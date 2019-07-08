@@ -4,17 +4,25 @@
 
 - `$ git init`
 
-  : 기존 프로젝트를 git으로 관리하고 싶을 때, 프로젝트의 디렉토리로 이동해서 명령
+  기존 프로젝트를 git으로 관리하고 싶을 때, 프로젝트의 디렉토리로 이동해서 명령
 
   .git이라는 하위 디렉토리 생성
 
-  저장소에 필요한 뼈대 파일(skeleton)이 생성됨
+  .git에는 저장소에 필요한 뼈대 파일(skeleton)을 생성
 
 - `$ git add 파일/디렉토리명`
 
-- `$ git commit -m 'Commit Comments'`
+  파일/디렉토리를 add
 
-  
+  `$ git add .`
+
+  현재 디렉토리를 add
+
+- `$ git commit -m 'Comments'`
+
+- `$ git config --global user.email "you@example.com"`
+
+  `$ git config --global user.name "Your Name`
 
 ---
 
@@ -32,3 +40,6 @@
 
 ---
 
+- `$ git push -u origin master`
+
+  master 내용을 push
