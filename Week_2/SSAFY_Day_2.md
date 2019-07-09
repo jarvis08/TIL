@@ -5,11 +5,17 @@
 ## PATH
 
 - Shell이 설정된 Path에 해당 프로그램의 존재 여부 확인
+  
   존재 시, 어느 위치에서도 해당 프로그램을 사용할 수 있도록 도움
+  
 - Windows의 경우 User보다 System 계정의 Path를 먼저 고려(Override)
+  
   Linux의 경우 import된 순서로 Override
+  
 - 권한에 있어서,
+  
   Windows는 '관리자 권한으로 실행'을 해야하며,
+  
   Linux의 경우 Sudo 입력을 통해 관리자 Override가 가능
 
 ---
@@ -17,12 +23,15 @@
 ## Web
 
 - **Client ---request---> Server**
-request로 url을 사용
+
+  request로 url을 사용
   
 - **Server ---response---> Client**
+  
   response로 문서를 받음
-  문서 : 페이지에서 마우스 우클릭, 페이지 소스보기로 확인 가능
 
+  문서 : 페이지에서 마우스 우클릭, 페이지 소스보기로 확인 가능
+  
 - 우클릭 후 검사, F12 등으로 확인 가능
 
 - Web 활용하기
@@ -31,6 +40,7 @@ request로 url을 사용
   3. 문서에서 필요한 내용 추출하기
   
   `pip install requests`
+  
   `pip install bs4`
 
 ```python
@@ -94,9 +104,13 @@ $ python Kospi.py
 - **Web에서 원하는 부분의 경로 복사하기**
 
   응답.select(selector)
+  
   Web 상의 원하는 부분에
+  
   (마우스 우클릭 > 요소 검사) 실행 시 원하는 부분의 코드를 바로 게시
+  
   찾아진 해당 라인에 (마우스 우클릭 > 복사 > CSS 선택자) 선택
+  
   *naver의 경우 (마우스 우클릭 > copy > copy selector) 선택*
 
 ```python
@@ -150,7 +164,9 @@ $ python Naver_Ranking.py
 ## import os
 
 `os.listdir()`: 현재 디렉토리 내부의 모든 파일, 디렉토리를 리스트에 저장
+
 `os.rename(현재 파일명, 바꿀 파일명)`: 파일명 변경
+
 `os.system()`: Terminal에서 사용하는 명령어 사용
 
 ```shell
@@ -233,8 +249,11 @@ for name in files:
 `with open('파일명', '파일 조작 유형', encoding='utf-8') as f:`
 
 - File 조작 3가지
+  
   `'r'`: read
+  
   `'w'`: write
+  
   `'a'`: append
 
 ```python

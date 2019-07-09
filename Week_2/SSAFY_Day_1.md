@@ -31,14 +31,20 @@
 ## Python은 어떻게 저장하는가?
 
 - 변수 (variable) 
+  
   :: 박스 1개
+  
 - 리스트 (list)
+  
   :: 박스 여러개
-  	list = ["강남구", ...]
 
+  ​	list = ["강남구", ...]
+  
 - 딕셔너리 (dictionary)
+  
   :: 견출지 붙인 박스들의 묶음
-  	dic = {"강남구" : 50, ...}
+  
+  ​	dic = {"강남구" : 50, ...}
 
 ```python
 # random.choice()
@@ -117,12 +123,19 @@ print(sorted(random.sample(range(1,46), 6)))
 : CMD, Powershell
 
 `ls` : list 목록
+
 `cd`: 지정 위치로 이동
+
 `pwd`: 현위치 (point working directory)
+
 `mkdir`: 폴더 생성
+
 `code .`: vs code 현위치에서 실행
+
 `touch 문서.txt`: 문서를 생성
+
 `rm 문서.txt`: 문서 삭제
+
 `mv 현재파일명 바꿀파일명`: 파일명 변경
 
 - chocolatey 설치 추천
@@ -140,9 +153,13 @@ print(sorted(random.sample(range(1,46), 6)))
 ## URL tip
 
 daum을 통해 아이유 를 검색할 때,
+
 https://search.daum.net/search?w=tot&DA=YZR&t__nil_searchbox=btn&sug=&sugo=&q=%EC%95%84%EC%9D%B4%EC%9C%A0](https://search.daum.net/search?w=tot&DA=YZR&t__nil_searchbox=btn&sug=&sugo=&q=수지
+
 중에서(위 url은 daum 페이지에서 아이유를 검색했을 때, 주소창에 적힌 코드)
+
 https://search.daum.net/search?q=수지
+
 부분만 있어도 검색이 가능하다! 나머지는 부가 옵션
 
 ```python
