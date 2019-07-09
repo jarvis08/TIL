@@ -1,60 +1,5 @@
 # SSAFY_Day_2
 
-## Markdown Language
-
-> `- + Enter`: black point
-> `(```python + Enter)`: 블록 코드 강조 (back tick)
->
-> ```python
-> (Ctrl + Enter) : 빠져나가기
-> ```
->
-> `--- + Enter`: 줄긋기
-> `Ctrl + T`: 표 만들기
-> `back tick + 내용 + back tick`: 코드블록에 내용 넣기
-> `> ` 단 띄우기
-
----
-
-## CLI(Command Line Interface)
-
-: 유닉스 shell(Linux, Git Bash, ...)
-: CMD, Powershell
-
-> `ls` : list 목록
-> `cd`: 지정 위치로 이동
-> `pwd`: 현위치 (point working directory)
-> `mkdir`: 폴더 생성
-> `code .`: vs code 현위치에서 실행
-> `touch 문서.txt`: 문서를 생성
-> `rm 문서.txt`: 문서 삭제
-
----
-
-## Git
-
-- 생활코딩 git 강의 좋다
-
-```shell
-cd (master directory)
-git init
-git add .
-git commit -m "1"
-# -m :: message와 함께
-"""
-Run
-
-  git config --global user.email "you@example.com"
-  git config --global user.name "Your Name"
-"""
-git config --global user.email "cdb921226@gmail.com"
-git config --global user.name "jarvis08"
-git remote add origin https://github.com/jarvis08/SSAFY.git
-git push -u origin master
-
-git rm -r 파일/디렉토리명
-```
-
 ---
 
 ## PATH
@@ -199,4 +144,126 @@ $ python Naver_Ranking.py
 10.      분홍코끼리
 """
 ```
+
+---
+
+## import os
+
+`os.listdir()`: 현재 디렉토리 내부의 모든 파일, 디렉토리를 리스트에 저장
+`os.rename(현재 파일명, 바꿀 파일명)`: 파일명 변경
+`os.system()`: Terminal에서 사용하는 명령어 사용
+
+```shell
+os.system('touch example.txt')
+os.system('rm example.txt')
+```
+
+`os.chdir()`: 작업 폴더를 현 위치에서 해당 위치로 옮김
+
+---
+
+## String에 문자 삽입하기
+
+- **pyformat**
+
+  ```python
+  os.system('touch example_{}.txt'.format(i))
+  ```
+
+- **f string**
+
+  ```python
+  os.system(f'touch example_{i}.txt')
+  ```
+
+  python 3.6 부터 가능하므로, coding test에서 사용 불가
+
+- 기초적인 방법
+
+  ```python
+  os.system('touch example'+ str(i) + '.txt')
+  ```
+
+```python
+# file.py
+import os
+
+# 디렉토리 내부 파일/디렉토리 조사
+print(os.listdir())
+print(len(os.listdir()))
+
+# 파일명/디렉토리명 변경
+# os.rename(현재 파일명, 바꿀 파일명)
+
+"""
+# pyformat 방법
+for i in range(100):
+    os.system('touch ./example/example_{}.txt'.format(i))
+
+# f string : 삽입법
+## python3.6부터 가능하며, SW test 불가
+for i in range(100):
+    os.system(f'touch ./example/example_{i}.txt')
+
+# 더 기초적인 방법
+os.chdir('example')
+for i in range(100):
+    os.system('touch example'+ str(i) + '.txt')
+"""
+
+# for i in range(100):
+#     os.system('rm example_{}'.format(i))
+
+
+# file명 한꺼번에 바꾸기
+os.chdir('example')
+files = os.listdir()
+
+for name in files:
+    # os.rename(name, 'Samsung_' + name)
+    # renamed = name.replace('Samsung', 'SSAFY')
+    # os.rename(name, renamed)
+    os.rename(name, name.replace('Samsung', 'SSAFY'))
+```
+
+---
+
+## Text file 다루기
+
+`with open('파일명', '파일 조작 유형', encoding='utf-8') as f:`
+
+- File 조작 3가지
+  `'r'`: read
+  `'w'`: write
+  `'a'`: append
+
+```python
+# text.py
+with open('ssafy.txt', 'w', encoding='utf-8') as f:
+    for i in range(5):
+        f.write('hell ssafy 가즈앙\n')
+
+with open('ssafy.txt', 'r', encoding='utf-8') as f:
+    lines = f.readlines()
+    for line in lines:
+        print(line.replace('\n', ''))
+
+with open('problem.txt', 'w') as f:
+    for i in range(4):
+        f.write(str(i) + '\n')
+
+lines = []
+with open('problem.txt', 'r') as f:
+    lines = f.readlines()
+
+with open('problem.txt', 'w') as f:
+    for i in range(4):
+        f.write(str(lines[-i]))
+
+lines.reverse()
+with open('reverse.txt', 'w') as f:
+    f.writelines(lines)
+```
+
+
 
