@@ -42,6 +42,7 @@ $ git clone address/repository.git new_name
 $ git status
 $ git log
 $ git rm -r 파일/디렉토리명
+$ git mv 현재이름 바꿀이름
 $ git merge
 $ git checkout 시점
 # 이전 버전으로 이동 (git log 활용)
