@@ -97,22 +97,3 @@ def hello_person(person):
 
   
 
-```python
-@app.route("/hello/<name>")
-def hello(name):
-    return render_template('hello.html', tem_name=name)
-    # tem_name :: template 안에서 사용할 변수명
-    # template에서는 <!-- --> 주석 사용 불가
-    # html이 아닌 template의 문법으로 처리
-```
-
-- 수정 시 서버 재시동 하지 않아도 되게 하기!
-
-  ```python
-  # 방법 1
-  if __name__ == "__main__":
-      app.run(debug=True)
-  ```
-
-  
-
