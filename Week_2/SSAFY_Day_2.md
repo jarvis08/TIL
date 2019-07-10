@@ -28,7 +28,7 @@
   
 - **Server ---response---> Client**
   
-  response로 문서를 받음
+  response로 문서(HTML, XML...)를 받음
 
   문서 : 페이지에서 마우스 우클릭, 페이지 소스보기로 확인 가능
   
@@ -45,6 +45,7 @@
 
 ```python
 # Kospi.py
+# 네이버 검색순위 scrapping 하기
 import requests
 import bs4
 
