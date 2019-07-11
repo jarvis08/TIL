@@ -36,6 +36,8 @@
 
 `<iframe width= height= src="">` : video
 
+`&nbsp` : 공백 2칸
+
 - Live Server(VS Code extention)
 
   VS Code 좌측 > Explorer 탭 > html 파일 우클릭 > Open with Live Server
