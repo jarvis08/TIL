@@ -55,6 +55,8 @@ print('touch example'+ str(i) + '.txt')
 
 `list(dic.keys())` : dictionary의 key 값들을 list로 변환
 
+`dic.get(key).get(key)` : 해당 key의 value를 반환, 없을 시 error 대신 None 반환
+
 ---
 
 ## Set
@@ -126,137 +128,24 @@ os.system('rm example.txt')
 
 ---
 
-## requests, bs4
+## decouple
 
-`requests.get( 'url' )` : http status code
+:: key 암호화시키기
 
-`requests.get( 'url' ).text` : url로부터 document를 text 형태로 받음
+- directory 안에 `.env` 파일 생성(linux에서는 .으로 시작하면 숨김파일)
 
-`requests.get( 'url' ).json()` : url로부터 document를 json 형태로 받음
-
-`bs4.BeautifulSoup(response,'xml')` : get()의 내용을 저장한 response 변수의 xml 타입을 파이썬이 보기 좋은 형태로 변환
-
-`document = bs4.BeautifulSoup(response, 'html.parser')` : response를 html parser를 사용하여 변형
-
-`document.select('.ah_k', limit=10)` : document의 ah_k class 중 10개 고르기
-
-`document.select_one(selector).text` : css selector 중 하나를 text화
-
----
-
-## webbroser, flask
+- 모두 대문자로 작성
 
 ```python
-import webbrowser
-
-url = "https://search.daum.net/search?q="
-keywords = ["수지", "한지민"]
-for keyword in keywords:
-    webbrowser.open(url + keyword)
+# .env 파일 내부에 아래와 같이 작성하며, .env파일은 공유되지 않아야한다.
+TELEGRAM_TOKEN = "토큰 정보 기입"
+# 이를 위해 .gitignore 파일을 생성하고, 무시하고자 하는 파일명을 기입
+.env
 ```
-
-`flask run` : flask 서버 구동
-
-http://naver.com:80/***상세주문***
-
-- 주문서
-
-  1. 어떻게 제공
-
-     `"/"` : CS에서 / 의미는 root
-
-     `@app.route("/")` : 가장 상위를 의미
-
-  2. 무엇을 제공
 
 ```python
-from flask import Flask
-app = Flask(__name__)
-# 플라스크를 코드 안에 불러옴
-
-
-### 1. 주문 받는 방식(어떻게) - @app.route("/")
-"""
-CS에서 /는 root를 의미
-따라서 가장 상위를 의미
-"""
-### 2. 무엇을 제공할지 - def hello():
-@app.route("/")
-def hello():
-    return "Hello World!"
-
-@app.route("/hi")
-def hi():
-    return "hi"
-# 주문 방식과 제공함수명은 일치시키는게 좋음
-
-# 1. /name
-# 2. 응답 : 영문 이름
-@app.route("/name")
-def name():
-    return "Dongbin Cho"
-
-# 이름을 붙여서 인사해주기
-@app.route("/hello/dongbin")
-def hello_1(name):
-    return "Hello, {}".format(name)
-
-# 사람에 따라 이름을 붙여서 인사해주기
-# person과 같은 명칭은 내가 정의
-@app.route("/hello/<person>")
-def hello_person(person):
-    return "Hello, {}!".format(person)
-    # return f"Hello, {person}!"
-    # return "Hello, } + person
+# token url 사용할 때
+from ducouple import config
+# token_url을 원래 토큰 값 대신 config('.env에 작성한 token을 넣은 변수명')
+token_url = config('TELEGRAM_TOKEN')
 ```
-
-- 포트
-
-  : 접속 경로(문)
-
-  http - 80, https - 443 포트를 주로 정문으로 사용(외부 사용자용)
-
-  자기 자신으로의 접속은 22
-
-- Routing
-
-  : 주문이 왔을 때, 답변을 하는 경로
-
-- Variable Routing
-
-  : 사용자의 요청이 왔을 때, 변수에 따라 가변적으로 응답
-
-  ```python
-  @app.route("/hello/<person>")
-  def hello_person(person):
-      return "Hello, {}!".format(person)
-      # return f"Hello, {person}!"
-      # return "Hello, } + person
-  ```
-
-- Flask에서 template 사용하기
-
-  `return render_template('파일명.html', html변수명=py변수명)`
-
-  ```python
-  @app.route("/hello/<name>")
-  def hello(name):
-      return render_template('hello.html', tem_name=name)
-      # tem_name :: template 안에서 사용할 변수명
-      # template에서는 <!-- --> 주석 사용 불가
-      # html이 아닌 template의 문법으로 처리
-  ```
-
-- 서버 재시동 하지 않아도 되게 하기
-
-  ```python
-  if __name__ == "__main__":
-      app.run(debug=True)
-  # 이후 터미널에서 'python 파일명.py' 명령으로 실행
-  ```
-
-- Flask 구조
-
-  dynamic directory(app.py) > templates directory (htmls)
-
-  app.py는 templates directory 안의 html template을 이용하여 요청에 응답

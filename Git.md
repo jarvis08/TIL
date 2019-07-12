@@ -6,6 +6,8 @@
 
 `push`를 통해 remote로 밀어 넣음
 
+`.gitignore` : 해당 파일에 작성해 둔 파일들은 git 활동에서 제외
+
 ```shell
 $ git config --global user.email "cdb921226@gmail.com"
 $ git config --global user.name "jarvis08"
