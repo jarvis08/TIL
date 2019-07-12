@@ -2,7 +2,9 @@
 
 ------
 
-`! + Tab` : html 자동완성 script
+## Tags
+
+`! + Tab` : VS Code의 경우 html 자동완성 script
 
 `<!DOCTYPE html>` : html5 규칙으로서, html임을 명시
 
@@ -37,6 +39,10 @@
 `<iframe width= height= src="">` : video
 
 `&nbsp` : 공백 2칸
+
+---
+
+## Extensions
 
 - Live Server(VS Code extention)
 

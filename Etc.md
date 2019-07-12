@@ -36,11 +36,11 @@ ex) Coursera, edX, Udacity(Stanford University), edwith
 
   Linux의 경우 import된 순서로 Override
 
-- 권한에 있어서,
+- Linux의 경우 `sudo` 입력을 통해 관리자 Override가 가능하며,
 
-  Windows는 '관리자 권한으로 실행'을 해야하며,
+  Windows는 '관리자 권한으로 실행'을 사용
 
-  Linux의 경우 Sudo 입력을 통해 관리자 Override가 가능
+  
 
 ---
 
