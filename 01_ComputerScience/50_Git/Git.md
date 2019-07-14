@@ -49,4 +49,16 @@ $ git checkout 시점
 # 이전 버전으로 이동 (git log 활용)
 $ git reset
 $ git reverse
+
+# 현재 디렉토리의 .DS_Store 제거
+$ git rm --cached .DS_Store
+# 모든 remote git repository에서 .DS_Store 찾아서 삭제
+find . -name .DS_Store -print0 | xargs -0 git rm --ignore-unmatch
+# 앞으로의 모든 repository에서의 .DS_Store upload 예방
+# 1. global하게 사용할 .gitignore를 어딘가에 생성.
+# 파일 예시
+echo .DS_Store >> ~/.gitignore_global
+# 2. git에게 모든 repository에 사용할 것을 선언하기
+git config --global core.excludesfile ~/.gitignore_global
+# 참고자료 - https://stackoverflow.com/questions/18393498/gitignore-all-the-ds-store-files-in-every-folder-and-subfolder
 ```

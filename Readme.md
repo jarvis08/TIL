@@ -29,13 +29,16 @@ I am concentrating on studying computer science, to understand machine learning 
 
 ## Not Yet
 
-- Code, Charles Petzold
+- Books
 
-- CS224N lecture, Stanford University
+  - Code, Charles Petzold
+  - Deep Learning from Scratch 2
 
-  https://www.youtube.com/watch?v=8rXD5-xhemo&list=PLoROMvodv4rOhcuXMZkNm7j3fVwBBY42z
+- Lectures
 
-- Deep Learning from Scratch 2
+  - CS224N lecture, Stanford University
+
+    https://www.youtube.com/watch?v=8rXD5-xhemo&list=PLoROMvodv4rOhcuXMZkNm7j3fVwBBY42z
 
 - Papers
 
@@ -51,7 +54,7 @@ I am concentrating on studying computer science, to understand machine learning 
 
 ---
 
-## Last
+## Past
 
 - Books
 
@@ -60,25 +63,21 @@ I am concentrating on studying computer science, to understand machine learning 
 
 - Lectures
 
-  
+- Paper Reviews
 
----
+  - WAVENET: A GENERATIVE MODEL FOR RAW AUDIO
 
-## Paper Reviews
+    https://arxiv.org/pdf/1609.03499.pdf
 
-- WAVENET: A GENERATIVE MODEL FOR RAW AUDIO
+  - TACOTRON: TOWARDS END-TO-END SPEECH SYNTHESIS
 
-  https://arxiv.org/pdf/1609.03499.pdf
+    https://arxiv.org/pdf/1703.10135.pdf
 
-- TACOTRON: TOWARDS END-TO-END SPEECH SYNTHESIS
+  - NATURAL TTS SYNTHESIS BY CONDITIONING WAVENET ON MEL SPECTROGRAM
+    PREDICTIONS
 
-  https://arxiv.org/pdf/1703.10135.pdf
+  - https://arxiv.org/pdf/1712.05884.pdf
 
-- NATURAL TTS SYNTHESIS BY CONDITIONING WAVENET ON MEL SPECTROGRAM
-  PREDICTIONS
+  - Learning Phrase Representations using RNN Encoder–Decoder for Statistical Machine Translation
 
-- https://arxiv.org/pdf/1712.05884.pdf
-
-- Learning Phrase Representations using RNN Encoder–Decoder for Statistical Machine Translation
-
-  https://arxiv.org/pdf/1406.1078.pdf
+    https://arxiv.org/pdf/1406.1078.pdf
