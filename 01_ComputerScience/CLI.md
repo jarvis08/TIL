@@ -8,6 +8,22 @@
 
 ---
 
+## PATH
+
+- Shell이 설정된 Path에 해당 프로그램의 존재 여부 확인
+
+  존재 시, 어느 위치에서도 해당 프로그램을 사용할 수 있도록 도움
+
+- Windows의 경우 User보다 System 계정의 Path를 먼저 고려(Override)
+
+  Linux의 경우 import된 순서로 Override
+
+- Linux의 경우 `sudo` 입력을 통해 관리자 Override가 가능하며,
+
+  Windows는 '관리자 권한으로 실행'을 사용
+
+---
+
 ## Unix Shell
 
 `sudo + 명령어` : 관리자 권한으로 명령어 실행
