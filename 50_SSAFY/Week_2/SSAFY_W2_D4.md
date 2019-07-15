@@ -1,4 +1,4 @@
-# SSAFY_DAY_4
+# SSAFY_Week2_DAY4
 
 - Static Page
 

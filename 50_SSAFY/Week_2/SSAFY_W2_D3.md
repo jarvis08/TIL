@@ -1,4 +1,4 @@
-# SSAFY_Day_3
+# SSAFY_Week2_Day3
 
 ---
 
