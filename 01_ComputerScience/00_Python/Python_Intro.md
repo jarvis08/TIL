@@ -77,7 +77,6 @@ keyword.kwlist
 - docstring : `func.__doc__` 기입 시 docstring 내용의 string 출력
 
   ```python
-  # 주석을 연습해봅시다. 
   def mysum(a, b):
       """덧셈 함수다.
       이 줄은 실행이 되지 않는다.
@@ -95,10 +94,10 @@ keyword.kwlist
       docstring을 쓰는 이유는 __doc__을 사용하기 때문이다.
   """
   ```
+  
+- 기본적으로  `;` semi-colon을 사용하지 않는다.
 
-- 기본적으로 파이썬에서는 `;` 을 작성하지 않는다.
-
-  한 줄로 표기할 떄는 `;`를 작성하여 표기할 수 있다.
+  한 줄로 표기할 떄는 이를 사용 가능하다.
 
   ```python
   print("happy")
@@ -402,21 +401,20 @@ keyword.kwlist
 - String
 
   - 문자열은 Single quotes(`'`)나 Double quotes(`"`)을 활용하여 표현 가능하다.
-  - 단, 문자열을 묶을 때 동일한 문장부호를 활용해야하며, `PEP-8`에서는 **하나의 문장부호를 선택**하여 유지하도록 하고 있습니다. (Pick a rule and Stick to it)
-  - 강동주 대표님은 single quote를 주로 사용
-
-  ```python
-  pro_said = '김지수 프로님은 말씀하셨다.'
-  proo = "오늘은 종례가 없을 거에요."
-  print(pro_said, proo)
-  print(pro_said + ' ' + proo)
+  - 단, 문자열을 묶을 때 동일한 문장부호를 활용해야하며, `PEP-8`에서는 **하나의 문장부호를 선택**하여 유지하도록 권장(Pick a rule and Stick to it)
+  
+```python
+  she_said = '김지수님은 말씀하셨다.'
+  go_home = "오늘은 집에 빨리 가세요."
+  print(she_said, go_home)
+  print(she_said + ' ' + go_home)
   """result
-  김지수 프로님은 말씀하셨다. 오늘은 종례가 없을 거에요.
-  김지수 프로님은 말씀하셨다. 오늘은 종례가 없을 거에요.
+  김지수님은 말씀하셨다. 오늘은 집에 빨리 가세요.
+  김지수님은 말씀하셨다. 오늘은 집에 빨리 가세요.
   """
   ```
-
-  ```python
+  
+```python
   # 사용자에게 받은 입력은 기본적으로 str
   age = input("당신의 나이를 입력해 주세요.")
   print(age)
@@ -427,24 +425,24 @@ keyword.kwlist
   <class 'str'>
   """
   ```
-
-  - 여러줄에 걸쳐있는 문장은 excape code 혹은 `"""` 사용 가능
-
-    `PEP-8`에 따르면 이 경우에는 반드시 `"""`를 사용하도록 되어 있다
-
-  ```python
+  
+- 여러줄에 걸쳐있는 문장은 excape code 혹은 `"""` 사용 가능
+  
+  `PEP-8`에 따르면 이 경우에는 반드시 `"""`를 사용하도록 되어 있다
+  
+```python
   # excape code를 이용하여 single quote 중복 사용하기
-  pro_said = '김지수 프로님은 말씀하셨다.\'오늘은 종례가 없을 거에요.\''
-  print(pro_said)
+  she_said = '김지수님은 말씀하셨다.\'오늘은 집에 빨리 가세요.\''
+  print(she_said)
   """result
-  김지수 프로님은 말씀하셨다.'오늘은 종례가 없을 거에요.'
+  김지수님은 말씀하셨다.'오늘은 집에 빨리 가세요.'
   """
   # """ 사용하기
-  print("""여러줄에 걸쳐있는 문장은 다음과 같이 표현 가능합니다.
-  PEP-8에 따르면 이 경우에는 반드시 이렇게 하도록 합니다.""")
+  print("""여러줄에 걸쳐있는 문장은 다음과 같이 표현 가능하다.
+  PEP-8에 따르면, 이 경우에는 반드시 이렇게 하도록 한다.""")
   ```
-
-  ```python
+  
+```python
   # string concatenation 합체
   concat = "안녕하세요," + ' 저는' + ' 조동빈입니다.'
   # string interpolation(보간법) 수술(삽입)
@@ -463,10 +461,10 @@ keyword.kwlist
   안녕하세요, 저는 조동빈입니다.
   """
   ```
-
-  - `\` excape 문자열
-
-  | <center>예약문자</center> |   내용(의미)    |
+  
+- `\` excape 문자열
+  
+| <center>예약문자</center> |   내용(의미)    |
   | :-----------------------: | :-------------: |
   |            \n             |     줄바꿈      |
   |            \t             |       탭        |
@@ -756,7 +754,7 @@ keyword.kwlist
       print(c is d)
       """result : False"""
     ```
-    
+  
 - 연산자 우선순위(PEMDAS)
 
   : 외우지 말고 그냥 괄호 사용
@@ -1036,11 +1034,15 @@ keyword.kwlist
 
 ## 정리
 
-- Ordered, Sequence
+`mutable` : 이미 선언되어 있는, 인덱싱 되어있는 값을 지정하여 수정할 수 있다.
+
+`immutable` : 이미 선언되어 있는, 인덱싱이 완료된 값을 지정하여 수정할 수 없다.
+
+- **Ordered**, Sequence
   - `'String'` : immutable
   - `[list]` : mutable
   - `(tuple)` : immutable
   - `range()` : immutable
-- Unordered
+- **Unordered**
   - `{set}` : mutable
   - `{dictionary}` : mutable
