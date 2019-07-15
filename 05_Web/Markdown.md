@@ -48,6 +48,11 @@ A backtick-delimited string in a code span: `` `foo` ``
 ![Alt text][img id]
 ```
 
+```python
+# source image를 center에 정렬하여 표시
+<center><img src="./images/01/variable.png", alt="variable"/></center>
+```
+
 ---
 
 `[Google]: http://google.com/` : [Google]: http://google.com/ 링크 생성

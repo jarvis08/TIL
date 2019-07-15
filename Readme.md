@@ -2,7 +2,7 @@
 
 ---
 
-I am concentrating on studying computer science, to understand machine learning better.
+I am concentrating on studying computer science to understand machine learning better.
 
 - at SSAFY
 

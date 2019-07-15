@@ -1,45 +1,65 @@
-# SSAFY_Week3_Day1
+# Python_Intro
 
 ---
 
-## 전체 SSAFY 과정, 배우는 이유
-
-- bootstrap
-
-  css어렵다. 남들이 잘해논거 쓰는게 이득
-
-- django
-
-  객체지향 개념을 가장 잘 공부할 수 있는 framework
-
-- Javascript
-
-  이제 가장 필수적인 언어
-
-  임베디드고 뭐고 모든게 웹으로 얽힘
-
-- Vue.js
-
-  귀요미로 만들어주는 framework
-
-- aws
-
-  전체적인 그림을 그릴 수 있도록 클라우드 경험
+**참고자료 file_path** : ./50_SSAFY/8ython/notes/01.python_intro
 
 ---
 
-## Python_Intro
+## Turing Completeness 
 
-**file_path** : ./50_SSAFY/8ython/notes/01.python_intro
+- 저장 :: 어디에 무엇을 어떻게 넣는가?
+  1. 숫자
+  2. 글자
+  3. 참/거짓
+- 조건
+- 반복
+
+------
+
+## 기본 자료형
+
+- 숫자
+- 글자
+- 참/거짓(boolean)
+
+---
+
+## Python은 어떻게 저장하는가?
+
+- 변수 (variable) 
+
+  :: 박스 1개
+
+- 리스트 (list)
+
+  :: 박스 여러개
+
+  ​	list = ["강남구", ...]
+
+- 딕셔너리 (dictionary)
+
+  :: 견출지 붙인 박스들의 묶음
+
+  ​	dic = {"강남구" : 50, ...}
+
+---
+
+- `Python Tutor`
+
+​	: Visualize Code and Get Live Help
+
+​	line by line으로 python 내부에서 어떻게 실행되는지 확인 가능
+
+​	http://pythontutor.com/
+
+​	http://pythontutor.com/visualize.html#mode=edit
+
+---
 
 `python -i` : git bash에서 python interactive 실행
 
 `.ipynb ` : jupyter notebook 확장자, json 파일 형식으로 저장
-
-```python
-# source image를 center에 정렬하여 표시
-<center><img src="./images/01/variable.png", alt="variable"/></center>
-```
 
 `PEP-8` : python enhancement proposal, python 개발자들의 표준안
 
@@ -116,21 +136,9 @@ keyword.kwlist
   }
   ```
 
-- python tutor
+---
 
-  : VISUALIZE CODE AND GET LIVE HELP
-
-  line by line으로 python 내부에서 어떻게 실행되는지 확인 가능
-
-  http://pythontutor.com/
-
-  http://pythontutor.com/visualize.html#mode=edit
-
-- 자료형은 기본적으로 세가지
-
-  - 숫자
-  - 글자
-  - 참/거짓(boolean)
+## 변수, Variable
 
 - `id()` : python이 관리하는 공간의 위치 제공
 
@@ -310,6 +318,10 @@ keyword.kwlist
 
   rel_tol 값을 조정하면 더 까다롭게 비교 가능
 
+---
+
+## 자료형
+
 - complex, 복소수
 
   허수부를 j로 표현
@@ -463,23 +475,23 @@ keyword.kwlist
   |           `\\`            |       `\`       |
   |            \'             | 단일인용부호(') |
   |            \"             | 이중인용부호(") |
-
-```python
-# print를 하는 과정의 이스케이프 문자열 활용
-print('가나다', end='')
-print('라마바', end='\0')
-print('사아자', end='\t')
-print('차카타')
-"""result
-가나다라마바사아자	차카타"""
-
-# 물론, end 옵션은 이스케이프 문자열이 아닌 다른 것도 가능합니다.
-print('가나다', end='!')
-print('라마바', end='!')
-"""result
-가나다!라마바!"""
-```
-
+  
+  ```python
+  # print를 하는 과정의 이스케이프 문자열 활용
+  print('가나다', end='')
+  print('라마바', end='\0')
+  print('사아자', end='\t')
+  print('차카타')
+  """result
+  가나다라마바사아자	차카타"""
+  
+  # 물론, end 옵션은 이스케이프 문자열이 아닌 다른 것도 가능합니다.
+  print('가나다', end='!')
+  print('라마바', end='!')
+  """result
+  가나다!라마바!"""
+  ```
+  
 - String Interpolation
 
   - `%-formatting`
@@ -529,6 +541,10 @@ print('라마바', end='!')
   원주율이 3.141592일 때, 반지름이 2인 원의 넓이는 12.566368다.
   원주율이 3.141592일 때, 반지름이 2인 원의 넓이는 6.283184다."""
   ```
+
+---
+
+## 연산자
 
 - 연산자
 
@@ -706,46 +722,41 @@ print('라마바', end='!')
 
     `is` 연산자를 통해 동일한 object인지 확인할 수 있다. 
 
-
-    (나중에 Class를 배우고 다시 학습)
-
   - Indexing/Slicing
 
     `[]`를 통한 값 접근 및 `[:]`을 통한 슬라이싱 
 
-    (다음 챕터를 배우면서 추가 학습)
-
-  ```python
-  # tuple, list 덧셈
-  # dictionary 불가
-  print([1, 2, 3] + [4, 5, 6])
-  print((1, 2, 3) + (4, 5, 6))
-  
-  # 기본 정수인 -5부터 256까지의 id는 언제나 동일
-  # 해당 기본 정수들은 자주 사용되는 정수로써, 이미 메모리 공간안에 띄워두고 사용
-  print(id(-5))
-  print(id('hi'))
-  print(id('hi') is id('hi'))
-  print(id('-5') is id('-5'))
-  """result
-  1835230208
-  1835230208
-  64406048
-  64406048
-  False
-  False"""
-  
-  a = 3
-  b = 3
-  print(a is b)
-  """result : True"""
-  
-  c = 257
-  d = 257
-  print(c is d)
-  """result : False"""
-  ```
-
+    ```python
+      # tuple, list 덧셈
+      # dictionary 불가
+      print([1, 2, 3] + [4, 5, 6])
+      print((1, 2, 3) + (4, 5, 6))
+      
+      # 기본 정수인 -5부터 256까지의 id는 언제나 동일
+      # 해당 기본 정수들은 자주 사용되는 정수로써, 이미 메모리 공간안에 띄워두고 사용
+      print(id(-5))
+      print(id('hi'))
+      print(id('hi') is id('hi'))
+      print(id('-5') is id('-5'))
+      """result
+      1835230208
+      1835230208
+      64406048
+      64406048
+      False
+      False"""
+      
+      a = 3
+      b = 3
+      print(a is b)
+      """result : True"""
+      
+      c = 257
+      d = 257
+      print(c is d)
+      """result : False"""
+    ```
+    
 - 연산자 우선순위(PEMDAS)
 
   : 외우지 말고 그냥 괄호 사용
@@ -767,6 +778,8 @@ print('라마바', end='!')
   -3 ** 4
   """result : -81"""
   ```
+
+---
 
 - 기초 형변환(Type Conversion, Typecasting)
 
@@ -804,6 +817,10 @@ print('라마바', end='!')
   int('0x23' + 'ab', 16)
   """result : 9131"""
   ```
+
+---
+
+## Sequence 자료형
 
 - 시퀀스(sequence) 자료형
 
@@ -1027,22 +1044,3 @@ print('라마바', end='!')
 - Unordered
   - `{set}` : mutable
   - `{dictionary}` : mutable
-
----
-
-- 파이썬 끝장 보고싶은 사람은
-
-  edx - introduction to computer science and programming in python
-
-  adit만 받으면 공짜. 돈 안내도됨.
-
-- `hw_ws/01/01_homework.md`
-
-  `hw_ws/01/01_workshop.md`
-
-  `# 대제목 : 01_homework`
-
-  `## 01_문제번호`
-
-  `정답(텍스트 or 코드블럭)`
-

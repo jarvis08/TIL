@@ -24,6 +24,9 @@ ex) Coursera, edX, Udacity(Stanford University), edwith
   
   Udacity - ML
 
+- **Python**
+
+  edx - Introduction to Computer Science and Programming in Python
 
 ---
 
@@ -35,3 +38,46 @@ ex) Coursera, edX, Udacity(Stanford University), edwith
 
 반대 개념 - 완결성 있는 제품을 장기간에 걸쳐 개발하여 출시
 
+---
+
+## 전체 SSAFY 과정, 배우는 이유
+
+- bootstrap
+
+  css어렵다. 남들이 잘해논거 쓰는게 이득
+
+- django
+
+  객체지향 개념을 가장 잘 공부할 수 있는 framework
+
+- Javascript
+
+  이제 가장 필수적인 언어
+
+  임베디드고 뭐고 모든게 웹으로 얽힘
+
+- Vue.js
+
+  귀요미로 만들어주는 framework
+
+- aws
+
+  전체적인 그림을 그릴 수 있도록 클라우드 경험
+
+---
+
+## SSAFY Homework & Workshop
+
+- 보관
+
+  `hw_ws/01/01_homework.md``
+
+  ``hw_ws/01/01_workshop.md`
+
+- 내용
+
+  `# 대제목 : 01_homework``
+
+  `## 01 문제번호`
+
+  `정답(텍스트 or 코드블럭)`
