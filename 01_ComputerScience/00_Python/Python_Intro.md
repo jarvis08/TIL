@@ -321,7 +321,7 @@ keyword.kwlist
 
 ## 자료형
 
-- complex, 복소수
+- **complex**, 복소수
 
   허수부를 j로 표현
 
@@ -342,7 +342,7 @@ keyword.kwlist
   """
   ```
 
-- Boolean
+- **Boolean**
 
   `True`와 `False`로 이뤄진 `bool` 타입이 있으며, 비교/논리 연산을 수행 등에서 활용
 
@@ -368,7 +368,7 @@ keyword.kwlist
   """
   ```
 
-- None
+- **None**
 
   파이썬에서는 값이 없음을 표현하기 위한 `None`타입이 존재
 
@@ -398,7 +398,7 @@ keyword.kwlist
   """
   ```
 
-- String
+- **String**
 
   - 문자열은 Single quotes(`'`)나 Double quotes(`"`)을 활용하여 표현 가능하다.
   - 단, 문자열을 묶을 때 동일한 문장부호를 활용해야하며, `PEP-8`에서는 **하나의 문장부호를 선택**하여 유지하도록 권장(Pick a rule and Stick to it)
@@ -412,8 +412,8 @@ keyword.kwlist
   김지수님은 말씀하셨다. 오늘은 집에 빨리 가세요.
   김지수님은 말씀하셨다. 오늘은 집에 빨리 가세요.
   """
-  ```
-  
+```
+
 ```python
   # 사용자에게 받은 입력은 기본적으로 str
   age = input("당신의 나이를 입력해 주세요.")
@@ -424,8 +424,8 @@ keyword.kwlist
   28
   <class 'str'>
   """
-  ```
-  
+```
+
 - 여러줄에 걸쳐있는 문장은 excape code 혹은 `"""` 사용 가능
   
   `PEP-8`에 따르면 이 경우에는 반드시 `"""`를 사용하도록 되어 있다
@@ -440,8 +440,8 @@ keyword.kwlist
   # """ 사용하기
   print("""여러줄에 걸쳐있는 문장은 다음과 같이 표현 가능하다.
   PEP-8에 따르면, 이 경우에는 반드시 이렇게 하도록 한다.""")
-  ```
-  
+```
+
 ```python
   # string concatenation 합체
   concat = "안녕하세요," + ' 저는' + ' 조동빈입니다.'
@@ -460,20 +460,19 @@ keyword.kwlist
   안녕하세요, 저는 조동빈입니다.
   안녕하세요, 저는 조동빈입니다.
   """
-  ```
-  
-- `\` excape 문자열
-  
+```
+
+- `\` excape code 문자열
 | <center>예약문자</center> |   내용(의미)    |
-  | :-----------------------: | :-------------: |
-  |            \n             |     줄바꿈      |
-  |            \t             |       탭        |
-  |            \r             |   캐리지리턴    |
-  |            \0             |    널(Null)     |
-  |           `\\`            |       `\`       |
-  |            \'             | 단일인용부호(') |
-  |            \"             | 이중인용부호(") |
-  
+| :-----------------------: | :-------------: |
+|            \n             |     줄바꿈      |
+|            \t             |       탭        |
+|            \r             |   캐리지리턴    |
+|            \0             |    널(Null)     |
+|           `\\`            |       `\`       |
+|            \'             | 단일인용부호(') |
+|            \"             | 이중인용부호(") |
+
   ```python
   # print를 하는 과정의 이스케이프 문자열 활용
   print('가나다', end='')
@@ -489,7 +488,7 @@ keyword.kwlist
   """result
   가나다!라마바!"""
   ```
-  
+
 - String Interpolation
 
   - `%-formatting`
@@ -544,7 +543,7 @@ keyword.kwlist
 
 ## 연산자
 
-- 연산자
+- **연산자**
 
   | 연산자 | 내용           |
   | ------ | -------------- |
@@ -587,7 +586,7 @@ keyword.kwlist
   4"""
   ```
 
-- 비교 연산자
+- **비교 연산자**
 
   | 연산자 | 내용     |
   | ------ | -------- |
@@ -614,7 +613,7 @@ keyword.kwlist
 
   
 
-- 논리 연산자
+- **논리 연산자**
 
   | 연산자  | 내용                         |
   | ------- | ---------------------------- |
@@ -655,7 +654,7 @@ keyword.kwlist
   True"""
   ```
 
-- 단축평가(short-circuit evaluation)
+- **단축평가**(short-circuit evaluation)
 
   and : a가 거짓이면 a를 리턴하고, 참이면 b를 리턴한다.
 
@@ -690,7 +689,7 @@ keyword.kwlist
   3"""
   ```
 
-- 복합 연산자
+- **복합 연산자**
 
   복합 연산자는 연산과 대입이 함께 이뤄진다. 
 
@@ -706,7 +705,7 @@ keyword.kwlist
   | a %= b  | a = a % b  |
   | a **= b | a = a ** b |
 
-- 기타 연산자
+- **기타 연산자**
 
   - Concatenation
 
@@ -755,7 +754,7 @@ keyword.kwlist
       """result : False"""
     ```
   
-- 연산자 우선순위(PEMDAS)
+- **연산자 우선순위**(PEMDAS)
 
   : 외우지 말고 그냥 괄호 사용
 
@@ -779,11 +778,11 @@ keyword.kwlist
 
 ---
 
-- 기초 형변환(Type Conversion, Typecasting)
+- **기초 형변환**(Type Conversion, Typecasting)
 
   파이썬은 자유롭게 데이터타입 변환 가능
 
-- 암시적 변환(Implicit Type Conversion)
+- **암시적 변환**(Implicit Type Conversion)
 
   사용자가 의도하지 않았지만, 파이썬 내부적으로 자동으로 형변환 하는 경우
 
@@ -796,7 +795,7 @@ keyword.kwlist
   print(True + 3)
   ```
 
-- 명시적 형변환, Explicit Type Conversion
+- **명시적 형변환**, Explicit Type Conversion
 
   ```python
   str(1) + '등'
@@ -834,7 +833,7 @@ keyword.kwlist
   4. 문자열(string)
   5. 바이너리(binary) : 따로 다루지는 않습니다.
 
-  - list
+  - **list**
 
     ```python
     [value1, value2, value3]
@@ -850,7 +849,7 @@ keyword.kwlist
     ll = list()
     ```
 
-  - tuple
+  - **tuple**
 
     ```python
     (value1, value2)
@@ -879,7 +878,7 @@ keyword.kwlist
     (1, 2, 3, 4, 5)"""
     ```
 
-  - range()
+  - **range()**
 
     레인지는 숫자의 시퀀스를 나타내기 위해 사용됩니다.
 
@@ -953,7 +952,7 @@ keyword.kwlist
     3"""
     ```
 
-  - set, dictionary
+  - **set**, **dictionary**
 
     세트는 수학에서의 집합과 동일하게 처리 
 
@@ -990,7 +989,7 @@ keyword.kwlist
     [1, 2, 3]"""
     ```
 
-  - dictionary
+  - **dictionary**
 
     ```python
     {Key1:Value1, Key2:Value2, Key3:Value3, ...}
