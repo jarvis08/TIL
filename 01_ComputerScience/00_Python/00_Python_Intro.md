@@ -1,7 +1,5 @@
 # Python_Intro
 
----
-
 **참고자료 file_path** : ./50_SSAFY/8ython/notes/01.python_intro
 
 ---
@@ -47,13 +45,13 @@
 
 - `Python Tutor`
 
-​	: Visualize Code and Get Live Help
+  ​	: Visualize Code and Get Live Help
 
-​	line by line으로 python 내부에서 어떻게 실행되는지 확인 가능
+  ​	line by line으로 python 내부에서 어떻게 실행되는지 확인 가능
 
-​	http://pythontutor.com/
+  ​	http://pythontutor.com/
 
-​	http://pythontutor.com/visualize.html#mode=edit
+  ​	http://pythontutor.com/visualize.html#mode=edit
 
 ---
 
@@ -68,11 +66,11 @@
   : `keyword` library에 포함되어 있다. 이 내용들은 함수/클래스/변수명 불가
 
   https://wikidocs.net/20557
-
-```python
-import keyword
-keyword.kwlist
-```
+  
+  ```python
+  import keyword
+  keyword.kwlist
+  ```
 
 - docstring : `func.__doc__` 기입 시 docstring 내용의 string 출력
 
@@ -138,6 +136,10 @@ keyword.kwlist
 ---
 
 ## 변수, Variable
+
+- **Scope**
+  - global(바깥)에서 제어문의 내부(local) 변수 참조 불가
+  - 제어문 안에서는 바깥 변수를 참조 가능
 
 - `id()` : python이 관리하는 공간의 위치 제공
 
@@ -401,143 +403,146 @@ keyword.kwlist
 - **String**
 
   - 문자열은 Single quotes(`'`)나 Double quotes(`"`)을 활용하여 표현 가능하다.
+  
   - 단, 문자열을 묶을 때 동일한 문장부호를 활용해야하며, `PEP-8`에서는 **하나의 문장부호를 선택**하여 유지하도록 권장(Pick a rule and Stick to it)
   
-```python
-  she_said = '김지수님은 말씀하셨다.'
-  go_home = "오늘은 집에 빨리 가세요."
-  print(she_said, go_home)
-  print(she_said + ' ' + go_home)
-  """result
-  김지수님은 말씀하셨다. 오늘은 집에 빨리 가세요.
-  김지수님은 말씀하셨다. 오늘은 집에 빨리 가세요.
-  """
-```
-
-```python
-  # 사용자에게 받은 입력은 기본적으로 str
-  age = input("당신의 나이를 입력해 주세요.")
-  print(age)
-  print(type(age))
-  """result
-  당신의 나이를 입력해 주세요.28
-  28
-  <class 'str'>
-  """
-```
-
-- 여러줄에 걸쳐있는 문장은 excape code 혹은 `"""` 사용 가능
+    ```python
+      she_said = '김지수님은 말씀하셨다.'
+      go_home = "오늘은 집에 빨리 가세요."
+      print(she_said, go_home)
+      print(she_said + ' ' + go_home)
+      """result
+      김지수님은 말씀하셨다. 오늘은 집에 빨리 가세요.
+      김지수님은 말씀하셨다. 오늘은 집에 빨리 가세요.
+      """
+    ```
   
-  `PEP-8`에 따르면 이 경우에는 반드시 `"""`를 사용하도록 되어 있다
+    ```python
+      # 사용자에게 받은 입력은 기본적으로 str
+      age = input("당신의 나이를 입력해 주세요.")
+      print(age)
+      print(type(age))
+      """result
+      당신의 나이를 입력해 주세요.28
+      28
+      <class 'str'>
+      """
+    ```
   
-```python
-  # excape code를 이용하여 single quote 중복 사용하기
-  she_said = '김지수님은 말씀하셨다.\'오늘은 집에 빨리 가세요.\''
-  print(she_said)
-  """result
-  김지수님은 말씀하셨다.'오늘은 집에 빨리 가세요.'
-  """
-  # """ 사용하기
-  print("""여러줄에 걸쳐있는 문장은 다음과 같이 표현 가능하다.
-  PEP-8에 따르면, 이 경우에는 반드시 이렇게 하도록 한다.""")
-```
-
-```python
-  # string concatenation 합체
-  concat = "안녕하세요," + ' 저는' + ' 조동빈입니다.'
-  # string interpolation(보간법) 수술(삽입)
-  # python 3.6 이상 버전의 fstring
-  name = '조동빈'
-  inter_1 = f'안녕하세요, 저는 {name}입니다.'
-  # 일반적인 python
-  inter_2 = '안녕하세요, 저는 {}입니다.'.format(name)
-  print(concat)
-  print(inter_1)
-  print(inter_2)
+  - 여러줄에 걸쳐있는 문장은 excape code 혹은 `"""` 사용 가능
   
-  """result
-  안녕하세요, 저는 조동빈입니다.
-  안녕하세요, 저는 조동빈입니다.
-  안녕하세요, 저는 조동빈입니다.
-  """
-```
+    `PEP-8`에 따르면 이 경우  `"""`를 사용할 것을 권장
+  
+    ```python
+      # excape code를 이용하여 single quote 중복 사용하기
+      she_said = '김지수님은 말씀하셨다.\'오늘은 집에 빨리 가세요.\''
+      print(she_said)
+      """result
+      김지수님은 말씀하셨다.'오늘은 집에 빨리 가세요.'
+      """
+      # """ 사용하기
+      print("""여러줄에 걸쳐있는 문장은 다음과 같이 표현 가능하다.
+      PEP-8에 따르면, 이 경우에는 반드시 이렇게 하도록 한다.""")
+    ```
+  
+    ```python
+      # string concatenation 합체
+      concat = "안녕하세요," + ' 저는' + ' 조동빈입니다.'
+      # string interpolation(보간법) 수술(삽입)
+      # python 3.6 이상 버전의 fstring
+      name = '조동빈'
+      inter_1 = f'안녕하세요, 저는 {name}입니다.'
+      # 일반적인 python
+      inter_2 = '안녕하세요, 저는 {}입니다.'.format(name)
+      print(concat)
+      print(inter_1)
+      print(inter_2)
+      
+      """result
+      안녕하세요, 저는 조동빈입니다.
+      안녕하세요, 저는 조동빈입니다.
+      안녕하세요, 저는 조동빈입니다.
+      """
+    ```
 
 - `\` excape code 문자열
-| <center>예약문자</center> |   내용(의미)    |
-| :-----------------------: | :-------------: |
-|            \n             |     줄바꿈      |
-|            \t             |       탭        |
-|            \r             |   캐리지리턴    |
-|            \0             |    널(Null)     |
-|           `\\`            |       `\`       |
-|            \'             | 단일인용부호(') |
-|            \"             | 이중인용부호(") |
+
+  | <center>예약문자</center> |   내용(의미)    |
+  | :-----------------------: | :-------------: |
+  |            \n             |     줄바꿈      |
+  |            \t             |       탭        |
+  |            \r             |   캐리지리턴    |
+  |            \0             |    널(Null)     |
+  |           `\\`            |       `\`       |
+  |            \'             | 단일인용부호(') |
+  |            \"             | 이중인용부호(") |
 
   ```python
-  # print를 하는 과정의 이스케이프 문자열 활용
-  print('가나다', end='')
-  print('라마바', end='\0')
-  print('사아자', end='\t')
-  print('차카타')
-  """result
-  가나다라마바사아자	차카타"""
-  
-  # 물론, end 옵션은 이스케이프 문자열이 아닌 다른 것도 가능합니다.
-  print('가나다', end='!')
-  print('라마바', end='!')
-  """result
-  가나다!라마바!"""
+    # print를 하는 과정의 이스케이프 문자열 활용
+    print('가나다', end='')
+    print('라마바', end='\0')
+    print('사아자', end='\t')
+    print('차카타')
+    """result
+    가나다라마바사아자	차카타"""
+    
+    # 물론, end 옵션은 이스케이프 문자열이 아닌 다른 것도 가능합니다.
+    print('가나다', end='!')
+    print('라마바', end='!')
+    """result
+    가나다!라마바!"""
   ```
 
 - String Interpolation
-
   - `%-formatting`
+
   - [`str.format()`](https://pyformat.info/)
+
   - [`f-strings`](https://www.python.org/dev/peps/pep-0498/) : 파이썬 3.6 버전 이후에 지원 되는 사항
 
-  ```python
-  # %-formatting
-  # s : string
-  # i : int
-  print('hello, I\'m %s' %name)
-  print('hello, I\'m %s, and I live in %s' %(name, address))
-  """result
-  hello, I'm Dongbin
-  hello, I'm Dongbin, and I live in Jamsil"""
-  
-  # str.format()
-  print('hello, I\'m {}, and I live in {}'.format(name, address))
-  # f-string
-  print(f'hello, I\'m {name}, and I live in {address}')
-  """result
-  hello, I'm Dongbin, and I live in Jamsil"""
-  ```
+    ```python
+    # %-formatting
+    # s : string
+    # i : int
+    print('hello, I\'m %s' %name)
+    print('hello, I\'m %s, and I live in %s' %(name, address))
+    """result
+    hello, I'm Dongbin
+    hello, I'm Dongbin, and I live in Jamsil"""
+    
+    # str.format()
+    print('hello, I\'m {}, and I live in {}'.format(name, address))
+    # f-string
+    print(f'hello, I\'m {name}, and I live in {address}')
+    """result
+    hello, I'm Dongbin, and I live in Jamsil"""
+    ```
 
-  ```python
-  # interpolation 예제 with datetime
-  import datetime
-  today = datetime.datetime.now()
-  print(f'오늘은 {today:%y}년 {today:%m}월 {today:%d}일 {today:%a}day {today.hour}시 {today.minute}분')
-  
-  year = datetime.datetime.now().year
-  month = datetime.datetime.now().month
-  day = datetime.datetime.now().day
-  print(f'오늘은 {year}년 {month}월 {day}일')
-  
-  """result
-  오늘은 19년 07월 15일 Monday 14시 20분
-  오늘은 2019년 7월 15일"""
-  
-  # 수식넣기
-  pi = 3.141592
-  radius = 2
-  print(f'원주율이 {pi}일 때, 반지름이 {radius}인 원의 넓이는 {radius * radius * pi}다.')
-  area = pi * radius
-  print(f'원주율이 {pi}일 때, 반지름이 {radius}인 원의 넓이는 {area}다.')
-  """result
-  원주율이 3.141592일 때, 반지름이 2인 원의 넓이는 12.566368다.
-  원주율이 3.141592일 때, 반지름이 2인 원의 넓이는 6.283184다."""
-  ```
+    ```python
+    # interpolation 예제 with datetime
+    import datetime
+    today = datetime.datetime.now()
+    print(f'오늘은 {today:%y}년 {today:%m}월 {today:%d}일 {today:%a}day {today.hour}시 {today.minute}분')
+    
+    year = datetime.datetime.now().year
+    month = datetime.datetime.now().month
+    day = datetime.datetime.now().day
+    print(f'오늘은 {year}년 {month}월 {day}일')
+    
+    """result
+    오늘은 19년 07월 15일 Monday 14시 20분
+    오늘은 2019년 7월 15일"""
+    
+    # 수식넣기
+    pi = 3.141592
+    radius = 2
+    print(f'원주율이 {pi}일 때, 반지름이 {radius}인 원의 넓이는 {radius * radius * pi}다.')
+    area = pi * radius
+    print(f'원주율이 {pi}일 때, 반지름이 {radius}인 원의 넓이는 {area}다.')
+    """result
+    원주율이 3.141592일 때, 반지름이 2인 원의 넓이는 12.566368다.
+    원주율이 3.141592일 때, 반지름이 2인 원의 넓이는 6.283184다."""
+    ```
 
 ---
 
@@ -610,8 +615,6 @@ keyword.kwlist
   True
   False"""
   ```
-
-  
 
 - **논리 연산자**
 
@@ -691,9 +694,9 @@ keyword.kwlist
 
 - **복합 연산자**
 
-  복합 연산자는 연산과 대입이 함께 이뤄진다. 
+  복합 연산자는 연산과 대입이 함께 진행
 
-  가장 많이 활용되는 경우는 반복문을 통해서 개수를 카운트하거나 할 때 활용된다.
+  가장 많이 활용되는 경우는 반복문을 통해서 개수를 카운트하거나 할 때
 
   | 연산자  | 내용       |
   | ------- | ---------- |
