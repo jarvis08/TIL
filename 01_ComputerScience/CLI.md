@@ -21,6 +21,16 @@
 - Linux의 경우 `sudo` 입력을 통해 관리자 Override가 가능하며,
 
   Windows는 '관리자 권한으로 실행'을 사용
+  
+- terminal에서 jupyter notebook 명령어 단축시키기
+
+  ~/user/students 위치에서 
+
+  - `code ~/.bashrc` 
+  - `alias jn='jupyter notebook'` 기입
+  - terminal > `source ~/.bashrc`
+
+  이후 terminal에서 jn만 작성해도 jupyter notebook 실행
 
 ---
 
@@ -43,6 +53,8 @@
 `touch 문서.txt`: 문서를 생성
 
 `rm 문서.txt`: 문서 삭제
+
+`rm -rf directory/file` : 묻지도 따지지도 않고 해당 directory/file 강제 제거
 
 `mv 현재명 변경명` : 파일명 변경, 위치 이동
 

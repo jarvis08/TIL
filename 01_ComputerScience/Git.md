@@ -50,6 +50,8 @@ $ git checkout 시점
 $ git reset
 $ git reverse
 
+# 현재 연결된 git 확인
+$ git remote -v
 # 현재 디렉토리의 .DS_Store 제거
 $ git rm --cached .DS_Store
 # 모든 remote git repository에서 .DS_Store 찾아서 삭제
