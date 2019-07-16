@@ -3,19 +3,19 @@
 ---
 
 - **Epoch, Iteration, Batch**
-         
-         - `Epoch` : 전체 데이터셋을 훑는 횟수
-         - `Batch` : 전체 데이터셋 중 몇개의 데이터씩 훑을 것인지
-         - `Iteration` : step횟수(백프로퍼게이션해서 수정하는것까지가 1step)
-         
-         i.g., 전체 2000개 데이터 일 때,
-          500의 batch와 4의 iteration(step)이면, 1 epoch.
-         
+  
+     - `Epoch` : 전체 데이터셋을 훑는 횟수
+     - `Batch` : 전체 데이터셋 중 몇개의 데이터씩 훑을 것인지
+     - `Iteration` : step횟수(백프로퍼게이션해서 수정하는것까지가 1step)
+     
+     i.g., 전체 2000개 데이터 일 때, 500의 batch와 4의 iteration(step)이면, 1 epoch.
+     
 - **Kernel**
+     
      : 컴퓨터 운영체계의 가장 중요한 핵심으로써 운영체계의 다른 모든 부분에 여러 가지 기본적인 서비스를 제공한다. 커널은 셸(shell)과 대비될 수 있는데, 셸은 운영체계의 가장 바깥부분에 위치하고 있으면서, 사용자 명령어에 대한 처리를 담당한다. 일반적으로 커널에는 종료된 입출력연산 등 커널의 서비스를 경쟁적으로 요구하는 모든 요청들을 처리하는 [인터럽트](https://terms.naver.com/entry.nhn?docId=782406&ref=y) 처리기와 어떤 프로그램들이 어떤 순서로 커널의 처리시간을 공유할 것인지를 결정하는 스케줄러, 그리고 스케줄이 끝나면 실제로 각 프로세스들에게 컴퓨터의 사용권을 부여하는 수퍼바이저(supervisor) 등이 포함되어 있다.
       또한 커널은 메모리나 저장장치 내에서 운영체계의 주소공간을 관리하고, 이들을 모든 주변장치들과 커널의 서비스들을 사용하는 다른 사용자들에게 고루 나누어주는 메모리관리자를 가지고 있다. 커널의 서비스는 운영체계의 다른 부분이나, 흔히 시스템 호출이라고 알려진 일련의 프로그램 [인터페이스](https://terms.naver.com/entry.nhn?docId=782407&ref=y)들을 통해 요청된다.
-     <https://terms.naver.com/entry.nhn?docId=782920&cid=42111&categoryId=42111>
-
+<https://terms.naver.com/entry.nhn?docId=782920&cid=42111&categoryId=42111>
+     
 - Random initialization
      세타값이 0이면 모두 동일한 값의 hidden layer들로 생성
      <https://blog.naver.com/dreamclouud/221339382795>
@@ -50,6 +50,7 @@
          
               In machine learning, the term "ground truth" refers to the accuracy of the training set's classification  for supervised learning techniques. This is used in statistical models to prove or disprove research hypotheses. The term "ground truthing" refers to the process of gathering the proper objective (provable) data for this test. Compare with gold standard.
              Bayesian spam filtering is a common example of supervised learning. In this system, the      algorithm is manually taught the differences between spam and non-spam. This depends on the ground truth of the messages used to train the algorithm – inaccuracies in the ground truth will correlate to inaccuracies in the resulting spam/non-spam verdicts.
+     
 - **Teacher-forcing**
 
      - 학습 효율적으로 하기 위해 전 output을 이번 input으로 사용
@@ -81,7 +82,7 @@
          
          1. 같은 수준의 정확도일 때 매개변수가 더 적게 필요
          2. 필요 연산의 수를 감소시킴
-         
+     
 - **Placeholder**
 
      - 실제 학습에 사용할 데이터를 저장하며, 학습에 사용
