@@ -18,7 +18,7 @@ ex) Coursera, edX, Udacity(Stanford University), edwith
   
   edX, edwith(한글번역) - CS50(Harvard, Yale)
   
-  edX - CS169, Software Engineering(Berekely)
+  edX - CS169, Software Engineering(UC Berekely)
   
 - **Machine Learning**
   
@@ -27,6 +27,10 @@ ex) Coursera, edX, Udacity(Stanford University), edwith
 - **Python**
 
   edx - Introduction to Computer Science and Programming in Python
+  
+  UC Berkeley(Prof.John DeNero) - SICP의 Python 버전인 CS 61A, CS 61B, CS 61C
+  
+  (서적 - Structure and Interpretation of Computer Programs, SICP)
 
 ---
 

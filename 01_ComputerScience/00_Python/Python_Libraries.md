@@ -97,6 +97,36 @@ os.system('rm example.txt')
 
 ---
 
+## map()
+
+```python
+# a = input()
+# b = a.split(" ")
+# num1 = int(b[0])
+# num2 = int(b[1])
+
+## 위의 네 줄을 생략할 수 있는 map()
+# iterable 한 tuple 형태를 응용
+
+# 8 3 이라고 input을 받아서 사칙연산을 수행하는 예제
+num1, num2 = map(int, input().split(" "))
+print(num1 + num2)
+print(num1 - num2)
+print(num1 * num2)
+print(num1 / num2)
+
+# iterable 하다면 모두 가능하므로 list로 변형해도 가능
+num1, num2 = list(num1, num2 = map(int, input().split(" ")))
+```
+
+
+
+
+
+---
+
+
+
 ## decouple
 
 :: key 암호화시키기

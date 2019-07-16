@@ -52,6 +52,11 @@ $ git reverse
 
 # 현재 연결된 git 확인
 $ git remote -v
+
+# jupyer notebook checkpoints 제거
+$ code .gitignore
+>> 내부 작성 .ipynb_checkpoints
+
 # 현재 디렉토리의 .DS_Store 제거
 $ git rm --cached .DS_Store
 # 모든 remote git repository에서 .DS_Store 찾아서 삭제
@@ -63,4 +68,9 @@ echo .DS_Store >> ~/.gitignore_global
 # 2. git에게 모든 repository에 사용할 것을 선언하기
 git config --global core.excludesfile ~/.gitignore_global
 # 참고자료 - https://stackoverflow.com/questions/18393498/gitignore-all-the-ds-store-files-in-every-folder-and-subfolder
+
+# TIL/50_SSAFY/8ython directory 내부에 .git이 따로 있었으나, 제외하고 다시 TIL의 .git으로 포함시킴
+$ git rm -rf ~/TIL/50_SSAFY/8ython.git
+$ git rm --cached 8ython/
+검색창 :: gitignore.io/api/python
 ```
