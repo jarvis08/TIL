@@ -1,4 +1,6 @@
-for i in range(9):
-    for j in range(5):
-        print('*', end='')
-    print()
+def palindrome(word):
+    backward = word[-1::-1]
+    if word == backward:
+        return True
+    return False
+print(palindrome('nayana'))

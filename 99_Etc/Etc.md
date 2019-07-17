@@ -30,7 +30,8 @@ ex) Coursera, edX, Udacity(Stanford University), edwith
   
   UC Berkeley(Prof.John DeNero) - SICP의 Python 버전인 CS 61A, CS 61B, CS 61C
   
-  (서적 - Structure and Interpretation of Computer Programs, SICP)
+  - CS 61A에서 재귀적인 방법을 많이 활용
+  - 서적 'Structure and Interpretation of Computer Programs' SICP의 파이썬 버전
 
 ---
 

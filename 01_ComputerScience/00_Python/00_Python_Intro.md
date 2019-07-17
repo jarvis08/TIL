@@ -961,19 +961,21 @@
 
     세트는 중괄호`{}`를 통해 만들며, 순서가 없고 **중복된 값이 없다.**
 
+    `set(list)`는 복잡도가 꽤 크다.
+  
     ```python
-    {value1, value2, value3}
+  {value1, value2, value3}
     ```
-
+  
     | 연산자/함수         | 설명   |
     | ------------------- | ------ |
     | a - b               | 차집합 |
     | a \| b `(| : pipe)` | 합집합 |
     | a & b               | 교집합 |
     | a.difference(b)     | 차집합 |
-    | a.union(b)          | 합집합 |
+  | a.union(b)          | 합집합 |
     | a.intersection(b)   | 교집합 |
-
+  
     ```python
     # 차, 합, 교집합
     set_a = {1, 2, 3}
@@ -989,20 +991,20 @@
     l = list(set(l))
     print(l)
     """result
-    [1, 2, 3]"""
+  [1, 2, 3]"""
     ```
 
   - **dictionary**
-
+  
     ```python
-    {Key1:Value1, Key2:Value2, Key3:Value3, ...}
+  {Key1:Value1, Key2:Value2, Key3:Value3, ...}
     ```
-
+  
     - 딕셔너리는 `key`와 `value`가 쌍으로 이뤄져있으며, 궁극의 자료구조입니다.
     - `{}`를 통해 만들며, `dict()`로 만들 수도 있습니다.
-    - `key`는 immutable한 모든 것이 가능하다. (불변값 : string, integer, float, boolean, tuple, range)
+  - `key`는 immutable한 모든 것이 가능하다. (불변값 : string, integer, float, boolean, tuple, range)
     - `value`는 `list`, `dictionary`를 포함한 모든 것이 가능하다.
-
+  
     ```python
     # 선언 방법
     dic_a = {}

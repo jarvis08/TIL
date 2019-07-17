@@ -1,16 +1,42 @@
-# Python
+# Python Standard Libraries
 
 ---
 
 ## String
 
-```python
-print('touch example_{}.txt'.format(i))
-print(f'touch example_{i}.txt')
-print('touch example'+ str(i) + '.txt')
-```
+- `string.replace('변경 전', '변경 후')` : string의 일부를 원하는 글자로 수정
 
-`string.replace('변경 전', '변경 후')` : string의 일부를 원하는 글자로 수정
+  ```python
+  print('touch example_{}.txt'.format(i))
+  print(f'touch example_{i}.txt')
+  print('touch example'+ str(i) + '.txt')
+  ```
+
+## strftime, isoformat
+
+- 날짜/시간을 string으로 변환
+
+  ```python
+  # datetime.datetime 날짜와 시간이 함께 포함되어 있으므로 date 함수 사용
+  from datetime import date, timedelta
+  
+  yesterday = date.today() - timedelta(days=1)
+  print(yesterday)
+  yesterday = yesterday.strftime('20%y%m%d')
+  print(yesterday)
+  """result
+  2019-07-16
+  20190716"""
+  ```
+
+  ```python
+  # isoformat은 %를 사용하지 않아도 되므로
+  from datetime import date
+  
+  yesterday = (date.today() - timedelta(days=1)).isoformat().replace('-', '')
+  ```
+
+  
 
 ---
 
@@ -47,6 +73,21 @@ count = len(set(winner) & set(ur_lotto))
 `sorted([ ])` : list를 오름차순으로 sort
 
 ---
+
+## collections
+
+- 내장 함수이며, 알고리즘 속도 개선을 위해 자주 사용
+- dictionary와 유사하지만, 다른 type
+
+```python
+import collections
+blood_types = ['A', 'B', 'A', 'O', 'AB', 'AB', 'O', 'A', 'B', 'O', 'B', 'AB']
+print(collections.Counter(blood_types))
+"""python
+Counter({'A': 3, 'B': 3, 'O': 3, 'AB': 3})"""
+```
+
+------
 
 ## File r / w / a
 
@@ -89,7 +130,7 @@ os.system('rm example.txt')
 
 ---
 
-## random
+## Random
 
 `random.sample( [], int )` : [ ] 중 int 개 만큼 비복원 추출
 
@@ -97,7 +138,7 @@ os.system('rm example.txt')
 
 ---
 
-## map()
+## map( )
 
 ```python
 # a = input()
@@ -119,32 +160,10 @@ print(num1 / num2)
 num1, num2 = list(num1, num2 = map(int, input().split(" ")))
 ```
 
-
-
-
-
 ---
 
+## math
 
-
-## decouple
-
-:: key 암호화시키기
-
-- directory 안에 `.env` 파일 생성(linux에서는 .으로 시작하면 숨김파일)
-
-- 모두 대문자로 작성
-
-```python
-# .env 파일 내부에 아래와 같이 작성하며, .env파일은 공유되지 않아야한다.
-TELEGRAM_TOKEN = "토큰 정보 기입"
-# 이를 위해 .gitignore 파일을 생성하고, 무시하고자 하는 파일명을 기입
-.env
-```
-
-```python
-# token url 사용할 때
-from ducouple import config
-# token_url을 원래 토큰 값 대신 config('.env에 작성한 token을 넣은 변수명')
-token_url = config('TELEGRAM_TOKEN')
-```
+- `sqrt()` : 루트
+- `floor()` : 버림
+- `ceil()` : 올림
