@@ -1,8 +1,8 @@
-## Now Studying
+## Now Studying.
 
 ---
 
-I am concentrating on studying computer science to understand machine learning better.
+I'm concentrating on studying computer science to understand machine learning better.
 
 - at SSAFY
 
@@ -11,15 +11,11 @@ I am concentrating on studying computer science to understand machine learning b
   - Algorithm
   - Web Programming
 
-- Mathematics for Machine Learning
-
-  Marc Peter Deisenroth, A.Aldo Faisal, Cheng Soon Ong
-
 - Introduction to Algorithms
 
   Thomas H.Cormen, Charles E.Leiserson, Ronald L.Rivest, Clifford Stein
 
-- KUOCW, 최린 교수님, 운영체제
+- KUOCW, 고려대학교 최린 교수님, 운영체제
 
   <http://www.kocw.net/home/cview.do?mty=p&kemId=1194929>
 
@@ -27,18 +23,23 @@ I am concentrating on studying computer science to understand machine learning b
 
 ---
 
-## Not Yet
+## Will Study.
 
 - Books
 
+  - Mathematics for Machine Learning
+
+    Marc Peter Deisenroth, A.Aldo Faisal, Cheng Soon Ong
+    
   - Code, Charles Petzold
-  - Deep Learning from Scratch 2
 
 - Lectures
 
   - CS224N lecture, Stanford University
 
     <https://www.youtube.com/watch?v=8rXD5-xhemo&list=PLoROMvodv4rOhcuXMZkNm7j3fVwBBY42z>
+    
+  - edX - CS50(Harvard, Yale)
 
 - Papers
 
@@ -50,11 +51,9 @@ I am concentrating on studying computer science to understand machine learning b
 
     <https://arxiv.org/pdf/1906.08237.pdf>
 
-    
-
 ---
 
-## Past
+## Past & Again in the Future Someday.
 
 - Books
 
