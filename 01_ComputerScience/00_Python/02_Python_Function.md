@@ -46,18 +46,18 @@
 
 ---
 
-## 인수, Parameter
+## 인자(Parameter) & 인수(Argument)
 
 - 함수의 **인수**
 
-  : 함수는 `인자, parameter` 전달이 가능
+  : 함수는 `인수, argument` 전달이 가능
 
   - 위치 인수
 
-    : 함수는 기본적으로 인수를 위치로 판단
+    : 기본적으로 함수는 인자와 인수를 위치로 판단
 
     ```python
-    # 순서를 바꾸면 다른 값 return
+    # 인자 및 인수의 순서를 바꾸면 다른 값을 return
     def cylinder(r, h):
         return r**2 * h * 3.14
     ```
@@ -90,7 +90,6 @@
 
   ```python
   # print(*object, sep='', end='\n', file=sys.stdout, flush=False)
-  # * : asterisk
   print('첫번째 문장')
   print('두번째 문장', end='_')
   print('세번째 문장', '마지막 문장', sep="/", end="끝!")
@@ -98,8 +97,8 @@
   첫번째 문장
   두번째 문장_세번째 문장/마지막 문장끝!"""
   ```
-
-  ```python
+  
+```python
   # 인자 전달
   def ssafy(name, location='서울')
   	print(f'{name}의 지역은 {location}입니다.')
@@ -112,7 +111,7 @@
   ## keyword argument는 positional argument 보다 뒤쪽에 위치해야함
   ssafy(name='철수', '대전')
   ```
-
+  
 - **가변 인자 리스트**
 
   `print()`처럼 **정해지지 않은 임의의 개수의 인자**를 받기 위해서는 가변인자를 활용
@@ -339,7 +338,7 @@
 
 ---
 
-## URL 편하게 만들기
+## 예제 1. URL 편하게 만들기
 
 - 영진위에서 제공하는 일별 박스오피스 API 서비스 이용하기
 
@@ -384,5 +383,38 @@
   my_url(**api)
   ```
 
-  
+---
+
+## 예제 2. 이진법으로 제곱근의 근사값 구하기
+
+```python
+import math
+def like_sqrt(x):
+    r = x
+    l = float(x / 2)
+    while True:
+        if l ** 2 > x:
+            l = l / 2
+        else:
+            break
+
+    for i in range(50):
+        half = (l+r)/2
+        if half ** 2 > x:
+            r = half
+            continue
+        elif half ** 2 < x:
+            l = half
+            continue
+        break
+    return l, r
+print(like_sqrt(2))
+print('오차 = ', math.sqrt(2) - like_sqrt(2)[0])
+
+"""result
+(1.414213562373095, 1.4142135623730958)
+오차 = 2.220446049250313e-16"""
+```
+
+
 

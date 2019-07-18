@@ -33,6 +33,8 @@ ex) Coursera, edX, Udacity(Stanford University), edwith
   - CS 61A에서 재귀적인 방법을 많이 활용
   - 서적 'Structure and Interpretation of Computer Programs' SICP의 파이썬 버전
 
+- 백준 - 제타 위키에 백준 문제 번호를 치면 답이 나온다
+
 ---
 
 ## MVP (Minimum Viable Product)

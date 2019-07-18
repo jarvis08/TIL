@@ -858,12 +858,20 @@
     (value1, value2)
     ```
 
-    튜플은 리스트와 유사하지만, `()`로 묶어서 표현합니다.
+    - 튜플은 리스트와 유사하지만, `()`로 묶어서 표현
 
-    그리고 tuple은 **수정 불가능(immutable)**하고, **읽을 수 밖에 없습니다.**
+    - **수정 불가능(immutable)**하고, **읽기만 가능**
 
-    직접 사용하는 것보다는 파이썬 내부에서 사용하고 있습니다.
+    - 직접 사용하는 것보다는 파이썬 내부에서 사용
 
+    - tuple끼리 `+` 가능
+  
+    - tuple끼리 복사하면 처음에는 같은 주소값을 갖으나,
+  
+      복사된 tuple에 요소를 추가하는 등의 조작을 하면 다른 주소의 다른 객체로 분리
+  
+      `Binding_python-tutor.png` 참고
+  
     ```python
     x = 3
     y = 5
@@ -872,13 +880,13 @@
     """result : 5"""
     # x, y라고 하는 tuple literal이 바뀐 것이며, tuple 바뀐게 아니다.
     
-    tp = (1, 2, 3, 4, 5)
+  tp = (1, 2, 3, 4, 5)
     tp2 = 1, 2, 3, 4, 5
-    print(tp)
+  print(tp)
     print(tp2)
-    """result
+  """result
     (1, 2, 3, 4, 5)
-    (1, 2, 3, 4, 5)"""
+  (1, 2, 3, 4, 5)"""
     ```
 
   - **range()**
@@ -890,13 +898,13 @@
     > 0부터 n-1까지 값을 가짐
 
     범위 지정 : `range(n, m)`
-
+  
     > n부터 m-1까지 값을 가짐
-
+  
     범위 및 스텝 지정 : `range(n, m, s)`
-
+  
     > n부터 m-1까지 +s만큼 증가한다
-
+  
     ```python
     range_ex = range(0,6)
     list_ex = [0, 1, 2, 3, 4, 5]
@@ -905,23 +913,23 @@
     print(type(range_ex))
     print(type(list(range_ex)) is type(list_ex))
     """result
-    range(0, 6)
+  range(0, 6)
     [0, 1, 2, 3, 4, 5]
-    <class 'range'>
+  <class 'range'>
     True"""
     
     print(list(range(0, -9, -1)))
     """result : [0, -1, -2, -3, -4, -5, -6, -7, -8]"""
     ```
-
+  
   - 시퀀스에 활용할 수 있는 연산자/함수
-
+  
     | operation  | 설명                    |
     | ---------- | ----------------------- |
     | x in s     | containment test        |
     | x not in s | containment test        |
     | s1 + s2    | concatenation           |
-    | s * n      | n번만큼 반복하여 더하기 |
+  | s * n      | n번만큼 반복하여 더하기 |
     | s[i]       | indexing                |
     | s[i:j]     | slicing                 |
     | s[i:j:k]   | k간격으로 slicing       |
@@ -929,7 +937,7 @@
     | min(s)     | 최솟값                  |
     | max(s)     | 최댓값                  |
     | s.count(x) | x의 개수                |
-
+  
     ```python
     # 숫자 0이 6개 있는 list
     [0] * 6
@@ -946,21 +954,21 @@
     
     pal = 'racecar'
     pal == pal[::-1]
-    """result
+  """result
     True"""
-    
+  
     l = [1, 2, 2, 2, 3]
-    l.count(2)
+  l.count(2)
     """result
-    3"""
+  3"""
     ```
-
+  
   - **set**, **dictionary**
-
+  
     세트는 수학에서의 집합과 동일하게 처리 
-
+  
     세트는 중괄호`{}`를 통해 만들며, 순서가 없고 **중복된 값이 없다.**
-
+  
     `set(list)`는 복잡도가 꽤 크다.
   
     ```python
@@ -985,7 +993,7 @@
     """result
     {1, 2}
     {1, 2}"""
-    
+  
     # 중복제거
     l = [1, 2, 2, 2, 3]
     l = list(set(l))
@@ -993,7 +1001,7 @@
     """result
   [1, 2, 3]"""
     ```
-
+  
   - **dictionary**
   
     ```python
@@ -1002,6 +1010,7 @@
   
     - 딕셔너리는 `key`와 `value`가 쌍으로 이뤄져있으며, 궁극의 자료구조입니다.
     - `{}`를 통해 만들며, `dict()`로 만들 수도 있습니다.
+    
   - `key`는 immutable한 모든 것이 가능하다. (불변값 : string, integer, float, boolean, tuple, range)
     - `value`는 `list`, `dictionary`를 포함한 모든 것이 가능하다.
   

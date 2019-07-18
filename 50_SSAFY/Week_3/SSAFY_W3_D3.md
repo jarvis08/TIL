@@ -1,4 +1,4 @@
-# SSAFY_Week3_Day2
+# SSAFY_Week3_Day3
 
  **참고자료** : ./50_SSAFY/8ython/notes/03.function.jpynb
 
