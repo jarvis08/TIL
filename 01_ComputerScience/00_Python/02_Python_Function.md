@@ -110,8 +110,8 @@
   # 불가능
   ## keyword argument는 positional argument 보다 뒤쪽에 위치해야함
   ssafy(name='철수', '대전')
-  ```
-  
+```
+
 - **가변 인자 리스트**
 
   `print()`처럼 **정해지지 않은 임의의 개수의 인자**를 받기 위해서는 가변인자를 활용
@@ -387,27 +387,21 @@
 
 ## 예제 2. 이진법으로 제곱근의 근사값 구하기
 
+- Bisection search
+
 ```python
 import math
-def like_sqrt(x):
-    r = x
-    l = float(x / 2)
-    while True:
-        if l ** 2 > x:
-            l = l / 2
+def my_sqrt(m):
+    x, y = 1, n
+    result = 1
+    while abs(result**2 - n) > 0.0000001:
+        result = (x+y) / 2
+        if result ** 2 < n:
+            x = result
         else:
-            break
+            y = result
+    return result
 
-    for i in range(50):
-        half = (l+r)/2
-        if half ** 2 > x:
-            r = half
-            continue
-        elif half ** 2 < x:
-            l = half
-            continue
-        break
-    return l, r
 print(like_sqrt(2))
 print('오차 = ', math.sqrt(2) - like_sqrt(2)[0])
 
