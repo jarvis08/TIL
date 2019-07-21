@@ -12,6 +12,11 @@
 $ git config --global user.email "cdb921226@gmail.com"
 $ git config --global user.name "jarvis08"
 
+# 로그인 정보 잘 못 입력했을 때
+git credential reject
+protocol=https
+host=github.com
+
 ### Making new repository
 $ cd (master directory)
 $ git init
@@ -74,3 +79,42 @@ $ git rm -rf ~/TIL/50_SSAFY/8ython.git
 $ git rm --cached 8ython/
 검색창 :: gitignore.io/api/python
 ```
+
+- hw_ws dirctory를 Gitlab repository로 옮기기
+
+  ```shell
+  # 이미 origin이 있기 때문에 gitlab을 다시 origin으로 설정해주는 작업을 시작
+  $ git remote add origin https://lab.ssafy.com/mtice/cho_dong_bin.git
+  fatal: remote origin already exists.
+  
+  
+  $ git remote -v
+  origin  https://github.com/jarvis08/hw_ws.git (fetch)
+  origin  https://github.com/jarvis08/hw_ws.git (push)
+  
+  git remote remove origin
+  $ git remote add origin https://lab.ssafy.com/mtice/cho_dong_bin.git
+  
+  $ git remote -v
+  origin  https://lab.ssafy.com/mtice/cho_dong_bin.git (fetch)
+  origin  https://lab.ssafy.com/mtice/cho_dong_bin.git (push)
+  
+  $ git push -u origin master
+  
+  $ git remote add github https://github.com/jarvis08/hw_ws.git
+  $ git remote -v
+  github  https://github.com/jarvis08/hw_ws.git (fetch)
+  github  https://github.com/jarvis08/hw_ws.git (push)
+  origin  https://lab.ssafy.com/mtice/cho_dong_bin.git (fetch)
+  origin  https://lab.ssafy.com/mtice/cho_dong_bin.git (push)
+  
+  # origin을 gitlab으로 교체했기 때문에 origin master는 gitlab
+  $ git push origin master
+  # github이라는 이름으로 추가했기 때문에 github master로 push
+  $ git push github master
+  
+  ```
+
+  ```shell
+  
+  ```
