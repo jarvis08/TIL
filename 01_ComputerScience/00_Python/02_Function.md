@@ -1,4 +1,4 @@
-# Python_Function
+# Function
 
  **참고자료** : ./50_SSAFY/8ython/notes/03.funtion.jpynb
 
@@ -79,15 +79,17 @@
 
 - **키워드 인자, Keyword Arguments**
 
-  : 키워드 인자는 직접적으로 **변수의 이름**으로 **특정 인자**를 전달
+  `**kwargs` : **keyword argument
 
+  : 키워드 인자는 직접적으로 **변수의 이름**으로 **특정 인자**를 전달
+  
   ```python
   def greeting(age, name='john'):
       print(f'{name}은 {age}살입니다.')
       pass
-  greeting(24, name='철수')
+greeting(24, name='철수')
   ```
-
+  
   ```python
   # print(*object, sep='', end='\n', file=sys.stdout, flush=False)
   print('첫번째 문장')
@@ -114,6 +116,8 @@
 
 - **가변 인자 리스트**
 
+  `*args` : *arguments
+
   `print()`처럼 **정해지지 않은 임의의 개수의 인자**를 받기 위해서는 가변인자를 활용
 
   가변인자는 **`tuple` 형태**로 처리가 되며, `*`(asterisk)로 표현
@@ -137,7 +141,9 @@
 
   **주로 `kwagrs`라는 이름**을 사용하며, `**kwargs`를 통해 인자를 받아 처리
 
-  `def func(**kwargs):`
+  - `def func(**kwargs):`
+    - `func(키워드 = 특정 값)` 형태로 함수 호출
+    - `{'키워드' : 특정 값}` 딕셔너리 형태로 함수로 전달
 
   ```python
   def fake_dict(**kwargs):
@@ -574,16 +580,37 @@ print('오차 = ', math.sqrt(2) - like_sqrt(2)[0])
   5.0 0.0 5"""
   ```
 
-- 문자열 덧셈 하기
 
-  #### 문자열 조작 및 반복/조건문 활용[¶](http://localhost:8888/notebooks/problems/problem04.ipynb#문자열-조작-및-반복/조건문-활용)
+- 숫자 패턴
 
-  **문제 풀기 전에 어떻게 풀어야할지 생각부터 해봅시다!**
+  ```python
+  # 다음과 같은 함수 만들기
+  print(pattern(9)):
+  1
+  333
+  55555
+  7777777
+  999999999
+  print(pattern(6))
+  1
+  333
+  55555
+  ```
 
-  > 사람은 덧셈을 할때 뒤에서부터 계산하고, 받아올림을 합니다.
-  >
-  > 문자열 2개를 받아 덧셈을 하여 숫자를 반환하는 함수 `my_sum(num1, num2)`을 만들어보세요.
+  ```python
+  # 일반적인 방법
+  def pattern(n):
+      result = ''
+      for turn in range(1, n+1, 2):
+          result += f'{str(turn) * turn}\n'
+      return result
+  print(pattern(9))
+  print(pattern(6))
+  
+  # lambda 사용
+  pattern = lambda n : "\n".join([str(i)*i for i in range(n+1) if i %2])
+  print(pattern(9))
+  print(pattern(6))
+  ```
 
-  **절대로 return int(num1)+int(num2) 이렇게 풀지 맙시다!!**
-
-  **재귀함수도 사용할 필요 없습니다.**
+  

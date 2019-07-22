@@ -37,7 +37,16 @@ ex) Coursera, edX, Udacity(Stanford University), edwith
 
 - **Block Chain**
 
-  Coursera - Bitcoin and Cryptocurrency Technologies
+  - Coursera - Bitcoin and Cryptocurrency Technologies
+  
+  - Youtube, 3Blue1Brown - Block Chain
+  
+- __Linear Algebra__
+
+  - Youtube, 3Blue1Brown - Linear transmorfation and matrices
+
+  - Youtube, 3Blue1Brown - Vectors what even are they
+  - Youtube, 3Blue1Brown - e, 자연 상수
 
 ---
 
@@ -48,6 +57,15 @@ ex) Coursera, edX, Udacity(Stanford University), edwith
 가장 필요한 기능을 빠르게 구현하여 출시한 후, 계속해서 사용자의 니드를 보완
 
 반대 개념 - 완결성 있는 제품을 장기간에 걸쳐 개발하여 출시
+
+---
+
+## HASH
+
+- `sha256` : Web의 보안 Hash 생성 방법
+  - 2**256의 경우의 수로 랜덤 생성
+- git log를 통해 hash를 확인 가능(sha256 급의 보안은 아님!)
+  - hash로 인해 git 내용의 철자 하나만 바뀌어도 즉각적인 변화 포착
 
 ---
 

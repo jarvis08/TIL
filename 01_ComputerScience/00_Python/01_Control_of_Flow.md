@@ -1,4 +1,4 @@
-# Python_Control-of-Flow
+# Control of Flow
 
  **참고자료** : ./50_SSAFY/8ython/notes/02.control_of_flow.jpynb
 

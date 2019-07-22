@@ -1,4 +1,4 @@
-# SSAFY_Week3_Day4
+# Data Structure
 
  **참고자료** : ./50_SSAFY/8ython/notes/04.data_structure.jpynb
 
@@ -624,6 +624,36 @@ dir('3')
     - 길이가 긴 것을 맞춰서 할 수도 있지만, 사용할 일이 없다.
   - `filter(function, iterable)`
     - iterable에서 function의 반환된 결과가 참인 것들만 구성하여 반환한다.
+  
+  ```python
+  # 2진수인지(0과 1로만 되어있는가) 판별하기
+  num = input('input = ')
+  num_set = set(num)
+  binary = ['0', '1']
+  for n in num_set:
+      if n not in binary:
+          print('이진수씨가 아닙니다.')
+          break
+  else:
+      print('이진수씨가 맞습니다.')
+  
+  # 송치원님
+  num = input()
+  if num.isdigit():
+      # 집합에 속하는지 부등호로 확인 가능
+      if set(num) <= {'0','1'}:
+          print("2진수가 맞습니다")
+      else:
+          print("2진수가 아닙니다")
+  else:
+      print("숫자가 아닙니다")
+      
+  # 이건희님
+  if set(num).issubset({'0','1'}):
+          print("2진수다")
+      else:
+          print("2진수 아니다.")
+  ```
 
 ### Set Comprehension
 

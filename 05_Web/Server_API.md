@@ -191,7 +191,16 @@ def hello_person(person):
   dynamic directory(app.py) > templates directory (htmls)
 
   app.py는 templates directory 안의 html template을 이용하여 요청에 응답
+  
+- `get_json()`
 
+  parameter 중 `silent` 파라미터는 JSON parsing fail 에 대해서 None 처리 여부를 설정 가능
+
+  기본값을 False인데, 명시적으로 True 로 주면 호출시 에러가 나지 않고 None을 리턴
+
+  ```python
+  print request.get_json(silent=True) 
+  ```
 
 ---
 
