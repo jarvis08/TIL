@@ -114,7 +114,3 @@ $ git rm --cached 8ython/
   $ git push github master
   
   ```
-
-  ```shell
-  
-  ```

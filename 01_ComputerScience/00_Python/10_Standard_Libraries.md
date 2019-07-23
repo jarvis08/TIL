@@ -12,7 +12,7 @@
   print('touch example'+ str(i) + '.txt')
   ```
   
-- `string.isdigit()` : 해당 문자열이 숫자인지 아닌지 판별
+- `string.isdigit()` : 문자열이 양의 정수로만 구성되어 있는지 판별
 
   ```python
   # input()은 모든 입력을 string으로 반화
@@ -22,6 +22,8 @@
   else:
       print('문자입니다.')
   ```
+
+- `string.isalpha()` : 문자열의 내용이 알파벳으로만 구성되어 있는지 판별
 
 - `.strftime()` : 날짜/시간 format에서 날짜/시간 요소만 추출
 
@@ -51,29 +53,49 @@
 
 ## list
 
-`list.reverse()` : list 원본의 순서를 역으로 변환
+- `list.sort()` : 원본을 오름차순으로 정렬
+- `list.sort(reverse=True)` : 원본을 내림차순으로 정렬
+- `sorted(list)` : 오름차순한 결과를 반환
+- `list.reverse()` : 원본의 순서를 역으로 변환
+- `reversed(list)` : 역순으로 변환한 list를 반환
+- `list.count(element)` : list 내의 element 개수를 반환
 
 ---
 
 ## dictionary
 
-`list(dic.keys())` : dictionary의 key 값들을 list로 변환
+- `dic.keys()` : key 값들의 나열을 dictionary의 특수한 자료형으로 나타내어 반환
 
-`dic.get(key).get(key)` : 해당 key의 value를 반환, 없을 시 error 대신 None 반환
+- `dic.values()` : value 값들의 나열을 dictionary의 특수한 자료형으로 나타내어 반환
+
+- `dic.items()` : (value, key) 값들의 나열을 dictionary의 특수한 자료형으로 나타내어 반환
+
+- `dict.get(key)` : dict[key] 의 결과값을 반환하며, 없을 시 error가 아닌 None을 반환
+
+  ```python
+  dictionary = {'first' : {'second' : 3}}
+  print(dictionary.get('first').get('second'))
+  """result
+  3"""
+  ```
 
 ---
 
 ## set
 
-: set은 중복 요소가 없으며, 오름차순
-
-`set( list )` : list를 집합으로 전환
+- `set( list )` : list를 집합으로 전환
 
 ```python
 count = len(set(winner) & set(ur_lotto))
 # winner list와 ur_lotto list를 비교할 때
 # for문을 이용하는 것 보다 빠른 속도로 같은 요소의 개수를 구함
 ```
+
+---
+
+## class
+
+- `isinstance(object, class/tuple)` : object가 class/tuple의 instance인지 판별
 
 ---
 
@@ -86,42 +108,49 @@ count = len(set(winner) & set(ur_lotto))
 
 ## file 'r / w / a'
 
-`with open('파일명', '파일 조작 유형', encoding='utf-8') as f:`
-
-`f.readlines()` : 모든 문장 읽기
-
-`f.readline()` : 한 줄 읽기
-
-`f.write()` : 한 번 쓰기
-
-`f.writelines()` : 모두 쓰기
-
+- `with open('파일명', '파일 조작 유형', encoding='utf-8') as f:``
+- `f.readline()` : 한 줄 읽기
+- `f.readlines()` : 모든 문장 읽기
+- `f.write()` : 한 번 쓰기
+- `f.writelines()` : 모두 쓰기
 - 파일 조작 3가지
-
-  `'r'`: read
-
-  `'w'`: write
-
-  `'a'`: append
+  - `'r'`: read
+  - `'w'`: write
+  - `'a'`: append
 
 ---
 
 ## os
 
-`os.listdir()`: 현재 디렉토리 내부의 모든 파일, 디렉토리를 리스트에 저장
+- `os.system('CLI commands')`: CLI에서 사용하는 명령어를 그대로 사용
 
-`os.rename(현재 파일명, 바꿀 파일명)`: 파일명 변경
+  ```python
+  os.system('touch example.txt')
+  # example.txt 파일 생성
+  os.system('rm example.txt')
+  # example.txt 파일 제거
+  ```
 
-`os.system()`: Terminal에서 사용하는 명령어 사용
+- `os.listdir()`: 현재 디렉토리 내부의 모든 파일, 디렉토리를 리스트에 저장
+- `os.rename(현재 파일명, 바꿀 파일명)`: 파일명 변경
+- `os.join(path, file_name)` : path 결합
+- : 
 
-```shell
-os.system('touch example.txt')
-# example.txt 파일 생성
-os.system('rm example.txt')
-# example.txt 파일 제거
-```
-
-`os.chdir()`: 작업 폴더를 현 위치에서 해당 위치로 옮김
+| code                                                         | info                                                         | output                                   |
+| ------------------------------------------------------------ | ------------------------------------------------------------ | ---------------------------------------- |
+| `os.getcwd()`                                                | 현재 작업 폴더                                               | "C:/Temp"                                |
+| `os.chdir()`                                                 | 작업 디렉토리를 현 위치에서 해당 위치로 옮김                 |                                          |
+| `os.path.abspath("./Scripts")`                               | 특정 경로에 대해 절대 경로 얻기                              | "C:/Python35/Scripts"                    |
+| `os.path.dirname("C:/Python35/Scripts/pip.exe")`             | 경로 중 디렉토리명 얻기                                      | "C:/Python35/Scripts"                    |
+| `if os.path.isfile("C:/Python35/Scripts/pip.exe"):    print(os.path.basename("C:/Python35/Scripts/pip.exe"))` | 경로 중 파일명만 얻기                                        | "pip.exe"                                |
+| `dir, file = os.path.split("C:/Python35/Scripts/pip.exe")`   | 경로 중 디렉토리명과 파일명을 나누어 얻기                    |                                          |
+| `"C:\Python35\Scripts\pip.exe".split(os.path.sep)`           | 파일 각 경로를 나눠 리스트로 리턴하기 os.path.sep은 OS별 경로 분리자 | ['C:', 'Python35', 'Scripts', 'pip.exe'] |
+| `os.path.join('C:\Tmp', 'a', 'b')`                           | 경로를 병합하여 새 경로 생성                                 | "C:\Tmp\a\b"                             |
+| `os.listdir("C:\Python35")`                                  | 디렉토리 안의 파일/서브디렉토리 리스트                       |                                          |
+| `os.path.exists("C:\Python35")`                              | 파일 혹은 디렉토리 경로가 존재하는지 체크하기                |                                          |
+| `os.path.isdir("C:\Python35")`                               | 디렉토리 경로가 존재하는지 체크하기                          |                                          |
+| `os.path.isfile("C:\Python35\python.exe")`                   | 파일 경로가 존재하는지 체크하기                              |                                          |
+| `os.path.getsize("C:\Python35\python.exe")`                  | 파일의 크기                                                  |                                          |
 
 ---
 
@@ -147,9 +176,10 @@ sys.path
 
 ---
 
-## magic method
+## Special Method, Magic Method
 
-: 내가 제작한 modul일 지라도, python이 알아서 추가
+- `__method__` 와 같은 형태로 underscore가 두개씩 양 옆에 붙은 method를 의미
+- Built-in  Method이며, 기본적으로 python에서 제공
 
 ```python
 from myPackage.math.formula import pi
@@ -475,4 +505,5 @@ print(collections.Counter(blood_types))
 Counter({'A': 3, 'B': 3, 'O': 3, 'AB': 3})"""
 ```
 
-------
+---
+
