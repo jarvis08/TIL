@@ -134,3 +134,15 @@ https://www.webfx.com/tools/emoji-cheat-sheet/
 `:clap:` : :clap:
 
 `:fu:` : :fu:
+
+### Language :	Python	/	C++	/	C
+
+Project Experience :	True	/	False	/	False
+
+### OS :	Windows	/	Linux	/	OS X
+
+Project Experience :	True	/	True	/	False
+
+### DL Framework :	Tensorflow	/	Pytorch
+
+Project Experience :	True	/	False
