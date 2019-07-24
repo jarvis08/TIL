@@ -1,4 +1,4 @@
-# SSAFY_Week4_Day1
+# SSAFY Week4 Day1
 
  **참고자료** : ./50_SSAFY/8ython/notes/05.module.ipynb
 

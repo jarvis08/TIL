@@ -134,7 +134,6 @@ count = len(set(winner) & set(ur_lotto))
 - `os.listdir()`: 현재 디렉토리 내부의 모든 파일, 디렉토리를 리스트에 저장
 - `os.rename(현재 파일명, 바꿀 파일명)`: 파일명 변경
 - `os.join(path, file_name)` : path 결합
-- : 
 
 | code                                                         | info                                                         | output                                   |
 | ------------------------------------------------------------ | ------------------------------------------------------------ | ---------------------------------------- |
@@ -506,4 +505,23 @@ Counter({'A': 3, 'B': 3, 'O': 3, 'AB': 3})"""
 ```
 
 ---
+
+## turtle
+
+- 그림그리는 데에 사용
+
+```python
+# 어느 금손의 코드
+import turtle
+
+colors = ['red', 'purple', 'blue', 'green', 'orange', 'yellow']
+t = turtle.Pen()
+#AbhijithPrakash
+turtle.bgcolor('black')
+for x in range(360): #code By ABHIJITHPRAKASH
+   t.pencolor(colors[x%6])
+   t.width(x/100 + 1)
+   t.forward(x)
+   t.left(59)
+```
 

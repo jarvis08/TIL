@@ -1,4 +1,6 @@
-# SSAFY_Week2_DAY4
+# SSAFY Week2 Day4
+
+---
 
 - Static Page
 

@@ -505,32 +505,212 @@
 
     instance object가 소멸되는 과정에서 호출되는 함수
 
-  ```python
-  def __init__(self):
-      print('생성될 때 자동으로 호출되는 메서드입니다.')
-  
-  def __del__(self):
-      print('소멸될 때 자동으로 호출되는 메서드입니다.')
-  ```
+    ```python
+    def __init__(self):
+        print('생성될 때 자동으로 호출되는 메서드입니다.')
+    
+    def __del__(self):
+        print('소멸될 때 자동으로 호출되는 메서드입니다.')
+    ```
 
-  ```python
-  class Person:
-      num_people = 0
-      name = ' '
-      
-      def __init__(self, name):
-          Person.num_people += 1
-          self.num_people += 1
-          self.name = name
+    ```python
+    class Person:
+        num_people = 0
+        name = ' '
+        
+        def __init__(self, name):
+            Person.num_people += 1
+            self.num_people += 1
+            self.name = name
+    
+    p1 = Person('조동빈')
+    print(p1.num_people)
+    print(p1.name)
+    print(Person.num_people)
+    print(Person.name)
+    """result
+    2
+    조동빈
+    1
+     """
+    ```
   
-  p1 = Person('조동빈')
-  print(p1.num_people)
-  print(p1.name)
-  print(Person.num_people)
-  print(Person.name)
-  """result
-  2
-  조동빈
-  1
-   """
-  ```
+    ```python
+    class Person:
+        def __init__(self, name, age):
+            self.name = name
+            self.age = age
+    
+        def __del__(self):
+            print(f'{self.name} 꿱')
+            
+        def __str__(self):
+            """객체가 표현될 때 쓰이는 문자열"""
+            return f'{self.name} - {self.age}'
+    
+    dongbin = Person('Dongbin', 28)
+    ken = Person('Ken', 28)
+    print(f'{dongbin}, {ken}')
+    del dongbin
+    del ken
+    """result
+    Dongbin - 28, Ken - 28
+    Dongbin 꿱
+    Ken 꿱"""
+    ```
+  
+    ------
+  
+  - OOP_Exercise_Stack구현
+  
+    [Stack](https://ko.wikipedia.org/wiki/스택) : LIFO(Last in First Out)으로 구조화된 자료구조
+  
+    1. `empty()`: 스택이 비었다면 True을 주고, 그렇지 않다면 False가 된다.
+    2. `top()`: 스택의 가장 마지막 데이터를 넘겨준다. 스택이 비었다면 None을 리턴한다.
+    3. `pop()`: 스택의 가장 마지막 데이터의 값을 넘겨주고, 해당 데이터를 삭제한다. 스택이 비었다면 None을 리턴한다.
+    4. `push()`: 스택의 가장 마지막 데이터 뒤에 값을 추가한다. 리턴 값은 없다.
+  
+    ```python
+    class Stack:
+        def __init__(self):
+            self.data = []
+        
+        def push(self, n):
+            self.data.append(n)
+        
+        def empty(self):
+            # if self.data:
+            #    return False
+            # return True
+            return not bool(self.data)
+            
+        
+        def top(self):
+            if self.data:
+                return self.data[-1]
+            # 함후가 아무런 return을 하지 않으면 알아서 None 처리하므로,
+            # return None 필요 없다
+        
+        def pop(self):
+            if self.data:
+                last = self.data[-1]
+                del self.data[-1]
+                return last
+        
+        def __repr__(self):
+            return f'{self.data}'
+    
+    stack = Stack()
+    print(stack.empty())
+    stack.push(1)
+    print(stack.empty())
+    stack.push(2)
+    stack.push(3)
+    print(stack)
+    stack.pop()
+    print(stack.top())
+    
+    """result
+    True
+    False
+    [1, 2, 3]
+    2"""
+    ```
+  
+  - OOP_Exercise_PokeMon
+  
+    모든 피카츄는 다음과 같은 속성을 갖습니다.
+  
+    - `name` : 이름
+    - `level` : 레벨
+      - 레벨은 시작할 때 모두 5 입니다.
+    - `hp` : 체력
+      - 체력은 `level` * 20 입니다.
+    - `exp` : 경험치
+      - 상대방을 쓰러뜨리면 상대방 `level` * 15 를 획득합니다.
+      - 경험치는 `level` * 100 이 되면, 레벨이 하나 올라가고 0부터 추가 됩니다.
+  
+    모든 피카츄는 다음과 같은 행동(메서드)을 할 수 있습니다.
+  
+    - `bark()`: 울기. `'pikachu'` 를 출력합니다.
+    - `body_attack()`: 몸통박치기. 상대방의 hp 를 내 `level` * 5 만큼 차감합니다.
+    - `thousand_volt()`: 십만볼트. 상대방의 hp 를 내 `level` * 7 만큼 차감합니다.
+  
+    ```python
+    # 아래에 코드를 작성해주세요.
+    class Pokemon:
+        def __init__(self, name):
+            self.name = name
+            self.level = 5
+            self.hp = self.level * 5
+            self.exp = 0
+            self.alive = True
+        
+        def bark(self):
+            print(f'{self.name} ::\t{self.name}!')
+        
+        def level_up(self):
+            if self.exp >= 100:
+                self.level += 1
+                self.exp -= 100
+                print(f'Command ::\tLevel up!!, Lv.{self.level}\n')
+        
+        def body_attack(self, enemy):
+            print(f'{self.name} ::\tpika!')
+            print(f'Command ::\t{self.name} attacked {enemy.name} with body attack!\n')
+            enemy.hp -= self.level * 5
+            if enemy.hp <= 0:
+                self.exp += enemy.level * 15
+                enemy.die()
+                self.level_up()
+            
+        def thousand_volt(self, enemy):
+            print(f'{self.name} ::\tpika~ chu~~~!')
+            print(f'Command ::\t{self.name} attacked {enemy.name} with thousand volt!\n')
+            enemy.hp -= self.level * 7
+            if enemy.hp <= 0:
+                self.exp += enemy.level * 15
+                enemy.die()
+                self.level_up()
+        
+        def die(self):
+            self.alive = False
+            del self
+        
+        def __del__(self):
+            print(f'Command ::\t{self.name} is Dead\n')
+        
+        def __repr__(self):
+            if self.alive:
+                return f'{self.name}\t(Lv.{self.level},\texp.{self.exp},\thp.{self.hp})'
+            return f'{self.name}\t(Lv.{self.level},\texp.{self.exp},\tDEAD)'
+    pika = Pokemon('Pikacu')
+    gugu = Pokemon('Gugu')
+    kobuk = Pokemon('Kobugi')
+    pika.bark()
+    pika.body_attack(gugu)
+    pika.thousand_volt(gugu)
+    pika.thousand_volt(kobuk)
+    print(pika)
+    print(gugu)
+    print(kobuk)
+    
+    """result
+    Pikacu ::	Pikacu!
+    Pikacu ::	pika!
+    Command ::	Pikacu attacked Gugu with body attack!
+    
+    Pikacu ::	pika~ chu~~~!
+    Command ::	Pikacu attacked Gugu with thousand volt!
+    
+    Command ::	Level up!!, Lv.6
+    
+    Pikacu ::	pika~ chu~~~!
+    Command ::	Pikacu attacked Kobugi with thousand volt!
+    
+    Command ::	Level up!!, Lv.7
+    
+    Pikacu	(Lv.7,	exp.25,	hp.25)
+    Gugu	(Lv.5,	exp.0,	DEAD)
+    Kobugi	(Lv.5,	exp.0,	DEAD)"""
+    ```

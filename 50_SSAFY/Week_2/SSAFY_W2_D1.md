@@ -1,4 +1,6 @@
-# SSAFY_Week2_Day1
+# SSAFY Week2 Day1
+
+---
 
 ## Markdown Language
 

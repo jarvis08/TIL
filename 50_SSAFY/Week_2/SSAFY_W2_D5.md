@@ -1,4 +1,4 @@
-# SSAFY_Week2_DAY5
+# SSAFY Week2 Day5
 
 ---
 

@@ -1,4 +1,4 @@
-# SSAFY_Week3_Day2
+# SSAFY Week3 Day2
 
  **참고자료** : ./50_SSAFY/8ython/notes/02.control_of_flow.jpynb
 
