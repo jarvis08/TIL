@@ -1,6 +1,6 @@
 # SSAFY_Week4_Day2
 
- **참고자료** : ./50_SSAFY/8ython/notes/06.errors.ipynb
+ **참고자료** : ./50_SSAFY/8ython/notes/07.OOP_basic.ipynb
 
 ---
 
@@ -513,6 +513,7 @@
           self.data = []
       
       def __repr__(self):
+          """객체가 표현될 때 쓰이는 문자열"""
           return f'내 리스트에는 {self.data} 이 담겨있다.'  
       
       
