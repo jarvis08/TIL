@@ -153,7 +153,23 @@ count = len(set(winner) & set(ur_lotto))
 
 ---
 
-## library path
+- `filter(function, iterable)`
+
+  function에 의해 처리되는 각각의 요소에 대해 Boolean 값을 반환
+
+  - `True` : 유지
+  - `False` : 제거
+
+  ```python
+  foo = [2, 9, 27, 3, 4, 5]
+  print(list(filter(lambda x: x % 3 == 0, foo)))
+  """result
+  [9, 27, 3]"""
+  ```
+
+---
+
+## sys
 
 ```python
 # 현재 directory를 시작으로,
@@ -379,6 +395,16 @@ num1, num2 = list(num1, num2 = map(int, input().split(" ")))
       writer.writerow({'name':'john', 'major':'cs'})
       writer.writerow({'name':'dongbin', 'major':'ie'})
   ```
+  
+  ```python
+  # csv Reader
+  with open('boxoffice.csv', 'r', encoding='utf-8') as f:
+      # reader instance 생성
+      reader = csv.DictReader(f)
+      # reader를 이용하여 movieCd 열의 data를 parse
+      for column in reader:
+          movieCds.append(column['movieCd'])
+  ```
 
 ---
 
@@ -494,34 +520,43 @@ def my_url(key, targetDt=None):
 ## collections
 
 - 내장 함수이며, 알고리즘 속도 개선을 위해 자주 사용
+
 - dictionary와 유사하지만, 다른 type
 
-```python
-import collections
-blood_types = ['A', 'B', 'A', 'O', 'AB', 'AB', 'O', 'A', 'B', 'O', 'B', 'AB']
-print(collections.Counter(blood_types))
-"""python
-Counter({'A': 3, 'B': 3, 'O': 3, 'AB': 3})"""
-```
+  ```python
+  import collections
+  blood_types = ['A', 'B', 'A', 'O', 'AB', 'AB', 'O', 'A', 'B', 'O', 'B', 'AB']
+  print(collections.Counter(blood_types))
+  """python
+  Counter({'A': 3, 'B': 3, 'O': 3, 'AB': 3})"""
+  ```
+
+- dictionary 정렬하기
+
+  ```python
+  import collections
+  order_dict = collections.OrderedDict(dict)
+  ```
+
 
 ---
 
-## turtle
+## functools
 
-- 그림그리는 데에 사용
+- `functools.reduce(function, iterable, initializer=None)`
 
-```python
-# 어느 금손의 코드
-import turtle
+  function을 통해 iterable을 하나의 값으로 줄인다.
 
-colors = ['red', 'purple', 'blue', 'green', 'orange', 'yellow']
-t = turtle.Pen()
-#AbhijithPrakash
-turtle.bgcolor('black')
-for x in range(360): #code By ABHIJITHPRAKASH
-   t.pencolor(colors[x%6])
-   t.width(x/100 + 1)
-   t.forward(x)
-   t.left(59)
-```
+  initializer가 주어지면 첫 번째 인자로 추가
 
+  ```python
+  from functools import reduce
+  reduce(function, [1, 2, 3, 4, 5])
+  1. reduce(function, [function(1, 2), 3, 4, 5])
+  2. reduce(function, [function(function(1,2), 3), 4, 5]
+  ...
+  ```
+
+  
+
+  

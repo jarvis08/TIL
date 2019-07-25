@@ -499,6 +499,28 @@ dir('3')
   ```
 
   ---
+  
+- dict, list에서 value 값 중 최대값, 최대 빈도수 찾기
+
+  ```python
+  dic = {'감자':2, '포도':3}
+  # key 값 중
+  max_k_value = max(dic.items(), key=lambda x: x[0])
+  """result
+  감자, 포도"""
+  # value 값 중
+  max_v_value = max(dic.items(), key=lambda x: x[1])
+  """result
+  3"""
+  
+  # list 최대 빈도수 구하기
+  l = [10, 10, 30, 30, 30]
+  max_count = max(l, key=lambda x: l.count(x))
+  """result
+  max_count = 3"""
+  ```
+
+  ---
 
 ### Dictionary Comprehension
 
