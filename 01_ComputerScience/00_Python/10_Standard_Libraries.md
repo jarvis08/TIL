@@ -132,8 +132,18 @@ count = len(set(winner) & set(ur_lotto))
   ```
 
 - `os.listdir()`: 현재 디렉토리 내부의 모든 파일, 디렉토리를 리스트에 저장
+
 - `os.rename(현재 파일명, 바꿀 파일명)`: 파일명 변경
+
 - `os.join(path, file_name)` : path 결합
+
+- 상위 directory로 거슬러 올라가기
+
+  ```python
+  import sys
+  # 한 단계 위의 directory file을 사용하고 싶을 때
+  sys.path.append(os.path.dirname(os.path.abspath(os.path.dirname(__file__))))
+  ```
 
 | code                                                         | info                                                         | output                                   |
 | ------------------------------------------------------------ | ------------------------------------------------------------ | ---------------------------------------- |
@@ -538,7 +548,6 @@ def my_url(key, targetDt=None):
   order_dict = collections.OrderedDict(dict)
   ```
 
-
 ---
 
 ## functools
@@ -557,6 +566,16 @@ def my_url(key, targetDt=None):
   ...
   ```
 
-  
+---
+
+## time
+
+- 시간 지연
+
+  ```python
+  from time import sleep
+  # 5초 지연
+  sleep(5)
+  ```
 
   

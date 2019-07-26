@@ -15,8 +15,8 @@ base = 'http://www.kobis.or.kr/kobisopenapi/webservice/rest/movie/searchMovieInf
 movieCds = []
 with open('boxoffice.csv', 'r', encoding='utf-8') as f:
     reader = csv.DictReader(f)
-    for column in reader:
-        movieCds.append(column['movieCd'])
+    for row in reader:
+        movieCds.append(row['movieCd'])
 # movieCds = ['20196309', '20183867']
 movies = []
 
@@ -50,7 +50,6 @@ for movieCd in movieCds:
         directors.append(response.get('movieInfoResult').get('movieInfo').get('directors')[i].get('peopleNm'))
     movie['peopleNm'] = directors
 
-    # 모든 영화 리스트에 영화 내용을 저장
     movies.append(movie)
 
 # make file and write header

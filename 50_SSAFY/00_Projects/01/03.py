@@ -15,43 +15,39 @@ base = 'http://www.kobis.or.kr/kobisopenapi/webservice/rest/people/searchPeopleL
 peopleNms = []
 with open('movie.csv', 'r', encoding='utf-8') as f:
     reader = csv.DictReader(f)
-    for column in reader:
-        director = column['peopleNm'].replace("'", '').replace('[', '').replace(']', '')
+    for row in reader:
+        director = row['peopleNm'].replace("'", '').replace('[', '').replace(']', '')
         if ',' in director:
             directors = director.split(',')
             for i in range(len(directors)):
                 peopleNms.append(directors[i])
         else:
             peopleNms.append(director)
-print(peopleNms)
-
 
 # parsing director info with api
 directors = []
 for name in peopleNms:
-    print(name)
     url = f'{base}?key={kobis_token}&peopleNm={name}'
     response = requests.get(url).json()
-    #pprint(response)
-    peopleCd = response.get('peopleListResult').get('peopleList')[0].get('peopleCd')
-    peopleNm = name
-    repRoleNm = response.get('peopleListResult').get('peopleList')[1].get('peopleCd')
-    filmoNames = response.get('peopleListResult').get('peopleList')[0].get('peopleCd')
-# people = []
+    # pprint(response)
+    # for문 하나에 peopleCd, rep, filmo 포함
+    for i in range(len(response.get('peopleListResult').get('peopleList'))):
+        director = dict()
+        director['peopleCd'] = response.get('peopleListResult').get('peopleList')[i].get('peopleCd')
+        director['peopleNm'] = name
+        director['repRoleNm'] = response.get('peopleListResult').get('peopleList')[i].get('repRoleNm')
+        director['filmoNames'] = response.get('peopleListResult').get('peopleList')[i].get('filmoNames')
+        directors.append(director)
 
-# response.get('movieInfoResult').get('movieInfo').get('directors')[i].get('peopleNm')
+# make file and write header
+with open('director.csv', 'w', encoding='utf-8', newline='') as f:
+    fieldnames = ['peopleCd', 'peopleNm', 'repRoleNm', 'filmoNames']
+    writer = csv.DictWriter(f, fieldnames=fieldnames)
+    writer.writeheader()
 
-# movies.append(movie)
-
-# # make file and write header
-# with open('director.csv', 'w', encoding='utf-8', newline='') as f:
-#     fieldnames = ['movieCd', 'movieNm', 'movieNmEn', 'movieNmOg', 'watchGradeNm', 'openDt', 'showTm', 'genreNm', 'peopleNm']
-#     writer = csv.DictWriter(f, fieldnames=fieldnames)
-#     writer.writeheader()
-
-# # data parsing
-# for movie in movies:
-#     with open('director.csv', 'a', encoding='utf-8', newline='') as f:
-#         fieldnames = ['movieCd', 'movieNm', 'movieNmEn', 'movieNmOg', 'watchGradeNm', 'openDt', 'showTm', 'genreNm', 'peopleNm']
-#         writer = csv.DictWriter(f, fieldnames=fieldnames)
-#         writer.writerow(movie)
+# data parsing
+for director in directors:
+    with open('director.csv', 'a', encoding='utf-8', newline='') as f:
+        fieldnames = ['peopleCd', 'peopleNm', 'repRoleNm', 'filmoNames']
+        writer = csv.DictWriter(f, fieldnames=fieldnames)
+        writer.writerow(director)

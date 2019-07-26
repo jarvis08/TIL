@@ -21,3 +21,19 @@
 
 ---
 
+## RFP List, 명세서
+
+- 제안 요청서(RFP, request for proposal)
+
+- 요구사항 명세서(SRS, Software Requirements Specification)
+  - 기능 명세 - FUNCTIONAL SPECIFICATION
+
+    완전히 사용자 관점에서 제품이 어떻게 동작할지를 기술
+
+    기능에 대해 이야기하고, 화면, 메뉴, 대화상자와 같은 사용자 인터페이스 부품을 명세
+
+  - 기술 명세 - TECHNICAL SPECIFICATION
+
+    프로그램 내부 구현을 기술
+
+    자료구조와 관계형 데이터베이스 모델과 프로그래밍 언어, 도구, 알고리즘 선택과 같은 항목
