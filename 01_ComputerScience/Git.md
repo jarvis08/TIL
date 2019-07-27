@@ -54,12 +54,35 @@
    $ git add file_name
    $ git add .
    
+   # add 취소, unstage
+   $ git reset HEAD 파일명
+   # add 전체 취소
+   $ git reset HEAD
+   
    # Staging Area - commit
    # -m : with message
    $ git commit -m "commit message"
    # add되지 않은 것 까지, git status 상에 나오는 변화된 모든 내용을 commit
    $ git commit -a
    
+   # [방법 1] commit을 취소하고 해당 파일들은 staged 상태로 워킹 디렉터리에 보존
+   $ git reset --soft HEAD^
+   # [방법 2] commit을 취소하고 해당 파일들은 unstaged 상태로 워킹 디렉터리에 보존
+   $ git reset --mixed HEAD^ // 기본 옵션
+   $ git reset HEAD^ // 위와 동일
+   $ git reset HEAD~2 // 마지막 2개의 commit을 취소
+   # [방법 3] commit을 취소하고 해당 파일들은 unstaged 상태로 워킹 디렉터리에서 삭제
+   $ git reset --hard HEAD^
+   
+   # commit message 변경
+   // [방법 1] commit을 취소하고 해당 파일들은 staged 상태로 워킹 디렉터리에 보존
+   $ git reset --soft HEAD^
+   // [방법 2] commit을 취소하고 해당 파일들은 unstaged 상태로 워킹 디렉터리에 보존
+   $ git reset --mixed HEAD^ // 기본 옵션
+   $ git reset HEAD^ // 위와 동일
+   $ git reset HEAD~2 // 마지막 2개의 commit을 취소
+   // [방법 3] commit을 취소하고 해당 파일들은 unstaged 상태로 워킹 디렉터리에서 삭제
+   $ git reset --hard HEAD^
    
    # remote repository에 적용하기
    $ git push -u origin master
@@ -84,6 +107,23 @@
    $ git reset --hard 'log의 commit hash code'
    $ git reverse
    ```
+
+- TIP git reset 명령은 아래의 옵션과 관련해서 주의하여 사용해야 한다.
+
+  - reset 옵션
+    –soft : index 보존(add한 상태, staged 상태), 워킹 디렉터리의 파일 보존. 즉 모두 보존.
+    –mixed : index 취소(add하기 전 상태, unstaged 상태), 워킹 디렉터리의 파일 보존 (기본 옵션)
+    –hard : index 취소(add하기 전 상태, unstaged 상태), 워킹 디렉터리의 파일 삭제. 즉 모두 취소.
+
+- TIP 만약 워킹 디렉터리를 원격 저장소의 마지막 commit 상태로 되돌리고 싶으면, 아래의 명령어를 사용한다.
+  단, 이 명령을 사용하면 원격 저장소에 있는 마지막 commit 이후의 워킹 디렉터리와 add했던 파일들이 모두 사라지므로 주의해야 한다.
+
+  ```shell
+  # 워킹 디렉터리를 원격 저장소의 마지막 commit 상태로 되돌린다.
+  $ git reset --hard HEAD
+  ```
+
+  https://gmlwjd9405.github.io/2018/05/25/git-add-cancle.html
 
 ---
 
