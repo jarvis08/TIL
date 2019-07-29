@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <h1>프로그래밍 교육</h1>
+  <!-- section을 부여하여, 글씨 클릭시 해당하는 본문 위치로 이동 -->
+  <a href="#python"><img width="30" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/768px-Python-logo-notext.svg.png">Python</a>
+  <a href="#web">Web</a>
+  <a href="#reference">Reference</a>
+  
+  <section id="python">
+    <h2><a href="https://docs.python.org/ko/3/tutorial/index.html">파이썬</a></h2>
+    
+    <h3>Number type</h3>
+    <p>파이썬에서 숫자형은 아래와 같이 있다.</p>
+    <ol>
+      <li>int</li>
+      <li>float</li>
+      <li>complex</li>
+
+      <!-- stike 매기는 방법 세가지 -->
+      <li><strike>str</strike></li>
+      <li><s>str</s></li>
+      <li><del>str</del></li>
+
+    </ol>
+    <h3>Sequence</h3>
+    <p>파이썬에서 시퀀스는 아래와 같이 있다.</p>
+
+    <!-- 강조 표현 방식 세가지 -->
+    <h4>시퀀스는 for문을 돌릴 수 있다!!</h4>
+    <!-- <b> : bolding tag -->
+    <p><b>시퀀스는 for문을 돌릴 수 있다!!</b></p>
+    <p><strong>시퀀스는 for문을 돌릴 수 있다!!</strong></p>
+
+    <!-- <br> tag의 경우 부분을 차지하기 때문에, 나중에 구조를 엉망으로 망가뜨릴 수 있다! -->
+    <b>시퀀스는 for문을 돌릴 수 있다!!</b> <br> 덧붙여 쓰기
+    <!-- <p> tag는 한 줄 전체(공간)을 잡아먹는다. Block based tag, 길막 개념 -->
+    <!-- browswer를 보면 위의 '덧붙여 쓰기'에 아래 '시퀀스는'이 붙어 나오는걸 확인 가능 -->
+    <b>시퀀스는 for문을 돌릴 수 있다!!</b> <p>덧붙여 쓰기</p>
+
+    <ol>
+      <li><b>str</b></li>
+      <li><s>list</s></li>
+      <!-- Italic 체인 <i> 와 <em>은 동일 기능이지만, 통일해서 사용하는 것이 좋다. -->
+      <li><i>tuple</i></li>
+      <li><em>range</em></li>
+    </ol>
+  </section>
+
+  <!-- <hr style="border: 선종류 선굵기 선색상;"> -->
+  <hr style="border: solid 1px black;">
+  <hr>
+  
+  <section id=web>
+    <h2><a href="https://developer.mozilla.org/ko/">웹</a></h2>
+    <h3>기초</h3>
+    <ul>
+      <!-- 검은 점원 대신 하얀 점으로 바꾸기 -->
+      <li style="list-style-type : circle">HTML</li>
+      <li style="list-style-type : circle">CSS</li>
+      <!-- CSS의 class를 사용하면 공통으로 적용시킬 수 있다 -->
+    </ul>
+  </section>
+<hr>
+<section id="reference">
+  <h2>Reference</h2>
+  <h3>Python</h3>
+  <ul>
+    <li><a href="">초보몽키 블로그</a></li>
+    <li><a href="">코딩도장 파이썬</a></li>
+  </ul>
+  <h3>Web</h3>
+  <ul>
+    <li></li>
+    <li></li>
+  </ul>
+</section>
+</body>
+
+</html>
+
+
+
+    <!--
+    { list-style-type : lower-roman } /* 로마숫자 소문자으로된 목록 */
+    { list-style-type : upper-roman } /* 로마숫자 대문자으로된 목록 */
+    { list-style-type : lower-alpha } /* 알파벳 소문자으로된 목록 */
+    { list-style-type : upper-alpha } /* 알파벳 대문자으로된 목록 */
+    { list-style-type : disc } /* 점으로 된 목록 */
+    { list-style-type : circle } /* 속이 하얀색 원으로 된 목록 */
+    { list-style-type : square } /* 사각형으로 된 목록 */
+    { list-style-type : decimal } /* 숫자로 된 목록 */
+    { list-style-type : none } /* 아무 표시 없음 */ 
+    출처: https://biju.tistory.com/256 [에헤라디야~]
+    -->
