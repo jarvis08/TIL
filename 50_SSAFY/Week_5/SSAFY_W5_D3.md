@@ -1,48 +1,6 @@
-# Intro
+# SSAFY Week5 Day3
 
 ---
-
-- 최대공약수, 최소공배수 구하기
-
-  ```python
-  # 유클리드 호제법
-  # GCD = Greatest Common Divisor
-  # LCM = Least Common Multiple
-  
-  # GCD/LCM 구하기
-  def gcdlcm(a, b):
-      # max, min을 할 필요 없음
-      # 어차피 작은 수를 큰 수로 나누면 나머지는 작은수
-      # m, n = max(a, b), min(a, b)
-      m, n = a, b
-      while n > 0:
-          m, n = n, m % n
-      return [m, int(a*b / m)]
-  print(gcdlcm(3, 12))
-  print(gcdlcm(1071, 1029))
-  
-  
-  # 재귀함수로 GCD 구하기
-  def gcd(n, m):
-      if n % m == 0:
-          return m
-      else:
-          return gcd(m, n%m)
-  
-  def gcdlcm2(n, m):
-      g = gcd(n, m)
-      l = n*m // g
-      return g, l
-  
-  print(gcdlcm2(3, 12))
-  print(gcdlcm2(1071, 1029))
-  
-  """result
-  [3, 12]
-  [21, 52479]
-  (3, 12)
-  (21, 52479)"""
-  ```
 
 ## APS, Algorithm Problem Solving 기본
 
@@ -61,13 +19,13 @@
     파일 제목 : 서울1반1월17일조동빈.zip
 
 - Problem Solving
-
+  
   - Type
   - 제어
     - 순차
     - 선택
-    - 반복
-
+  - 반복
+  
 - ADT, Abstract Data Type
 
   - 자료
@@ -187,7 +145,7 @@
 
         - 기하
 
-------
+---
 
 - 알고리즘, Algorithm
 
@@ -236,8 +194,8 @@
         - O(n**k) 시간복잡도를 가지는 완전 검색(P클래스 문제)
 
         n이 커지면 늙어 죽을때까지 결과 못보기 때문에 다른 방법을 시도(Tree 구조를 활용)
-
-        - 근사 알고리즘
+  
+      - 근사 알고리즘
         - 인공지능
 
 - Algorithm 설계 기법
@@ -255,6 +213,7 @@
   - **Back Tracking**
 
     - 상태 공간 트리 문제를 DFS로 해결 할 때, Stack 혹은 재귀를 이용하여 구현
+
     - 혹은 BFS를 사용하여 우선 순위에 따라 Queue를 이용하여 해결
 
   - DP, Dynamic Programming
@@ -267,7 +226,7 @@
 
     - 반복적 DP
 
-------
+---
 
 - Algorithm : 유한한 단계를 통해 문제를 해결하기 위한 절차나 방법
 
@@ -335,17 +294,16 @@
   i.g., 667767, 054060
 
   - 0~9 사이의 숫자 카드에서 임의의 카드 6장 추출
-
     - `run` : 3장의 카드가 연속적인 번호
     - `triplet` : 3장의 카드가 동일한 번호
 
   - 완전 검색을 이용한 Baby-gin
 
     1. 모든 숫자 나열을 모두 조사(중복 포함)
-    2. 전/후반부 3개 숫자씩 나눈 후 `run`, `triplet` 여부를 테스트
-
-  - Greedy적 접근법
-
+  2. 전/후반부 3개 숫자씩 나눈 후 `run`, `triplet` 여부를 테스트
+  
+- Greedy적 접근법
+  
     `run` 혹은 `triplet` 중 한 가지를 고른 후,
 
     찾아지면 나머지 숫자에 대해 `triplet` 혹은 `run`인지 판단
@@ -357,7 +315,7 @@
   `nPr = n * (n-1) * ... * (n-r+1)`
 
   `nPn = n! = n Factorial = n * (n-1) * ... * 2 * 1`
-
+  
 - 탐욕, Greedy
 
   탐욕 알고리즘 설계 기법
@@ -405,3 +363,75 @@
 
       역순으로 탐색하면 baby-gin이 아니다.
 
+---
+
+## 정렬
+
+- 정렬 : 2개 이상의 자료를 특정 기준에 의해 Ascending, 혹은 Descending으로 재배열 하는 것
+  - `O(n^2)` : 버블 / 삽입 / 선택 정렬
+  - `O(nlongn)` : 퀵 / 병합 / 힙 정렬
+  - `O(n)` : 카운팅 정렬(특수한 경우에만 사용 가능)
+
+- 버블 정렬, Bubble Sort
+
+  - 시간 복잡도 = `O(n^2)`
+
+  - 인접한 두 개의 원소를 비교하며 자리를 계속 교환하는 방식
+  - 교환하며 자리를 이동하는 모습이 물 위에 올라오는 거품 모양과 같다고 하여 버블 정렬
+
+  - 첫 번째 원소부터 인접한 원소끼리 계속 자리를 교환하면서 맨 마지막 자리까지 이동
+
+  - 한 단계가 끝나면 가장 큰 원소가 마지막 자리로 정렬됨
+
+  ```python
+  a = [7, 55, 12 , 44, 49]
+  def BubbleSort(a):
+      # 4부터 0까지, 비교할 마지막 원소의 index를 의미
+      for i in range(len(a)-1, 0, -1):
+          # 0부터 i까지, 인접 원소인 [j], [j+1]을 마지막 원소인 [i]까지 비교
+          for j in range(0, i):
+              if a[j] > a[j+1]:
+                  a[j], a[j+1] = a[j+1], a[j]
+  # i 당 5, 4, 3, 2, 1회씩 j를 반복
+  # n(n+1)/2 = (n^2 + n)/2 => O(n^2)
+  ```
+
+- 카운팅 정렬, Counting Sort
+
+  - 평균 수행시간 = 최악 수행시간 = `O(N+k)`
+
+    k : 정수의 최대값
+
+  - 비교환 방식
+
+    같은 값의 인덱스 순서가 변하지 않음
+
+    i.g., [2, 1, 2] -> [1, 2, 2] 일 때 [2]끼리의 순서가 원본과 같음
+
+  - 전제 조건
+
+    1. 공간 할당을 위해 집합 내 가장 큰 값과 최소값을 알 수 있어야하며, 연속된 숫자
+
+       i.g., 0~10 사이의 정수라면 10이라는 값을 알 수 잇다.
+
+    2. type(input) == int 혹은 정수로 표현할 수 있는 자료
+
+       0~1 사이의 확률값 중 소수점 둘째 자리 까지의 숫자 범위는 [0.01, 0.02, ... 0.99]의 값들로 , 100개의 유한한 숫자
+
+  - 과정
+
+    1. Data_list, Count_list, Sorted_list 준비
+
+    2. Count_list의 크기는 중복값이 없는 Data_list의 data 개수이며,
+
+       작은 숫자부터 Count_list에 순서대로 배정됨
+
+    3. Count_list에 data 별 개수를 값으로 넣음
+
+    4. Count_list 요소 별로 자신 이전의 누적 개수를 더해줌
+
+    5. Data_list의 끝에서 부터 시작하여,
+
+       Sorted_list[Count_list[data]]에 해당하는 곳에 data를 삽입
+
+    6. Count_list[data]의 값을 -1
