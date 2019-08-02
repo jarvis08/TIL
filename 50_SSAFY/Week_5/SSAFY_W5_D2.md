@@ -515,9 +515,11 @@
 ---
 
 - color
-  - black : #f0f0f0
-  - white : #030303
-
+  - black : `#f0f0f0`
+    - light-black: `#444444`
+- white : `#030303`
+  - link-blue: `rgb(15, 168, 224)`
+  
 - freecodecamp에서 bootstrap무료 수강 및 수료증
 
 ---
