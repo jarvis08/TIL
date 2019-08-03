@@ -1,5 +1,7 @@
 # Numpy
 
+참고자료 : Data Science Handbook, Jake VanderPlas
+
 ---
 
 ```python

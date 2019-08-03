@@ -39,142 +39,143 @@
 
 > 객체 지향 프로그래밍(영어: Object-Oriented Programming, OOP)은 컴퓨터 프로그래밍의 패러다임의 하나이다. 객체 지향 프로그래밍은 컴퓨터 프로그램을 명령어의 목록으로 보는 시각에서 벗어나 여러 개의 독립된 단위, 즉 "객체"들의 모임으로 파악하고자 하는 것이다. 각각의 객체는 메시지를 주고받고, 데이터를 처리할 수 있다.
 >
-> 명령형 프로그래밍인 절차지향 프로그래밍에서 발전된 형태를 나타내며, 기본 구성요소는 다음과 같다.
 
-- 클래스, Class
+- OOP의 기본 구성 요소
 
-  - 같은 종류(또는 문제 해결을 위한)의 집단에 속하는 **속성(attribute)**과 **행위(behavior)**를 정의한 것으로, 객체지향 프로그램의 기본적인 사용자 정의 데이터형(user define data type)이라고 할 수 있다.
+  - 클래스, Class
 
-  - class는 프로그래머가 아니지만 해결해야 할 문제가 속하는 영역에 종사하는 사람이라면 사용할 수 있고, 다른 클래스 또는 외부 요소와 독립적으로 디자인하여야 한다.
+    - 같은 종류(또는 문제 해결을 위한)의 집단에 속하는 **속성(attribute)**과 **행위(behavior)**를 정의한 것으로, 객체지향 프로그램의 기본적인 사용자 정의 데이터형(user define data type)이라고 할 수 있다.
 
-    ---
+    - class는 프로그래머가 아니지만 해결해야 할 문제가 속하는 영역에 종사하는 사람이라면 사용할 수 있고, 다른 클래스 또는 외부 요소와 독립적으로 디자인하여야 한다.
 
-    우리는 처음 나무라는 식물을 배울 때 위키피디아로 배우지 않는다.
+      ---
 
-    이것도, 그것도, 저것도 나무라는 것을 학습해가며 나무들의 **공통점** 및 **체계**를 익힌다.
+      우리는 처음 나무라는 식물을 배울 때 위키피디아로 배우지 않는다.
 
-    OOP에서는 그 **분류 체계**를 **`class`**라고 칭하며, Object들을 **구조화** 한다.
+      이것도, 그것도, 저것도 나무라는 것을 학습해가며 나무들의 **공통점** 및 **체계**를 익힌다.
 
-  ---
+      OOP에서는 그 **분류 체계**를 **`class`**라고 칭하며, Object들을 **구조화** 한다.
 
-- 인스턴스, Instance
+      ---
 
-  - class의 instance/object(실제로 메모리상에 할당된 것)
+  - 인스턴스, Instance
 
-  - object는 자신 고유의 속성(attribute)을 가지며 class에서 정의한 행위(behavior)를 수행
+    - class의 instance/object(실제로 메모리상에 할당된 것)
 
-  - object의 행위는 class에 정의된 행위에 대한 정의(method)를 공유함으로써 메모리를 경제적으로 사용
+    - object는 자신 고유의 속성(attribute)을 가지며 class에서 정의한 행위(behavior)를 수행
 
-  - `instanciate` : instance를 만드는 작업
+    - object의 행위는 class에 정의된 행위에 대한 정의(method)를 공유함으로써 메모리를 경제적으로 사용
 
-    ---
+    - `instanciate` : instance를 만드는 작업
 
-    나무 `class`에 속하는 여러가지 나무들을 `instance`라고 한다.
+      ---
 
-  ---
+      나무 `class`에 속하는 여러가지 나무들을 `instance`라고 한다.
 
-- 속성, Attribute
+      ---
 
-  - 클래스/인스턴스 가 가지고 있는 속성(값)
+  - 속성, Attribute
 
-    ---
+    - 클래스/인스턴스 가 가지고 있는 속성(값)
 
-    `class` 나무
+      ---
 
-    `instance` 바오밥 나무
+      `class` 나무
 
-    `attribute` 나무 재질
+      `instance` 바오밥 나무
 
-    ```python
-    # 복소수의 실수, 허수 속성
-    complex_num = 3 + 2j
-    print(complex_num.real)
-    print(complex_num.imag)
-    
-    """result
-    3.0
-    2.0"""
-    ```
+      `attribute` 나무 재질
 
-  ---
+      ```python
+      # 복소수의 실수, 허수 속성
+      complex_num = 3 + 2j
+      print(complex_num.real)
+      print(complex_num.imag)
+      
+      """result
+      3.0
+      2.0"""
+      ```
+      
+      ---
 
-- 메서드, Method
+  - 메서드, Method
 
-  - 클래스/인스턴스 가 할 수 있는 행위(함수)
+    - 클래스/인스턴스 가 할 수 있는 행위(함수)
 
-    ```python
-    complex_num = 3 + 2j
-    print(complex_num.conjugate)
-    print(complex_num.conjugate())
-    """result
-    <built-in method conjugate of complex object at 0x05649EF0>
-    (3-2j)"""
-    ```
+      ```python
+      complex_num = 3 + 2j
+      print(complex_num.conjugate)
+      print(complex_num.conjugate())
+      """result
+      <built-in method conjugate of complex object at 0x05649EF0>
+      (3-2j)"""
+      ```
 
-  - `dir(객체)` : 사용 가능한 method 확인
+    - `dir(객체)` : 사용 가능한 method 확인
 
-    ```python
-    nums = [3, 2, 1]
-    dir(nums)
-    """result
-    ['__add__',
-     '__class__',
-     '__contains__',
-     '__delattr__',
-     '__delitem__',
-     '__dir__',
-     '__doc__',
-     '__eq__',
-     '__format__',
-     '__ge__',
-     '__getattribute__',
-     '__getitem__',
-     '__gt__',
-     '__hash__',
-     '__iadd__',
-     '__imul__',
-     '__init__',
-     '__init_subclass__',
-     '__iter__',
-     '__le__',
-     '__len__',
-     '__lt__',
-     '__mul__',
-     '__ne__',
-     '__new__',
-     '__reduce__',
-     '__reduce_ex__',
-     '__repr__',
-     '__reversed__',
-     '__rmul__',
-     '__setattr__',
-     '__setitem__',
-     '__sizeof__',
-     '__str__',
-     '__subclasshook__',
-     'append',
-     'clear',
-     'copy',
-     'count',
-     'extend',
-     'index',
-     'insert',
-     'pop',
-     'remove',
-     'reverse',
-     'sort']"""
-    ```
+      ```python
+      nums = [3, 2, 1]
+      dir(nums)
+      """result
+      ['__add__',
+       '__class__',
+       '__contains__',
+       '__delattr__',
+       '__delitem__',
+       '__dir__',
+       '__doc__',
+       '__eq__',
+       '__format__',
+       '__ge__',
+       '__getattribute__',
+       '__getitem__',
+       '__gt__',
+       '__hash__',
+       '__iadd__',
+       '__imul__',
+       '__init__',
+       '__init_subclass__',
+       '__iter__',
+       '__le__',
+       '__len__',
+       '__lt__',
+       '__mul__',
+       '__ne__',
+       '__new__',
+       '__reduce__',
+       '__reduce_ex__',
+       '__repr__',
+       '__reversed__',
+       '__rmul__',
+       '__setattr__',
+       '__setitem__',
+       '__sizeof__',
+       '__str__',
+       '__subclasshook__',
+       'append',
+       'clear',
+       'copy',
+       'count',
+       'extend',
+       'index',
+       'insert',
+       'pop',
+       'remove',
+       'reverse',
+       'sort']"""
+      ```
+      
+      ---
+      
+      | class / type | instance                 | attributes       | methods                                |
+      | ------------ | ------------------------ | ---------------- | -------------------------------------- |
+      | `str`        | `''`, `'hello'`, `'123'` | _                | `.capitalize()`, `.join()`, `.split()` |
+      | `list`       | `[]`, `['a', 'b']`       | _                | `.append()`, `reverse()`, `sort()`     |
+      | `dict`       | `{}`, `{'key': 'value'}` | _                | `.keys()`, `.values()`, `.items().`    |
+      | `int`        | `0`, `1`, `2`            | `.real`, `.imag` | `.conjugate()`                         |
 
-  ---
-
-| class / type | instance                 | attributes       | methods                                |
-| ------------ | ------------------------ | ---------------- | -------------------------------------- |
-| `str`        | `''`, `'hello'`, `'123'` | _                | `.capitalize()`, `.join()`, `.split()` |
-| `list`       | `[]`, `['a', 'b']`       | _                | `.append()`, `reverse()`, `sort()`     |
-| `dict`       | `{}`, `{'key': 'value'}` | _                | `.keys()`, `.values()`, `.items().`    |
-| `int`        | `0`, `1`, `2`            | `.real`, `.imag` | `.conjugate()`                         |
-
-
+---
 
 ## 클래스 및 인스턴스
 

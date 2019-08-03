@@ -313,17 +313,18 @@ num1, num2 = list(num1, num2 = map(int, input().split(" ")))
 
 - 함수 종류
 
-  | 함수                | 비고                            |
-  | ------------------- | ------------------------------- |
-  | math.ceil(x)        | 소수점 올림                     |
-  | math.floor(x)       | 소수점 내림                     |
-  | math.trunc(x)       | 소수점 버림                     |
-  | math.copysign(x, y) | y의 부호를 x에 적용한 값        |
-  | math.fabs(x)        | float 절대값 - 복소수 오류 발생 |
-  | math.factorial(x)   | 팩토리얼 계산 값                |
-  | math.fmod(x, y)     | float 나머지 계산               |
-  | math.fsum(iterable) | float 합                        |
-  | math.modf(x)        | 소수부 정수부 분리              |
+  | 함수                | 비고                                                     |
+  | ------------------- | -------------------------------------------------------- |
+  | math.ceil(x)        | 소수점 올림                                              |
+  | math.floor(x)       | 소수점 내림                                              |
+  | math.trunc(x)       | 소수점 버림                                              |
+  | math.copysign(x, y) | y의 부호를 x에 적용한 값                                 |
+  | math.fabs(x)        | float 절대값 - 복소수 오류 발생                          |
+  | math.factorial(x)   | 팩토리얼 계산 값                                         |
+  | math.fmod(x, y)     | float 나머지 계산                                        |
+  | math.fsum(iterable) | float 합                                                 |
+  | math.modf(x)        | 소수부 정수부 분리                                       |
+  | math.isclose(x, y)  | x, y가 같거나, 같다고 말 할 수 있을 정도로 차이가 없는가 |
 
   ```python
   # 내림과 버림은 음수에서 처리가 다르다.
@@ -412,8 +413,8 @@ num1, num2 = list(num1, num2 = map(int, input().split(" ")))
       # reader instance 생성
       reader = csv.DictReader(f)
       # reader를 이용하여 movieCd 열의 data를 parse
-      for column in reader:
-          movieCds.append(column['movieCd'])
+      for row in reader:
+          movieCds.append(row['movieCd'])
   ```
 
 ---

@@ -296,6 +296,16 @@ class DerivedClassName(BaseClassName):
   - sub class에 method 추가 구현 가능
   - super class의 내용을 사용하고자 할 때, `super(기존 인자)` 사용
 
+  ```python
+  class SubClass(SuperClass):
+    	SubClass인자_1 = ''
+      SubClass인자_2 = 0
+  		def __init__(self, SuperClass 인자, *args):
+      		super().__init__(SuperClass 인자)
+          self.SubClass인자_1 = arg_1
+          self.SubClass인자_2 = arg_2
+  ```
+
 - Method Overriding[¶](http://localhost:8888/notebooks/notes/08.OOP_advanced.ipynb#메서드-오버라이딩)
 
   메서드를 재정의
