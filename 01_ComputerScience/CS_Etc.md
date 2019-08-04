@@ -73,4 +73,12 @@ source .bash_profile
   #-*-coding: utf-8
   ```
 
+- `~/.bahs_profile` 에 적힌 내용들을 유효화 하려면 `source ~/.bash_profile` 을 터미널에 작성해야 하는데,
+
+  이를 자동화 하기 위해 `.zshrc`에 내용 추가
+
+  ```shell
+  source ~/.bash_profile
+  ```
+
   
