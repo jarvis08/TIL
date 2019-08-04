@@ -11,7 +11,7 @@ I'm concentrating on studying Computer Science to understand Machine Learning be
   - Algorithm
   - Web Programming
 
-- Introduction to Algorithms
+- Introduction to Algorithms (with C)
 
   Thomas H.Cormen, Charles E.Leiserson, Ronald L.Rivest, Clifford Stein
 

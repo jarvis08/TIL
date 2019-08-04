@@ -124,15 +124,3 @@
     else Q.head = Q.head + 1
     return x
     ```
-
-### 2. Linked List
-
-### 3. Pointer and Object Implementation
-
-### 4. Tree with Root
-
----
-
-## Hash Talble
-
-### 
