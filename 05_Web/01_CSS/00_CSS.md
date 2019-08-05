@@ -77,6 +77,7 @@
     <!-- style.css -->
     body{
       background-color: #f0f0f0
+      background: #f0f0f0
     }
     h1, p{
       color: #3b3a30
@@ -329,6 +330,12 @@
        display: None;
    }
    ```
+   
+5. Float
+
+   위로 띄워서 이동
+
+6. Flex
 
 ---
 

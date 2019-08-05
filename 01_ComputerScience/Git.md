@@ -23,14 +23,17 @@
    staging area에서 `commit`한 내용들을 누적하여 기록
 
    ```shell
+   # git 정보 확인
+   $ git config --list
+   
    # github 로그인
    $ git config --global user.email "cdb921226@gmail.com"
    $ git config --global user.name "jarvis08"
    
    # 로그인 정보 잘못 입력했을 때
-   git credential reject
-   protocol=https
-   host=github.com
+   $ git credential reject
+   $ protocol=https
+   $ host=github.com
    
    # git 내용 정리
    $ git status
@@ -74,14 +77,14 @@
    # [방법 3] commit을 취소하고 해당 파일들은 unstaged 상태로 워킹 디렉터리에서 삭제
    $ git reset --hard HEAD^
    
-   # commit message 변경
-   // [방법 1] commit을 취소하고 해당 파일들은 staged 상태로 워킹 디렉터리에 보존
+   ### commit 이후 message 변경
+   # [방법 1] commit을 취소하고 해당 파일들은 staged 상태로 워킹 디렉터리에 보존
    $ git reset --soft HEAD^
-   // [방법 2] commit을 취소하고 해당 파일들은 unstaged 상태로 워킹 디렉터리에 보존
+   # [방법 2] commit을 취소하고 해당 파일들은 unstaged 상태로 워킹 디렉터리에 보존
    $ git reset --mixed HEAD^ // 기본 옵션
    $ git reset HEAD^ // 위와 동일
    $ git reset HEAD~2 // 마지막 2개의 commit을 취소
-   // [방법 3] commit을 취소하고 해당 파일들은 unstaged 상태로 워킹 디렉터리에서 삭제
+   # [방법 3] commit을 취소하고 해당 파일들은 unstaged 상태로 워킹 디렉터리에서 삭제
    $ git reset --hard HEAD^
    
    # remote repository에 적용하기
@@ -142,6 +145,9 @@
   # jupyer notebook checkpoints 제거
   $ code .gitignore
   >> 내부 작성 .ipynb_checkpoints
+  
+  # .git 폴더 제거
+  $ rm -rf .git/
   
   # 현재 디렉토리의 .DS_Store 제거
   $ git rm --cached .DS_Store
