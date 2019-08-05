@@ -1,4 +1,4 @@
-# 10장. 기본 자료구조, Basic Data Structure
+# 기본 자료구조, Basic Data Structure
 
 ---
 

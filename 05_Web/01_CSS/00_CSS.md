@@ -437,6 +437,105 @@
 
 - 격자 형식으로, Web Page의 구간을 나누어 규격을 맞추는 방법
 
+- 가장 먼저는 가로(행) 배열을 고려
+
+  그 이후 세로 정렬 형태 고려
+
+- 현재는 대부분 표준화된 Grid(12개) 사용
+
+  12개 Grid 분할은 2, 3, 4, 6개의 column으로 나누어 post를 띄움
+
+  (약수가 많기 때문에 12가 표준으로 지정됨)
+
+- 나머지 내용은 Bootstrap을 통해 공부
+
+---
+
+## 선택자, Selector
+
+복합 선택자
+
+선택자들을 여러개 섞어 사용하기
+
+```
+>`, `~`, ``, `*`, `+
+```
+
+- 자식 셀렉터와 후손 셀렉터
+
+  - html
+
+    ```
+      <div>
+        <h1>
+          이건 테스트입니다.
+          <span>이건 inline 태그인 span</span>
+        </h1>
+      </div>
+    ```
+
+  - css
+
+    ```
+    /* 자식 셀렉터, 후손 셀렉터 */
+    /* 자식 셀렉터 :: div와 span이 직접 연결이 되지 않아 적용 X */
+    div > span {
+      color: burlywood
+    }
+    
+    /* 후손 셀렉터 :: 직접 연결되어 있지 않지만, div의 후손으로 span이 있기만 한다면 다음을 적용 */
+    div span {
+      color: burlywood
+    }
+    ```
+
+  - 형제 셀렉터
+
+    ```
+    /* + 는 형제를 의미 */
+    /* a + ul은 a와 바로 붙어있는 ul에만 적용 */
+    a + ul {
+      background-color: gold;  
+    }
+    
+    /* ~ 은 형제를 의미하지만, 형제관계인 모든 ul에 적용 */
+    a ~ ul {
+      border: solid darkgray 1px;
+    }
+    ```
+
+  - 속성 셀렉터
+
+    i.g., `<img src="사진.jpg" target="_blank">` 태그 안의 `src="주소"` 내용 혹은 `target=_blank`
+
+    - `target=_black` : 새 탭에서 링크 열기
+
+    - <a> 태그 중 target이 _black 인 것들에 대해 속성 부여
+
+    - class 셀렉터
+
+      ```
+      /* me class 셀렉트 */
+      .me {
+        background-color: black;
+        color: white;
+      }
+      ```
+
+    - Regular Expression, 정규표현식 활용
+
+      정규표현식 참고 사이트, regexr.com
+
+      ```
+      /* Regular Expression, 정규 표현식의 개념
+      class를 주로 활용하며, 정규 포현식은 있긴 있는데 잘 안쓰는 방법 */
+      /* img 태그의 alt 속성에 TYPE이라는 값이 포함되어 있다면 */
+      img[alt|="TYPE"] {
+      
+      }
+      /* $ ^ ~ 등의 기호도 존재 */
+      ```
+
 ---
 
 - color
@@ -444,7 +543,6 @@
     - light-black: `#444444`
 - white : `#030303`
   - link-blue: `rgb(15, 168, 224)`
-  
 - freecodecamp에서 bootstrap무료 수강 및 수료증
 
 ---
