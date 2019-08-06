@@ -1,0 +1,27 @@
+body {
+  background-color: #FAF3DD;
+  overflow: hidden;
+  text-align:center;
+   display: flex;
+   align-items: center;
+   justify-content: center; 
+ }
+ 
+ body,
+ html {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+ }
+ 
+ svg {
+  width: 77%;
+  height: 77%;
+  visibility: hidden;
+  
+ }
+ 
+ /* #startGroup{
+  fill:url(#playGrad)
+ } */
