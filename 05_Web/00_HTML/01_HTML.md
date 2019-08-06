@@ -87,14 +87,13 @@
 
       어떤 정보를 가지고 있는지에 대한 요약본
 
-      i.g., 카톡으로 link를 보냈을 때 OG 내용을 표시
+      e.g., 카톡으로 link를 보냈을 때 OG 내용을 표시
 
-      i.g., Naver에서 `페이지 소스 보기`를 통해 og 내용과 image 확인 가능
+      e.g., Naver에서 `페이지 소스 보기`를 통해 og 내용과 image 확인 가능
 
   - body 요소
 
     Browser 화면에 나타나는 정보이며, 실제 내용
-
 
 ---
 
@@ -214,7 +213,7 @@
 
 - Google 검색 시, SEO가 잘 되어진 web site는 검색창에 검색 만으로도 Link 밑에 Site에 대한 설명들이 보여짐
 
-  i.g., Naver 검색 시 아름답게 부가 설명들을 게시
+  e.g., Naver 검색 시 아름답게 부가 설명들을 게시
 
   - `spider`를 이용하여 자동으로 crawling
 

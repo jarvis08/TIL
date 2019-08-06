@@ -71,7 +71,7 @@
       codeblock1
   # 예외 내용은 변수의 특정 값일 수 있으며,
   # Error 내용으로 지정할 수 있다
-  # i.g., ValueError
+  # e.g., ValueError
   except 예외 내용:
       codeblock2
   ```

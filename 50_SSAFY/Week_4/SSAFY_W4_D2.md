@@ -17,7 +17,7 @@
       codeblock1
   # 예외 내용은 변수의 특정 값일 수 있으며,
   # Error 내용으로 지정할 수 있다
-  # i.g., ValueError
+  # e.g., ValueError
   except 예외 내용:
       codeblock2
   ```
@@ -679,11 +679,11 @@
 
     - class object로부터 attribute의 namespace를 분리시킬 수 있다.
 
-      i.g., `self.name = '조동빈'`
+      e.g., `self.name = '조동빈'`
 
     - `class_name.attribute_name = 값` 형태를 통해 class object의 namespace 또한 접근 가능
 
-      i.g., `Person.num_people += 1`
+      e.g., `Person.num_people += 1`
 
   - 소멸자
 

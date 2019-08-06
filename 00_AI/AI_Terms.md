@@ -8,7 +8,7 @@
      - `Batch` : 전체 데이터셋 중 몇개의 데이터씩 훑을 것인지
      - `Iteration` : step횟수(백프로퍼게이션해서 수정하는것까지가 1step)
      
-     i.g., 전체 2000개 데이터 일 때, 500의 batch와 4의 iteration(step)이면, 1 epoch.
+     e.g., 전체 2000개 데이터 일 때, 500의 batch와 4의 iteration(step)이면, 1 epoch.
      
 - **Kernel**
   

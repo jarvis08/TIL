@@ -20,7 +20,7 @@
 
 - 기본 사용법
 
-  `color: 이름 / #hexadesimal/ keword i.g.,dk`
+  `color: 이름 / #hexadesimal/ keword e.g.,dk`
 
   ```css
   h1{color:blue;font-size:15px;}

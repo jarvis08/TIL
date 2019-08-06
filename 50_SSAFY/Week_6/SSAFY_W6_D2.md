@@ -101,7 +101,7 @@
 
     각각의 축은 `flex-direction`에 의해 결정
 
-    i.g., `justify-content`가 세로일 경우 `align-items`가 가로, 혹은 그 역순
+    e.g., `justify-content`가 세로일 경우 `align-items`가 가로, 혹은 그 역순
 
   - 가능한 속성 값은 `justify-content`와 동일하며, default 값은 `flex-start`
 

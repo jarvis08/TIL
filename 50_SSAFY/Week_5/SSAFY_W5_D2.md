@@ -20,7 +20,7 @@
 
 - 기본 사용법
 
-  `color: 이름 / #hexadesimal/ keword i.g.,dk`
+  `color: 이름 / #hexadesimal/ keword e.g.,dk`
 
   ```css
   h1{color:blue;font-size:15px;}
@@ -320,7 +320,7 @@
 
      공간은 유지하고 싶을 때, `visibility`를 사용
 
-     *i.g., log-in 시 log-in 버튼 사라지게 하기*
+     *e.g., log-in 시 log-in 버튼 사라지게 하기*
 
      ```css
      <div class="none">얘는 곧 사라집니다.</div>

@@ -53,7 +53,7 @@
   
 - 속성 셀렉터
 
-  i.g., `<img src="사진.jpg" target="_blank">` 태그 안의 `src="주소"` 내용 혹은 `target=_blank`
+  e.g., `<img src="사진.jpg" target="_blank">` 태그 안의 `src="주소"` 내용 혹은 `target=_blank`
 
   - `target=_black` : 새 탭에서 링크 열기
   - `<a>` 태그 중 `target`이 `_black` 인 것들에 대해 속성 부여
@@ -113,7 +113,7 @@
 
   여러 노드에 가진 네트워크에 데이터를 제공하는 시스템
 
-  - i.g., Amazon Cloud Front
+  - e.g., Amazon Cloud Front
 
   - 개별 end-user의 가까운 서버를 통해 빠르게 전달
 
@@ -356,7 +356,7 @@
 
   https://poiemaweb.com/bootstrap-grid-system 참고
 
-  i.g., `col-md-4` 의 경우 4개의 grid를 사용
+  e.g., `col-md-4` 의 경우 4개의 grid를 사용
 
   1. `<div class="container">`
 

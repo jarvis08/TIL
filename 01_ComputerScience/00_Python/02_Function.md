@@ -27,7 +27,7 @@
 
   - 함수는 동작후에 `return`을 통해 결과값을 전달 가능 
 
-    (`return` 값이 없으면 None을 반환, i.g., `print()`)
+    (`return` 값이 없으면 None을 반환, e.g., `print()`)
 
   - `func(val1, val2)` : 함수는 호출
 

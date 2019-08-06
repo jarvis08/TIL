@@ -107,7 +107,7 @@
 
 ## 속성 셀렉터
 
-i.g., `<img src="사진.jpg" target="_blank">` 태그 안의 `src="주소"` 내용 혹은 `target=_blank`
+e.g., `<img src="사진.jpg" target="_blank">` 태그 안의 `src="주소"` 내용 혹은 `target=_blank`
 
 - `target=_black` : 새 탭에서 링크 열기
 

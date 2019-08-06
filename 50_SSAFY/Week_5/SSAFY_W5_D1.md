@@ -122,7 +122,7 @@
 
   요청이 단순할 것을 가정하며, 어떤 요청이든 동일한 답변만 가능
 
-  i.g., Blogs, Portfolio page, Github Pages
+  e.g., Blogs, Portfolio page, Github Pages
 
 - Web Browser
 
@@ -152,7 +152,7 @@
 
         전화번호부 처럼, Entity와 실제 주소를 매칭
 
-        i.g., naver.com / google.com
+        e.g., naver.com / google.com
 
         DNS Server가 중단되면 직접 주소를 입력해야 접속 가능
 
@@ -257,9 +257,9 @@
 
         어떤 정보를 가지고 있는지에 대한 요약본
 
-        i.g., 카톡으로 link를 보냈을 때 OG 내용을 표시
+        e.g., 카톡으로 link를 보냈을 때 OG 내용을 표시
 
-        i.g., Naver에서 `페이지 소스 보기`를 통해 og 내용과 image 확인 가능
+        e.g., Naver에서 `페이지 소스 보기`를 통해 og 내용과 image 확인 가능
 
     - body 요소
 
@@ -379,7 +379,7 @@
 
     - Google 검색 시, SEO가 잘 되어진 web site는 검색창에 검색 만으로도 Link 밑에 Site에 대한 설명들이 보여짐
 
-      i.g., Naver 검색 시 아름답게 부가 설명들을 게시
+      e.g., Naver 검색 시 아름답게 부가 설명들을 게시
 
       - `spider`를 이용하여 자동으로 crawling
 

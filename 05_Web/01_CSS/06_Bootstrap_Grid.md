@@ -16,7 +16,7 @@
 
   https://poiemaweb.com/bootstrap-grid-system 참고
 
-  i.g., `col-md-4` 의 경우 4개의 grid를 사용
+  e.g., `col-md-4` 의 경우 4개의 grid를 사용
 
   1. `<div class="container">`
 

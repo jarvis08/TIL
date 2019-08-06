@@ -81,7 +81,7 @@
 
 - 공간은 유지하고 싶을 때, `visibility`를 사용
 
-  *i.g., log-in 시 log-in 버튼 사라지게 하기*
+  *e.g., log-in 시 log-in 버튼 사라지게 하기*
 
 ```html
 <div class="none">얘는 곧 사라집니다.</div>
@@ -142,7 +142,7 @@
 
     각각의 축은 `flex-direction`에 의해 결정
 
-    i.g., `justify-content`가 세로일 경우 `align-items`가 가로, 혹은 그 역순
+    e.g., `justify-content`가 세로일 경우 `align-items`가 가로, 혹은 그 역순
 
   - 가능한 속성 값은 `justify-content`와 동일하며, default 값은 `flex-start`
 

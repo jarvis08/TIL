@@ -39,7 +39,7 @@
 
   요청이 단순할 것을 가정하며, 어떤 요청이든 동일한 답변만 가능
 
-  i.g., Blogs, Portfolio page, Github Pages
+  e.g., Blogs, Portfolio page, Github Pages
 
 - Web Browser
 
@@ -69,7 +69,7 @@
 
         전화번호부 처럼, Entity와 실제 주소를 매칭
 
-        i.g., naver.com / google.com
+        e.g., naver.com / google.com
 
         DNS Server가 중단되면 직접 주소를 입력해야 접속 가능
 

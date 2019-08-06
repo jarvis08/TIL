@@ -20,7 +20,7 @@
 
   여러 노드에 가진 네트워크에 데이터를 제공하는 시스템
 
-  - i.g., Amazon Cloud Front
+  - e.g., Amazon Cloud Front
 
   > 개별 end-user의 가까운 서버를 통해 빠르게 전달
   >
