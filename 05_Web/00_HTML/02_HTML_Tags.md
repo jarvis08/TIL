@@ -44,6 +44,15 @@
   `<iframe width= height= src="">` : video
 
   `<table>` : 조직화된 표 구조를 생성, 모든 게시판에 사용됨
+  
+- `<label>` tag를 통해 `<input>` tag가 어떤 input을 받는지 설명해 주며, semantic web을 위해 필수적인 tag
+
+  `<label>` 의 `for`와 `<input>`의 `id`는 항상 동일해야 한다!
+
+  ```html
+  <label for="exampleInputEmail1">Email address</label>
+  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+  ```
 
 ---
 
@@ -52,6 +61,10 @@
 - `ol>li*3` + `Tab` 
 
   make 3 `<li>` tags in a `<ol>` tag
+  
+- `.container` + `Tab`
+
+  `container` class 적용한 `<div>` tag 생성
 
 ---
 
@@ -82,51 +95,3 @@
       <button type="submit">로그인</button>
   </form>
   ```
-
-- selector, 자식 색칠하기
-
-  ```html
-  <head>
-    <style>
-      #ssafy > p:nth-of-type(2) {
-        color: red
-      }
-    </style>
-  </head>
-  
-  <body>
-    <div id="ssafy">
-      <h2>어떻게 선택될까/</h2>
-      <p>첫번째 달락</p>
-      <p>두번째 달락</p>
-      <p>세번째 달락</p>
-      <p>네번째 달락</p>
-    </div> 
-  </body>
-  <!-- 두번째 달락이 빨간색으로 색칠됨 -->
-  ```
-
-  ```html
-  <head>
-    <style>
-      #ssafy > p:nth-child(2) {
-        color: red
-      }
-    </style>
-  </head>
-  
-  <body>
-    <div id="ssafy">
-      <h2>어떻게 선택될까/</h2>
-      <p>첫번째 달락</p>
-      <p>두번째 달락</p>
-      <p>세번째 달락</p>
-      <p>네번째 달락</p>
-    </div> 
-  </body>
-  <!-- 두번째 달락이 빨간색으로 색칠됨 -->
-  ```
-
-  - 후손 선택자와 자식 선택자 차이
-
-    후손 셀렉터는 자식 셀렉터와 달리 모든 후손(대대손손)에 적용

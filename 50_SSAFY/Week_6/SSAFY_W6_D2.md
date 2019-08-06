@@ -11,24 +11,7 @@
   <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
   ```
 
-- `class="justify-content-center"`
-
-  반응형 제작 후, mobile 버전으로 변경됐을 때 중앙 정렬 하여 contents를 보여주는 class
-
-  ```html
-  <div class="row m4-4 justify-content-center">
-      <div class="col-sm-4 col-12 card" style="width: 18rem;">
-          <img src="https://images8.alphacoders.com/282/thumb-1920-282535.jpg" class="card-img-top" alt="spiderman">
-          <div class="card-body">
-              <h5 class="card-title">Ironman</h5>
-              <p class="card-text">아이언맨을 못 보는게 아쉽다.</p>
-              <a href="#" class="btn btn-primary">Visit Shield</a>
-          </div>
-      </div>
-  </div>
-  ```
-
-- `col-12`를 카드 별로 추가적으로 작성 시, mobile 버전에서 전체 가로 grid를 사용
+- `col-12`를 카드 별로 추가적으로 작성 시, mobile 버전에서 전체 grid를 사용
 
   ```html
   <div class="col-sm-4 col-12 card" style="width: 18rem;">
