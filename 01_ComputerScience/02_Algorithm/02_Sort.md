@@ -89,7 +89,7 @@ def BubbleSort(a):
   1. 정렬 알고리즘을 이용하여 data 정렬
   2. 원하는 순서에 있는 원소 가져오기
 
-  - `K = N` 일 경우 **선택 정렬**과 동일
+  3. `K = N` 일 경우 **선택 정렬**과 동일
 
   ```python
   def select(l, k):
@@ -104,25 +104,25 @@ def BubbleSort(a):
 
 - 선택 정렬, Selection Sort
 
-- O(N^2)
+  - 시간 복잡도 = O(N^2)
 
-  주어진 data 중 가장 작은 값의 원소부터 차례대로 선택하여 위치를 교환
+  - 주어진 data 중 가장 작은 값의 원소부터 차례대로 선택하여 위치를 교환
 
-  (계속해서 가장 큰/작은 값을 앞 인덱스로 위치시키고, 나머지 부분에 대해 작업을 반복)
+    (계속해서 가장 큰/작은 값을 앞 인덱스로 위치시키고, 나머지 부분에 대해 작업을 반복)
 
-  1. 주어진 list 중 최소값 찾기
-  2. 그 값을 맨 앞에 위치한 값과 교환
-  3. 맨 처음 위치를 제외한 나머지 리스트를 대상으로 위의 과정을 반복
-  ```python
-def selectionSort(l):
-      for i in range(len(l)-1):
-          min_idx = i
-          for j in range(i+1, len(l)):
-              if l[min_idx] > l[j]:
-                  min_idx = j
-          l[i], l[min_idx] = l[min_idx], l[i]
-      return l
-  ```
+      1. 주어진 list 중 최소값 찾기
+      2. 그 값을 맨 앞에 위치한 값과 교환
+      3. 맨 처음 위치를 제외한 나머지 리스트를 대상으로 위의 과정을 반복
+      ```python
+      def selectionSort(l):
+          for i in range(len(l)-1):
+              min_idx = i
+              for j in range(i+1, len(l)):
+                  if l[min_idx] > l[j]:
+                      min_idx = j
+              l[i], l[min_idx] = l[min_idx], l[i]
+          return l
+      ```
 
 - 달팽이 문제, `SelectionSort_snail.py`
 
