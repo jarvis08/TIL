@@ -1,0 +1,53 @@
+header {
+    width: 100%;
+    height: 350px;
+}
+header > h1 {
+    text-align: center;
+    line-height: 350px;
+    background-image: url("./images/20175771-01.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    color: lightgray;
+}
+.subtitle {
+    margin: 3rem 0px 3rem;
+}
+.subtitle > h3 {
+    text-align: center;
+}
+.subtitle hr {
+    width: 70px;
+}
+
+.card {
+    margin: 1rem 0px 1rem;
+}
+
+
+
+
+
+
+
+footer {
+    display: block;
+    height: 50px;
+    width: 100%;
+}
+footer > div {
+    font-family: "Times New Roman", Times, serif;
+    padding: 0px 3rem;
+}
+footer p {
+    display: inline-block;
+    margin-bottom: 0px;
+    line-height: 50px;
+    color: whitesmoke
+}
+footer a {
+    float: right;
+    line-height: 50px;
+    color: lightblue;
+    text-align: end;
+}
