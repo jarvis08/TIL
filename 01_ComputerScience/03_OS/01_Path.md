@@ -48,12 +48,21 @@
 
   - Windows
 
-    - root 경로 = `C:\` 
+    - root 경로 = `C:\`
+
+    - `where 프로그램이름`
+
+      확인 방법
 
   - Linux
 
     - root 경로 = `/`
+
     - `~/` : home directory
+
+    - `which 프로그램이름`
+
+      확인 방법
 
   - 상대 경로
 
@@ -62,3 +71,7 @@
     - `../../directory/`
 
       두 단계 거슬러 올라간 후, direc 이라는 directory
+
+- `python3 -m site --user-site`
+
+  python site-package 절대경로 확인
