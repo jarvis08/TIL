@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <form action="/match/" method="POST">
+    {% csrf_token %}
+    당신의 이름 : <input type="text" name="me">
+    당신이 좋아하는 분의 이름 : <input type="text" name="you">
+    <button type="submit">제출</button>
+  </form>
+</body>
+</html>
