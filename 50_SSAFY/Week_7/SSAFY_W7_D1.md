@@ -509,8 +509,7 @@
     ```html
   <!-- match.html -->
     <h1> {{ me }}님과 {{ you }}님의 궁합은 {{ goonghap }}%입니다.</h1>
-    ```
-  <p>{{ path_1 }}</p>
+    <p>{{ path_1 }}</p>
     <p>{{ path_2 }}</p>
     <p>{{ scheme }}</p>
     <p>{{ method }}</p>
@@ -525,6 +524,7 @@
     http
     GET
     localhost:8000
+  
     ```
     
   - `index.html`의 **`POST`** 방식의 `<form>`
