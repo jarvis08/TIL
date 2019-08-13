@@ -1,4 +1,4 @@
-# Add Function to an App
+# Add Function to existing Apps
 
 ---
 
@@ -15,15 +15,19 @@
   - `urls.py`
 
     ```python
+    from django.contrib import admin
+    from django.urls import path
+    from AppName import views
+    
     urlpatterns = [
         # index/, home/ 이라는 주문이 들어올 시, views를 실행
-        path('admin/', admin.site.urls),
+      path('admin/', admin.site.urls),
         path('cube/<int:num>/', views.cube),
     ]
     ```
-
+  
   - `views.py`
-
+  
     ```python
     def cube(request, num):
         result = num ** 3
@@ -73,7 +77,7 @@
     ```
 
   ```html
-<!-- match.html -->
+  <!-- match.html -->
   <h1> {{ me }}님과 {{ you }}님의 궁합은 {{ goonghap }}%입니다.</h1>
   <p>{{ path_1 }}</p>
   <p>{{ path_2 }}</p>
@@ -84,7 +88,7 @@
   
   ```
   ## result
-  조동빈님과 박현지님의 궁합은 51%입니다.
+  조동빈님과 박현지님의 궁합은 100%입니다.
   /match/
   /match/
   http
@@ -98,7 +102,7 @@
 
   `POST`의 경우 `CSRF Token`으로 넣어버리는 것과, 무시하는 방법이 존재
 
-  Token으로 넣기 - `{% csrf_token %}`
+  Token으로 넣을 시 다음의 코드를 추가, `{% csrf_token %}`
 
   ```html
   <!-- index.html -->
@@ -133,7 +137,7 @@
 
   ```
   ## result
-  조동빈님과 박현지님의 궁합은 51%입니다.
+  조동빈님과 박현지님의 궁합은 100%입니다.
   POST
   ```
 

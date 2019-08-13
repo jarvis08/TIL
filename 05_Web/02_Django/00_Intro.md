@@ -54,21 +54,26 @@
 
   - Maintenance 또한 복잡해짐
 
-- **MVC**, Django는 **MTV**
 
-  - Model
+---
 
-    데이터를 관리하며, Database로 접근
+## Django의 **MTV**
 
-  - Template
+> 다른 Framework에는 MVC가 존재하며, Django는 차별화를 위해 MTV를 사용
 
-    사용자가 보는 화면(HTML)을 관리
+- Model
 
-    - Flask의 `render_template()` 역할
+  데이터를 관리하며, Database로 접근
 
-  - **View**
+- Template
 
-    Model과 Template의 **중간 관리자**
+  사용자가 보는 화면(HTML)을 관리
 
-    - URLS를 통해 `url`을 받고, 이를 Model 혹은 Template으로 전송하여 작업을 진행
+  - Flask의 `render_template()` 역할
+
+- **View**
+
+  Model과 Template의 **중간 관리자**
+
+  - URLS를 통해 `url`을 받고, 이를 Model 혹은 Template으로 전송하여 작업을 진행
 

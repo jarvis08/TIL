@@ -4,6 +4,15 @@
 
 ## Django's Conventions
 
+- New Project 생성 시
+
+  Capital Letter의 Directory 안에 같은 이름의 Lower Lettered Project가 존재
+
+  ```
+  NEWPROJECT/newproject/
+  NEWPROJECT/manage.py
+  ```
+
 - url은 항상 **`/`**로 종료
 
 - 마지막 요소일 지라도 `,`를 붙여주기

@@ -1,4 +1,4 @@
-# Make Project $ Application
+# Make Project & Application
 
 ---
 
@@ -10,17 +10,19 @@
 
     Capital Letter의 Directory 안에 같은 이름의 Lower Lettered Project가 존재
 
-  ```shell
-  $ mkdir PROJECT
-  $ cd PROJECT
-  $ django-admin startproject project .
-  ```
+- Project 생성 방법
 
-  - 생성 파일
+  ```shell
+  $ mkdir PROJECT_NAME
+  $ cd PROJECT_NAME
+  $ django-admin startproject project_name .
+  # '$ cd PROJECT_NAME' 대신에 '.' 자리에 PROJECT_NAME을 써주어도 무방
+  ```
+  - Start Project 생성 파일
 
     `PROJECT/project/__init__py`
 
-    `PROJECT/project/wettings.py`
+    `PROJECT/project/settings.py`
 
     `PROJECT/project/urls.py`
 
@@ -50,7 +52,7 @@
 
 ## Make Application
 
-1. app 생성하기
+1. app 생성
 
     ```shell
     $ python manage.py startapp NewApp
@@ -133,13 +135,13 @@
      - 확인 방법
 
        1. Django Github
+     2. local pip, `site-packages/`
+       
+     - 변수 및 참조 활용 순서
 
-       2. local pip, `site-packages/`
-
-          `Local` - `Enclosed` -  `Global` - `site-packages` - `built-in`
+        `Local` > `Enclosed` > `Global` > `site-packages` > `built-in`
 
      ```python
-     from django.shortcuts import render
      from django.http import HttpResponse
      
      # Create your views here.
