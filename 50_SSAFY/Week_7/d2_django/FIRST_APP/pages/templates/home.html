@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% block body %}
+
+  <h2>For문</h2>
+  <p>{{ myname }}</p>
+  <p>{{ class }}</p>
+  {% for item in class %}
+    <p>{{ item }}</p>
+  {% endfor %}
+
+  <h2>forloop.counter와 empty</h2>
+  {% for movie in empty_dataset %}
+    <p>{{ forloop.counter }}. {{ movie }}</p>
+  {% empty %}
+    <p>영화 데이터가 없습니다.</p>
+  {% endfor %}
+
+  <h2>다양한 helper / filter</h2>
+  {% for movie in empty_dataset %}
+    <p>{{ movie|length }} {{ movie|truncatechars:5 }}</p>
+  {% endfor %}
+
+  <h2>int</h2>
+  {{ num|add:10 }}
+
+  <h2>datetime</h2>
+  <p>{% now 'd.m.y' %}</p>
+  <p>{% now 'd M Y' %}</p>
+  <p>{% now 'Y년m월d일 h시i분 a D' %}</p>
+{% endblock %}

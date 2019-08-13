@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block body %}
+  <h1>아스키 아트 제조기</h1>
+  <form action="/artii/result/" method="GET">
+    <input type="text" name="string">
+    <select name="font" id="">
+      {% for font in font_list %}
+      <option>{{ font }}</option>
+      {% endfor %}
+    </select>
+    <button type="submit">submit</button>
+  </form>
+{% endblock %}

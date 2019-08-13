@@ -1,0 +1,21 @@
+#header {
+  height: 350px;
+  background-image: url("images/20183844-03.jpg");
+  /* image size 늘림 */
+  background-size: cover;
+  /* 이미지 바둑판 배열 제거 */
+  background-repeat: no-repeat;
+  /* image와 color를 겹치게 사용 */
+  background-color: gray;
+  background-blend-mode: screen;
+  /* image를 중앙으로 */
+  background-position: 50%;
+}
+
+#footer {
+  background-color: rgba(110, 120, 120, 1);
+}
+
+#top-btn {
+  color: white;
+}

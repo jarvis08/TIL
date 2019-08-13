@@ -161,6 +161,22 @@ count = len(set(winner) & set(ur_lotto))
 | `os.path.isfile("C:\Python35\python.exe")`                   | 파일 경로가 존재하는지 체크하기                              |                                          |
 | `os.path.getsize("C:\Python35\python.exe")`                  | 파일의 크기                                                  |                                          |
 
+- 예시
+
+  - `os.getcwd()`
+
+    current working directory
+
+  - `os.path.join(a, b, c)`
+
+    `a/b/c` 형태로 `a` 경로에 `b`와 `c`의 경로를 추가
+
+    ```python
+    import os
+    current = os.getcwd()
+    templates_path = os.path.join(current, 'Directory_name')
+    ```
+
 ---
 
 - `filter(function, iterable)`

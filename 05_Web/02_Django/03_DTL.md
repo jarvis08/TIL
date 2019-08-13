@@ -1,23 +1,6 @@
-# Django Template Language
+# DTL, Django Template Language
 
 ---
-
-## Django's Conventions
-
-- New Project 생성 시
-
-  Capital Letter의 Directory 안에 같은 이름의 Lower Lettered Project가 존재
-
-  ```
-  NEWPROJECT/newproject/
-  NEWPROJECT/manage.py
-  ```
-
-- url은 항상 **`/`**로 종료
-
-- 마지막 요소일 지라도 `,`를 붙여주기
-
-- `views.py` 함수의 parameter로 항상 **`request`**를 기입
 
 - `render(request, url, 변수Dict)` 형태로 사용하며,
 
@@ -141,7 +124,6 @@
       <p>{{ movie|length }} {{ movie|truncatechars:5 }}</p>
     {% endfor %}
       ```
-
 
 ---
 

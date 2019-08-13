@@ -1,8 +1,8 @@
-# Add Function to existing Apps
+# Add Function to an Existing Apps
 
 ---
 
-## 이미 존재하는 App에 기능 추가하기
+## 이미 존재하는 App에 기능을 추가하는 과정
 
 1. `urls.py`에 `url`과  `view 함수 위치` 추가
 2. `views.py`에 함수 작성

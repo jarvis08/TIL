@@ -54,7 +54,6 @@
 
   - Maintenance 또한 복잡해짐
 
-
 ---
 
 ## Django의 **MTV**
@@ -76,4 +75,6 @@
   Model과 Template의 **중간 관리자**
 
   - URLS를 통해 `url`을 받고, 이를 Model 혹은 Template으로 전송하여 작업을 진행
+
+---
 
