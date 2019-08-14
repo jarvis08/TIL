@@ -329,6 +329,19 @@
 
   rel_tol 값을 조정하면 더 까다롭게 비교 가능
 
+### Under-bar( _ )를 사용하는 경우
+
+- 무의미한 변수를 할당해야 할 때
+
+  - for문의 i가 사용되지 않을 경우 _로 설정
+
+  - tuple의 요소를 개별로 저장하는데, 사용되지 않는 요소의 경우 _로 설정
+
+- Built-in 함수의 이름을 사용하고 싶을 때
+
+  - `_sum = 0``
+  - ``_int = result`
+
 ---
 
 ## 자료형
@@ -927,27 +940,31 @@
     [0, 1, 2, 3, 4, 5]
   <class 'range'>
     True"""
+    ```
   
   print(list(range(0, -9, -1)))
   """result : [0, -1, -2, -3, -4, -5, -6, -7, -8]"""
-    ```
-
-  - 시퀀스에 활용할 수 있는 연산자/함수
-
+  
+  ```
+  
+  ```
+  
+- 시퀀스에 활용할 수 있는 연산자/함수
+  
     | operation    | 설명                    |
     | ------------ | ----------------------- |
     | `x in s`     | containment test        |
     | `x not in s` | containment test        |
     | `s1 + s2`    | concatenation           |
   | `s * n`      | n번만큼 반복하여 더하기 |
-    | `s[i]`       | indexing                |
-    | `s[i:j]`     | slicing                 |
-    | `s[i:j:k]`   | k간격으로 slicing       |
-    | `len(s)`     | 길이                    |
-    | `min(s)`     | 최솟값                  |
-    | `max(s)`     | 최댓값                  |
-    | `s.count(x)` | x의 개수                |
-
+  | `s[i]`       | indexing                |
+  | `s[i:j]`     | slicing                 |
+  | `s[i:j:k]`   | k간격으로 slicing       |
+  | `len(s)`     | 길이                    |
+  | `min(s)`     | 최솟값                  |
+  | `max(s)`     | 최댓값                  |
+  | `s.count(x)` | x의 개수                |
+  
     ```python
     # 숫자 0이 6개 있는 list
     [0] * 6
@@ -965,35 +982,35 @@
     pal = 'racecar'
     pal == pal[::-1]
   """result
-    True"""
-
+  True"""
+  
     l = [1, 2, 2, 2, 3]
   l.count(2)
     """result
   3"""
     ```
-
-  - **set**, **dictionary**
-
-    세트는 수학에서의 집합과 동일하게 처리 
-
-    세트는 중괄호`{}`를 통해 만들며, 순서가 없고 **중복된 값이 없다.**
-
-    `set(list)`는 복잡도가 꽤 크다.
-
+  
+- **set**, **dictionary**
+  
+  세트는 수학에서의 집합과 동일하게 처리 
+  
+  세트는 중괄호`{}`를 통해 만들며, 순서가 없고 **중복된 값이 없다.**
+  
+  `set(list)`는 복잡도가 꽤 크다.
+  
     ```python
   {value1, value2, value3}
     ```
-
-    | 연산자/함수         | 설명   |
-    | ------------------- | ------ |
-    | a - b               | 차집합 |
-    | a \| b `(| : pipe)` | 합집합 |
-    | a & b               | 교집합 |
-    | a.difference(b)     | 차집합 |
+  
+  | 연산자/함수         | 설명   |
+  | ------------------- | ------ |
+  | a - b               | 차집합 |
+  | a \| b `(| : pipe)` | 합집합 |
+  | a & b               | 교집합 |
+  | a.difference(b)     | 차집합 |
   | a.union(b)          | 합집합 |
-    | a.intersection(b)   | 교집합 |
-
+  | a.intersection(b)   | 교집합 |
+  
     ```python
     # 차, 합, 교집합
     set_a = {1, 2, 3}
@@ -1002,8 +1019,8 @@
     print(set_a.difference(set_b))
     """result
     {1, 2}
-    {1, 2}"""
-
+  {1, 2}"""
+  
     # 중복제거
     l = [1, 2, 2, 2, 3]
     l = list(set(l))
@@ -1011,19 +1028,19 @@
     """result
   [1, 2, 3]"""
     ```
-
-  - **dictionary**
-
+  
+- **dictionary**
+  
     ```python
   {Key1:Value1, Key2:Value2, Key3:Value3, ...}
-    ```
-
+  ```
+  
     - 딕셔너리는 `key`와 `value`가 쌍으로 이뤄져있으며, 궁극의 자료구조입니다.
     - `{}`를 통해 만들며, `dict()`로 만들 수도 있습니다.
     
   - `key`는 immutable한 모든 것이 가능하다. (불변값 : string, integer, float, boolean, tuple, range)
-    - `value`는 `list`, `dictionary`를 포함한 모든 것이 가능하다.
-
+  - `value`는 `list`, `dictionary`를 포함한 모든 것이 가능하다.
+  
     ```python
     # 선언 방법
     dic_a = {}
