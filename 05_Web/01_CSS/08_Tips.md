@@ -59,3 +59,30 @@
 - white : `#030303`
   - link-blue: `rgb(15, 168, 224)`
 - freecodecamp에서 bootstrap무료 수강 및 수료증
+
+---
+
+## body tag 색상변하게하기
+
+```css
+body {
+  margin: 0;
+  width: 100%;
+  height: 100vh;
+  color: black;
+  background: linear-gradient(-45deg, #fca084, #fc74a8, #4683f5, #6cffdd);
+  background-size: 500% 700%;
+animation: gradientBG 7s ease infinite;
+}
+@keyframes gradientBG {
+  0% {
+      background-position: 0% 50%;
+  }
+  50% {
+      background-position: 100% 50%;
+  }
+  100% {
+      background-position: 0% 50%;
+  }
+}
+```
