@@ -7,55 +7,52 @@
 ## Lecture Overview
 
 1. OS Overview
+
 2. Process
+
+   실행 중인 프로그램
+
 3. Thread
+
+   가벼운 Process
+
+   하나의 Process는 여러 개의 Thread를 보유 가능
+
 4. Mutual Exclusion and Synchronization
+
+   (Mutual Exclusion)여러 Process가 IO 장비(e.g., Printer)와 같은 None Shared Resource를 동시에 사용하지 않도록 Protect
+
 5. Deadlock and Starvation
+
+   - Deadlock
+
+     Process끼리 서로 Resource를 점유하려 시도하여 충돌이 된 상태
+
+   - Starvation
+
+     Resource 사용을 계속 대기중인 상태
+
 6. Memory Management
+
 7. Virtual Memory
+
 8. Uniprocessor Scheduling
+
+   어느 Process가 CPU(Multi-Core의 경우 여러 일 가능)를 사용할 지 결정하는 알고리즘
+
+   e.g., Uni-process Scheduling
+
 9. Multiprocessor and Realtime Scheduling
+
 10. IO
+
+    Disk Scheduling 성능 최적화
+
+    Disk는 속도가 느리다
+
 11. File Management
+
 12. Virtual Machine
-
-- Process
-
-  실행 중인 프로그램
-
-- Thread
-
-  가벼운 Process
-
-  하나의 Process는 여러 개의 Thread를 보유 가능
-
-- Mutual Exclusion
-
-   여러 Process가 IO 장비(e.g., Printer)와 같은 None Shared Resource를 동시에 사용하지 않도록 Protect
-
-- Deadlock
-
-  Process끼리 서로 Resource를 점유하려 시도하여 충돌이 된 상태
-
-- Starvation
-
-  Resource 사용을 계속 대기중인 상태
-
-- Memory
-
-  Main Memory와 Virtual Memory
-
-- Scheduling
-
-  어느 Process가 CPU(Multi-Core의 경우 여러 일 가능)를 사용할 지 결정하는 알고리즘
-
-  e.g., Uni-process Scheduling
-
-- IO
-
-  Disk Scheduling 성능 최적화
-
-  Disk는 속도가 느리다
 
 ---
 
@@ -133,7 +130,7 @@
 
   - HW
 
-    Individualy Seperated Works
+    Individualy Seperated, Equal Level Works
 
     - Processor, Main Memory, I/O Devices
 
