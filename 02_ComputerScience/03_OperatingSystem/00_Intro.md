@@ -4,19 +4,20 @@
 
 ---
 
-- Lecture Overview
-  1. OS Overview
-  2. Process
-  3. Thread
-  4. Mutual Exclusion and Synchronization
-  5. Deadlock and Starvation
-  6. Memory Management
-  7. Virtual Memory
-  8. Uniprocessor Scheduling
-  9. Multiprocessor and Realtime Scheduling
-  10. IO
-  11. File Management
-  12. Virtual Machine
+## Lecture Overview
+
+1. OS Overview
+2. Process
+3. Thread
+4. Mutual Exclusion and Synchronization
+5. Deadlock and Starvation
+6. Memory Management
+7. Virtual Memory
+8. Uniprocessor Scheduling
+9. Multiprocessor and Realtime Scheduling
+10. IO
+11. File Management
+12. Virtual Machine
 
 - Process
 
@@ -107,13 +108,14 @@
    System calls are performed thorugh library calls.
   
      - Enables application programs to be ported easily, through remopilation to other systems that support the same API
-  
+    
      - Library가 제공하는, Application Program들을 제작할 때 사용하는 편리한 Interface
-  
-- OS의 또 다른 정의
+
+### OS의 또 다른 정의
+
+- OS
 
   A layer of SW between the application program and the HW
-
   - Provide applications with simple and uniform interface to manipulate complicated and often widely dirrerent low-level hardware devices
   - Protect the hardware from misuse by runaway applications
   - Share the hardware resource from multiple processes/users
