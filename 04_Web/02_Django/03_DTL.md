@@ -25,6 +25,39 @@
         return render(request, 'home.html', context)
     ```
 
+- `redirect('별명')`
+
+  존재하는 다른 페이지로 돌아가도록 설정하기
+  
+  1. `PROJECT_NAME/project_name/urls.py`에 root의 별명 설정
+  
+     ```python
+     # PROJECT_NAME/project_name/urls.py
+     urlpatterns = [
+         path('admin/', admin.site.urls),
+         # path('', views.index),
+         path('', views.index, name='index'),
+     ]
+     ```
+     
+  2. `views.py`에 `render()` 대신 `redirect()` 사용하기
+  
+     ```python
+     # views.py
+     from django.shortcuts import render, redirect
+     
+     
+     def create(request):
+         ## 기존
+         # return render(request, 'create.html', context)
+         
+         ## redirect 잘못된 사용
+         # return redirect('index.html')
+     	
+         # PROJECT_NAME/project_name/urls.py에서 설정한 별명을 사용해야 한다.
+         return redirect('index')
+     ```
+
 ---
 
 ## for 문

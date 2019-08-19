@@ -43,7 +43,7 @@
 
 ---
 
-- `Python Tutor`
+- Python Tutor
 
   ​	: Visualize Code and Get Live Help
 
@@ -52,14 +52,16 @@
   ​	http://pythontutor.com/
 
   ​	http://pythontutor.com/visualize.html#mode=edit
+  
+- `$ python -i` : git bash에서 python interactive 실행
+
+- `.ipynb ` : jupyter notebook 확장자, json 파일 형식으로 저장
+
+- `PEP-8` : python enhancement proposal, python 개발자들의 표준안
+
+- Linter : Code Style Guide Extention
 
 ---
-
-`python -i` : git bash에서 python interactive 실행
-
-`.ipynb ` : jupyter notebook 확장자, json 파일 형식으로 저장
-
-`PEP-8` : python enhancement proposal, python 개발자들의 표준안
 
 - python keyword(식별자, 예약어)
 
