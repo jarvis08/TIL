@@ -1,4 +1,4 @@
-# Seperate urls.py / templates / Namspaces
+# Seperate Url / Template / Namspace
 
 ---
 
@@ -63,7 +63,7 @@
        TEMPLATES = [
            {
                'BACKEND': 'django.template.backends.django.DjangoTemplates',
-               'DIRS': [os.path.join(BASE_DIR, 'first_app','templates')],
+               'DIRS': [os.path.join(BASE_DIR, 'project_name','templates')],
                'APP_DIRS': True,
                'OPTIONS': {
                    'context_processors': [
@@ -76,10 +76,20 @@
            },
        ]
        ```
+       
+       - `project_name` 구하기
+       
+         `os.path.basename(os.getcwd())`
 
 ---
 
 ## 다른 App의 동일한 파일명의 HTML을 App별로 다르게 인식시키기
+
+- 해당 조치 이유
+
+  Django는 **project 내부의 모든 `templates` directory들을 하나의 directory인 것 처럼 관리**
+
+  따라서 app 별로 동일한 이름의 html 파일을 생성하면 별개로의 인식이 불가
 
 1. `templates/AppName/` 형태로 directory를 만들어서 그 안에 위치시키기
 
@@ -99,3 +109,85 @@
    def artii(request):
        return render(request, 'artii/artii.html', context)
    ```
+
+---
+
+## App 별 url namespace 구분하기
+
+- Django에서는 url naming이 가능
+
+  ```python
+  # posts/urls.py
+  urlpatterns = [
+      path('posts/new/', views.index, name='posts_new'),
+  ]
+  ```
+
+  ```python
+  # movie/urls.py
+  urlpatterns = [
+      path('movie/new/', views.index, name='movie_new'),
+  ]
+  ```
+
+- 하지만 여러 app들이 생겨날 경우 겹치는 이름이 발생 할 수 있으며,
+
+  overlapping이 발생했을 경우의 문제 해결 방법이 난해
+
+  `posts_new`, `posts_create`, `movie_new`, `movie_create`
+
+  - url 주소 변경 또한 용이
+
+- 따라서 app 별로 `posts`, `movie`와 같은 `app_name`을 미리 설정할 수 있도록 조치
+
+  ```python
+  # posts/urls.py
+  app_name = 'posts'
+  urlpatterns = [
+      path('posts/new/', views.index, name='new')
+  ]
+  ```
+
+  ```python
+  # movie/urls.py
+  app_name = 'movie'
+  urlpatterns = [
+      path('movie/new/', views.index, name='movie_new'),
+  ]
+  ```
+
+
+### 활용 방법
+
+- 기본 활용
+
+  ```python
+  # python
+  app_name = 'app'
+  urlpatter = [path('', views.index, 'home'),]
+  return render('app:home')
+  ```
+
+  ```html
+  <!-- html -->
+  <a href="{% url 'app:home' %}">
+  ```
+
+- `input` parameter가 있는 경우
+
+  ```python
+  # python
+  app_name = 'app'
+  urlpatter = [path('<int:pk>/edit/', views.edit, 'edit'),]
+  return render('app:edit', pk)
+  ```
+
+  ```html
+  <!-- html -->
+  <a href="{% url 'app:edit' instance.pk %}">
+  ```
+
+  
+
+  
+

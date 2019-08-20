@@ -31,7 +31,9 @@
   | UPDATE      | UPDATE |
   | DELETE      | DELETE |
 
-### Django ORM
+---
+
+## DB 생성하기
 
 - `settings.py` 에서 Default로 SQLite가 설정되어 있으며,
 
@@ -219,7 +221,7 @@ $ python manage.py sqlmigrate articles 0001
 
 ---
 
-## Python 파일에서 DB data 다루기
+## DB 갱신하기
 
 1. `models.py`를 통해 DB data 불러오기
 
@@ -244,7 +246,7 @@ $ python manage.py sqlmigrate articles 0001
        # context = {
        #     'blogs': blogs,
        # }
-       articles = Article.object.all()
+       articles = Article.objects.all()
        context = {
            'articles': reversed(articles),
        }
@@ -292,3 +294,56 @@ $ python manage.py sqlmigrate articles 0001
        
        return render(request, 'create.html', context)
    ```
+
+### 객체를 DB에 저장하는 방법 네 가지
+
+1. 인스턴스 생성 후 속성 별로 부여하기
+
+   ```python
+   def create(request):
+       post = Post()
+       post.title = request.GET.get('title')
+       post.content = request.GET.get('content')
+       post.img_url = request.GET.get('img_url')
+       post.save()
+   ```
+
+2. 인스턴스 생성과 동시에 인수로 설정하기
+
+   ```python
+   def create(request):
+       post = Post(
+           title = request.GET.get('title')
+           content = request.GET.get('content')
+           img_url = request.GET.get('img_url')
+       )
+       post.save()
+   ```
+
+3. `save()`가 필요 없는 방법
+
+   하지만 데이터 별 조건(불순 데이터 여부)을  만족하는지 확인하는 validation 과정이 대게 `save()`에 존재하므로, 좋은 방법이 아니다.
+
+   ```python
+   def create(request):
+       Post.objects.create(
+           title = request.GET.get('title')
+           content = request.GET.get('content')
+           img_url = request.GET.get('img_url')
+       )
+   ```
+
+4. 세 번째 방법의 간편화 버전
+
+   dictionary는 아니지만, keyword argument와 같은 방식이 가능
+
+   단, DB의 Column 이름과 GET을 통해 가져온 data의 `name`이 동일해야 가능
+
+   이 역시 validation 과정이 없어 좋은 방법은 아니다.
+
+   ```python
+   def create(request):
+   	Post.objects.create(**request.GET)
+   ```
+
+   
