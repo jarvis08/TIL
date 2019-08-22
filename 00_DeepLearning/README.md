@@ -1,7 +1,5 @@
 # Machine Learning
 
----
-
 My goal is to develop AI Secretary like 'Jarvis' in movie 'Ironman'.
 
 But now I'm concentrating on studying Computer Science.
@@ -12,7 +10,7 @@ Before November, I will review and organize what I learned before whenever I hav
 
 ---
 
-## Will Study.
+## Expecting to Study.
 
 - Books
 

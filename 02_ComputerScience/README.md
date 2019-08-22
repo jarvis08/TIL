@@ -1,10 +1,6 @@
 # Computer Science
 
----
-
-I study computer science to understand computer and Machine Learning better.
-
-Furthermore, I believe that this will enhance performance of my codes.
+I study Computer Science to understand computer and Machine Learning better.
 
 ---
 
@@ -24,9 +20,7 @@ Furthermore, I believe that this will enhance performance of my codes.
 
   <http://www.kocw.net/home/cview.do?mty=p&kemId=1194929>
 
----
-
-## Will Study.
+### Expecting.
 
 - Books
 

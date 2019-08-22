@@ -1,8 +1,6 @@
 ## Now Studying.
 
----
-
-I'm concentrating on studying Computer Science to understand Machine Learning better.
+I enjoy studying Computer Science, Data Science, and Machine Learning.
 
 - at SSAFY
 
@@ -23,7 +21,7 @@ I'm concentrating on studying Computer Science to understand Machine Learning be
 
 ---
 
-## Will Study.
+## Will
 
 - Books
 
@@ -53,14 +51,12 @@ I'm concentrating on studying Computer Science to understand Machine Learning be
 
 ---
 
-## Past & Again in the Future Someday.
+## Past
 
 - Books
 
   - Data Science Handbook, Jake VanderPlas
   - Deep Learning from Scratch
-
-- Lectures
 
 - Paper Reviews
 
