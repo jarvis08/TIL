@@ -86,3 +86,15 @@
       - Proxy
 
         Client와 Server의 중간에서 정보를 빼내는 해킹 방법
+
+- url이 길고 길어지는 이유
+
+  사용자의 footstep을 기록 및 tagging하여 데이터화
+
+  - `장바구니`와 같은 컨텐츠는 `cookie`에 기록
+
+    `cookie`는 browser를 통해 저장
+
+  - app 간의 이동에는 `cookie`를 활용할 수 없으며, 이는 url tagging이 대신
+
+    기업은 tagging된 데이터를 활용하여 사용자가 어떤 route를 통해 서비스를 이용하는지 확인 가능

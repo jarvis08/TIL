@@ -1,6 +1,8 @@
 # DTL, Django Template Language
 
----
+## Template 이동
+
+### 새 페이지 Load
 
 - `render(request, url, 변수Dict)` 형태로 사용하며,
 
@@ -25,11 +27,13 @@
         return render(request, 'home.html', context)
     ```
 
+### 이전의 특정 페이지 Load
+
 - `redirect('별명')`
 
   존재하는 다른 페이지로 돌아가도록 설정하기
   
-  1. `PROJECT_NAME/project_name/urls.py`에 root의 별명 설정
+  1. `PROJECT_NAME/project_name/urls.py`에 Url의 별명을 설정
   
      ```python
      # PROJECT_NAME/project_name/urls.py
@@ -42,25 +46,21 @@
      
   2. `views.py`에 `render()` 대신 `redirect()` 사용하기
   
+     `urls.py`에서 설정한 `name`을 사용
+     
      ```python
      # views.py
      from django.shortcuts import render, redirect
      
-     
      def create(request):
-         ## 기존
-         # return render(request, 'create.html', context)
-         
-         ## redirect 잘못된 사용
-         # return redirect('index.html')
-     	
-         # PROJECT_NAME/project_name/urls.py에서 설정한 별명을 사용해야 한다.
          return redirect('index')
      ```
 
 ---
 
-## for 문
+## Template 내부 제어
+
+### for 문
 
 ```html
 {% for s in lotto %}
@@ -90,9 +90,7 @@
   {% endfor %}
   ```
 
----
-
-## if 문
+### if 문
 
 ```html
 {% if True %}
@@ -116,9 +114,7 @@
 {% endfor %}
 ```
 
----
-
-## helper $ filter
+### helper
 
 - `helper` example
 
@@ -139,9 +135,7 @@
         ```
     
 
----
-
-## filter
+### filter
 
 - `{{ html변수|filter함수 }}`
   - `length`
@@ -158,9 +152,7 @@
     {% endfor %}
       ```
 
----
-
-## datetime
+### datetime
 
 ```html
 <p>{% now 'd.m.y' %}</p>
@@ -189,14 +181,36 @@
 
   But `가능 != 해도된다`
 
----
+### extends & include
 
-## extends
+- `extends`
 
-- Template 상속하여 편의성 급증
+  `block`과 함께 사용되며, 현재 template의 내용을 `base.html`의 `block` 부분에 삽입한 형태로 사용
 
-  e.g., Bootstrap을 Template마다 적용시키기
+  ```html
+  {% extends 'base.html' %}
+  {% block block_name %}
+  내용
+  {% endblock %}
+  ```
 
----
+- `inclunde`
 
-## block
+  `_navbar.html`의 내용을 `{% inlude %}`의 위치에 삽입
+  
+  ```html
+  {% include '_navbar.html' %}
+  ```
+
+### block
+
+- 다른 template의 내용을 끼워 넣는 것에 사용
+
+  ```html
+  {% extends 'base.html' %}
+  {% block block_name %}
+  내용
+  {% endblock %}
+  ```
+
+  

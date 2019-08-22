@@ -76,5 +76,11 @@
 
   - URLS를 통해 `url`을 받고, 이를 Model 혹은 Template으로 전송하여 작업을 진행
 
----
+### 대형 Project를 진행할 때의 기획 순서
+
+1. Model 제작
+2. Workflow
+   1. Url 정의
+   2. View 함수 정의
+   3. Template 제작
 
