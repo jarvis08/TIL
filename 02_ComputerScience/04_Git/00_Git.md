@@ -58,7 +58,9 @@
    $ git add .
    
    # add 취소, unstage
+   $ git rm --cached 파일명(경로포함)
    $ git reset HEAD 파일명
+   
    # add 전체 취소
    $ git reset HEAD
    
