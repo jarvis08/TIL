@@ -38,7 +38,7 @@
 
 8. Uniprocessor Scheduling
 
-   어느 Process가 CPU(Multi-Core의 경우 여러 일 가능)를 사용할 지 결정하는 알고리즘
+   어느 Process가 CPU(Multi-Core의 경우 여러 일 가능)를 사용할 지 결정하는 알고리즘
 
    e.g., Uni-process Scheduling
 
@@ -105,7 +105,7 @@
    System calls are performed thorugh library calls.
   
      - Enables application programs to be ported easily, through remopilation to other systems that support the same API
-    
+   
      - Library가 제공하는, Application Program들을 제작할 때 사용하는 편리한 Interface
 
 ### OS의 또 다른 정의
@@ -213,6 +213,184 @@
 
     Programmers program Pentium 4 as same as 486 processor
 
-    
+- CISC, Complex Instruction Set Computer
 
-  
+  80년대 이전까지 복잡하지만 정교한 Instruction Set
+
+  프로그램 설계가 용이하지만, 속도가 느리다.
+
+  - Each instruction is complex
+
+  - A large number of instucutions in ISA
+
+  - Architectures until mid 80's
+
+    e.g., x86
+
+- RISC, Reduced Instruction Set Computer
+
+  - A small number of Instructions in ISA
+  - Load-store architectures
+    - Computations are allowd only on registers
+    - Data must be transferred to registers before computation
+  - Most architectures built since 80's
+
+- Word
+
+  Default data size for computation
+
+  - Size of GPR & ALU data path depends on the word size
+
+    - GPR
+
+      General purpose (integer) register
+
+    - ALU
+
+      Arithmetic and logic unit
+
+  - The word size determines if a processor is a 8b, 16b, 32b, or 64b processor
+
+- Address(Pointer)
+
+  Points to a location in memory
+
+  - Each address points to a byte(byte addressable)
+    - 32bit address가 있을 때, `2^32` bytes(4GB) 만큼 address 가능
+    - 256MB memory가 있을 때, 최소 28bit address 필요(`2^28` = 256MB)
+
+- Caches
+
+  Faster but smaller memory close to processor
+
+  - SRAMs에 설치되어 있어 속도가 빠르지만, 그 만큼 제한된 용량을 보유
+
+- Interrupt
+
+  - A mechanism by which I/O devices may interrupt the normal sequencing of the processor
+  - Provided primarily as a way to improve processor utilization since most I/O devices are much slower than the processor
+  - More formally, interrupt can be defined as below
+    - Forced transfer of control to a procedure(handler) due to external events(interrups) or due to an erroneous condition(exceptions)
+    - External interrupt is caused by external evnets(I/O devices) and asynchronous
+    - Exceptions are caused by processor internally at erroneous condition
+
+---
+
+## Evolution of Operating Systems
+
+1. Serial Processing
+2. Simple Batch Systems
+3. Multiprogrammed Batch Systems
+4. Time Sharing Systems
+
+### Serial Processing
+
+- Earliest computers
+
+  - No OS until mid 1950s
+
+    Programmers interacted directly with the computer H/W
+
+  - Computers ran from a console with,
+
+    display lights, toggle switches, some form of input device, printer
+
+- Problems
+
+  - Scheduling
+
+    사용하기 위해 연구자들의 사용 예약 요구
+
+  - Setup time of program to run
+
+    - Compile
+    - Link
+    - Load require mounting tapes
+    - Setting up card decks
+
+  - Extemely expensive
+
+- 인물
+
+  - Alan Turing's
+
+    Computer Machine 최초의 이론인 Turing Machine을 제안
+
+    - Bombe
+
+      컴퓨터에 가까운 독일군 암호 해독 기계
+
+    - Colossus
+
+      Turing이 직접 발명에 참여한 것은 아니나, Bombe를 기초로 만든 세계 최초의 전자식 컴퓨터
+
+      ENIAC 발명 이전의 기계이며, Disclosed 되지 않았었다.
+
+    - Turing test
+
+      설명 생략
+
+  - The Von Neumann Machine
+
+    최초의 현대식 컴퓨터 개발
+
+    - IAS
+
+      IBM comercial computer의 Base
+
+### Simple Batch Systems
+
+- Moinitor
+
+  먼저 제출한 프로그램 부터 차례대로 수행(FIFO)
+
+  - User submits the job on cards or tpae to a computer operater, who batches them together sequentially and places them on an input device
+  - Monitor is a resident S/W in main memory
+  - Monitor reads in jobs one at a time from the input device
+  - The current job is placed in the user program area
+  - The control is passed to the job
+  - When the job is completed, it returns control to the monitor
+    - User no longer has direct access to the processor
+
+- History
+
+  - The 1st batch OS was developed by GM in the mid-1950s for use on IBM 701
+  - By the early 1960s, a number of vendors developed batch OS for their computer systems
+
+- Problems
+
+  - Processor is often idle
+
+    - Even with automatic job sequencing
+
+    - I/O devices are slow compared to processor
+
+      ```
+      15ms - Read one record from file
+      1 ms - Execute 100 instructions
+      15ms - Write one record to file
+      Total = 31ms
+      ```
+
+### Multiprogrammed Batch System
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
