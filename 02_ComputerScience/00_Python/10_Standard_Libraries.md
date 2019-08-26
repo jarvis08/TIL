@@ -1,125 +1,5 @@
 # Python Standard Libraries
 
----
-
-## string
-
-- `string.replace('변경 전', '변경 후')` : string의 일부를 원하는 글자로 수정
-
-  ```python
-  print('touch example_{}.txt'.format(i))
-  print(f'touch example_{i}.txt')
-  print('touch example'+ str(i) + '.txt')
-  ```
-  
-- `string.isdigit()` : 문자열이 양의 정수로만 구성되어 있는지 판별
-
-  ```python
-  # input()은 모든 입력을 string으로 반화
-  num = input()
-  if num.isdigit():
-      print('숫자입니다.')
-  else:
-      print('문자입니다.')
-  ```
-
-- `string.isalpha()` : 문자열의 내용이 알파벳으로만 구성되어 있는지 판별
-
-- `.strftime()` : 날짜/시간 format에서 날짜/시간 요소만 추출
-
-  `.isoformat()` : %를 사용하지 않으며, 날짜/시간 format을 유지한 채 자료형만 string으로 변환
-
-  ```python
-  # datetime.datetime 날짜와 시간이 함께 포함되어 있으므로 date 함수 사용
-  from datetime import date, timedelta
-  
-  yesterday = date.today() - timedelta(days=1)
-  print(yesterday)
-  yesterday = yesterday.strftime('20%y%m%d')
-  print(yesterday)
-  """result
-  2019-07-16
-  20190716"""
-  ```
-
-  ```python
-  # isoformat은 %를 사용하지 않으며, 날짜/시간 format을 유지한 채 자료형만 string으로 변환
-  from datetime import date
-  
-  yesterday = (date.today() - timedelta(days=1)).isoformat().replace('-', '')
-  ```
-
----
-
-## list
-
-- `list.sort()` : 원본을 오름차순으로 정렬
-- `list.sort(reverse=True)` : 원본을 내림차순으로 정렬
-- `sorted(list)` : 오름차순한 결과를 반환
-- `list.reverse()` : 원본의 순서를 역으로 변환
-- `reversed(list)` : 역순으로 변환한 list를 반환
-- `list.count(element)` : list 내의 element 개수를 반환
-
----
-
-## dictionary
-
-- `dic.keys()` : key 값들의 나열을 dictionary의 특수한 자료형으로 나타내어 반환
-
-- `dic.values()` : value 값들의 나열을 dictionary의 특수한 자료형으로 나타내어 반환
-
-- `dic.items()` : (value, key) 값들의 나열을 dictionary의 특수한 자료형으로 나타내어 반환
-
-- `dict.get(key)` : dict[key] 의 결과값을 반환하며, 없을 시 error가 아닌 None을 반환
-
-  ```python
-  dictionary = {'first' : {'second' : 3}}
-  print(dictionary.get('first').get('second'))
-  """result
-  3"""
-  ```
-
----
-
-## set
-
-- `set( list )` : list를 집합으로 전환
-
-```python
-count = len(set(winner) & set(ur_lotto))
-# winner list와 ur_lotto list를 비교할 때
-# for문을 이용하는 것 보다 빠른 속도로 같은 요소의 개수를 구함
-```
-
----
-
-## class
-
-- `isinstance(object, class/tuple)` : object가 class/tuple의 instance인지 판별
-
----
-
-## sort
-
-- `sort()` : list 원본을 오름차순으로 sort
-- `sorted()` : 오름차순으로 sort한 결과를 반환
-
----
-
-## file 'r / w / a'
-
-- `with open('파일명', '파일 조작 유형', encoding='utf-8') as f:``
-- `f.readline()` : 한 줄 읽기
-- `f.readlines()` : 모든 문장 읽기
-- `f.write()` : 한 번 쓰기
-- `f.writelines()` : 모두 쓰기
-- 파일 조작 3가지
-  - `'r'`: read
-  - `'w'`: write
-  - `'a'`: append
-
----
-
 ## os
 
 - `os.system('CLI commands')`: CLI에서 사용하는 명령어를 그대로 사용
@@ -177,24 +57,6 @@ count = len(set(winner) & set(ur_lotto))
     templates_path = os.path.join(current, 'Directory_name')
     ```
 
----
-
-- `filter(function, iterable)`
-
-  function에 의해 처리되는 각각의 요소에 대해 Boolean 값을 반환
-
-  - `True` : 유지
-  - `False` : 제거
-
-  ```python
-  foo = [2, 9, 27, 3, 4, 5]
-  print(list(filter(lambda x: x % 3 == 0, foo)))
-  """result
-  [9, 27, 3]"""
-  ```
-
----
-
 ## sys
 
 ```python
@@ -213,54 +75,6 @@ sys.path
  'c:\\users\\student\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages',
  'c:\\users\\student\\appdata\\local\\programs\\python\\python37-32\\lib\\site-packages\\IPython\\extensions',
  'C:\\Users\\student\\.ipython']"""
-```
-
----
-
-## Special Method, Magic Method
-
-- `__method__` 와 같은 형태로 underscore가 두개씩 양 옆에 붙은 method를 의미
-- Built-in  Method이며, 기본적으로 python에서 제공
-
-```python
-from myPackage.math.formula import pi
-dir(pi)
-"""result
-['__annotations__',
- '__call__',
- '__class__',
- '__closure__',
- '__code__',
- '__defaults__',
- '__delattr__',
- '__dict__',
- '__dir__',
- '__doc__',
- '__eq__',
- '__format__',
- '__ge__',
- '__get__',
- '__getattribute__',
- '__globals__',
- '__gt__',
- '__hash__',
- '__init__',
- '__init_subclass__',
- '__kwdefaults__',
- '__le__',
- '__lt__',
- '__module__',
- '__name__',
- '__ne__',
- '__new__',
- '__qualname__',
- '__reduce__',
- '__reduce_ex__',
- '__repr__',
- '__setattr__',
- '__sizeof__',
- '__str__',
- '__subclasshook__']"""
 ```
 
 ---
@@ -295,33 +109,15 @@ dir(pi)
   print(names)
   ```
 
-- `random.sample( [], int )` : [ ] 중 int 개 만큼 비복원 추출
+- Sampling
 
-  `random.choice( [ ] )` : [ ] 중 1개를 임의 복원 추출
-
----
-
-## map( )
-
-```python
-# a = input()
-# b = a.split(" ")
-# num1 = int(b[0])
-# num2 = int(b[1])
-
-## 위의 네 줄을 생략할 수 있는 map()
-# iterable 한 tuple 형태를 응용
-
-# 8 3 이라고 input을 받아서 사칙연산을 수행하는 예제
-num1, num2 = map(int, input().split(" "))
-print(num1 + num2)
-print(num1 - num2)
-print(num1 * num2)
-print(num1 / num2)
-
-# iterable 하다면 모두 가능하므로 list로 변형해도 가능
-num1, num2 = list(num1, num2 = map(int, input().split(" ")))
-```
+  - `random.sample( [], int )`
+  
+    [ ] 중 int 개 만큼 비복원 추출
+    
+  - `random.choice( [ ] )`
+  
+    [ ] 중 1개를 임의 복원 추출
 
 ---
 
@@ -510,9 +306,7 @@ num1, num2 = list(num1, num2 = map(int, input().split(" ")))
   '25'"""
   ```
 
-  ---
-
-## timedelta
+### timedelta
 
 ```python
 from datetime import timedelta
@@ -563,6 +357,34 @@ def my_url(key, targetDt=None):
   ```python
   import collections
   order_dict = collections.OrderedDict(dict)
+  ```
+
+- deque, double-ended queue
+
+  `appendleft()`
+
+  `extendleft()`
+
+  `popleft()`
+
+  `rotate(int_n)` : 정수(음수 가능) 값 만큼 요소를 회전(순서 밀어내기)
+
+  ```python
+  import collections
+  
+  deq = collections.deque(['a', 'b', 'c'])
+  deq.appendleft('d')
+  print(deq)
+  '''result
+  deque(['d', 'a', 'b', 'c'])
+  '''
+  
+  deq1 = collections.deque(['a', 'b', 'c', 'd', 'e'])
+  deq1.rotate(-2)
+  print('deq1 >>', ' '.join(deq1))
+  '''result
+  deq1 >> c d e a b
+  '''
   ```
 
 ---

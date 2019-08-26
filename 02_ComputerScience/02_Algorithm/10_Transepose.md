@@ -21,12 +21,12 @@
 ```
 
 ```python
-l = [[], [], []]
+l = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
 for i in range(3):
     for j in range(3):
         if i < j :
             l[i][j], l[j][i]= l[j][i], l[i][j]
 ```
 
-### 큰 행렬의 column을 조작할 때에는 Transpose 후에 Slicing하여 탐색하는 것이 빠르다!
+**큰 행렬의 column을 조작할 때에는 Transpose 후에 Slicing하여 탐색하는 것이 빠르다!**
 
