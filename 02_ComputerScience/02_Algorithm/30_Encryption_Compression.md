@@ -1,8 +1,6 @@
-# Encryption
+# Encryption & Compression
 
-------
-
-### 암호화
+## 암호화, Encryption
 
 - 시저 암호, Caesar Cipher
 
@@ -27,3 +25,15 @@
 - bit열의 암호화
 
   배타적 논리합(exclusive-or, XOR) 연산 사용
+
+## 압축, Compression
+
+- Run-length encoding 알고리즘
+
+  같은 값이 몇 번 반복되는가를 나타내어 압축
+
+  RRRRRGGGBRRR -> R5G3B1R3
+
+  - BMP 파일 포맷인 이미지 파일 포맷에 사용
+
+- 허프만 코딩 알고리즘
