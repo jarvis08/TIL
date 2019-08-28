@@ -26,7 +26,7 @@ for i in range(int(len_input//2)):
     # 양방향 연결일 경우
       adj[_input[i*2+1]][_input[i*2]] = 1
 ```
-  
+
 - 인접 리스트, Adjacency List
 
   - 연결 개수에 비해 vertex의 개수가 적은 그래프에 용이
@@ -40,7 +40,7 @@ for i in range(int(len_input//2)):
       'D': ['C', 'E'],
       'E': ['D', 'F']
   }
-  ```
+```
 
 ### Graph 순회
 
@@ -197,34 +197,34 @@ def dfs_recursive(G, v):
 
 ### 구현
 
-1. 다음 깊이의 노드를 방문
-2. 방문한 노드를 Dequeue
-3. 방문한 노드의 다음 (깊이의) 노드들을 Enqueue, 방문 처리
-   - 방문 기록 방법
-     - Dequeue 할 때
-     - Enqueue 할 때
-4. 모든 노드들을 방문할 때 까지 1~3 과정을 반복
+2. 방문할 노드를 Dequeue
+2. 이미 방문 처리된 곳이라면 skip
+3. 방문하지 않았다면, visit
+4. 방문한 노드의 다음 (깊이의) 노드들을 Enqueue
+5. 모든 노드들을 방문할 때 까지 1~4 과정을 반복
 
-- 2-Dimention List에 노드 별 인접 행렬을 작성하여
-
-  0과 1로 인접 여부를 판단하는 방법
+- SSAFY Code
 
   ```python
-  # Graph를 2-D List로 표현했다면,
-  # graph : 순회 할 graph 전체
-  # start : Root 노드, 순회의 시작 노드
-  def bfs(graph, start):
-      visited = []
-      queue = [start]
+  # G : graph
+  # v : 시작점
+  # n : 정점 개수
+  def BFS(G, v):
+      visited = [0] * n
+      queue = []
+      queue.append(v)
       while queue:
-          node = queue.pop(0)
-          for child in node_childs:
-              visited.append(child)
-              queue.append(child)
-      return visited
+          t = queue.pop(0)
+          if not visited[t]:
+              visited[t] = True
+              visit[t]
+          # t와 연결된 모든 node에 대해 방문되지 않은 곳 찾고, queue에 추가
+          for i in G[t]:
+              if not visited[i]:
+                  queue.append(i)
   ```
 
-- Dictionary를 이용하여 인접 노드를 표시
+- 다른 예시
 
   ```python
   # 출처 : https://itholic.github.io/python-bfs-dfs/
@@ -276,7 +276,9 @@ def dfs_recursive(G, v):
       return result
   ```
 
-  
+- layer를 관리하도록 하는 경우가 존재
+
+  (A, 0) (B, 1) (C, 1)와 같이 표기하여 해결
 
 ---
 
