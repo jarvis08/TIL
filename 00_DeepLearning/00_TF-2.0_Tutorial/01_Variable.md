@@ -1,6 +1,6 @@
 # Variable
 
-## 변수Variable이 무엇인가요?
+## 변수, Variable이란
 
 ### TensorFlow 공식 홈페이지 설명
 
@@ -14,7 +14,7 @@
 
 
 
-### 사용하는 이유
+### tf.Varible을 사용하는 이유
 
 `tf.Variable`은 그 이름으로 부터 알 수 있듯이, 변수를 저장할 수 있는 객체입니다. 그런데 왜 일반적인 파이썬 코딩처럼 `w = 0`과 같은 형태로 변수를 선언하면 안되는 것일까요? 그 이유는 텐서플로(TensorFlow)가 모델을 학습할 때 텐서(Tensor)와 그래프(Graph)를 활용하기 때문입니다. 그리고 우리는 우리가 선언 할 변수들을 텐서 형태로 다루기 위해 `Variable` 객체를 사용해야 합니다. `tf.Variable`을 사용하여 선언한 변수는 사라지지 않고 지속되며, 공유됩니다. 사용자가 작성한 연산의 묶음(프로그램)은 작성된 연산을 수행하여 `tf.Variable`의 값을 갱신해 나아갑니다.
 
@@ -22,7 +22,7 @@
 
 ## Variable 다루기 
 
-### 생성 및 변수 할당
+### 변수 의 생성 및 할당
 
 `tf.Variable` 객체를 생성하기 위해서는 초기값을 선언해 주어야 하며, 그 형태는 다음과 같습니다.
 
@@ -53,7 +53,7 @@ my_variable = tf.Variable(tf.zeros([1., 2., 3.]))
 
   
 
-### 사용하기
+### 변수 조작하기
 
 1. `tf.Tensor`처럼 사용하는 방법
 
@@ -97,9 +97,9 @@ my_variable = tf.Variable(tf.zeros([1., 2., 3.]))
 
    
 
-### 사용중인 변수 목록 확인하기
+### 사용 중인 변수 목록 확인하기
 
-`tf.Module` 클래스(Class)를 상속받으면 `variables` 혹은 `trainable_variables` 메서드를 사용하여 사용중인 모든 변수들을 return 받을 수 있습니다.
+`tf.Module` 클래스(Class)를 상속받으면 `variables` 혹은 `trainable_variables` 메서드를 사용하여 사용중인 모든 변수들을 return 받음으로서 추적(track)할 수 있습니다.
 
 ```python
 import tensorflow as tf
@@ -126,4 +126,4 @@ print(len(my_var.variables))
 
 `MyModule` 클래스에는 11개(1 + 10)의 데이터가 존재하며, `AnotherModule` 클래스에는 `MyModule` 클래스로 부터 받은 11개의 데이터와 자기 자신의 1개의 데이터를 합한 총 12개의 데이터가 존재합니다.
 
-### 관리하기
+레이어(layer)를 형성하고 있다면, `tf.Module` 대신 `tf.keras.Layer`를 상속받는 것이 더 좋은 선택일 수 있습니다. 케라스 인터페이스를 형성함으로서 케라스에 완전하게 통합될 수 있으며, 이로 인해 `model.fit`을 포함하여 잘 통합된 다른 API들을 사용할 수 있습니다. `tf.keras.Layer`의 변수 추적 방법은 `tf.Module`의 방법과 동일합니다.
