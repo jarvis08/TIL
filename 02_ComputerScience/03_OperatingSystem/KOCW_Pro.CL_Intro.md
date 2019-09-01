@@ -1,8 +1,8 @@
 # Operating System Intro
 
-참고 자료: 고려대학교 최린 교수님, KUOCW 운영체제 강의
+고려대학교 최린 교수님, KOCW 운영체제 강의
 
----
+1강 시청 후 영상 비공개 처리되어 진행 불가
 
 ## Lecture Overview
 
