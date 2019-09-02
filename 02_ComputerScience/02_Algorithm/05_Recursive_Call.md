@@ -1,4 +1,4 @@
-# Recursive Function
+# Recursive Call
 
 - 재귀 함수 = 수학에서의 점화식
 

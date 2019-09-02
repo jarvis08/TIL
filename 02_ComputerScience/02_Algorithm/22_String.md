@@ -1,6 +1,6 @@
 # String
 
----
+## 문자열의 표준
 
 - ASCII, American Standard Code for Information Interchange
 
@@ -68,13 +68,14 @@
 
       e.g., C
 
----
+
 
 ## 문자열 처리
 
 - C 언어에서의 문자열 처리
 
   - ASCII
+    
     - `strlen('홍길동') = 6`
   - char들의 배열로 저장하는 응용 자료형
 
