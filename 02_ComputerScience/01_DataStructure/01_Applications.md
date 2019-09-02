@@ -2,7 +2,7 @@
 
 ### 배열, Array
 
-- 그리디, Greedy Algorithm
+- 탐욕 알고리즘, Greedy Algorithm
 - 버블 정렬, Bubble Sort
 - 카운팅 정렬, Counting Sort
 - 부분집합 생성, Find Subsets
@@ -46,10 +46,11 @@
 
 ### 리스트, List
 
-- 순차 리스트
 - 연결 리스트, Linked List
   - 단순 연결 리스트, Singly Linked List
   - 이중(양방향) 연결 리스트, Doubly Linked List
+- 삽입 정렬, Insoertion Sort
+- 병합 정렬, Merge Sort
 - 스택, Stack
 - 우선 순위 큐, Priority Queue
 
@@ -64,3 +65,4 @@
 - 수식 (이진) 트리, Expression Binary Tree
 - 이진 탐색 트리, Binary Search Tree
 - 힙, Heap
+

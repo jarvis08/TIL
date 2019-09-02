@@ -46,6 +46,8 @@
 
 - 데크, Deck
 
+
+
 ### 비선형
 
 > element와 element의 관계가 1:N

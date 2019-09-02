@@ -76,7 +76,7 @@
 
 
 
-### Linked List를 활용한 Stack
+### 스택, Stack
 
 스택 내의 **순서**를 Linked List로 구현
 
