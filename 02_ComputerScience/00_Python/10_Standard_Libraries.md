@@ -417,4 +417,16 @@ def my_url(key, targetDt=None):
   sleep(5)
   ```
 
-  
+---
+
+## copy
+
+### Deep Copy
+
+```python
+import copy
+matrix_1 = [[1, 2], [3, 4]]
+matrix_2 = copy.deepcopy(matrix_1)
+print(matrix_2[0][0])
+```
+

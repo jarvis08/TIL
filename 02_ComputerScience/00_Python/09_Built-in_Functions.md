@@ -86,6 +86,10 @@
   # winner list와 ur_lotto list를 비교할 때
   # for문을 이용하는 것 보다 빠른 속도로 같은 요소의 개수를 구함
   ```
+  
+- `set_1.issubset(set_2)`
+
+  `set_1`이 `set_2`의 부분집합인지 확인
 
 
 ### sort
