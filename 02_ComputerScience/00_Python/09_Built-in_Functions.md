@@ -1,5 +1,11 @@
 ## Built-in Functions
 
+OS X 한글 Encoding 오류
+
+`#-\*- coding:utf-8 -\*-`
+
+
+
 ## is* 시리즈
 
 - `isinstance(object, class/tuple)`
@@ -151,7 +157,7 @@
 
 ### file 'r / w / a'
 
-- `with open('파일명', '파일 조작 유형', encoding='utf-8') as f:``
+- `with open('파일명', '파일 조작 유형', encoding='utf-8') as f:`
 - `f.readline()` : 한 줄 읽기
 - `f.readlines()` : 모든 문장 읽기
 - `f.write()` : 한 번 쓰기

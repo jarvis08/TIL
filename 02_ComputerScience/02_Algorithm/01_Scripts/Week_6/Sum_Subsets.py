@@ -1,5 +1,5 @@
 import sys
-sys.stdin = open('find_subset.txt', 'r')
+sys.stdin = open('Sum_Subsets.txt', 'r')
 
 
 def sum_subset(subset):
