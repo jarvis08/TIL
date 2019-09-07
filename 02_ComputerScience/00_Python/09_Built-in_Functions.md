@@ -1,10 +1,20 @@
 ## Built-in Functions
 
+## is* 시리즈
+
 - `isinstance(object, class/tuple)`
 
   object가 class/tuple의 instance인지 판별
+  
+- `set_1.issubset(set_2)` : `set_1`이 `set_2`의 부분집합인지 판별
 
-### string
+- `isalpha(string)` : string의 내용이 알파벳인지 판별
+
+- `isdigit(string)` : string의 내용이 숫자인지 판별
+
+
+
+## String
 
 - `string.replace('변경 전', '변경 후')` : string의 일부를 원하는 글자로 수정
 
@@ -51,16 +61,61 @@
   yesterday = (date.today() - timedelta(days=1)).isoformat().replace('-', '')
   ```
 
-### list
+
+
+## List
+
+### Sort
 
 - `list.sort()` : 원본을 오름차순으로 정렬
 - `list.sort(reverse=True)` : 원본을 내림차순으로 정렬
 - `sorted(list)` : 오름차순한 결과를 반환
+
+
+
+### Reverse
+
 - `list.reverse()` : 원본의 순서를 역으로 변환
 - `reversed(list)` : 역순으로 변환한 list를 반환
 - `list.count(element)` : list 내의 element 개수를 반환
+- `cmp(list_1, list2)` : 두 list가 같은 요소들 만을 포함하는지 확인
 
-### dictionary
+
+
+### Insert/Delete Element
+
+- `list.append()`  : 요소를 뒤에 삽입
+- `list.extend()` : 리스트를 연장
+
+
+
+### Insert 속도 비교
+
+1. `list.append()`
+
+   가장 느린 속도
+
+2. 인덱스 지정하여 변경
+
+   `list.append()`보다 훨씬 빠른 속도
+
+   ```python
+   l = [0] * 10
+   for i in range(1, 11):
+       l[i] = i
+   ```
+
+3. `range` 사용하기
+
+   세 방법 중 가장 빠른 속도이나 사용할 수 있는 상황이 매우 제한적
+
+   ```python
+   l = range(1, 11)
+   ```
+
+   
+
+## Dictionary
 
 - `dic.keys()` : key 값들의 나열을 dictionary의 특수한 자료형으로 나타내어 반환
 
@@ -77,7 +132,9 @@
   3"""
   ```
 
-### set
+
+
+## Set
 
 - `set( list )` : list를 집합으로 전환
 
@@ -87,15 +144,10 @@
   # for문을 이용하는 것 보다 빠른 속도로 같은 요소의 개수를 구함
   ```
   
-- `set_1.issubset(set_2)`
+  
+  
 
-  `set_1`이 `set_2`의 부분집합인지 확인
-
-
-### sort
-
-- `sort()` : list 원본을 오름차순으로 sort
-- `sorted()` : 오름차순으로 sort한 결과를 반환
+---
 
 ### file 'r / w / a'
 
