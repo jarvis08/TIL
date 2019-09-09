@@ -10,6 +10,8 @@
 >
 > Delete
 
+
+
 ### 게시판 생성
 
 ```python
@@ -52,6 +54,8 @@ def index(request):
 {% endblock %}
 ```
 
+
+
 ### Create, 작성하기
 
 ```python
@@ -89,6 +93,8 @@ def create(request):
 </div>
 {% endblock %}
 ```
+
+
 
 ### Read, 세부 내용 보기
 
@@ -164,6 +170,8 @@ def detail(request, pk):
 <a href="{% url 'posts:elete' post.id %}" class="btn btn-danger">삭제</a>
 ```
 
+
+
 ### Delete, 삭제하기
 
 ```python
@@ -188,6 +196,8 @@ def delete(request, pk):
     # Post.objects.get(pk=pk)
     return redirect('home')
 ```
+
+
 
 ### Update, 수정하기
 
@@ -238,6 +248,12 @@ def delete(request, pk):
    </div>
    {% endblock %}
    ```
+
+   - 1993-02-05 형태로 이전의 날짜 데이터 불러오기
+
+     ```html
+     작성날짜 : <input type="date" name="created_at" value="{{ posts.created_at|date:'Y-m-d' }}">
+     ```
 
 2. 수정 사항을 DB에 반영하는 위한 `update`
 
