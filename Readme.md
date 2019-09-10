@@ -2,7 +2,7 @@
 
 I enjoy studying Computer Science, Data Science, and Machine Learning.
 
-
+<br>
 
 ### On Going Project
 
@@ -10,7 +10,7 @@ I enjoy studying Computer Science, Data Science, and Machine Learning.
 
   Will be published as a book and also be opened for everyone with pdf and notion.
 
-
+<br>
 
 ### at SSAFY
 
@@ -27,7 +27,7 @@ I enjoy studying Computer Science, Data Science, and Machine Learning.
   - CSS
   - Bootstrap
 
-
+<br>
 
 ### MOOC
 
@@ -35,7 +35,7 @@ I enjoy studying Computer Science, Data Science, and Machine Learning.
 
   경성대학교 양희재 교수님, [KOCW][http://www.kocw.net]
 
-
+<br>
 
 ### Book
 
@@ -43,11 +43,9 @@ I enjoy studying Computer Science, Data Science, and Machine Learning.
 
   Thomas H.Cormen, Charles E.Leiserson, Ronald L.Rivest, Clifford Stein
 
+<br><br>
 
-
-
-
-## Will.
+## Will Study.
 
 ### MOOC
 
@@ -59,7 +57,7 @@ I enjoy studying Computer Science, Data Science, and Machine Learning.
 
   Harvard & Yale, [edX](https://www.edx.org/), [edwith][https://www.edwith.org]
 
-
+<br>
 
 ### Book
 
@@ -79,7 +77,7 @@ I enjoy studying Computer Science, Data Science, and Machine Learning.
 
   사이토 고키(齋藤 康毅)
 
-
+<br>
 
 ### Paper Review and Implementation
 
@@ -87,11 +85,9 @@ I enjoy studying Computer Science, Data Science, and Machine Learning.
 
 - [XLNet: Generalized Autoregressive Pretraining for Language Understanding](https://arxiv.org/pdf/1906.08237.pdf)
 
+<br><br>
 
-
-
-
-## Past.
+## Past Study.
 
 ### MOOC
 
@@ -99,7 +95,7 @@ I enjoy studying Computer Science, Data Science, and Machine Learning.
 
   NYU 조경현 교수님, [edwith][https://www.edwith.org]
 
-  
+<br>
 
 ### Book
 
@@ -111,7 +107,7 @@ I enjoy studying Computer Science, Data Science, and Machine Learning.
 
   사이토 고키(齋藤 康毅)
 
-
+<br>
 
 ### Paper Review
 
