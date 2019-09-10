@@ -6,7 +6,7 @@
 
   `Margin` > `Border` > `Padding` > `Content`
 
-1. Margine
+1. Margin
 
    테두리 바깥의 외부 여백
 

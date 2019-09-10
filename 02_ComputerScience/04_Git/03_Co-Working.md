@@ -1,7 +1,5 @@
 # Co-Working Using Git
 
----
-
 - git info 열람
   - `ls .git`
   - `cat .git/config`
@@ -9,8 +7,6 @@
     1. 시간을 분리
     2. 파일을 분리
   - Team Leader는 작업을 분배
-
----
 
 ## Github 제공 기능
 

@@ -1,6 +1,8 @@
 ## Now Studying.
 
-I enjoy studying Computer Science, Data Science, and Machine Learning.
+After being fascinated by Machine Learning, I'm studying Computer Science and Data Science to handle Machine Learning better.
+
+머신러닝에 관심을 갖게되어 공부를 시작한 이래로, 머신러닝을 잘 활용하기 위해 컴퓨터 사이언스와 데이터 사이언스를 공부하고 있습니다.
 
 <br>
 
@@ -9,10 +11,16 @@ I enjoy studying Computer Science, Data Science, and Machine Learning.
 - TensorFlow 2.0 Beta Tutorial
 
   Will be published as a book and also be opened for everyone with pdf and notion.
+  
+  Open Source 프로젝트이며, 책과 pdf, notion으로 공유됩니다.
 
 <br>
 
 ### at SSAFY
+
+I'm Learning Python programming, Data Structure, Algorithm, and Web Programming at SSAFY. I have learned how to handle computer and data better, and understood how we use Web for I work and to provide my application.
+
+SSAFY(삼성청년SW아카데미)에서 파이썬 프로그래밍, 자료 구조, 알고리즘, 웹 프로그래밍에 대해 공부하고 있습니다. 컴퓨터와 데이터를 다루는 방법에 대해 배우고 있으며, 웹을 통해 내가 필요한 데이터를 얻는 동시에 나의 앱을 제공하는 과정을 학습하고 있습니다.
 
 - Python
 - Data Structure

@@ -1,4 +1,4 @@
-# Git & Github
+# Git
 
 ## Intro
 
@@ -24,7 +24,7 @@
    
      현재 Working Directory의 위치를 가리킴
 
-
+<br>
 
 ### Config
 
@@ -42,7 +42,7 @@ $ protocol=https
 $ host=github.com
 ```
 
-
+<br>
 
 ### Status & Log
 
@@ -70,7 +70,7 @@ $ git log --oneline --graph
 
 ```
 
-
+<br>
 
 ### Remote Repository
 
@@ -94,7 +94,7 @@ $ git clone address/repository.git
 $ git clone address/repository.git new_name
 ```
 
-
+<br>
 
 ### Add & Commit
 
@@ -117,7 +117,25 @@ $ git commit -m "commit message"
 $ git commit -a
 ```
 
+- 커밋은 Git 저장소에 여러분의 디렉토리에 있는 모든 파일에 대한 스냅샷을 기록하는 것
 
+- 디렉토리 전체를 복사하여 붙여넣는것과 유사하지만, 훨씬 유용한 방법
+
+- Git은 가능한 한 커밋을 가볍게 유지하고자 하며,
+
+  커밋할 때마다 디렉토리 전체를 복사하진 않는다.
+
+- 각 커밋은 저장소의 이전 버전과 다음 버전의 변경내역("delta"라고도 함)을 저장
+
+- 그래서 대부분의 커밋이 그 커밋 위의 부모 커밋을 가리킴
+
+- 저장소를 복제(clone)하려면 모든 변경분(delta)를 풀어내야 하는데,
+
+  이 때문에 명령행 결과로 아래 문구를 확인 가능
+
+  `resolving deltas`
+
+<br>
 
 ### Checkout
 
@@ -130,7 +148,33 @@ $ git checkout 'log의 commit hash code 6자리'
 $ git checkout master
 ```
 
+<br>
 
+### HEAD
+
+먼저"HEAD"에 대해 이야기해 봅시다. HEAD는 현재 체크아웃된 커밋을 가리킵니다. -- 다시 말하자면 현재 작업중인 커밋입니다.
+
+HEAD는 항상 작업트리의 가장 최근 커밋을 가리킵니다. 작업트리에 변화를 주는 git 명령어들은 대부분 HEAD를 변경하는것으로 시작합니다.
+
+일반적으로 HEAD는 브랜치의 이름을 가리키고있습니다(bugFix와 같이). 커밋을 하게 되면, bugFix의 상태가 바뀌고 이 변경은 HEAD를 통해서 확인이 가능합니다.
+
+<br>
+
+### 상대 참조
+
+말했듯이, 커밋들을 해시로 구분하고 사용하는것이 아주 편하다고 볼 수는 없습니다. Git의 상대 참조(Relative Ref)가 여기서 등장합니다. 굉장한 기능입니다.
+
+상대 참조로 우리가 기억할 만한 지점(브랜치 `bugFix`라던가 `HEAD`라던가)에서 출발해서 이동하여 다른 지점에 도달해 작업을 할 수 있습니다.
+
+상대 커밋은 강력한 기능인데, 여기서 두가지 간단한 방법을 소개하겠습니다.
+
+- 한번에 한 커밋 위로 움직이는 `^`
+
+  ex) `git checkout HEAD^`
+
+- 한번에 여러 커밋 위로 올라가는 `~<num>`
+
+<br>
 
 ### Push & Pull
 
@@ -146,7 +190,7 @@ $ git pull
 
 `pull`은 `fetch`와 `merge`가 합쳐진 기능이며, `pull`로 인해 conflict 발생 가능
 
-
+<br>
 
 ### Reset
 
@@ -199,7 +243,7 @@ $ git reset --hard HEAD^
 
   commit을 다시 하여 합침
 
-
+<br>
 
 ### Remote Repository 재할당
 
@@ -236,7 +280,7 @@ $ git push github master
 
 ```
 
-
+<br>
 
 ### 이전 Commit으로 이동 후, 다시 이전 Commit 상태로 되돌리기
 

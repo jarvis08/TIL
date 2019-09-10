@@ -2,7 +2,7 @@
 
 I study Computer Science to understand computer and Machine Learning better.
 
----
+<br><br>
 
 ## Now Studying.
 
@@ -18,15 +18,23 @@ I study Computer Science to understand computer and Machine Learning better.
 
 - 경성대학교 양희재 교수님, [KOCW 운영체제 강의](http://www.kocw.net/home/cview.do?cid=5c3c30382c7bbcf6)
 
-  
+<br>
 
 ### Expecting.
 
 - Books
 
-  - Code, Charles Petzold
+  - [Code](http://www.charlespetzold.com/books/)
+
+    Charles Petzold
+
+  - [Operating System Concepts](https://book.naver.com/bookdb/book_detail.nhn?bid=7218891)
+
+    Abraham Silberschatz
 
 - Lectures
 
-  - edX - CS50(Harvard, Yale)
+  - [CS50](https://www.edwith.org/cs50)
+  
+    Harvard & Yale, [edX](https://www.edx.org/), [edwith]
 

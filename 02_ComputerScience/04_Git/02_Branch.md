@@ -4,9 +4,7 @@
 
 많은 기업에서 `master` branch는 service 영역으로 사용하며, 개발자들은 `develop` branch에서 개발한다. 개발 도중에는 `develop` branch에서 `feature login`, `feature createPost` 등과 같이 기능 별로 branch를 새로 구성하여 개발 후 `develop` branch에 `merge`한다. 기능 별 개발 완료 및 branch `merge` 이후에는 `master`와 `develop` branch를 제외하고는 삭제해준다. 기타 Branch들은 유지용이 아닌, 사용하고 버리는 용도로 사용된다.
 
-
-
-
+<br><br>
 
 ## Master & Branch
 
@@ -19,11 +17,15 @@
   - master = 제품
   - branch = 신기능
 
-
+<br>
 
 ### Branch
 
 Branch 정보를 확인, branch 생성/삭제 명령어
+
+- 단순한 브랜치의 정의
+
+  하나의 커밋과 그 부모 커밋들을 포함하는 작업 내역
 
 ```shell
 # branch 확인
@@ -36,7 +38,7 @@ $ git branch [branchName]
 $ git branch -d [branchName]
 ```
 
-
+<br>
 
 ### Checkout
 
@@ -49,7 +51,7 @@ $ git checkout [branchName]
 $ git checkout -b [branchName]
 ```
 
-
+<br>
 
 ### Switch
 
@@ -62,7 +64,7 @@ $ git switch [branchName]
 $ git switch -c [branchName]
 ```
 
-
+<br>
 
 ### Merge
 
@@ -71,9 +73,42 @@ $ git switch -c [branchName]
 $ git merge [branchName]
 ```
 
+<br>
 
+### Rebase
 
+브랜치끼리의 작업을 접목하는 방법이며, 이름 그대로 base를 재지정
 
+커밋들을 모아서 복사한 뒤, 다른 곳에 떨궈 놓는 것
+
+- 장점
+
+  커밋들의 흐름을 보기 좋게 한 줄로 만들 수 있다
+
+  저장소의 커밋 로그와 이력을 깨끗하게 유지 가능
+
+```shell
+# branch를 master에 rebase
+$ git checkout branchName
+$ git rebase master
+$ git checkout master
+$ git rebase branchName
+```
+
+<br>
+
+### 브랜치 강제로 옮기기
+
+상대 참조를 사용하는 가장 일반적인 경우는 '브랜치를 옮길 때'
+
+`-f` 옵션을 이용하여 브랜치를 특정 커밋에 직접적으로 재지정하는 것이 가능
+
+```shell
+# (강제로) master 브랜치를 HEAD에서 세번 뒤로 옮김(three parents behind HEAD)
+$ git branch -f master HEAD~3
+```
+
+<br><br>
 
 ## Merge Scenario
 
@@ -99,7 +134,7 @@ $ git merge [branchName]
 
   4. `master`에서 `git merge branch`
 
-
+<br>
 
 ### Auto Merge
 
@@ -111,7 +146,7 @@ ex. `master` branch에서는  html 파일을 생성하고, `develop` branch에�
   1. 자동으로 vim을 이용하여 `merge branch` 문구가 생성하고 보여줌
   2. `:wq` 입력하면 자동으로 auto merge 진행하며 commit
 
-
+<br>
 
 ### Merge with Conflict
 
@@ -149,9 +184,9 @@ ex) 동일 line에 branch 간 다른 내용을 기입한 후 merge 시도
    $ git commit -m "resolve merge conflict"
    ```
 
+<br>
 
-
-
+<br>
 
 ## Handling Conflicts
 
