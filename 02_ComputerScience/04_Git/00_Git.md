@@ -44,6 +44,33 @@ $ host=github.com
 
 <br>
 
+### Remote Repository
+
+```shell
+# Making new repository
+$ git init
+# .git이라는 하위 디렉토리 생성
+# .git에는 저장소에 필요한 뼈대 파일(skeleton)을 생성
+
+# 삭제
+$ rm -r .git
+
+# 현재 연결된 git 정보 확인(이름)
+$ git remote
+# 현재 연결된 git 정보 확인(이름, 주소)
+$ git remote -v
+
+# remote repository(원격저장소) 추가
+$ git remote add 설정할저장소이름 저장소주소
+
+# Cloning
+$ git clone address/repository.git
+# 원하는 디렉토리명으로 repository를 clone
+$ git clone address/repository.git new_name
+```
+
+<br>
+
 ### Status & Log
 
 ```shell
@@ -68,30 +95,6 @@ $ git log --oneline --graph
 * efb7d6f merge
 * 0265663 merge fast-forward merge scenario
 
-```
-
-<br>
-
-### Remote Repository
-
-```shell
-# Making new repository
-$ git init
-# .git이라는 하위 디렉토리 생성
-# .git에는 저장소에 필요한 뼈대 파일(skeleton)을 생성
-
-# 현재 연결된 git 정보 확인(이름)
-$ git remote
-# 현재 연결된 git 정보 확인(이름, 주소)
-$ git remote -v
-
-# remote repository(원격저장소) 추가
-$ git remote add 설정할저장소이름 저장소주소
-
-# Cloning
-$ git clone address/repository.git
-# 원하는 디렉토리명으로 repository를 clone
-$ git clone address/repository.git new_name
 ```
 
 <br>
@@ -192,7 +195,20 @@ $ git pull
 
 <br>
 
+### cached
+
+`git add` 취소하기
+
+```shell
+$git rm --cached -r fileName
+$git rm --cached -r .
+```
+
+<br>
+
 ### Reset
+
+Git에게 치명적인 역할을 수행하는 명령어이며, 사용시 매우 주의
 
 ```shell
 $ git reset

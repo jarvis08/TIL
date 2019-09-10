@@ -8,7 +8,11 @@
     2. 파일을 분리
   - Team Leader는 작업을 분배
 
-## Github 제공 기능
+<br>
+
+<br>
+
+## Github 기능
 
 - Github `organization`
 
@@ -24,8 +28,12 @@
   - issue 해결 후 `closed`를 통해 종료
   - `reopen` 도 가능
 
-- Work Flow
+<br>
 
-  git work-flow : 매우 복잡
+<br>
 
-  gitlab work-flow가 github 보다 조금 더 간략
+### Work Flow
+
+git work-flow : 매우 복잡
+
+gitlab work-flow가 github 보다 조금 더 간략

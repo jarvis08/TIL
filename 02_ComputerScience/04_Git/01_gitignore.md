@@ -1,6 +1,6 @@
 # .gitignore
 
----
+[gitignore.io](http://gitignore.io/) Framework, OS, IDE 등에 맞는 gitignore 목록 검색
 
 - git에 upload하고 싶지 않은 대상을 `.gitignore`에 작성,
 

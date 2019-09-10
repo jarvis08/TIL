@@ -1,12 +1,12 @@
-## Now Studying.
+## Now studying.
 
-After being fascinated by Machine Learning, I'm studying Computer Science and Data Science to handle Machine Learning better.
+After being fascinated by machine learning, I started to study computer science and data science to handle machine learning better. But nowadays, not just machine learning, I have fallen into studying everything in this field. I believe I can solve many problems by understanding CS, DS and using ML.
 
-머신러닝에 관심을 갖게되어 공부를 시작한 이래로, 머신러닝을 잘 활용하기 위해 컴퓨터 사이언스와 데이터 사이언스를 공부하고 있습니다.
+머신러닝에 매료되어 개발 공부를 시작한 이래로, 머신러닝을 잘 활용하기 위해 컴퓨터 사이언스와 데이터 사이언스를 공부를 시작했습니다. 하지만 지금은 머신러닝 뿐만 아니라, 이 분야의 모든 지식들에 빠져서 공부하고 있습니다. CS와 DS를 이해하고 ML을 활용하여 다양한 문제들을 해결하고 싶습니다.
 
 <br>
 
-### On Going Project
+### On going project
 
 - TensorFlow 2.0 Beta Tutorial
 
@@ -53,7 +53,7 @@ SSAFY(삼성청년SW아카데미)에서 파이썬 프로그래밍, 자료 구조
 
 <br><br>
 
-## Will Study.
+## Soon, will study.
 
 ### MOOC
 
@@ -95,7 +95,7 @@ SSAFY(삼성청년SW아카데미)에서 파이썬 프로그래밍, 자료 구조
 
 <br><br>
 
-## Past Study.
+## Studied and wish to review.
 
 ### MOOC
 
@@ -117,7 +117,7 @@ SSAFY(삼성청년SW아카데미)에서 파이썬 프로그래밍, 자료 구조
 
 <br>
 
-### Paper Review
+### Paper review
 
 - [WAVENET: A GENERATIVE MODEL FOR RAW AUDIO](https://arxiv.org/pdf/1609.03499.pdf)
 
