@@ -1,6 +1,6 @@
 # Web
 
----
+## Webhook
 
 - `GET` : 일반적인 내용을 요청
 
@@ -28,7 +28,7 @@
 
   (local - 22, http - 80, https - 443) 주로 사용
 
----
+<br><br>
 
 ## ngrok
 
@@ -53,9 +53,7 @@ Connections                   ttl     opn     rt1     rt5     p50     p90
                               0       0       0.00    0.00    0.00    0.00
 ```
 
-
-
----
+<br><br>
 
 ## requests, bs4
 
@@ -73,7 +71,7 @@ Connections                   ttl     opn     rt1     rt5     p50     p90
 
 `document.select_one(selector).text` : css selector 중 하나를 text화
 
----
+<br><br>
 
 ## webbroser, flask
 

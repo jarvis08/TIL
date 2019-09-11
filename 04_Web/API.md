@@ -1,8 +1,6 @@
 # API
 
----
-
-- Papago NMT API
+## Papago NMT API
 
 ```python
 # Papago NMT API
@@ -28,11 +26,13 @@ text = res.get("message").get("result").get("translatedText")
 print(text)
 ```
 
----
+<br>
 
-- Clova Face Recognition
+<br>
 
-  https://developers.naver.com/docs/clova/api/CFR/API_Guide.md?origin_team=TL97JQ9KQ
+## Clova Face Recognition
+
+https://developers.naver.com/docs/clova/api/CFR/API_Guide.md?origin_team=TL97JQ9KQ
 
 ```python
 @app.route(f'/{token}', methods=['POST'])
@@ -70,31 +70,31 @@ def webhook():
     # 정보를 요청하면 token이 들어가 있는 url로 telegram이 정보를 보내줌
 ```
 
----
+<br><br>
 
-- Telegram chatbot API, @botfather
+## Telegram chatbot API, @botfather
 
-  1. `/newbot` : 새로운 bot 시작
+1. `/newbot` : 새로운 bot 시작
 
-  2. botfather의 지시에 따라 이름 설정
+2. botfather의 지시에 따라 이름 설정
 
-  3. https://core.telegram.org/bots/api 중 Authorizing your bot을 읽어 인증 방법 숙지
+3. https://core.telegram.org/bots/api 중 Authorizing your bot을 읽어 인증 방법 숙지
 
-     - https://api.telegram.org/bot123456:ABC-DEF1234ghIkl-zyx57W2v1u123ew11/getMe 중
+   - https://api.telegram.org/bot123456:ABC-DEF1234ghIkl-zyx57W2v1u123ew11/getMe 중
 
-       123456~123ew11 부분을 내가 botfather에게 받은 HTTP API(token)로 교체하여 접속(getMe 기능)
+     123456~123ew11 부분을 내가 botfather에게 받은 HTTP API(token)로 교체하여 접속(getMe 기능)
 
-       :: https://api.telegram.org/bot{token}/getUpdates
+     :: https://api.telegram.org/bot{token}/getUpdates
 
-       :: user가 보낸 메세지 내역 확인
+     :: user가 보낸 메세지 내역 확인
 
-     - `sendMessage` 사용(주요 params : chat_id, text)
+   - `sendMessage` 사용(주요 params : chat_id, text)
 
-       1. `chat_id` : 위 url을 통해 확인한 "id"
+     1. `chat_id` : 위 url을 통해 확인한 "id"
 
-       2. `text` : bot이 user에게 보내는 메세지
+     2. `text` : bot이 user에게 보내는 메세지
 
-          예시 = https://api.telegram.org/bot{token}}/sendMessage?chat_id=873780022&text=왜임마
+        예시 = https://api.telegram.org/bot{token}}/sendMessage?chat_id=873780022&text=왜임마
 
 ```python
 # Chatbot 만들기, .py
@@ -112,3 +112,4 @@ url = base_url + token_url + method[0] + chat_id + "&" + text
 response = requests.get(url)
 print(response.text)
 ```
+
