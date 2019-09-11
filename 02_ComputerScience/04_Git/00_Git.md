@@ -1,5 +1,25 @@
 # Git
 
+Git의 기능 두가지
+
+1. SCM, Source Code Manager
+
+2. VCS, Version Control System
+
+3. 원격 저장소, Remote Repository
+
+   Github, Gitlab, Bitbucket
+
+4. 협업 도구
+
+   `Push + Pull` : 차례로 `Push`와 `Pull`을 진행
+
+   `Fork + PR(Pull Request)` : 관리자의 Repository를 `Fork`해와서 수정 후 `Pull Request`
+
+   `Branch + PR` : 각자 작업하는 Branch를 Push하여 Github에서 PR하여 `Push`
+
+<br><br>
+
 ## Intro
 
 1. Status
@@ -19,9 +39,9 @@
 3. Commit Log
 
    staging area에서 `commit`한 내용들을 누적하여 기록
-   
+
    - **HEAD**
-   
+
      현재 Working Directory의 위치를 가리킴
 
 <br>

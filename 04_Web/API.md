@@ -113,3 +113,92 @@ response = requests.get(url)
 print(response.text)
 ```
 
+
+
+### webHook & sendMessage
+
+Telegram도 webhook 기능 제공
+
+목적 : Telegram이 메세지왔다고 사용자에게 알림
+
+- Webhook 켜기
+
+  `{Telegram주소}/bot{token}/setWebhook?url={내주소}/{token}`
+
+  ex) https://api.telegram.org/bot123123/setWebhook?url=https://abcdefg/123123
+
+  - Telegram의 bot을 언급할 때에는 `bot` + `token` 형태로 사용
+
+  - 맨 끝의 `{token}` 부분은 사용자가 임의로 설정할 수 있는 변수이지만,
+
+    아무나 사용할 수 없게 하기 위해 토큰을 사용하는 경우가 많다.
+
+- Webhook 정보 조회
+
+  `{Telegram주소}/bot{token}/getWebhookInfo`
+
+  새로운 메세지가 올 때마다 Webhook이 서버로 메세지를 보내므로,
+
+  `getWebhookInfo`를 통해 알아낸 `url`을 서버에서 인식하도록 지시
+
+  - Django의 경우 `views.py`에 `reqeust`를 받는 함수를 제작하여 json 형태로 parse
+
+    - `urls.py`
+
+      ```python
+      from django.contrib import admin
+      from django.urls import path, include
+      from todos import views
+      from decouple import config
+      
+      token = config('TOKEN')
+      
+      urlpatterns = [
+          path('admin/', admin.site.urls),
+          path('todos/', include('todos.urls')),
+          path(f'{token}/', views.telegram),
+      ]
+      ```
+
+    - `views.py`
+
+      ```python
+      from django.views.decorators.csrf import csrf_exempt
+      # csrf token이 없다고하는 에러를 무시하기 위해 csrf_exempt 사용
+      
+      
+      @csrf_exempt
+      def telegram(request):
+          
+          res = json.loads(request.body)
+          res.get('message').get('text')
+          return HttpResponse('가랏')
+      ```
+
+- Webhook 끄기
+
+  `{Telegram주소}/bot{token}/deletewebhook`
+
+아래 코드블록이 받은 메세지를 그대로 다시 돌려주는 `views.py` 전체 코드이다.
+
+```python
+from django.views.decorators.csrf import csrf_exempt
+import json
+from decouple import config
+
+
+@csrf_exempt
+def telegram(request):
+    # webHook
+    res = json.loads(request.body)
+    text = res.get('message').get('text')
+    
+    # sendMessage
+    chat_id = res.get('message').get('chat').get('id')
+    base = 'https://api.telegram.org'
+    token = config('TOKEN')
+    url = f'{base}/bot{token}/sendMessage?text={text}&chat_id={chat_id}'
+    requests.get(url)
+    return HttpResponse('가랏')
+```
+
