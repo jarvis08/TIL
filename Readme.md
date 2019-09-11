@@ -1,4 +1,4 @@
-## Now studying.
+# Today I Learned
 
 After being fascinated by machine learning, I started to study computer science and data science to handle machine learning better. But nowadays, not just machine learning, I have fallen into studying everything in this field. I believe I can solve many problems by understanding CS, DS and using ML.
 
@@ -6,15 +6,21 @@ After being fascinated by machine learning, I started to study computer science 
 
 <br>
 
-### On going project
+<br>
 
-- TensorFlow 2.0 Beta Tutorial
+## On Going Project.
 
-  Will be published as a book and also be opened for everyone with pdf and notion.
-  
-  Open Source 프로젝트이며, 책과 pdf, notion으로 공유됩니다.
+### TensorFlow 2.0 Beta Tutorial
+
+Will be published as a book and also be opened for everyone with pdf and notion.
+
+Open Source 프로젝트이며, 책과 pdf, notion으로 공유됩니다.
 
 <br>
+
+<br>
+
+## Now studying.
 
 ### at SSAFY
 
@@ -35,15 +41,11 @@ SSAFY(삼성청년SW아카데미)에서 파이썬 프로그래밍, 자료 구조
   - CSS
   - Bootstrap
 
-<br>
-
 ### MOOC
 
 - [Operating System](http://www.kocw.net/home/cview.do?cid=5c3c30382c7bbcf6)
 
   경성대학교 양희재 교수님, [KOCW][http://www.kocw.net]
-
-<br>
 
 ### Book
 
@@ -65,8 +67,6 @@ SSAFY(삼성청년SW아카데미)에서 파이썬 프로그래밍, 자료 구조
 
   Harvard & Yale, [edX](https://www.edx.org/), [edwith][https://www.edwith.org]
 
-<br>
-
 ### Book
 
 - [Mathematics for Machine Learning](https://mml-book.github.io/)
@@ -85,8 +85,6 @@ SSAFY(삼성청년SW아카데미)에서 파이썬 프로그래밍, 자료 구조
 
   사이토 고키(齋藤 康毅)
 
-<br>
-
 ### Paper Review and Implementation
 
 - [Attention Is All You Need](https://arxiv.org/pdf/1706.03762.pdf)
@@ -103,8 +101,6 @@ SSAFY(삼성청년SW아카데미)에서 파이썬 프로그래밍, 자료 구조
 
   NYU 조경현 교수님, [edwith][https://www.edwith.org]
 
-<br>
-
 ### Book
 
 - [Data Science Handbook](https://jakevdp.github.io/PythonDataScienceHandbook/)
@@ -114,8 +110,6 @@ SSAFY(삼성청년SW아카데미)에서 파이썬 프로그래밍, 자료 구조
 - [Deep Learning from Scratch](http://www.hanbit.co.kr/media/community/review_view.html?hbr_idx=3595)
 
   사이토 고키(齋藤 康毅)
-
-<br>
 
 ### Paper review
 
