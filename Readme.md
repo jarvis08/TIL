@@ -12,9 +12,9 @@ After being fascinated by machine learning, I started to study computer science 
 
 ### TensorFlow 2.0 Beta Tutorial
 
-Will be published as a book and also be opened for everyone with pdf and notion.
+This is an open source project which managed by GDG(Google Developers Group) Jeju. Our work will be published as a book and also be opened for everyone with PDF and Notion.
 
-Open Source 프로젝트이며, 책과 pdf, notion으로 공유됩니다.
+GDG(Google Developers Group) Jeju에서 주관하여 진행하는 오픈 소스 프로젝트입니다. 책으로 출간되며, PDF와 Notion으로 공유됩니다.
 
 <br>
 
