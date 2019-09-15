@@ -45,7 +45,7 @@ SSAFY(삼성청년SW아카데미)에서 파이썬 프로그래밍, 자료 구조
 
 - [Operating System](http://www.kocw.net/home/cview.do?cid=5c3c30382c7bbcf6)
 
-  경성대학교 양희재 교수님, [KOCW][http://www.kocw.net]
+  경성대학교 양희재 교수님, [KOCW](http://www.kocw.net)
 
 ### Book
 
