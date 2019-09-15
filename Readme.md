@@ -65,7 +65,7 @@ SSAFY(삼성청년SW아카데미)에서 파이썬 프로그래밍, 자료 구조
 
 - [CS50](https://www.edwith.org/cs50)
 
-  Harvard & Yale, [edX](https://www.edx.org/), [edwith][https://www.edwith.org]
+  Harvard & Yale, [edX](https://www.edx.org/), [edwith](https://www.edwith.org)
 
 ### Book
 
