@@ -1,6 +1,8 @@
-# graykode_NLP_Study
+# NLP Study Summary
 
----
+NLP study group with graykode(김태훈), summary
+
+<br><br>
 
 ## Day_1
 
@@ -14,7 +16,7 @@
 
   최근부터 파이토치 지원
 
-   
+   <br>
 
 - pytorch
 
@@ -57,7 +59,7 @@
   		print(output)
   ```
 
----
+ <br> <br>
 
 ## Day_2
 
@@ -91,7 +93,7 @@
 
   뒤에 많은 문장들을 생성해줌.
 
- 
+  <br>
 
 - BERT에서는 Skip gram이 아닌, CBOW의 컨셉을 사용
 
@@ -99,7 +101,7 @@
 
   (classification, seq2seq 등)
 
-   
+  <br>
 
 - Code Review
 
@@ -111,7 +113,7 @@
 
   X = self.C(X) :: 임베딩에서 X에 해당하는 행을 가져옴
 
-   
+  <br>
 
 - Fasttext
 
@@ -137,7 +139,7 @@
 
 - attention :: cs224, 조경현 교수 강의, rat'so 블로그(attention mechanism)
 
- 
+  <br>
 
 - one-shot learning
 
@@ -149,7 +151,7 @@
 
 - 구글 sentencepiece
 
----
+ <br> <br>
 
 ## Day_3
 
