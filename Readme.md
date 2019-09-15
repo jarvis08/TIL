@@ -99,7 +99,7 @@ SSAFY(삼성청년SW아카데미)에서 파이썬 프로그래밍, 자료 구조
 
 - [딥러닝을 이용한 자연어 처리](https://www.edwith.org/deepnlp/joinLectures/17363)
 
-  NYU 조경현 교수님, [edwith][https://www.edwith.org]
+  NYU 조경현 교수님, [edwith](https://www.edwith.org)
 
 ### Book
 
