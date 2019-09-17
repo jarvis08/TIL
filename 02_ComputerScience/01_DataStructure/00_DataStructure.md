@@ -16,9 +16,19 @@
 
     주어진 자료 구조의 모든 element를 빠짐 없이 조회할 수 있는 방법
 
+<br>
 
+<br>
 
-## 자료 구조의 종류
+## 자료 구조의 분류
+
+![views](https://wayhome25.github.io/assets/post-img/cs/data-structure.png)
+
+출처 : [초보몽키의 개발공부로그](https://wayhome25.github.io/cs/2017/04/17/cs-18/)
+
+<br>
+
+<br>
 
 ### 선형
 
@@ -46,7 +56,7 @@
 
 - 데크, Deck
 
-
+<br>
 
 ### 비선형
 
