@@ -108,13 +108,40 @@
 
 <br>
 
-### 1-5. 해싱
+### 1-5. 해싱, Hashing
+
+- 특정 Key를 Hash Function에 넣어 얻은 값을 index로 사용하여 해당 index에 데이터를 저장하는 방식
+- 다른 Key값이 같은 index를 내놓는 Collision이 발생할 수 있다. Collision의 해결방법이 필요하다.
+
+#### 1-5-1. Open-Address Hashing
+
+- Linear Probing
+  - 특정 Hash Function을 통해 얻어낸 index를 *hash(key)* 라고 한다.
+  - 만약 *data[hash(key)]* 가 비어있으면 저장하고 끝낸다.
+  - 비어있지 않으면, *data[hash(key)+1]* 를 확인하고 비어있으면 저장후 종료, 비어있지 않으면 index를 하나씩 늘려가면서 확인한다.
+- Doublie Hasing
+  - Linear Probing의 경우 Clustering Problem으로 인해 Insertion 작업의 시간이 오래 걸릴 수 있다.
+  - *Hash Function 1*과 *Hash Function 2*를 정의한다.
+  - *Hash Function 1*을 통해 얻어낸 index가 비어있지 않으면 *Hash Function 2*를 통해 얻은 값을 index에 더한다.
+
+#### 1-5-2. Chanined Hasing
+
+- Array가 하나 이상의 Entry를 가질 수 있는 Hashing 방법이다.
+- Collision이 발생하면 해당 index에 새로운 Entry를 추가한다.
+
+#### 1-5-3. Table
+
+- Table은 record에 대해 Insertin, Deleting, Locating을 수행하는 container이다.
+- Single Key Field에 의해 결정된다.
+- Hash와 Table의 개념이 합펴진 것이 HashTable이다.
+
+<br>
 
 - 키 값에 특별한 수식을 적용하여 원하는 자료가 저장되어 있는 주소를 직접 알아냄(직접주소를 이용하여 빠르게 탐색)
 
 - 충돌 : 자료를 삽입할 때 두 개의 서로 다른 자료가 해싱 함수에 의해 똑같은 주소의 버킷으로 해싱되는 경우가 발생되는 현상
 
-#### 해싱 함수
+#### 1-5-4. 해싱 함수
 
 해싱 테이블 내의 버킷 주소로 변환하며, 주소가 특정 주소에 편향되지 않도록 하고, 편향된 주소로 해싱된 자료들이 오버플로우를 발생시키지 않도록 하는 것이 중요하다.
 
@@ -138,7 +165,7 @@
 
      키 값의 분포를 활용하여 적절하게 배치
 
-#### 충돌 해결 방법
+#### 1-5-5. 충돌 해결 방법
 
 - 개방 주소법
 
@@ -154,67 +181,14 @@
 
 ## 2. 정렬, Sort
 
-### BINARY SEARCH
+### 2-1. 이진 탐색, Binary Search
 
 - 정렬된 상태의 배열을 정 가운데 index와 찾고자 하는 값을 비교하여 값을 찾아내는 방식
 - 하지만, 정렬되지 않는 배열에 적용할 수 없다는 단점을 가진다.
 
-### HASHING
+<br>
 
-- 특정 Key를 Hash Function에 넣어 얻은 값을 index로 사용하여 해당 index에 데이터를 저장하는 방식
-- 다른 Key값이 같은 index를 내놓는 Collision이 발생할 수 있다. Collision의 해결방법이 필요하다.
-
-### OPEN-ADDRESS HASHING
-
-- Linear Probing
-  - 특정 Hash Function을 통해 얻어낸 index를 *hash(key)* 라고 한다.
-  - 만약 *data[hash(key)]* 가 비어있으면 저장하고 끝낸다.
-  - 비어있지 않으면, *data[hash(key)+1]* 를 확인하고 비어있으면 저장후 종료, 비어있지 않으면 index를 하나씩 늘려가면서 확인한다.
-- Doublie Hasing
-  - Linear Probing의 경우 Clustering Problem으로 인해 Insertion 작업의 시간이 오래 걸릴 수 있다.
-  - *Hash Function 1*과 *Hash Function 2*를 정의한다.
-  - *Hash Function 1*을 통해 얻어낸 index가 비어있지 않으면 *Hash Function 2*를 통해 얻은 값을 index에 더한다.
-
-### CHANINED HASHING
-
-- Array가 하나 이상의 Entry를 가질 수 있는 Hashing 방법이다.
-- Collision이 발생하면 해당 index에 새로운 Entry를 추가한다.
-
-### TABLE
-
-- Table은 record에 대해 Insertin, Deleting, Locating을 수행하는 container이다.
-- Single Key Field에 의해 결정된다.
-- Hash와 Table의 개념이 합펴진 것이 HashTable이다.
-
-### HASH FUNCTIONS
-
-- Division
-
-   
-
-  Hash Functions
-
-  - 보통 *key % table_size*
-  - table_size는 소수인 경우가 제일 이상적이다
-
-- Mid_Square
-
-   
-
-  Hash Functions
-
-  - *key \* key* 를 2진수로 바꾼 후, 중간 digit을 선택
-
-- Multiplicative
-
-   
-
-  Hash Functions
-
-  - *a \* key(0<a<1)* 의 값에서 숫자 몇 개를 선택
-  - ex) key = 157, a = 0.0234521, 0.0234521 * 157 = 3.6819797에서 681 선택
-
-### 2-1. 삽입 정렬, Insert Sort
+### 2-2. 삽입 정렬, Insert Sort
 
 자료가 소량인 경우에 유리하며, 알고리즘이 간단하다는 장점이 있다.
 
@@ -230,7 +204,7 @@
 
 <br>
 
-#### 셸 정렬, Shell Sort
+#### 2-2-1. 셸 정렬, Shell Sort
 
 입력 파일을 여러 개의 부분 파일로 세분화하여 부분 파일을 삽입 정렬
 
@@ -248,7 +222,7 @@
 
 <br>
 
-### 2-2. 합병 정렬
+### 2-3. 합병 정렬
 
 쪼개어진 이미 정렬되어 있는 2개의 파일을 하나의 정렬된 파일로 만들며 전체를 정렬한다.
 
@@ -270,7 +244,7 @@
 
 <br>
 
-### 2-3. 퀵 정렬
+### 2-4. 퀵 정렬
 
 평균적으로 가장 좋은 성능을 내며, 스택 구조와 순환적 알고리즘을 사용한다.
 
@@ -286,7 +260,7 @@
 
 <br>
 
-### 2-4. 버블 정렬
+### 2-5. 버블 정렬
 
 좌측에서 우측으로 인접한 두 요소를 반복적으로 비교하며 크기가 큰 요소를 계속해서 비교하며 정렬한다.
 
