@@ -523,4 +523,4 @@ Heap은 특정 노드 N의 값이 항상 자식들보다 큰 Complete Binary Tre
 
 [도연이 지식창고](https://doyeonii.tistory.com/9)
 
-[ITance](https://itance.tistory.com/entry/)
+[ITance](https://itance.tistory.com/entry/자료구조-정리)
