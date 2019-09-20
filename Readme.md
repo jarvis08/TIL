@@ -2,11 +2,13 @@
 
 After being fascinated by machine learning, I started to study computer science and data science to handle machine learning better. But nowadays, not just machine learning, I have fallen into studying everything in this field. I believe I can solve many problems by understanding CS, DS and using ML.
 
+Almost every knowledge I study is being written in this TIL repository, and I study & work just like the schedule written in this [Trello Board](https://trello.com/b/L2OzHmaz/get-it).
+
 머신러닝에 매료되어 개발 공부를 시작한 이래로, 머신러닝을 잘 활용하기 위해 컴퓨터 사이언스와 데이터 사이언스를 공부를 시작했습니다. 하지만 지금은 머신러닝 뿐만 아니라, 이 분야의 모든 지식들에 빠져서 공부하고 있습니다. CS와 DS를 이해하고 ML을 활용하여 다양한 문제들을 해결하고 싶습니다.
 
-<br>
+제가 습득하는 대부분의 지식은 이 TIL 저장소에 기록되며, 공부와 일에 대한 계획을 [Trello 게시판](https://trello.com/b/L2OzHmaz/get-it)에 기록합니다.
 
-<br>
+<br><br>
 
 ## On Going Project.
 
@@ -52,6 +54,10 @@ SSAFY(삼성청년SW아카데미)에서 파이썬 프로그래밍, 자료 구조
 - [Introduction to Algorithms](http://www.hanbit.co.kr/store/books/look.php?p_code=B9722727468) with C
 
   Thomas H.Cormen, Charles E.Leiserson, Ronald L.Rivest, Clifford Stein
+  
+- [env이산수학](http://www.kyobobook.co.kr/product/detailViewKor.laf?ejkGb=KOR&mallGb=KOR&barcode=9788996814894&orderClick=LEA&Kc=)
+
+  황석근 지음, 교우미디어
 
 <br><br>
 
