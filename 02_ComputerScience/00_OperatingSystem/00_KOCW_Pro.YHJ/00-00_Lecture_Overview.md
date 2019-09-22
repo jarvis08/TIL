@@ -7,7 +7,7 @@
   2. 주기억장치 관리, Main Memory Management
   3. 파일 관리, File System Management
 
-
+<br><br>
 
 ## 목차
 
@@ -31,7 +31,7 @@
 
    1.8 시스템 콜
 
-
+<br>
 
 ### Process Management
 
@@ -77,7 +77,7 @@
 
    3.9 모니터
 
-
+<br>
 
 ### Main Memory Management
 
@@ -105,7 +105,7 @@
 
    5.4 페이지 크기
 
-
+<br>
 
 ### File System Management
 

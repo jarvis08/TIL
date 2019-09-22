@@ -24,7 +24,7 @@
 
     망치로 종이를 두들겨 찍어냄
 
-
+<br>
 
 ### 일괄처리시스템, Batch Processing System
 
@@ -34,7 +34,7 @@
 
 - MS-DOS는 Batch Processing System
 
-
+<br>
 
 ### 다중프로그래밍 시스템, Multiprogramming System
 
@@ -50,7 +50,7 @@
 
 - 다른 Program들 끼리 침범하지 않도록 보호
 
-
+<br>
 
 ### 시공유 시스템, Time-Sharing System
 
@@ -86,7 +86,7 @@
 
 - Windows, Linux, OSX, Android, iOS 모두 TSS 방식
 
-
+<br><br>
 
 # 1-3. 고등 운영체제
 
@@ -96,7 +96,7 @@
 
   (하나의 CPU) + (하나의 Memory)
 
-
+<br>
 
 ### 다중 프로세서 시스템, Multiprocessor System
 
@@ -119,7 +119,7 @@
 
 - 다중 프로세서 운영체제, Multiprocessor OS
 
-
+<br>
 
 ### 분산 시스템, Distributed System
 
@@ -134,7 +134,7 @@
   - Reliability
 - 분산 운영체제, Distributed OS
 
-
+<br>
 
 ### 실시간 시스템, Real-Time System
 

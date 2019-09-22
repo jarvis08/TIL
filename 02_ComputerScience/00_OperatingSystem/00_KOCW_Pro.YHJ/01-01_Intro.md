@@ -6,16 +6,16 @@
 
 Control Program for computer which manage resources
 
-
+<br>
 
 ### OS 목적
 
 - **Performance**
 - **Convenience**
 
+<br>
 
-
-
+<br>
 
 ## 1-1-2. 운영체제의 사용
 
@@ -62,7 +62,7 @@ Control Program for computer which manage resources
 
     Instruction들의 집합을 Program이라고 한다.
 
-
+<br>
 
 ### 커널과 쉘
 
@@ -74,7 +74,7 @@ Control Program for computer which manage resources
 
   사용자로부터 받은 명령을 OS의 Kernal이 이해할 수 있도록 **해석 및 번역**
 
-
+<br>
 
 ### 단계 별 예시
 
@@ -90,9 +90,9 @@ Control Program for computer which manage resources
 
    CPU, Memory, Disk, Monitor, Printer 등
 
+<br>
 
-
-
+<br>
 
 ## 1-1-3. 컴퓨터의 규모별 분류
 
