@@ -88,7 +88,7 @@ Control Program for computer which manage resources
 
 3. Hardware
 
-   CPU, Memory, Disk, Monitor, Printer 등
+   CPU(Central Processing Unit), Memory, Disk, Monitor, Printer 등
 
 <br>
 
