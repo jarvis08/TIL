@@ -22,31 +22,21 @@
 
 하지만 이미 정렬되어 있는 자료구조에 자료를 하나씩 삽입/제거하는 경우, 오버헤드가 매우 적다.
 
-<br>
-
 ### 2. Stable
-
-<br>
 
 ### 3. 최선 - O(`n`)
 
-<br>
-
 ### 4. 이미 정렬되어 있는 경우로, 비교만 하면 된다.
-
-<br>
 
 ### 5. 평균 - O(`n^2`)
 
-<br>
-
 ### 6. 최악 - O(`n^2`)
-
-<br>
 
 ### 7. 역순으로 정렬된 상태일 때
 
-<br><br>
+<br>
+
+<br>
 
 ## 버블 정렬, Bubble Sort
 
@@ -54,7 +44,7 @@
 
 오름차순으로 정렬하고자 할 경우 한 싸이클 진행 시 가장 큰 값이 맨 뒤에 저장된다. 그리고 싸이클이 진행될 수록 싸이클 당 진행 작업 회수는 하나씩 줄어든다(`전체 배열의 크기` – `현재까지 순환한 바퀴 수`).
 
-<br>
+
 
 ### 2. Stable
 
@@ -62,27 +52,29 @@
 
 `공간복잡도`는 단 하나의 배열에서 진행하므로 `O(n)`이다.
 
-<br>
+
 
 ### 3. 최선 - O(`n`)
 
-<br>
+
 
 ### 4. 이미 정렬된 자료
 
-<br>
+
 
 ### 5. 평균 - O(`n^2`)
 
-<br>
+
 
 ### 6. 최악 - O(`n^2`)
 
-<br>
+
 
 ### 7. 모든 요소들을 비교할 때
 
-<br><br>
+<br>
+
+<br>
 
 ## 기수 정렬, Radix Sort
 
@@ -99,37 +91,35 @@
 
 (i.g., 부동소수점 형태의 자료형)
 
-<br>
+
 
 ### 2. Stable
 
-<br>
+
 
 ### 3. 최선/평균/최악 - O(`n`)
 
-<br>
+
 
 ### 4. 다중키를 사용하여 비교적 많은 공간을 사용하며, '자리수'가 존재하는 자료형만 가능(부동소주점 형태는 불가)
 
-<br><br>
+<br>
+
+<br>
 
 ## 계수 정렬, Counting Sort
 
 ### 1. 요소 별 개수를 세어 카운팅 배열에, 값에 해당하는 인덱스에 삽입한 후 뒤에서 부터 추출하여 새로운 배열에 삽입
 
-<br>
-
 ### 2. Stable
-
-<br>
 
 ### 3. 최선/평균/최악 - O(`n`)
 
-<br>
-
 ### 4. 0이상 정수로의 표현 가능해야 사용이 가능
 
-<br><br>
+<br>
+
+<br>
 
 ## 팀 정렬, Tim Sort
 
@@ -141,21 +131,19 @@
 
 [합병 정렬](https://www.notion.so/jarvis08/Overall-of-Sorting-Algorithms-f0c43eb0f1134b7eaf9196ebccb6059f#2baf81ef347743adb3f47b41b6b6fbee)과 비슷한 특징을 가지고, 대부분의 경우 더 빠르며, 가장 많이 사용되는 정렬 중 하나이다.
 
-<br><br>
-
 ### 2. Stable
-
-<br>
 
 ### 3. 최선 - O(`n`)
 
 최상의 경우 [삽입 정렬](https://www.notion.so/jarvis08/Overall-of-Sorting-Algorithms-f0c43eb0f1134b7eaf9196ebccb6059f#5ef527abfd804cb68125d3419d62c320)의 O(n)를 복잡도를 가지고, 최악의 경우 [합병 정렬](https://www.notion.so/jarvis08/Overall-of-Sorting-Algorithms-f0c43eb0f1134b7eaf9196ebccb6059f#2baf81ef347743adb3f47b41b6b6fbee)의 O(n logn)를 가진다.
 
-<br>
-
 ### 4. 평균/최악 - O(`n logn`)
 
-<br><br><br>
+<br>
+
+<br>
+
+<br>
 
 # O(n logn)
 
@@ -173,23 +161,17 @@
   2. gap은 N/2 ~ 1
   3. gap = 1일 경우 데이터 전체를 [삽입 정렬](https://www.notion.so/jarvis08/Overall-of-Sorting-Algorithms-f0c43eb0f1134b7eaf9196ebccb6059f#5ef527abfd804cb68125d3419d62c320)한 것과 같다.
 
-<br>
-
 ### 2. Stable
-
-<br>
 
 ### 3. 최선 - O(`n logn`)
 
-<br>
-
 ### 4. 평균 - O(`n (logn)^2`)
-
-<br>
 
 ### 5. 최악 - O(`n (logn)^2`)
 
-<br><br>
+<br>
+
+<br>
 
 ## 합병 정렬, Merge Sort
 
@@ -204,11 +186,7 @@
    2. 만약 둘 중에서 하나의 리스트가 먼저 끝나게 되면 나머지 리스트의 값들을 전부 새로운 리스트(sorted)로 복사한다.
    3. 새로운 리스트(sorted)를 원래의 리스트(list)로 옮긴다.
 
-<br>
-
 ### 2. Stable
-
-<br>
 
 ### 3. 최선/평균/최악 - O(`n logn`)
 
@@ -216,11 +194,11 @@
 
 평균적인 [퀵 정렬](https://www.notion.so/jarvis08/Overall-of-Sorting-Algorithms-f0c43eb0f1134b7eaf9196ebccb6059f#b092ea76459e4ec1abdbb063a37dc159)보다 느리며, 데이터 크기 만큼의 메모리가 더 필요하므로 **공간복잡가 크다**.
 
-<br>
-
 ### 4. 크기가 1인 배열로 분할하는 과정에 O(`logn`) 소요
 
-<br><br>
+<br>
+
+<br>
 
 ## 퀵 정렬, Quick Sort
 
@@ -249,23 +227,17 @@
   3. 인트로 정렬 
      - 재귀 깊이가 어느 제한 이상으로 깊어질 경우 [힙 정렬](https://www.notion.so/jarvis08/Overall-of-Sorting-Algorithms-f0c43eb0f1134b7eaf9196ebccb6059f#90ad70185a554e6c94bb67782286aad2) 알고리즘을 사용하여 항상 O(n log n)을 보장해주는 방법
 
-<br>
-
 ### 2. Unstable
-
-<br>
 
 ### 3. 최선/평균 - O(`n logn`)
 
-<br>
-
 ### 4. 최악 - O(`n^2`)
-
-<br>
 
 ### 5.  피벗이 계속해서 최소/최대값으로 지정될 때
 
-<br><br>
+<br>
+
+<br>
 
 ## 힙 정렬, Heap Sort
 
@@ -286,19 +258,17 @@
 
 또한 `힙정렬`은 일반적으로 `포인터 연산`을 많이 하기 때문에 `오버헤드가 크다`.
 
-<br>
-
 ### 2. Unstable
-
-<br>
 
 ### 3. 최선/평균/최악 - O(`n logn`)
 
-<br>
-
 ### 4. 노드 하나를 삽입/삭제할 때 O(`logn`)을 소요
 
-<br><br><br>
+<br>
+
+<br>
+
+<br>
 
 # O(n^2)
 
@@ -310,19 +280,17 @@
 
 배열의 상태와 무관하게 `n(n-1)/2` 에 비례하는 시간이 소요되며, **일반적으로 버블 정렬보다 약 두 배 빠르다**. 단 하나의 배열에서만 진행하므로 공간복잡도는 O(n)이다.
 
-<br>
-
 ### 2. Unstable
-
-<br>
 
 ### 3. 최선/평균/최악 - O(`n^2`)
 
-<br>
-
 ### 4. 최악/최상 어떤 경우이든 요소 전부를 비교
 
-<br><br>
+<br>
+
+<br>
+
+<br>
 
 # Reference
 
