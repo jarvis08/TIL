@@ -2,11 +2,11 @@
 
 After being fascinated by machine learning, I started to study computer science and data science to handle machine learning better. But nowadays, not just machine learning, I have fallen into studying everything in this field. I believe I can solve many problems by understanding CS, DS and using ML.
 
-I record and organize almost every knowledge I study in this TIL repository and [Notion](https://www.notion.so/Links-of-jarvis08-3ec5cb8df1bf453e9d78409976da54ab). You can check what I study & work nowadays in this [Trello Board](https://trello.com/b/L2OzHmaz/get-it). If you want to see my CV or Portfolio, visit [here](https://jarvis08.github.io). Also, you can see the details of projects by clicking the title of them.
+I record and organize almost every knowledge I study in this TIL repository and [Notion](https://www.notion.so/Links-of-jarvis08-3ec5cb8df1bf453e9d78409976da54ab). You can check what I study & work nowadays in this [Trello Board](https://trello.com/b/L2OzHmaz/get-it). If you want to see my CV or Portfolio, visit my [Github Page](https://jarvis08.github.io). Also, you can see the details of projects by clicking the title of them.
 
 머신러닝에 매료되어 개발 공부를 시작한 이래로, 머신러닝을 잘 활용하기 위해 컴퓨터 사이언스와 데이터 사이언스를 공부를 시작했습니다. 하지만 지금은 머신러닝 뿐만 아니라, 이 분야의 모든 지식들에 빠져서 공부하고 있습니다. CS와 DS를 이해하고 ML을 활용하여 다양한 문제들을 해결하고 싶습니다.
 
-제가 습득하는 대부분의 지식은 이 TIL 저장소와 [Notion](https://www.notion.so/Links-of-jarvis08-3ec5cb8df1bf453e9d78409976da54ab)에 정리하여 기록합니다. 지금 진행중인 작업들에 대한 계획은 [Trello 게시판](https://trello.com/b/L2OzHmaz/get-it)에서 확인할 수 있습니다. 만약 제 이력서와 포트폴리오를 보고 싶으시다면 [여기](https://jarvis08.github.io)를 클릭하세요. 프로젝트 제목을 클릭하면 상세 내용을 볼 수 있습니다.
+제가 습득하는 대부분의 지식은 이 TIL 저장소와 [Notion](https://www.notion.so/Links-of-jarvis08-3ec5cb8df1bf453e9d78409976da54ab)에 정리하여 기록합니다. 지금 진행중인 작업들에 대한 계획은 [Trello 게시판](https://trello.com/b/L2OzHmaz/get-it)에서 확인할 수 있습니다. 만약 제 이력서와 포트폴리오를 보고 싶으시다면 제 [Github Page](https://jarvis08.github.io)를 방문하세요. 프로젝트 제목을 클릭하면 상세 내용을 볼 수 있습니다.
 
 <br><br>
 
@@ -26,9 +26,9 @@ GDG(Google Developers Group) 제주에서 주관하여 진행하는 오픈 소�
 
 ### at SSAFY
 
-I'm Learning Python programming, Data Structure, Algorithm, and Web Programming at SSAFY. I have learned how to handle computer and data better, and understood how we use Web for I work and to provide my application.
+I'm Learning Python programming, Data Structure, Algorithm, and Web Programming at [SSAFY](https://www.ssafy.com). I have learned how to handle computer and data better, and understood how we use Web for I work and to provide my application.
 
-SSAFY(삼성청년SW아카데미)에서 파이썬 프로그래밍, 자료 구조, 알고리즘, 웹 프로그래밍에 대해 공부하고 있습니다. 컴퓨터와 데이터를 다루는 방법에 대해 배우고 있으며, 웹을 통해 내가 필요한 데이터를 얻는 동시에 나의 앱을 제공하는 과정을 학습하고 있습니다.
+[SSAFY](https://www.ssafy.com)(삼성청년SW아카데미)에서 파이썬 프로그래밍, 자료 구조, 알고리즘, 웹 프로그래밍에 대해 공부하고 있습니다. 컴퓨터와 데이터를 다루는 방법에 대해 배우고 있으며, 웹을 통해 내가 필요한 데이터를 얻는 동시에 나의 앱을 제공하는 과정을 학습하고 있습니다.
 
 - Python
 - Data Structure
