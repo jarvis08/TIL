@@ -8,7 +8,7 @@ Process(= Task, Job)는 현재 실행되고 있는 프로그램(Program in execu
 
   주소 정보
 
-- SP
+- SP, Stack Point
 
 - Register
 
@@ -127,31 +127,26 @@ I/O 장치와 Disk의 대기열이며, Device Scheduler가 관리한다.
 
   Main Memory에 몇 개의 프로세스가 적재되어 있는가?
 
-Job Scheduler는 Job Queue에서 다음 작업을 선택할 때, 다음에 설명할 **I/O-bound Process**와 **CPU-bound Process**를 적절히 배분하여  선택해야 한다.
-
 <br>
 
-### I/O-bound Process
+### I/O-bound Process & CPU-bound Process
 
-작업해야 하는 내용이 주로 I/O를 사용하는 프로세스
+Job Scheduler는 Job Queue에서 다음 작업을 선택할 때, 다음에 설명할 **I/O-bound Process**와 **CPU-bound Process**를 적절히 배분하여  선택해야 한다.
 
-- 예시
+- I/O-bound Process
+
+  작업해야 하는 내용이 주로 I/O를 사용하는 프로세스이며, 아래의 예시가 있다.
+
   - Word Processor
   - 타자 연습 프로그램
 
-<br>
+- CPU-bound Process
 
-### CPU-bound Process
-
-CPU(계산) 사용이 많은 Process
-
-- 기상청의 일기 예측 프로그램
+  CPU(계산) 사용이 많은 프로세스이며, 기상청의 일기 예측 프로그램과 같은 프로그램이 그 예이다.
 
 <br>
 
-<br>
-
-## 2-1-5. Medium-term Scheduler
+### Medium-term Scheduler
 
 Medium-term Scheduler는 어떤 작업을 **Swapping**(Swap In/Out)할 지 결정한다.
 
@@ -159,9 +154,36 @@ Medium-term Scheduler는 어떤 작업을 **Swapping**(Swap In/Out)할 지 결�
 
 ### Swapping
 
-**대화형 시스템(Interactive System)**은 대부분 **Time-Sharing System**이다. Time-Sharing System의 예시로는 Windows와 Linux가 있다. Time-Sharing System은 **사용자 별로 시간을 분배하여 CPU를 할당**한다. 운영체제는 **PCB를 계속해서 확인**하며, 만약 한 사용자가 자리를 작업을 멈추었을 경우, 장기간 동안 작업을 하지 않은 프로세스 및 사용자의 작업 내용을 **Hard Disk**로 **Swap Out**한다. 그리고 다시 작업을 시작한 경우 메모리로 **Swap In**하며, 여기서의 Hard Disk는 **Swap Device**의 역할을 한다.
+**대화형 시스템(Interactive System)**은 대부분 **Time-Sharing System**이다. Time-Sharing System의 예시로는 Windows와 Linux가 있다. Time-Sharing System은 **사용자 별로 시간을 분배하여 CPU를 할당**한다.
 
+운영체제는 **PCB를 계속해서 확인**하며, 만약 한 사용자가 자리를 작업을 멈추었을 경우, 장기간 동안 작업을 하지 않은 프로세스 및 사용자의 작업 내용을 **Hard Disk**로 **Swap Out**한다. 그리고 다시 작업을 시작한 경우 메모리로 **Swap In**하며, 여기서의 Hard Disk는 **Swap Device**의 역할을 한다. Hard Disk의 물리적 공간은 File System으로 사용되는 공간과 Swap Device로 사용되는 **Backing Store**로 나뉜다.
 
+<br>
 
+### Context Switching
 
+`Process-1`에서 `Process-2`로, `Process-2`에서 `Process-3`로 이동하는 등의 전환을 `Context Switching`이라고 한다.
+
+- **Scheduler**
+
+  현재 프로세스에서 어떤 프로세스로 Context Switching할 것인지 결정한다.
+
+- **Dispatcher**
+
+  1. `Process-1`의 현재 정보를 OS 메모리 내부의 `PCB-1`에 저장
+  2. 전환하려는 프로세스인 `Process-2`의 `PCB-2`를 복원하여 다음 데이터 값들을 변경
+     - PC(Program Counter)
+     - SP(Stack Point)
+     - Register
+     - MMU(Base, Limit)
+
+- **Context switching overhead**
+
+- **Context Switching Overhead**
+
+  프로세스간 전환하는 과정에서 발생하는 오버헤드를 말한다.
+
+  오버헤드를 감소시키기 위해서는 C와 같은 High Level Language보다는 Assembly Language를 사용해야 한다.
+
+  
 
