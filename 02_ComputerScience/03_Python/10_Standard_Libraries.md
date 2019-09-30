@@ -77,7 +77,7 @@ sys.path
  'C:\\Users\\student\\.ipython']"""
 ```
 
----
+<br><br>
 
 ## random
 
@@ -119,7 +119,7 @@ sys.path
   
     [ ] 중 1개를 임의 복원 추출
 
----
+<br><br>
 
 ## math
 
@@ -168,7 +168,7 @@ sys.path
   ```
   ~~~
 
----
+<br><br>
 
 ## CSV
 
@@ -229,7 +229,7 @@ sys.path
           movieCds.append(row['movieCd'])
   ```
 
----
+<br><br>
 
 ## datetime
 
@@ -306,6 +306,8 @@ sys.path
   '25'"""
   ```
 
+<br>
+
 ### timedelta
 
 ```python
@@ -336,7 +338,7 @@ def my_url(key, targetDt=None):
     return request_url
 ```
 
----
+<br><br>
 
 ## collections
 
@@ -387,7 +389,7 @@ def my_url(key, targetDt=None):
   '''
   ```
 
----
+<br><br>
 
 ## functools
 
@@ -405,7 +407,7 @@ def my_url(key, targetDt=None):
   ...
   ```
 
----
+<br><br>
 
 ## time
 
@@ -417,7 +419,7 @@ def my_url(key, targetDt=None):
   sleep(5)
   ```
 
----
+<br><br>
 
 ## copy
 
@@ -428,5 +430,42 @@ import copy
 matrix_1 = [[1, 2], [3, 4]]
 matrix_2 = copy.deepcopy(matrix_1)
 print(matrix_2[0][0])
+```
+
+<br><br>
+
+## heapq
+
+`heapq` 모듈은 list를 최소힙으로 사용할 수 있게 한다. heapq의 대표적인 메서드는 다음과 같다.
+
+- `heapify(list)`: list를 힙으로 변환
+- `heappush(list, element)`: list이 힙의 형태를 유지하도록, element를 삽입
+- `heappop(list)`: list의 `0` index, 최소값을 `pop` 하며, 나머지 요소들을 다시 heap 형태로 유지
+
+```python
+import heapq
+
+heap = []
+a = [3, 1, 8, 5, 12, 30, 7]
+for i in range(len(a)):
+    heapq.heappush(heap, a[i])
+print(heap)
+
+heapq.heapify(a)
+print(a)
+
+for _ in range(len(heap)):
+    print(heapq.heappop(heap))
+
+"""result
+[1, 3, 7, 5, 12, 30, 8]
+[1, 3, 7, 5, 12, 30, 8]
+1
+3
+5
+7
+8
+12
+30"""
 ```
 
