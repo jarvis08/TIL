@@ -14,3 +14,8 @@
 
   피봇의 위치 인덱스를 찾은 후, k 가 피봇보다 크거나 작으므로, 나머지 부분을 버려서 탐색 범위를 좁히며 탐색
 
+<br>
+
+### Google Python Style Guide
+
+![Google_Convention_NameSpace](/Users/whdbin/Documents/00_TIL/02_ComputerScience/assets/Google_Convention_NameSpace.png)
