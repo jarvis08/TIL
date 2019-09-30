@@ -52,7 +52,7 @@ Git의 기능 두가지
 # git 정보 확인
 $ git config --list
 
-# github 로그인
+# git에 유저 정보 기록
 $ git config --global user.email "cdb921226@gmail.com"
 $ git config --global user.name "jarvis08"
 
