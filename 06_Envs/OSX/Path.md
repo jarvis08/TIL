@@ -1,4 +1,4 @@
-# Path
+# PATH
 
 ## Path 확인하기
 
@@ -17,7 +17,7 @@
 
   `/etc/paths`
 
-
+<br>
 
 ## 사용자 PATH
 
@@ -36,6 +36,8 @@
 
 그리고 그 뒤에 다른 Path가 필요할 경우 `{PATH}`뒤에 `:` 적어서 경로를 이어준다.
 
+<br>
+
 ## 관리자 PATH
 
 - `sudo nano /etc/paths`
@@ -52,5 +54,3 @@
 - 저장 파일
 
   `/etc/paths`
-
----
