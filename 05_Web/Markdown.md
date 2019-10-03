@@ -107,9 +107,7 @@ A |B
 
 ---
 
-https://github.com/jarvis08/emoji-cheat-sheet
-
-https://www.webfx.com/tools/emoji-cheat-sheet/
+[emoji-cheat-sheet](https://www.webfx.com/tools/emoji-cheat-sheet/)
 
 `:+1:` : :+1:
 

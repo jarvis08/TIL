@@ -17,7 +17,9 @@ $ brew install python3
 $ brew rm python3
 ```
 
----
+<br>
+
+<br>
 
 ## My Installations
 
