@@ -177,13 +177,10 @@ Medium-term Scheduler는 어떤 작업을 **Swapping**(Swap In/Out)할 지 결�
      - Register
      - MMU(Base, Limit)
 
-- **Context switching overhead**
-
 - **Context Switching Overhead**
 
   프로세스간 전환하는 과정에서 발생하는 오버헤드를 말한다.
 
   오버헤드를 감소시키기 위해서는 C와 같은 High Level Language보다는 Assembly Language를 사용해야 한다.
 
-  
 
