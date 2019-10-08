@@ -62,6 +62,12 @@
 
 <br>
 
+### 재귀식의 시간 복잡도를 계산하는 예제
+
+![Complexity_Exercise](./assets/Complexity_Exercise.png)
+
+<br>
+
 <br>
 
 ## Reference
