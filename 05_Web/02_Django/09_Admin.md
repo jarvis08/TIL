@@ -26,6 +26,8 @@
 
   - http://localhost:8000/admin/ 접속 가능
 
+<br>
+
 ### Admin에서 DB의 data를 다룰 수 있도록 설정하기
 
 - `PROJECT_NAME/AppName/admin.py`에서 Article Class 추가
@@ -38,4 +40,29 @@
   admin.site.register(Article)
   ```
 
-  
+![admin_default](assets/admin_default.JPG)
+
+<br>
+
+<br>
+
+## Admin Customization
+
+참고자료: [초보몽키](https://wayhome25.github.io/django/2017/03/22/django-ep8-django-admin/)
+
+```python
+from django.contrib import admin
+from .models import Article
+
+# Register your models here.
+class ArticleAdmin(admin.ModelAdmin):
+    # admin에서 무엇을 볼 지 지정
+    list_display = ('pk', 'title', 'content',)
+    
+    # list_display_links = ['title',]
+    
+
+admin.site.register(Article, ArticleAdmin)
+```
+
+![admin_class](assets/admin_class.JPG)
