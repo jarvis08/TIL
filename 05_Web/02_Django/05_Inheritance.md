@@ -1,7 +1,5 @@
 # Template Inheritance
 
----
-
 - DRY, Do not Repeat Yourself
 
 - Navbar라는 요소는 모든 페이지에 있어야 하므로 다른 페이지에서도 가능해야 한다.

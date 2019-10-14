@@ -27,6 +27,8 @@
         return render(request, 'home.html', context)
     ```
 
+<br>
+
 ### 이전의 특정 페이지 Load
 
 - `redirect('별명')`
@@ -56,7 +58,9 @@
          return redirect('index')
      ```
 
----
+<br>
+
+<br>
 
 ## Template 내부 제어
 
@@ -90,6 +94,8 @@
   {% endfor %}
   ```
 
+<br>
+
 ### if 문
 
 ```html
@@ -114,6 +120,8 @@
 {% endfor %}
 ```
 
+<br>
+
 ### helper
 
 - `helper` example
@@ -135,6 +143,8 @@
         ```
     
 
+<br>
+
 ### filter
 
 - `{{ html변수|filter함수 }}`
@@ -152,34 +162,7 @@
     {% endfor %}
       ```
 
-### datetime
-
-```html
-<p>{% now 'd.m.y' %}</p>
-<p>{% now 'd M Y' %}</p>
-<p>{% now 'Y년m월d일 h시i분 a D' %}</p>
-## 출력
-12.08.19
-12 Aug 2019
-2019년08월12일 03시57분 p.m. Mon
-```
-
-- `settings.py` 에서 Time Zone을 변경해 주어야 원하는 장소의 시간대
-
-  ```python
-  # TIME_ZONE = 'UTC'
-  TIME_ZONE = 'Asia/Seoul'
-  ```
-  
-- int 숫자 처리
-
-  ```html
-  {{ num|add:10}}
-  ## 출력
-  20
-  ```
-
-  But `가능 != 해도된다`
+<br>
 
 ### extends & include
 
@@ -202,6 +185,8 @@
   {% include '_navbar.html' %}
   ```
 
+<br>
+
 ### block
 
 - 다른 template의 내용을 끼워 넣는 것에 사용
@@ -213,4 +198,61 @@
   {% endblock %}
   ```
 
-  
+<br>
+
+<br>
+
+## Date & Time
+
+```html
+<p>{% now 'd.m.y' %}</p>
+<p>{% now 'd M Y' %}</p>
+<p>{% now 'Y년m월d일 h시i분 a D' %}</p>
+## 출력
+12.08.19
+12 Aug 2019
+2019년08월12일 03시57분 p.m. Mon
+```
+
+- `settings.py` 에서 Time Zone을 변경해 주어야 원하는 장소의 시간대
+
+  ```python
+  # TIME_ZONE = 'UTC'
+  TIME_ZONE = 'Asia/Seoul'
+  ```
+
+- int 숫자 처리
+
+  ```html
+  {{ num|add:10}}
+  <!-- 출력 -->
+  20
+  ```
+
+  But `가능 != 해도된다`
+
+<br>
+
+### 1993-01-05 형태
+
+```html
+<input type="date" name="created_at" value="{{ posts.created_at|date:"Y-m-d" }}">
+```
+
+<br>
+
+### 더욱 편리하게 사용하기
+
+```html
+{% extends 'base.html' %}
+{% block body %}
+  <h1>DETAIL</h1>
+  <p>Title: {{ article.title }}</p>
+  <p>Content: {{ article.content }}</p>
+  <p>Created at: {{ article.created_at | date:"Y년 m월 d일" }}</p>
+  <p>Updated at: {{ article.updated_at | date:"SHORT_DATE_FORMAT" }}</p>
+  <a href="{% url 'articles:index' %}">글 목록</a>
+{% endblock %}
+```
+
+![Date_Format](assets/Date_Format.jpg)

@@ -1,7 +1,5 @@
 # Make Project & Application
 
----
-
 ## Make Project
 
 - Boiler Template, Starter Template 생성
@@ -48,7 +46,9 @@
 
   e.g., app1 - 게시판, app2 - 회원관리...
 
----
+<br>
+
+<br>
 
 ## Make Application
 
@@ -136,7 +136,7 @@
 
        1. Django Github
      2. local pip, `site-packages/`
-       
+     
      - 변수 및 참조 활용 순서
 
         `Local` > `Enclosed` > `Global` > `site-packages` > `built-in`

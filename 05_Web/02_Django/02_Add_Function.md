@@ -1,14 +1,10 @@
 # Add Function to an Existing Apps
 
----
-
 ## 이미 존재하는 App에 기능을 추가하는 과정
 
 1. `urls.py`에 `url`과  `view 함수 위치` 추가
 2. `views.py`에 함수 작성
 3. 함수에 대한 html파일 제작
-
----
 
 - 숫자 변수 받기
 
@@ -37,7 +33,9 @@
         return render(request, 'cube.html', context)
     ```
 
----
+<br>
+
+<br>
 
 ## input 변수 전달하기
 
@@ -95,6 +93,8 @@
   GET
   localhost:8000
   ```
+
+<br>
 
 ### 2. POST
 

@@ -1,8 +1,4 @@
-# Conventions
-
----
-
-## Django's Conventions
+# Django's Conventions
 
 - New Project 생성 시
 
@@ -13,7 +9,7 @@
   NEWPROJECT/manage.py
   ```
 
----
+<br>
 
 - urls의 `path(url, vies.def)` 에서 url과 def는 동일한 이름으로 하는 것이 Convention
 
@@ -41,11 +37,11 @@
 
 - 마지막 요소일 지라도 `,`를 붙여주기
 
----
+<br>
 
 - `views.py` 함수의 parameter로 항상 **`request`**를 기입
 
----
+<br>
 
 - Inheritance 설정 시 `block` 이름은 **`body`** 혹은 **`content`**
 
