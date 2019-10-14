@@ -46,3 +46,29 @@
   - Youtube, 3Blue1Brown - e, 자연 상수
 
 - 백준 - 제타 위키에 백준 문제 번호를 치면 답이 나온다
+
+<br>
+
+<br>
+
+## About Development
+
+### Vision, Mission 수립
+
+장기적인 목표 지향은 성공을 야기
+
+- `Facebook`: 모든 사람을 연결
+- `Tesla`: 전 지구 에너지 문제 해결
+- `Air B&B`: 모든 곳을 자기 집처럼
+
+<br>
+
+### Post Mortem
+
+'after death'를 의미하는 라틴어. 사건 발생 후 분석하기
+
+- 원인
+- 결과
+- 해결 방법
+- 사건이 발생하도록 한 시스템적인 문제는 무엇인가?
+
