@@ -10,7 +10,7 @@
 >
 > Delete
 
-
+<br>
 
 ### 게시판 생성
 
@@ -54,7 +54,7 @@ def index(request):
 {% endblock %}
 ```
 
-
+<br>
 
 ### Create, 작성하기
 
@@ -94,7 +94,7 @@ def create(request):
 {% endblock %}
 ```
 
-
+<br>
 
 ### Read, 세부 내용 보기
 
@@ -170,7 +170,7 @@ def detail(request, pk):
 <a href="{% url 'posts:elete' post.id %}" class="btn btn-danger">삭제</a>
 ```
 
-
+<br>
 
 ### Delete, 삭제하기
 
@@ -197,7 +197,7 @@ def delete(request, pk):
     return redirect('home')
 ```
 
-
+<br>
 
 ### Update, 수정하기
 
