@@ -10,6 +10,8 @@
 
     벽을 만나면 갈 수 있는 방향이 제한됨
 
+<br>
+
 ### Graph 표현 방법
 
 - 인접 행렬, Adjacency Matrix
@@ -42,6 +44,8 @@ for i in range(int(len_input//2)):
   }
 ```
 
+<br>
+
 ### Graph 순회
 
 - 순회
@@ -61,7 +65,9 @@ for i in range(int(len_input//2)):
 
     Queue 구조와 Visited 처리를 이용하여 탐색
 
----
+<br>
+
+<br>
 
 ## DFS, Depth First Search
 
@@ -74,6 +80,8 @@ for i in range(int(len_input//2)):
   - 스택
   - 반복
   - 재귀
+
+<br>
 
 ### DFS 탐색 방법
 
@@ -109,6 +117,10 @@ def dfs_recursive(G, v):
         if not visited[w]:
             dfs_recursive(G, w)
 ```
+
+<br>
+
+<br>
 
 ## DFS의  응용
 
@@ -150,6 +162,8 @@ def dfs_recursive(G, v):
      
        **진출 방향을 역으로 설정하지 않으면 DFS**가 불가능
 
+<br>
+
 ### AOE, Activity On Edge
 
 > 참고 자료
@@ -173,7 +187,9 @@ def dfs_recursive(G, v):
 
     그러므로 한 프로젝트를 완료하기 위한 최소시간은 여러 시나리오 중 최악의 경우이다.
 
----
+<br>
+
+<br>
 
 ## BFS, Breadth First Search
 
@@ -280,7 +296,9 @@ def dfs_recursive(G, v):
 
   (A, 0) (B, 1) (C, 1)와 같이 표기하여 해결
 
----
+<br>
+
+<br>
 
 ## DFS와 BFS의 차이
 
@@ -296,6 +314,8 @@ def dfs_recursive(G, v):
 
 - BFS의 경우 메모리 사용량이 훨씬 작다
 
+<br>
+
 ### 방문 처리 방식
 
 - DFS는 이웃을 모두 처리 한 다음에 자기 자신을 방문 처리
@@ -303,6 +323,8 @@ def dfs_recursive(G, v):
   Stack에 자기 자신을 계속해서 쌓으며, 끝에 도달하면 역방향으로 처리하기 시작
 
 - BFS의 경우 자기 자신을 방문처리 한 후 이웃을 탐색하며 Queue에 추가
+
+<br>
 
 ### 처리 방향
 

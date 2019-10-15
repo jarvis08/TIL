@@ -8,6 +8,8 @@
 >
 > 보이어-무어 알고리즘
 
+<br>
+
 ### 고지식한 패턴 검색 알고리즘, Brute Force
 
 ```python
@@ -50,6 +52,8 @@ print(BruteForce(t, p))
 
   시간 복잡도 = O(MN)
 
+<br>
+
 ### KMP Algorithm
 
 - 불일치가 발생한 텍스트 스트링의 앞 부분에 어떤 문자가 있는가를 미리 알고 있으므로,
@@ -69,6 +73,8 @@ print(BruteForce(t, p))
      (접두어 기준/접미어 기준)을 나열 및 비교하여, 겹치는 부분의 길이가 최대인 것을 탐색
 
   2. (패턴길이 - 최대 길이)만큼을 shifting 하며 탐색
+
+<br>
 
 ### Boyer-Moore Algorithm
 
@@ -90,6 +96,8 @@ print(BruteForce(t, p))
 
   a가 계속해서 있으므로  패턴을 모든 a에 맞춰서 비교
 
+<br>
+
 ### 문자열 매칭 알고리즘 비교
 
 - 찾고자 하는 문자열 패턴의 길이를 m, 총 문자열의 길이를 n이라 할 때
@@ -102,7 +110,7 @@ print(BruteForce(t, p))
 
     수행시간 = O(n)
 
----
+<br>
 
 ## Index 빠르게 찾기
 

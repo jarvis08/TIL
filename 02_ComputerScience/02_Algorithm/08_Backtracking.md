@@ -64,6 +64,8 @@
                   checknode(child)
   ```
 
+<br>
+
 ### 4-Queen
 
 - 4-Queen 문제(4x4 체스판, 4개 Queen)를 풀 때,
@@ -72,6 +74,8 @@
 
   - Default DFS :: 155 nodes
   - Back-Tracking :: 27 nods
+
+<br>
 
 ### 멱집합, Powerset
 
@@ -110,6 +114,8 @@ a = [0] * NMAX
 backtrack(a, 0, 3)
 ```
 
+<br>
+
 ### Permutation 구현
 
 - Back-Tracking 이용하여 Permutation 구현
@@ -145,6 +151,8 @@ def construct_candidates(a, k, target, c):
             n_cands += 1
     return n_cands
 ```
+
+<br>
 
 ### Target Subset Search
 

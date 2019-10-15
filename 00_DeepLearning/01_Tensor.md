@@ -2,6 +2,8 @@
 
 [TensorFlow Documents](https://www.tensorflow.org/guide/tensors#rank_0)
 
+<br>
+
 ## What is Tensor?
 
 A tensor is a generalization of vectors and matrices to potentially heigher dimensions.
@@ -34,7 +36,9 @@ With the exception of [`tf.Variable`](https://www.tensorflow.org/api_docs/python
 
 However, evaluating the same tensor twice can return different values; for example that tensor can be the result of reading data from disk, or generating a random number.
 
----
+<br>
+
+<br>
 
 ## Rank
 
@@ -54,6 +58,8 @@ As the following table shows, each rank in TensorFlow corresponds to a different
 | 3    | 3-Tensor (cube of numbers)       |
 | n    | n-Tensor (you get the idea)      |
 
+<br>
+
 ### Rank 0
 
 The following snippet demonstrates creating a few rank 0 variables:
@@ -67,7 +73,7 @@ its_complicated = tf.Variable(12.3 - 4.85j, tf.complex64)
 
 **Note:** A string is treated as a single object in TensorFlow, not as a sequence of characters. It is possible to have scalar strings, vectors of strings, etc.
 
-
+<br>
 
 ### Rank 1
 
@@ -80,7 +86,7 @@ first_primes = tf.Variable([2, 3, 5, 7, 11], tf.int32)
 its_very_complicated = tf.Variable([12.3 - 4.85j, 7.5 - 6.23j], tf.complex64)
 ```
 
-
+<br>
 
 ### Higher ranks
 
@@ -95,15 +101,13 @@ rank_of_squares = tf.rank(squarish_squares)
 mymatC = tf.Variable([[7],[11]], tf.int32)
 ```
 
-
-
 **Higher-rank** Tensors, similarly, consist of an n-dimensional array. For example, during image processing, many tensors of rank 4 are used, with dimensions corresponding to example-in-batch, image width, image height, and color channel.
 
 ```python
 my_image = tf.zeros([10, 299, 299, 3])  # batch x height x width x color
 ```
 
-
+<br>
 
 ### Getting a [`tf.Tensor`](https://www.tensorflow.org/api_docs/python/tf/Tensor) object's rank
 
@@ -113,7 +117,7 @@ To determine the rank of a [`tf.Tensor`](https://www.tensorflow.org/api_docs/pyt
 r = tf.rank(my_image)# After the graph runs, r will hold the value 4.
 ```
 
-
+<br>
 
 ### Referring to [`tf.Tensor`](https://www.tensorflow.org/api_docs/python/tf/Tensor) slices
 
@@ -143,7 +147,9 @@ my_row_vector = my_matrix[2]my_column_vector = my_matrix[:, 3]
 
 The `:` notation is python slicing syntax for "leave this dimension alone". This is useful in higher-rank Tensors, as it allows you to access its subvectors, submatrices, and even other subtensors.
 
----
+<br>
+
+<br>
 
 ## Shape
 
@@ -165,7 +171,7 @@ The TensorFlow documentation uses three notational conventions to describe tenso
 
 Shapes can be represented via Python lists / tuples of ints, or with the [`tf.TensorShape`](https://www.tensorflow.org/api_docs/python/tf/TensorShape).
 
-
+<br>
 
 ### Getting a [`tf.Tensor`](https://www.tensorflow.org/api_docs/python/tf/Tensor) object's shape
 
@@ -179,7 +185,7 @@ For example, here is how to make a vector of zeros with the same size as the num
 zeros = tf.zeros(my_matrix.shape[1])
 ```
 
-
+<br>
 
 ### Changing the shape of a [`tf.Tensor`](https://www.tensorflow.org/api_docs/python/tf/Tensor)
 
@@ -204,7 +210,9 @@ matrixAlt = tf.reshape(matrixB, [4, 3, -1])  # Reshape existing content into a
 yet_another = tf.reshape(matrixAlt, [13, 2, -1])  # ERROR!
 ```
 
----
+<br>
+
+<br>
 
 ## Data types
 
@@ -223,7 +231,9 @@ To inspect a [`tf.Tensor`](https://www.tensorflow.org/api_docs/python/tf/Tensor)
 
 When creating a [`tf.Tensor`](https://www.tensorflow.org/api_docs/python/tf/Tensor) from a python object you may optionally specify the datatype. If you don't, TensorFlow chooses a datatype that can represent your data. TensorFlow converts Python integers to [`tf.int32`](https://www.tensorflow.org/api_docs/python/tf#int32) and python floating point numbers to [`tf.float32`](https://www.tensorflow.org/api_docs/python/tf#float32). Otherwise TensorFlow uses the same rules numpy uses when converting to arrays.
 
----
+<br>
+
+<br>
 
 ## Evaluating Tensors
 
@@ -255,7 +265,9 @@ Note that it is possible to fed any [`tf.Tensor`](https://www.tensorflow.org/api
 
 Other model constructs might make evaluating a [`tf.Tensor`](https://www.tensorflow.org/api_docs/python/tf/Tensor) complicated. TensorFlow can't directly evaluate [`tf.Tensor`](https://www.tensorflow.org/api_docs/python/tf/Tensor)s defined inside functions or inside control flow constructs. If a [`tf.Tensor`](https://www.tensorflow.org/api_docs/python/tf/Tensor) depends on a value from a queue, evaluating the [`tf.Tensor`](https://www.tensorflow.org/api_docs/python/tf/Tensor)will only work once something has been enqueued; otherwise, evaluating it will hang. When working with queues, remember to call [`tf.train.start_queue_runners`](https://www.tensorflow.org/api_docs/python/tf/train/queue_runner/start_queue_runners) before evaluating any [`tf.Tensor`](https://www.tensorflow.org/api_docs/python/tf/Tensor)s.
 
----
+<br>
+
+<br>
 
 ## Printing Tensors
 

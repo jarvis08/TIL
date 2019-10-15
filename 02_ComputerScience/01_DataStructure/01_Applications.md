@@ -10,7 +10,7 @@
 - 선택 알고리즘, Selection Algorithm
 - 선택 정렬, Selection Sort
 
-
+<br>
 
 ### 문자열, String
 
@@ -21,7 +21,7 @@
 - 문자열 암호화, Encryption
 - 문자열 압축, Compression
 
-
+<br>
 
 ### 스택, Stack
 
@@ -33,7 +33,7 @@
 - 중위/후위 표기법, Infix/Postfix Notation
 - 분할 정복, Divide and Conquer
 
-
+<br>
 
 ### 큐, Queue
 
@@ -42,7 +42,7 @@
 - 버퍼, Buffer
 - 최단 거리 구하기, Shortest Route
 
-
+<br>
 
 ### 리스트, List
 
@@ -54,7 +54,7 @@
 - 스택, Stack
 - 우선 순위 큐, Priority Queue
 
-
+<br>
 
 ### 트리, Tree
 

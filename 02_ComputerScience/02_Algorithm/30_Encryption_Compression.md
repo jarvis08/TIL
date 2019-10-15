@@ -26,6 +26,10 @@
 
   배타적 논리합(exclusive-or, XOR) 연산 사용
 
+<br>
+
+<br>
+
 ## 압축, Compression
 
 - Run-length encoding 알고리즘

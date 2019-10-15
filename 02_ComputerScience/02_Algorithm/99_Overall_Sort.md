@@ -12,6 +12,8 @@
 
 ![img](https://github.com/jarvis08/TIL/raw/master/02_ComputerScience/02_Algorithm/assets/Sort_Complexity.png)
 
+<br>
+
 # O(n)
 
 ## 삽입 정렬, Insertion Sort

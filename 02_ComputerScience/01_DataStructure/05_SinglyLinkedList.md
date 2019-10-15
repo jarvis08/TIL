@@ -49,7 +49,9 @@
       pre = pre.link
   ```
 
+<br>
 
+<br>
 
 ## 구현 함수
 
@@ -91,7 +93,7 @@
           p.link = Node(data, None)
   ```
 
-
+<br>
 
 ### Delete
 

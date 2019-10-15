@@ -36,7 +36,9 @@
 
     `L.head = NIL`인 경우는 **리스트가 비었음**을 의미
 
+<br>
 
+<br>
 
 ## Doubly Linked List의 사용
 
@@ -72,7 +74,7 @@
   2. `cur`의 왼쪽 노드의 주소를 `cur`의 오른쪽 노드의 `pre`에 저장
   3. `cur`의 메모리 반환
 
-
+<br>
 
 ### 함수 - Search
 
@@ -93,7 +95,7 @@
 
     수행 시간 - **O(n)**
 
-
+<br>
 
 ### 함수 - Insert
 
@@ -113,7 +115,7 @@
 
     - n개의 원소를 가지는 리스트에 대해 LIST-INSERT procedure의 수행시간 - **O(1)**
 
-
+<br>
 
 ### 함수 - Delete
 

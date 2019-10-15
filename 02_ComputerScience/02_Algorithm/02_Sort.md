@@ -1,14 +1,14 @@
 # 정렬, Sort
 
----
+정렬 : 2개 이상의 자료를 특정 기준에 의해 Ascending, 혹은 Descending으로 재배열 하는 것
 
-- 정렬 : 2개 이상의 자료를 특정 기준에 의해 Ascending, 혹은 Descending으로 재배열 하는 것
+- `O(n^2)` : 버블 / 삽입 / 선택 정렬
+- `O(nlongn)` : 퀵 / 병합 / 힙 정렬
+- `O(n)` : 카운팅 정렬(특수한 경우에만 사용 가능)
 
-  - `O(n^2)` : 버블 / 삽입 / 선택 정렬
-  - `O(nlongn)` : 퀵 / 병합 / 힙 정렬
-  - `O(n)` : 카운팅 정렬(특수한 경우에만 사용 가능)
+<br>
 
----
+<br>
 
 ## 버블 정렬, Bubble Sort
 
@@ -34,7 +34,9 @@ def BubbleSort(a):
 # n(n+1)/2 = (n^2 + n)/2 => O(n^2)
 ```
 
----
+<br>
+
+<br>
 
 ## 카운팅 정렬, Counting Sort
 
@@ -76,7 +78,9 @@ def BubbleSort(a):
 
   6. Count_list[data]의 값을 -1
 
----
+<br>
+
+<br>
 
 ## 선택 정렬, Selection Sort
 
