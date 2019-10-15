@@ -1,41 +1,51 @@
-## MOOC Lectures Recommendation
+## Et cetra
 
-## MOOC
+## MOOC Recommendations
 
 > MOOC, Massive Online Open Courses
 >
 > e.g., Coursera, edX, Udacity(Stanford University), edwith
 
-- **Git**
-  
-  - 생활코딩 - 지옥에서 온 git
-  
-  - Udacity - 무료강의 중 Git
-  
-- **Computer Science**
-  
-  - edX, edwith(한글번역) - CS50(Harvard, Yale)
-  
-  - edX - CS169, Software Engineering(UC Berekely)
-  
-- **Machine Learning**
-  
-  - Udacity - ML
+<br>
 
-- **Python**
+### **Git**
 
-  - edx - Introduction to Computer Science and Programming in Python
-  
-  - UC Berkeley(Prof.John DeNero) - SICP의 Python 버전인 CS 61A, CS 61B, CS 61C
-    - CS 61A에서 재귀적인 방법을 많이 활용
-    - 서적 'Structure and Interpretation of Computer Programs' SICP의 파이썬 버전
-  
-- **Block Chain**
+- 생활코딩 - 지옥에서 온 git
 
-  - Coursera - Bitcoin and Cryptocurrency Technologies
-  
-  - Youtube, 3Blue1Brown - Block Chain
-  
+- Udacity - 무료강의 중 Git
+
+<br>
+
+### **Computer Science**
+
+- edX, edwith(한글번역) - CS50(Harvard, Yale)
+
+- edX - CS169, Software Engineering(UC Berekely)
+
+<br>
+
+### **Machine Learning**
+
+- Udacity - ML
+
+<br>
+
+### **Python**
+
+- edx - Introduction to Computer Science and Programming in Python
+
+- UC Berkeley(Prof.John DeNero) - SICP의 Python 버전인 CS 61A, CS 61B, CS 61C
+  - CS 61A에서 재귀적인 방법을 많이 활용
+  - 서적 'Structure and Interpretation of Computer Programs' SICP의 파이썬 버전
+
+<br>
+
+### **Block Chain**
+
+- Coursera - Bitcoin and Cryptocurrency Technologies
+
+- Youtube, 3Blue1Brown - Block Chain
+
 - __Linear Algebra__
 
   - Youtube, 3Blue1Brown - Linear transmorfation and matrices
@@ -49,9 +59,11 @@
 
 <br>
 
-## Books
+## Book Recommendations
 
-- 디자인 패턴
+- GoF의 디자인 패턴
+
+  [네이버 책](https://book.naver.com/bookdb/book_detail.nhn?bid=8942623)
 
   규모가 큰 개발에 큰 도움이 되는, 중급 수준 이상의 중요한 지식
 

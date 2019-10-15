@@ -166,3 +166,61 @@ def create(request):
 
    서버 측에서 제한을 적용하여, 검증 과정에서 걸러지는 데이터를 삭제
 
+<br>
+
+<br>
+
+## Form Class 사용하여 Update하기
+
+```python
+# views.py
+
+def update(request, article_pk):
+    article = get_object_or_404(Article, pk=article_pk)
+    if request.method == 'POST':
+        form = ArticleForm(request.POST)
+        if form.is_valid():
+            article.title = form.cleaned_data.get('title')
+            article.content = form.cleaned_data.get('content')
+            article.save()
+            return redirect(article)
+	# 1. method == 'GET'
+    # 2. update 하는데, form의 내용이 valid 하지 않을 경우
+    form = ArticleForm(
+        initial={
+            'title': article.title,
+            'content': article.content,
+        }
+    )
+    context = {
+        'article': article,
+        'form': form,
+    }
+    return render(request, 'articles/update.html', context)
+```
+
+```html
+{% extends 'base.html' %}
+{% load bootstrap4 %}
+{% block body %}
+<h1>UPDATE</h1>
+<form action="{% url 'articles:update' article.pk %}" method="POST">
+  {% csrf_token %}
+  {% bootstrap_form form %}
+  <br>
+  <button type="submit">제출</button>
+</form>
+<a href="{{ article.get_absolute_url }}">뒤로가기</a>
+{% endblock %}
+```
+
+HTML 파일의 경우 `create.html`과 거의 동일하다.
+
+![form_class_attrs](./assets/form_class_attrs.JPG)
+
+<br>
+
+### Django Session
+
+보다 친절하게 데이터가 valid하지 않음을 알리려면, **django session**을 활용하여 flash message를 작성할 수 있다. **Flash Message**란, 잠시 메세지를 띄우는 것으로, 로그인 정보가 잘 못 됐을 때 문제가 있음을 알려주는 기능이다.
+
