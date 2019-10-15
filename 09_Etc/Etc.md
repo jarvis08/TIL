@@ -1,7 +1,5 @@
 ## MOOC Lectures Recommendation
 
----
-
 ## MOOC
 
 > MOOC, Massive Online Open Courses
@@ -46,6 +44,16 @@
   - Youtube, 3Blue1Brown - e, 자연 상수
 
 - 백준 - 제타 위키에 백준 문제 번호를 치면 답이 나온다
+
+<br>
+
+<br>
+
+## Books
+
+- 디자인 패턴
+
+  규모가 큰 개발에 큰 도움이 되는, 중급 수준 이상의 중요한 지식
 
 <br>
 
