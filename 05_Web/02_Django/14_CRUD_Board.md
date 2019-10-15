@@ -284,3 +284,5 @@ def delete(request, pk):
        # return redirect(f'/posts/{pk}/')
        return redirect('posts:detail', pk)
    ```
+   
+   
