@@ -1,7 +1,5 @@
 # Partial View, Rendering, Template
 
----
-
 - Partial Temlplate
 
   **파일명** 앞에 **`_`**를 붙이는 것이 Convention

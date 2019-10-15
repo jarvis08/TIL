@@ -31,7 +31,9 @@
   | UPDATE      | UPDATE |
   | DELETE      | DELETE |
 
----
+<br>
+
+<br>
 
 ## DB 생성하기
 
@@ -54,6 +56,8 @@
       content = models.TextField()
       created_at = models.DateTimeField(auto_now_add=True)
   ```
+
+<br>
 
 ### Migration
 
@@ -83,6 +87,8 @@
    ```
 
 3. `SQLite` Extention 혹은 https://inloop.github.io/sqlite-viewer/ 통해 `db.sqlite3`의 내용물 확인 가능
+
+<br>
 
 ### Migration 갱신하기
 
@@ -146,6 +152,8 @@
       $ python manage.py migrate
       ```
 
+<br>
+
 ### SQLite 확인해보기
 
 ```bash
@@ -162,6 +170,8 @@ $ python manage.py sqlmigrate articles 0001
     CREATE TABLE "articles_article" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "title" text NOT NULL, "content" text NOT NULL, "created_at" datetime NOT NULL);
     COMMIT;
     ```
+
+<br>
 
 ### DB 삭제 후 새로 데이터 생성하기
 
@@ -219,7 +229,9 @@ $ python manage.py sqlmigrate articles 0001
    <QuerySet [<Article: 1 | 첫 번째 글>, <Article: 2 | 두 번째 글>]>
    ```
 
----
+<br>
+
+<br>
 
 ## DB 갱신하기
 
@@ -294,6 +306,8 @@ $ python manage.py sqlmigrate articles 0001
        
        return render(request, 'create.html', context)
    ```
+
+<br>
 
 ### 객체를 DB에 저장하는 방법 네 가지
 

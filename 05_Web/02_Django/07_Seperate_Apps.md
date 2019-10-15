@@ -1,7 +1,5 @@
 # Seperate Url / Template / Namspace
 
----
-
 ## Project와 App의 **`urls.py` 분리**시키기
 
 - app이 여러개 된다면 project의 urls.py에 수많은 url들이 존재
@@ -36,7 +34,9 @@
     ]
     ```
 
----
+<br>
+
+<br>
 
 ## 모든 app들이 **공통으로 사용할 template들을 모아서 한곳에서 관리**
 
@@ -81,7 +81,9 @@
        
          `os.path.basename(os.getcwd())`
 
----
+<br>
+
+<br>
 
 ## 다른 App의 동일한 파일명의 HTML을 App별로 다르게 인식시키기
 
@@ -110,7 +112,9 @@
        return render(request, 'artii/artii.html', context)
    ```
 
----
+<br>
+
+<br>
 
 ## App 별 url namespace 구분하기
 
@@ -156,6 +160,7 @@
   ]
   ```
 
+<br>
 
 ### 활용 방법
 
