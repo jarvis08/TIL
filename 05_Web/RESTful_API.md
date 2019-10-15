@@ -20,7 +20,7 @@ urlpatterns = [
 ]
 ```
 
-GET/POST 만을 사용하면 RESTful 하지 못하며, **DRF(Django Rest Framework)**를 활용할 수 있다.
+**GET/POST** 메써드만을 사용하면 RESTful 하지 못하며, **DRF(Django Rest Framework)**를 활용하여 `update` 함수에 **PUT**을 사용할 수 있다.
 
 ![REST_API](assets/REST_API.JPG)
 
