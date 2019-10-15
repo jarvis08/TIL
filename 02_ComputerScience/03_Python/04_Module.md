@@ -2,8 +2,6 @@
 
  **참고자료** : ./50_SSAFY/8ython/notes/05.module.ipynb
 
----
-
 ## Module, 모듈
 
 - 정의 : 기능별 단위로 분할한 부분
@@ -36,39 +34,39 @@
    'hi']"""
   ```
 
-  ---
+<br>
 
-- Package 만들기
+### Package 만들기
 
-  - module의 상/하 구조를 나누어 구조화 할 수 있도록 계층화
+- module의 상/하 구조를 나누어 구조화 할 수 있도록 계층화
 
-  - `__init__.py`
+- `__init__.py`
 
-    : 파이썬이 directory를 package로 취급하게 만들기 위해 필요
+  : 파이썬이 directory를 package로 취급하게 만들기 위해 필요
 
-    : string 처럼 흔히 쓰는 이름의 directory가 의도하지 않게 모듈 검색 경로의 뒤에 등장하는, 올바른 모듈들을 가리는 일을 방지하기 위함
+  : string 처럼 흔히 쓰는 이름의 directory가 의도하지 않게 모듈 검색 경로의 뒤에 등장하는, 올바른 모듈들을 가리는 일을 방지하기 위함
 
-    This prevents directories with a common name, such as string , unintentionally hiding valid modules that occur later on the module search path
+  This prevents directories with a common name, such as string , unintentionally hiding valid modules that occur later on the module search path
 
-  ```python
-  /myPackage
-      __init__.py
-      /math
-          __init__.py
-          formula.py
-      /web
-          __init__.py
-          url.py
-  
-  # __init__.py
-  pi = 3.145
-  
-  # formula.py
-  def pi():
-      return 3.14
-  ```
+```python
+/myPackage
+    __init__.py
+    /math
+        __init__.py
+        formula.py
+    /web
+        __init__.py
+        url.py
 
-  ---
+# __init__.py
+pi = 3.145
+
+# formula.py
+def pi():
+    return 3.14
+```
+
+---
 
 - `from` 모듈 `import` `attribute`
 
@@ -163,8 +161,6 @@
 
     `import myPackage` 만으로 하부 계층의 module(ex.`formula.py`)을 사용 불가
 
-  ---
-
 - `__all__=['모듈명', '모듈명']`
 
   `__init__.py`에 package의 사용할 모듈 모두 지정해 두기
@@ -190,13 +186,13 @@
    'web']"""
   ```
 
-  ---
+<br>
+
+### 기타
 
 - python version 3.3 이후로는 `__init__.py`를 작성하지 않더라도 실행 가능
 
 - 현재는 하위 호환성을 위해 계속 작성
-
-  ---
 
 - `from` 모듈 `import` attribute `as` 별칭
 

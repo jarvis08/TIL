@@ -2,8 +2,6 @@
 
  **참고자료** : ./50_SSAFY/8ython/notes/06.erros.ipynb
 
----
-
 ## Errors
 
 - 문법 에러, Syntax Error
@@ -56,7 +54,9 @@
   # 무한 반복 중에 'ctrl + C'와 같은 강제 중단 명령이 있을 경우
   ```
 
----
+<br>
+
+<br>
 
 ## 예외처리, Exceptions
 
@@ -75,8 +75,6 @@
   except 예외 내용:
       codeblock2
   ```
-
-  ------
 
 - 복수 예외 처리
 
@@ -121,8 +119,6 @@
     # ZeroDivisionError이지만, 앞에서 걸러져버림
     ```
 
-  ------
-
 - 에러 문구 처리
 
   에러 문구를 print, 전달 할 수 있다.
@@ -136,8 +132,6 @@
   """result
   list indices must be integers or slices, not tuple"""
   ```
-
-  ------
 
 - `else`
 
@@ -160,11 +154,9 @@
       print('에러 났어요')
   else:
       print(num_list[2])
-  """result
+  """resul\t
   3"""
   ```
-
-  ------
 
 - `finally`
 
@@ -193,8 +185,6 @@
   곧 쉬는 시간. 조금만 힘내"""
   ```
 
-  ------
-
 - `raise`
 
   예외 발생시키기
@@ -206,8 +196,6 @@
   if num.isalpha():
       raise ValueError('숫자를 입력하세요')
   ```
-
-  ------
 
 - `assert`
 

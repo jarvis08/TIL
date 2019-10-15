@@ -2,8 +2,6 @@
 
 참고 자료 : ./10_Lecture_Scripts/02_html.pdf
 
----
-
 - HTTP(s)
 
   Hyper Text Transfer Protocol, 전송 규약
@@ -37,7 +35,9 @@
 
     Firefox 개발사인 Mozila에서 제공하는 HTML Docs
 
----
+<br>
+
+<br>
 
 ## HTML 기본구조
 
@@ -65,37 +65,42 @@
 
     단축키 : `Alt + Shift + F`
 
+
+<br>
+
+### HTML 요소
+
+문서의 root이며, head/body로 구분
+
 - DOCTYPE 선언부
 
   사용하는 문서의 종류를 선언
 
-- HTML 요소
+- head 요소
 
-  문서의 root이며, head/body로 구분
+  Meta 정보(문서에 대한 문서)를 내포
 
-  - head 요소
+  - 문서제목, 문자코드(인코딩)와 같은 문서 정보를 내포
 
-    Meta 정보(문서에 대한 문서)를 내포
+  - Browser에 보여지지 않음
 
-    - 문서제목, 문자코드(인코딩)와 같은 문서 정보를 내포
+  - CSS 선언 혹은 외부 로딩 파일 지정 등을 작성
 
-    - Browser에 보여지지 않음
+  - Open Graph
 
-    - CSS 선언 혹은 외부 로딩 파일 지정 등을 작성
+    어떤 정보를 가지고 있는지에 대한 요약본
 
-    - Open Graph
+    e.g., 카톡으로 link를 보냈을 때 OG 내용을 표시
 
-      어떤 정보를 가지고 있는지에 대한 요약본
+    e.g., Naver에서 `페이지 소스 보기`를 통해 og 내용과 image 확인 가능
 
-      e.g., 카톡으로 link를 보냈을 때 OG 내용을 표시
+- body 요소
 
-      e.g., Naver에서 `페이지 소스 보기`를 통해 og 내용과 image 확인 가능
+  Browser 화면에 나타나는 정보이며, 실제 내용
 
-  - body 요소
+<br>
 
-    Browser 화면에 나타나는 정보이며, 실제 내용
-
----
+<br>
 
 ## Tag와 DOM TREE
 
@@ -163,7 +168,9 @@
   </body>
   ```
 
----
+<br>
+
+<br>
 
 ## 시맨틱 태그, Semantic Tag
 

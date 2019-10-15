@@ -2,7 +2,9 @@
 
 참고 자료 : ./10_Lecture_Scripts/03_css.pdf
 
----
+<br>
+
+<br>
 
 ## CSS Intro
 
@@ -42,53 +44,57 @@
 
   회사에서는 일부러 uglify를 사용하여 비공개 처리
 
-- CSS 활용하기
+<br>
 
-  - Inline
+### CSS 활용하기
 
-    `h1 style="color:blue"`
+- Inline
 
-  - Embedding, 내부 참조
+  `h1 style="color:blue"`
 
-    HTML 내부에 CSS 포함
+- Embedding, 내부 참조
 
-    ```html
-    <head>
-        <style>
-            h1, p {
-                color:blue
-            }
-        </style>
-    </head>
-    ```
+  HTML 내부에 CSS 포함
 
-  - link file, 외부 참조
+  ```html
+  <head>
+      <style>
+          h1, p {
+              color:blue
+          }
+      </style>
+  </head>
+  ```
 
-    외부의 CSS 파일 로드
+- link file, 외부 참조
 
-    HTML에서의 `<style>` tag 내용을 CSS 파일로 분리하여 link를 걸어넣음
+  외부의 CSS 파일 로드
 
-    ```HTML
-    <!-- index.html -->
-    <link rel="stylesheet" href="style.css">
-    reslation : stylesheet
-    href : file명
-    
-    <!-- style.css -->
-    body{
-      background-color: #f0f0f0
-      background: #f0f0f0
-    }
-    h1, p{
-      color: #3b3a30
-    }
-    ```
+  HTML에서의 `<style>` tag 내용을 CSS 파일로 분리하여 link를 걸어넣음
 
+  ```HTML
+  <!-- index.html -->
+  <link rel="stylesheet" href="style.css">
+  reslation : stylesheet
+  href : file명
+  
+  <!-- style.css -->
+  body{
+    background-color: #f0f0f0
+    background: #f0f0f0
+  }
+  h1, p{
+    color: #3b3a30
+  }
+  ```
+  
 - 자주 사용되는 CSS properties
 
   https://developer.microsoft.com/en-us/microsoft-edge/platform/usage/
 
----
+<br>
+
+<br>
 
 ## Size 단위
 
@@ -128,7 +134,9 @@
 
   IE 8 이하는 지원하지 않으며, 이후 버전의 IE와 Edge 또한 불완전한 지원
 
----
+<br>
+
+<br>
 
 ## Color 표현 방법
 
@@ -144,7 +152,9 @@
 
   `rgb(0, 0, 0, 0.5)`
 
----
+<br>
+
+<br>
 
 ## Box Model 다루기
 
@@ -182,7 +192,9 @@
   }
   ```
 
----
+<br>
+
+<br>
 
 ## class, 분류하기
 
@@ -213,7 +225,9 @@
   }
   ```
 
----
+<br>
+
+<br>
 
 ## Visibility
 
@@ -231,11 +245,17 @@
  }
 ```
 
----
+<br>
+
+<br>
 
 ## Background-image
 
 - `<body style="background-image: url(image 주소)">`
+
+<br>
+
+<br>
 
 ## Text & Font
 

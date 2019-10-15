@@ -1,7 +1,5 @@
 # Bootstrap Class
 
----
-
 ## Grid
 
 - `.container` : grid를 12개 가진 container를 생성
@@ -24,6 +22,8 @@
 
     1 ~ 12
 
+<br>
+
 ### Device 종류에 의존하기
 
 - `d-sm-none` : Mobile Screen
@@ -34,7 +34,9 @@
 
   `d-xl-none` : Wide Screen
 
----
+<br>
+
+<br>
 
 ## Position & Display
 
@@ -58,6 +60,8 @@
 
     `fixed`
 
+<br>
+
 ### Display
 
 - `d-[display]`
@@ -76,11 +80,15 @@
 
 - `float`- `left`/ `right` / `none`
 
----
+<br>
+
+<br>
 
 ## Aligning Tags
 
 - `text-[where]` : `display`가 `inline` 인 text를 정렬
+
+<br>
 
 ### Displlay-Flex 일 경우
 
@@ -102,7 +110,9 @@
 
     justify-content와 동일
 
----
+<br>
+
+<br>
 
 ## Colors
 
@@ -130,7 +140,9 @@
 
     `transparent` : 투명도 부여
 
----
+<br>
+
+<br>
 
 ## Margin & Padding
 
@@ -183,7 +195,9 @@
 - `p-[value]`
 - `p[where]-[value]`
 
----
+<br>
+
+<br>
 
 ## Text
 

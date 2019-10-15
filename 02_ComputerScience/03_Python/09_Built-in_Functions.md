@@ -1,10 +1,12 @@
-## Built-in Functions
+# Built-in Functions
 
 OS X 한글 Encoding 오류
 
 `#-\*- coding:utf-8 -\*-`
 
+<br>
 
+<br>
 
 ## is* 시리즈
 
@@ -18,7 +20,9 @@ OS X 한글 Encoding 오류
 
 - `isdigit(string)` : string의 내용이 숫자인지 판별
 
+<br>
 
+<br>
 
 ## String
 
@@ -67,7 +71,9 @@ OS X 한글 Encoding 오류
   yesterday = (date.today() - timedelta(days=1)).isoformat().replace('-', '')
   ```
 
+<br>
 
+<br>
 
 ## List
 
@@ -77,7 +83,7 @@ OS X 한글 Encoding 오류
 - `list.sort(reverse=True)` : 원본을 내림차순으로 정렬
 - `sorted(list)` : 오름차순한 결과를 반환
 
-
+<br>
 
 ### Reverse
 
@@ -86,14 +92,14 @@ OS X 한글 Encoding 오류
 - `list.count(element)` : list 내의 element 개수를 반환
 - `cmp(list_1, list2)` : 두 list가 같은 요소들 만을 포함하는지 확인
 
-
+<br>
 
 ### Insert/Delete Element
 
 - `list.append()`  : 요소를 뒤에 삽입
 - `list.extend()` : 리스트를 연장
 
-
+<br>
 
 ### Insert 속도 비교
 
@@ -119,7 +125,9 @@ OS X 한글 Encoding 오류
    l = range(1, 11)
    ```
 
-   
+<br>
+
+<br>
 
 ## Dictionary
 
@@ -138,7 +146,9 @@ OS X 한글 Encoding 오류
   3"""
   ```
 
+<br>
 
+<br>
 
 ## Set
 
@@ -149,13 +159,12 @@ OS X 한글 Encoding 오류
   # winner list와 ur_lotto list를 비교할 때
   # for문을 이용하는 것 보다 빠른 속도로 같은 요소의 개수를 구함
   ```
-  
-  
-  
 
----
+<br>
 
-### file 'r / w / a'
+<br>
+
+## file 'r / w / a'
 
 - `with open('파일명', '파일 조작 유형', encoding='utf-8') as f:`
 - `f.readline()` : 한 줄 읽기
@@ -167,7 +176,11 @@ OS X 한글 Encoding 오류
   - `'w'`: write
   - `'a'`: append
 
-### filter
+<br>
+
+<br>
+
+## filter
 
 - `filter(function, iterable)`
 
@@ -185,7 +198,11 @@ OS X 한글 Encoding 오류
   [9, 27, 3]"""
   ```
 
-### map( )
+<br>
+
+<br>
+
+## map( )
 
 ```python
 # a = input()
@@ -207,7 +224,9 @@ print(num1 / num2)
 num1, num2 = list(num1, num2 = map(int, input().split(" ")))
 ```
 
----
+<br>
+
+<br>
 
 ## Special Method, Magic Method
 

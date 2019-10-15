@@ -2,8 +2,6 @@
 
  **참고자료** : ./50_SSAFY/8ython/notes/04.data_structure.jpynb
 
----
-
 ## 문자열 메소드 활용
 
 - `jarvis.callmom()`
@@ -26,7 +24,7 @@
 
     `.capitalize()`
 
-  ---
+<br>
 
 ### 변형
 
@@ -105,7 +103,7 @@ dir('3')
   --------"""
   ```
 
-  ---
+<br>
 
 ### 탐색 및 검증
 
@@ -123,7 +121,9 @@ dir('3')
   dir('string')
   ```
 
----
+<br>
+
+<br>
 
 ## 리스트 메소드 활용
 
@@ -208,15 +208,18 @@ dir('3')
   [2, 3, 4, 5]"""
   ```
 
-- 실행 속도
 
-  `remove()`는 하나씩 모두 확인
+<br>
 
-  `pop()`은 index로 바로 search
+### 실행 속도
 
-  대체로 index를 받는 method가 빠른 속도로 실행
+`remove()`는 하나씩 모두 확인
 
-  ---
+`pop()`은 index로 바로 search
+
+대체로 index를 받는 method가 빠른 속도로 실행
+
+<br>
 
 ### 탐색 및 정렬
 
@@ -278,7 +281,7 @@ dir('3')
   [3, 2, 1]"""
   ```
 
-  ---
+<br>
 
 ### 데이터 복사, Copying Data
 
@@ -331,63 +334,65 @@ dir('3')
       tuple_2 += (2, 2)
       ```
 
-- 복사 방법
+<br>
 
-  - 얕은 복사, Shallow Copy
+### 복사 방법
 
-    Shallow Copy는 1차원 까지만 가능
+- 얕은 복사, Shallow Copy
 
-    ```python
-    # list
-    a = [1]
-    b = a
-    b = list(a)
-    
-    # dictionary
-    c = {'a':b}
-    d = dict(c)
-    ```
+  Shallow Copy는 1차원 까지만 가능
 
-    - **2차원 객체**
+  ```python
+  # list
+  a = [1]
+  b = a
+  b = list(a)
+  
+  # dictionary
+  c = {'a':b}
+  d = dict(c)
+  ```
 
-      기본적으로 2차원 객체는 1차원 객체 안에 2차원 객체의 주소를 저장
+  - **2차원 객체**
 
-      `Binding_matrix.png` 참조
+    기본적으로 2차원 객체는 1차원 객체 안에 2차원 객체의 주소를 저장
 
-    - **2차원 객체 복사**
+    `Binding_matrix.png` 참조
 
-      2차원 객체들의 주소를 담은 1차원 객체만을 다른 주소의 다른 객체로 복사하며,
+  - **2차원 객체 복사**
 
-      2차원 객체의 주소를 공유
+    2차원 객체들의 주소를 담은 1차원 객체만을 다른 주소의 다른 객체로 복사하며,
 
-      ```python
-      # matrix_2는 2차원의 요소까지 복사 불가
-      # 1차원 list를 다른 주소의 객체로 생성하지만,
-      # 2차원 요소를 불러올 때에는 matrix_1의 2차원 객체로 접근
-      # matrix_1의 2차원 요소 값을 변경해도 matrix_1의 원본 값이 변경
-      matrix_1 = [[1, 2], [3, 4]]
-      matrix_2 = matrix_1[:]
-      matrix_2[0][0] = 3
-      ```
-
-      `Binding_matrix_shallow-copy.png` 참고
-
-      - Tuple의 경우 복사 후 수정을 가하면, 다른 주소의 객체로 분리 후 수정
-
-  - 깊은 복사, Deep Copy
+    2차원 객체의 주소를 공유
 
     ```python
-    import copy
+    # matrix_2는 2차원의 요소까지 복사 불가
+    # 1차원 list를 다른 주소의 객체로 생성하지만,
+    # 2차원 요소를 불러올 때에는 matrix_1의 2차원 객체로 접근
+    # matrix_1의 2차원 요소 값을 변경해도 matrix_1의 원본 값이 변경
     matrix_1 = [[1, 2], [3, 4]]
-    matrix_2 = copy.deepcopy(matrix_1)
-    print(matrix_2[0][0])
+    matrix_2 = matrix_1[:]
+    matrix_2[0][0] = 3
     ```
 
-    `Binding_matrix_deep-copy.png` 참고
+    `Binding_matrix_shallow-copy.png` 참고
 
+    - Tuple의 경우 복사 후 수정을 가하면, 다른 주소의 객체로 분리 후 수정
+
+- 깊은 복사, Deep Copy
+
+  ```python
+  import copy
+  matrix_1 = [[1, 2], [3, 4]]
+  matrix_2 = copy.deepcopy(matrix_1)
+  print(matrix_2[0][0])
+  ```
+
+  `Binding_matrix_deep-copy.png` 참고
+  
 - `.clear()` : 리스트의 모든 항목 삭제
 
-  ---
+<br>
 
 ### List Comprehension
 
@@ -439,7 +444,9 @@ dir('3')
   Lf s t shrt,  nd pthn!"""
   ```
 
----
+<br>
+
+<br>
 
 ## 딕셔너리 메소드 활용
 
@@ -498,8 +505,6 @@ dir('3')
   print(my_dict.get('pineapple'))
   ```
 
-  ---
-  
 - dict, list에서 value 값 중 최대값, 최대 빈도수 찾기
 
   ```python
@@ -520,7 +525,7 @@ dir('3')
   max_count = 3"""
   ```
 
-  ---
+<br>
 
 ### Dictionary Comprehension
 
@@ -581,7 +586,9 @@ dir('3')
     {'서울': '보통', '대전': '나쁨', '구미': '좋음', '광주': '보통', '중국': '매우나쁨'}"""
     ```
 
----
+<br>
+
+<br>
 
 ## Set 메소드 활용
 
@@ -677,6 +684,8 @@ dir('3')
           print("2진수 아니다.")
   ```
 
+<br>
+
 ### Set Comprehension
 
 - List Comprehension과 유사
@@ -709,7 +718,9 @@ dir('3')
   1"""
   ```
 
----
+<br>
+
+<br>
 
 ## 함수형 언어의 잠재
 
@@ -750,8 +761,6 @@ dir('3')
   - 대표적으로 iterable한 타입 - `list`, `dict`, `set`, `str`, `bytes`, `tuple`, `range`
 
   - `return`은 **`map_object 형태`**로 됩니다.
-
-  ---
 
 - `zip(*iterables)`
 
@@ -803,8 +812,6 @@ dir('3')
     [(1, '1'), (2, '2'), (3, 0)]"""
     ```
 
-  ---
-
 - `filter(function, iterable)`
 
   iterable에서 function의 반환된 **결과가 참인 것들만 구성하여 반환**
@@ -819,8 +826,6 @@ dir('3')
   """result
   [2, 4, 6, 8, 10, 12, 14, 16, 18]"""
   ```
-
-  
 
 - `함수의 인자(parameter)` : 함수를 선언할 때 설정한 값
   `인수(argument)` : 함수를 호출할 때 넘겨주는 값

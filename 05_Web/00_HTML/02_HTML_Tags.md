@@ -54,7 +54,9 @@
   <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
   ```
 
----
+<br>
+
+<br>
 
 ## Emmet
 
@@ -66,7 +68,9 @@
 
   `container` class 적용한 `<div>` tag 생성
 
----
+<br>
+
+<br>
 
 ## Extensions
 
@@ -80,7 +84,9 @@
 
   e.g., CSS 없애기
 
----
+<br>
+
+<br>
 
 ## Ex
 

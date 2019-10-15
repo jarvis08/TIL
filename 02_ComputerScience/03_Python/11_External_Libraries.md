@@ -1,7 +1,5 @@
 # Python External Libraries
 
----
-
 ## decouple
 
 :: key 암호화시키기
@@ -25,6 +23,4 @@ token_url = config('TELEGRAM_TOKEN')
 ```
 
 - `Linux` 에서는 환경변수 안에 저장하여, 언어에 무관하게 암호화된 키를 사용 가능
-
----
 

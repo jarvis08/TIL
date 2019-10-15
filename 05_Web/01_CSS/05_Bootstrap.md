@@ -1,7 +1,5 @@
 # Bootstrap
 
----
-
 - Twitter에서 개발
 
   https://getbootsrap.com
@@ -30,222 +28,225 @@
   >
   > 캐시 : 사용한 경험이 있는 것은 저장하여, 더 빠르게 로딩
 
-1. Utilities
+### Utilities
 
-   편하게 클래스로 적용
+편하게 클래스로 적용
 
-   1. Spacing
+<br>
 
-      기존의 `margin` 조작 대신, 편하게 공간 확보
+### Spacing
 
-      `rem`으로 값을 배정하며, browser default가 16px 정도이므로 대략적인 계산 가능
+기존의 `margin` 조작 대신, 편하게 공간 확보
 
-      ```html
-      <!-- 기존 -->
-      <style>
-          h1 {
-              margin-top: 10px;
-          }
-      </style>
-      ```
+`rem`으로 값을 배정하며, browser default가 16px 정도이므로 대략적인 계산 가능
 
-      ```html
-      <!-- Bootstrap을 사용한 html에서의 class 설정 -->
-      <!-- m-5 : margin value 5(48px) -->
-      <!-- mx, mt, pt, pb 등 margin과 padding 설정 가능 -->
-      <h1 class="mt-1">편리한 margin 부여</h1>
-      ```
+```html
+<!-- 기존 -->
+<style>
+    h1 {
+        margin-top: 10px;
+    }
+</style>
+```
 
-      ```css
-      /* bootstrap.css */
-      .m-0 {
-        margin: 0 !important;
-      }
-      /* important를 부가하여 우선순위 배정 */
-      ```
+```html
+<!-- Bootstrap을 사용한 html에서의 class 설정 -->
+<!-- m-5 : margin value 5(48px) -->
+<!-- mx, mt, pt, pb 등 margin과 padding 설정 가능 -->
+<h1 class="mt-1">편리한 margin 부여</h1>
+```
 
-      - `mt-1` = 0.25 `rem`
+```css
+/* bootstrap.css */
+.m-0 {
+  margin: 0 !important;
+}
+/* important를 부가하여 우선순위 배정 */
+```
 
-        `mt-2` = 0.5 `rem`
+- `mt-1` = 0.25 `rem`
 
-        `mt-3` = 1 `rem`
+  `mt-2` = 0.5 `rem`
 
-        `mt-4` = 1.5 `rem`
+  `mt-3` = 1 `rem`
 
-        `mt-5` = 3 `rem`
+  `mt-4` = 1.5 `rem`
 
-        1.5 rem부터는 크다고 느껴지며, 보통 2혹은 3 정도를 적당하다고 판단
+  `mt-5` = 3 `rem`
 
-      - `m`, `mt`, `mb`, `ml`, `mr`, `mx`, `my`, `m-n1~4`, `mx-autio`
+  1.5 rem부터는 크다고 느껴지며, 보통 2혹은 3 정도를 적당하다고 판단
 
-        = 전체, top, bottom, left, right, x축, y축, `-(negative)`
+- `m`, `mt`, `mb`, `ml`, `mr`, `mx`, `my`, `m-n1~4`, `mx-autio`
 
-      - mx-auto, ml-auto, mr-auto의 경우 잘 쓰이지 않는다.
+  = 전체, top, bottom, left, right, x축, y축, `-(negative)`
 
-        주로  `position: flex`와 `grid`를 이용하여 설정
+- mx-auto, ml-auto, mr-auto의 경우 잘 쓰이지 않는다.
 
-   2. Color
+  주로  `position: flex`와 `grid`를 이용하여 설정
 
-      | Purpose and Name | Hash Value |
-      | ---------------- | ---------- |
-      | primary          | #007bff    |
-      | secondary        | #6c757d    |
-      | success          | #28a745    |
-      | info             | #17a2b8    |
-      | warning          | #ffc107    |
-      | danger           | #dc3545    |
-      | light            | #f8f9fa    |
-      | dark             | #343a40    |
+<br>
 
-      - 사용법
+### Color
 
-        - `class="bg-primary"`
+| Purpose and Name | Hash Value |
+| ---------------- | ---------- |
+| primary          | #007bff    |
+| secondary        | #6c757d    |
+| success          | #28a745    |
+| info             | #17a2b8    |
+| warning          | #ffc107    |
+| danger           | #dc3545    |
+| light            | #f8f9fa    |
+| dark             | #343a40    |
 
-        - `class="text-primary"`
+- 사용법
 
-        - `{color: primary;}`
+  - `class="bg-primary"`
 
-        - `class="alert-primary"`
+  - `class="text-primary"`
 
-          배경색과 텍스트(동일 계열) 색을 변경
+  - `{color: primary;}`
 
-        - `class="btn-primary"`
+  - `class="alert-primary"`
 
-          버튼 색 변경
+    배경색과 텍스트(동일 계열) 색을 변경
 
-          ```html
-          <button class="btn btn-primary">버튼 1</button>
-          <button class="btn-primary">버튼 2</button>
-          <a class="btn btn-dark" href="">이쁜 링크</a>
-          ```
+  - `class="btn-primary"`
 
-   3. Border
+    버튼 색 변경
 
-      - `class="border border-success rounded"`
+    ```html
+    <button class="btn btn-primary">버튼 1</button>
+    <button class="btn-primary">버튼 2</button>
+    <a class="btn btn-dark" href="">이쁜 링크</a>
+    ```
 
-        ```html
-          <div class="border border-success rounded">
-            <p>보더 테스트</p>
-          </div>
-        ```
+<br>
 
-   4. Display
+### Border
 
-      - 기존 : block, inline-block, inline, none
+- `class="border border-success rounded"`
 
-      - `class="d-block"`
+  ```html
+    <div class="border border-success rounded">
+      <p>보더 테스트</p>
+    </div>
+  ```
 
-        ```html
-        <div class="border border-success rounded">
-            <p class="d-inline">보더 테스트</p>
-        </div>
-        ```
+<br>
 
-        - 반응형 맛보기
+### Display
 
-          Device 크기에 따라 sm(Small), md(Medium), lg(Large), xl(Extra Large)
+- 기존 : block, inline-block, inline, none
 
-          Browser 창 크기 조절하여 확인 가능
+- `class="d-block"`
 
-          Extra Small은 default 값으로 사용
+  ```html
+  <div class="border border-success rounded">
+      <p class="d-inline">보더 테스트</p>
+  </div>
+  ```
 
-          - `class="d-sm-none"` : Mobile Screen
-          - `class="d-md-none"` : Tablet 세로 Screen
-          - `class="d-lg-none"` : 정사각형 Screen
-          - `class="d-xl-none"` : Wide Screen
+  - 반응형 맛보기
 
-   5. Position
+    Device 크기에 따라 sm(Small), md(Medium), lg(Large), xl(Extra Large)
 
-      `class="position-static/relative/absolute/fixed/float"`
+    Browser 창 크기 조절하여 확인 가능
 
-      - `class="fixed-top/bottom"`
+    Extra Small은 default 값으로 사용
 
-      - Text
+    - `class="d-sm-none"` : Mobile Screen
+    - `class="d-md-none"` : Tablet 세로 Screen
+    - `class="d-lg-none"` : 정사각형 Screen
+    - `class="d-xl-none"` : Wide Screen
 
-        https://getbootstrap.com/docs/4.3/utilities/borders/
+<br>
 
-        공식 홈페이지 Unitilities에서 자세하게 확인 가능
+### Position
 
-        - `class="text-center"`
+`class="position-static/relative/absolute/fixed/float"`
 
-          `class="font-weight-bold"`
+- `class="fixed-top/bottom"`
 
-          `class="font-italic"`
+- Text
 
-        - **color와 breakpoint는 공식 홈페이지의 Components에서 자세히 확인 가능**
+  https://getbootstrap.com/docs/4.3/utilities/borders/
 
-          https://getbootstrap.com/docs/4.3/components/alerts/
+  공식 홈페이지 Unitilities에서 자세하게 확인 가능
 
-   - 자주 사용 할 Components
+  - `class="text-center"`
 
-      - Card
+    `class="font-weight-bold"`
 
-      - Carousel(회전목마)
+    `class="font-italic"`
 
-        화살표로 넘기는 Auto Slide
+  - **color와 breakpoint는 공식 홈페이지의 Components에서 자세히 확인 가능**
 
-      - Collapse
+    https://getbootstrap.com/docs/4.3/components/alerts/
 
-        접어서 내용 비가시 효과
+- 자주 사용 할 Components
 
-      - Dropdowns
+   - Card
 
-        Mobile이 사용시 Button에서의 에러 발생이 잦다.
+   - Carousel(회전목마)
 
-      - **Forms**
+     화살표로 넘기는 Auto Slide
 
-        무엇을 하든 사용자로부터 입력값을 받아야 하기 때문에 자주 사용
+   - Collapse
 
-      - Input group
+     접어서 내용 비가시 효과
 
-      - Jumbotron
+   - Dropdowns
 
-        전광판 효과
+     Mobile이 사용시 Button에서의 에러 발생이 잦다.
 
-      - List group
+   - **Forms**
 
-        여러 게시판들 사이를 자유롭게 오갈 수 있도록 도움
+     무엇을 하든 사용자로부터 입력값을 받아야 하기 때문에 자주 사용
 
-      - Modal
+   - Input group
 
-        팝업창 효과, Mobile에서 깨지기 쉬워 자주 사용하지는 않는다.
+   - Jumbotron
 
-      - Navs, Navbar
+     전광판 효과
 
-      - Pagination
+   - List group
 
-        페이지 구분하여 만들 때
+     여러 게시판들 사이를 자유롭게 오갈 수 있도록 도움
 
-      - Popovers
+   - Modal
 
-        팝업보다는 규모가 적게 살짝 뜨는 것
+     팝업창 효과, Mobile에서 깨지기 쉬워 자주 사용하지는 않는다.
 
-        (마우스 가져다대면 설명 보여주기 등)
+   - Navs, Navbar
 
-      - Progress
+   - Pagination
 
-        진행 bar 표시
+     페이지 구분하여 만들 때
 
-      - Scrollspy
+   - Popovers
 
-   - `rebootstrap.css`
+     팝업보다는 규모가 적게 살짝 뜨는 것
 
-     open source인 `normalize.css` 내용을 포함
+     (마우스 가져다대면 설명 보여주기 등)
 
-     html 설정을 설정한 default로 바꿔주는 역할
+   - Progress
 
-   - margin collapsion을 제거하기 위해
+     진행 bar 표시
 
-     bootstrap에서는 기본적으로 윗 마진을 제거
+   - Scrollspy
 
-   - javascript의 script 파일을 `<body>`에서 선언하는 이유
+- `rebootstrap.css`
 
-     `<head>`에 있을 시 heavy해지는 성능상(속도)의 제한으로 body에 위치
+  open source인 `normalize.css` 내용을 포함
 
----
+  html 설정을 설정한 default로 바꿔주는 역할
 
-- lorem pixel
+- margin collapsion을 제거하기 위해
 
-  random image 부여
+  bootstrap에서는 기본적으로 윗 마진을 제거
 
+- javascript의 script 파일을 `<body>`에서 선언하는 이유
+
+  `<head>`에 있을 시 heavy해지는 성능상(속도)의 제한으로 body에 위치
 

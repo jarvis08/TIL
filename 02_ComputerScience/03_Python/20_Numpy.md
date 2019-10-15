@@ -2,8 +2,6 @@
 
 참고자료 : Data Science Handbook, Jake VanderPlas
 
----
-
 ```python
 import numpy as np
 

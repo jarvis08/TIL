@@ -6,32 +6,40 @@
 
   `Margin` > `Border` > `Padding` > `Content`
 
-1. Margin
+<br>
 
-   테두리 바깥의 외부 여백
+### 1. Margin
 
-   배경색 지정 가능
+테두리 바깥의 외부 여백
 
-   <p> <h1~> 는 기본적으로 margine이 있어, 줄 띄우기가 가능
+배경색 지정 가능
 
-2. Border
+<p> <h1~> 는 기본적으로 margine이 있어, 줄 띄우기가 가능
 
-   - 테두리 영역
+<br>
 
-     `padding`과 `margin`의 경계를 테두리로 설정
+### 2. Border
 
-     `solid` 등의 모양 설정 가능
+- 테두리 영역
 
-   - MDN Docs
+  `padding`과 `margin`의 경계를 테두리로 설정
 
-     https://developer.mozilla.org/ko/docs/Web/CSS/border-style
+  `solid` 등의 모양 설정 가능
 
-3. Padding
+- MDN Docs
 
-   테두리(border) 안쪽의 내부 여백
+  https://developer.mozilla.org/ko/docs/Web/CSS/border-style
 
-   요소에 적용된 배경의 컬러/이미지는 패딩까지 적용
+<br>
 
-4. Content
+### 3. Padding
 
-   실제 내용이 위치
+테두리(border) 안쪽의 내부 여백
+
+요소에 적용된 배경의 컬러/이미지는 패딩까지 적용
+
+<br>
+
+### 4. Content
+
+실제 내용이 위치

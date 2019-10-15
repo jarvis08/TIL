@@ -1,7 +1,5 @@
 # Tips for CSS & Bootstrap
 
----
-
 ## Animate.css
 
 - animation 효과 부여
@@ -13,7 +11,9 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
   ```
 
----
+<br>
+
+<br>
 
 ## Font Awesome
 
@@ -41,7 +41,9 @@
   <i class="fas fa-camera fa-10x"></i>
   ```
 
----
+<br>
+
+<br>
 
 ## Codepen
 
@@ -49,7 +51,9 @@
 
   https://codepen.io/popular/pens/
 
----
+<br>
+
+<br>
 
 ## Etc
 
@@ -60,7 +64,9 @@
   - link-blue: `rgb(15, 168, 224)`
 - freecodecamp에서 bootstrap무료 수강 및 수료증
 
----
+<br>
+
+<br>
 
 ## body tag 색상변하게하기
 

@@ -2,8 +2,6 @@
 
  **참고자료** : <https://offbyone.tistory.com/73>
 
----
-
 - `lmbda (변수) : (계산식)`
 
   ```python
