@@ -75,3 +75,21 @@ i.g., CPU가 0번 주소의 데이터를 요청했다. 하지만 Relocation Regi
 
 주소를 **논리 주소(Logical Address)**와 **물리 주소(Physical Address)**로 구분합니다.
 
+<br>
+
+### 논리 주소, Logical Address
+
+CPU가 사용하는 주소입니다. CPU는 Main Memory에 논리 주소를 전송하여 데이터를 요청합니다.
+
+<br>
+
+### 물리 주소, Physical Address
+
+실제로 Main Memory에서 사용하는 주소입니다. CPU가 전송한 논리 주소는 MMU에 의해 Relocate 되고, Relocate 된 물리 주소 형태로 Main Memory에서 사용됩니다.
+
+<br>
+
+### 논리 주소와 물리 주소로 구분되는 이유
+
+CPU는 프로세스를 작업하면서 언제나 같은 작업에 대해서는, 언제나 같은 주소로 메인 메모리에게 데이터를 요청합니다. 하지만 메인 메모리에 적재된 프로세스의 주소는 언제나 다를 수 밖에 없습니다. **같은 프로세스를 실행할 지라도, 아까 적재했던 주소값에는 다른 프로세스가 적재되어 있을 수 있습니다**. 따라서 MMU는 CPU에게 적절한 데이터를 반환하기 위해 **Relocation Register**를 사용하여 **Address Translation**을 진행합니다.
+
