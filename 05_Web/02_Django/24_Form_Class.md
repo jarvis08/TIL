@@ -62,6 +62,7 @@ html 파일의 수정 전/후는 다음과 같다.
 <h1>NEW</h1>
 <form action="{% url 'articles:create' %}" method="POST">
   {% csrf_token %}
+  {{ form }}
   {{ form.as_p }}
   <br>
   <button type="submit">제출</button>
