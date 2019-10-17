@@ -6,7 +6,7 @@ CPU는 주소(Address)를 Main Memory에 전송하고, Main Memory는 해당 주
 
 <br>
 
-##4-2-1. 프로그램 개발
+## 4-2-1. 프로그램 개발
 
 ### 원천 파일, Source File
 
@@ -36,7 +36,7 @@ CPU는 주소(Address)를 Main Memory에 전송하고, Main Memory는 해당 주
 
 - `Stack`
   1. 함수 호출 시 돌아와야 할 주소를 저장
-  2. Local Variable wjwkd
+  2. Local Variable 저장
 
 OS는 다음과 같은 사용자의 역할을 대신해 준다.
 
