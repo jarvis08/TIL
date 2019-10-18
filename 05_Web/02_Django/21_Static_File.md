@@ -10,6 +10,41 @@ i.g., Favicon(16x16 image), Open Graph
 
 <br>
 
+### Image 사용하기
+
+1. `root경로/static/App_Name/image.png`  경로에 파일 저장
+
+2. `settings.py` 수정
+
+   ```python
+   # settings.py
+   STATICFILES_DIRS = [
+       os.path.join(BASE_DIR, "static"),
+       '/var/www/static/',
+   ]
+   ```
+
+3. `Pjt_Name/urls.py` 수정
+
+   ```python
+   # PjtName/urls.py
+   from django.conf.urls.static import static
+   from django.conf import settings
+   urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+   ```
+
+4. 이미지를 업로드하고자 하는 html 파일 수정
+
+   ```html
+   <!-- html file -->
+   {% load static %}
+   <img src="{% static 'movies/I_also_have_purity.jpg' %}" style="width: 100%;">
+   ```
+
+<br>
+
+<br>
+
 ## Favicon 생성
 
 - 무료 파비콘 생성
