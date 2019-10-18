@@ -18,9 +18,16 @@ CPU는 어떤 페이지를 backing store로 보내야 효율적으로 작업할 
 
 ### Modified Bit
 
-페이지가 수정됐는지, 수정되지 않았는지 판단하는 작업은 또 다시 MMU가 수행해 줍니다. 5-1-1의 Valid Bit과 같이 **Modified Bit**을 설정하여 수정 여부를 표시합니다.
+페이지가 수정됐는지, 수정되지 않았는지 판단하는 작업은 또 다시 MMU가 수행해 줍니다. 5-1-1의 Valid Bit과 같이 **Modified Bit**을 설정하여 수정 여부를 표시합니다. 과거에는 **Dirty Bit**이라고 불렸습니다.
 
-Modified bit은 과거에는 **Dirty Bit**이라고 불렸습니다.
+| Frame Number | Valid Bit | Modified Bit |
+| ------------ | --------- | ------------ |
+| 6            | 1         | 0            |
+| 5            | 1         | 1            |
+
+위의 표가 MMU의 일부라고 했을 때, 첫 번째 행의 Relocation Register는 6번 Frame으로 주소를 변환 시킵니다. 현재 Main Memory에 존재하고 있으며, 수정되지 않아 Backing Store의 Load 이전의 내용과 동일합니다.
+
+하지만 두 번째 행의 재배치 레지스터의 경우 메인 메모리에 존재하지만, 수정되어 있어 Page-out 시 writing 작업이 필요합니다.
 
 <br>
 
@@ -50,11 +57,18 @@ MMU는 바이트로 표현되는 논리 주소로 부터 필요한 페이지가 
 1, 1, 1, 4, 6, 1, 1, 6, 6
 ```
 
-우리는 여기서 참조해야 하는 페이지의 순서 열이 다음과 같음을 알 수 있습니다.
+지역성의 원리(Locality of Reference)로 인해 100에 해당하는 페이지를 로드할 때에는 199까지의 내용까지 함께 로드 됩니다. 그러므로 101과 102를 요구할 때에는 Page Fault가 발생하지 않으며, 참조해야 하는 페이지의 순서 열이 다음과 같습니다.
 
 ```
 1, 4, 6, 1, 6
 ```
+
+<br>
+
+### Replacement 대상
+
+- **Global Replacement**: 메모리 상의 모든 프로세스들의 페이지들을 교체 대상으로 합니다.
+- **Local Replacement**: 메모리 상의 모든 프로세스들 중, 자기 자신의 페이지들만을 교체 대상으로 합니다.
 
 <br>
 
@@ -66,11 +80,23 @@ MMU는 바이트로 표현되는 논리 주소로 부터 필요한 페이지가 
 
 <br>
 
-### 1. FIFO, First-In First-Out
+### 1) FIFO, First-In First-Out
 
+계속해서 가장 빠른 시점에 로드 됐었던 페이지를 Page-out 합니다. 메모리의 크기가 증가하면 Page Fault가 계속해서 줄어들 것이라 생각되지만, 사실상 **Belady's Anomaly**에 의하면 그렇지 않습니다.
 
+Belady's Anomaly는 FIFO 방식의 페이지 교체 알고리즘을 사용할 때, 프레임의 수(메모리 용량)이 증가하지만, 특정 구간에서 PF(Page Fault) 횟수가 증가하는 현상을 말합니다. 이러한 현상으로 인해 무작정 메모리의 크기를 늘린다고 해서 효율이 줄어드는 효과가 무조건적으로 발생하지는 않습니다.
 
+![5-2.Beladys_Anomaly](./assets/5-2_Beladys_Anomaly.png)
 
+<br>
 
+### 2) OPT, Optimal
 
+가장 오래동안 사용되지 않을 페이지를 Page-out 합니다. 설명이 다소 이상하게 들리실 수 있습니다. 하지만 말 그대로, 미래까지 예측할 수 있어야 가능한 방법이며, SJF CPU Scheduling Algorithm과 같이 현실적으로 사용기 어렵습니다.
+
+<br>
+
+### 3) LRU, Least-Recently-Used
+
+과거 이력을 봤을 때, 가장 오래동안 사용되지 않은 프로세스를 Page-out 합니다. 이는 최근에 사용되지 않았다면, 나중에도 사용되지 않을 것이라는 예상에 기반을 합니다.
 
