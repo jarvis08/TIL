@@ -1,6 +1,6 @@
 # Tips - Bootstrap
 
-**CDN(Content Delivery Network)을 사용하지 않는**, 서버에 설치하는 방법입니다.
+**CDN(Content Delivery Network)을 사용하지 않는**, third-party package를 서버에 설치하는 방법입니다.
 
 <br>
 
