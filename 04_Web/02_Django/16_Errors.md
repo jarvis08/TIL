@@ -101,3 +101,35 @@ def delete(request, article_pk):
 ```
 
 **Python Decorator(@)** 기능은 해당 decorator를 그 아래의 함수에 포함시킨다.
+
+<br>
+
+<br>
+
+## 401 Error
+
+**Unauthorized Error**이다. 즉, 로그인 정보가 잘못됐음을 의미한다. 서버를 만약 API Call로 사용하게 된다면, token으로 인증되지 않는 정보로 요청이 왔을 때 이를 거절한다. API Call을 사용할 때에는 요청 마다 인증 정보를 보내도록 되어 있다.
+
+`Http404`의 경우 너무 많이 사용되어서 따로 제작되어 있지만, 나머지 요청의 경우 `HttpResponse` 사용한다.
+
+```python
+# articles/views.py
+from django.http import Http404, HttpResponse
+
+@require_POST
+@login_required
+def delete(request, article_pk):
+    if request.user.is_authenticated:
+        article = get_object_or_404(Article, pk=article_pk)
+        
+        if request.method == 'POST':
+            article.delete()
+            return redirect('articles:index')
+        else:
+            return redirect(article)
+    
+    # 인증된 사용자의 요청이 아닌 경우
+    return HttpResponse('검증되지 않은 유저정보', status=401)
+```
+
+<br>
