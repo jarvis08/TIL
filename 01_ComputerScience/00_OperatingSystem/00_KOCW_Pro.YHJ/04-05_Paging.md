@@ -47,11 +47,11 @@ CPU가 보내는 주소를 2진수로 표현했을 때, 이는 총 `m` bit 입�
 
 CPU에서 전송한 주소는 50이며, 50을 이진수로 표기하면 `110010`(이진수)입니다. 따라서 `n` 개의 이진수로 표시되는 `d` 값은 `0010`(이진수)이며, `m-n` 개의 이진수로 표시되는 `p` 값은 `11`(이진수)인 `3`(10진수)입니다.
 
-![Logical_Address](./assets/Logical_Address.png)
+![Logical_Address](./assets/4-5_Logical_Address.png)
 
 `p` 값은 페이지 테이블의 주소값이며, 페이지 테이블 주소의 값으로 변환됩니다. `p`로 부터 변환된 `f` 값은 `8`이며, 물리적 주소는 `10000010`(이진수)가 됩니다. 물리적 주소는 `d`와 `p`를 분리하여 계산하지 않으며, 해당 값의 주소인 `130`으로 직접 접근합니다.
 
-![Address_Translation](./assets/Address_Translation.png)
+![Address_Translation](./assets/4-5_Address_Translation.png)
 
 <br>
 

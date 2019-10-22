@@ -15,7 +15,7 @@
 - 새 쓰레드는 `조건동기`로 블록된 쓰레드를 깨울 수 있다.
 - 깨워진 쓰레드는 현재 쓰레드가 나가야 재진입할 수 있다.
 
-![Monitor](./assets/Monitor.jpg)
+![Monitor](./assets/3-7_Monitor.jpg)
 
 <br>
 

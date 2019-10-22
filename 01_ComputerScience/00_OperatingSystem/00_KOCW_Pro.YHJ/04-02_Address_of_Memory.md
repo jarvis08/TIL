@@ -26,7 +26,7 @@ CPU는 주소(Address)를 Main Memory에 전송하고, Main Memory는 해당 주
 
 **Loader**가 **Executable File**을 Main Memory에 **Load**합니다.
 
-![Program_Development](./assets/Program_Development.png)<br>
+![Program_Development](./assets/4-2_Program_Development.png)<br>
 
 <br>
 
@@ -65,7 +65,7 @@ MMU에는 총 세 가지 레지스터가 존재합니다. 1~2번은 이전에 �
 
 i.g., CPU가 0번 주소의 데이터를 요청했다. 하지만 Relocation Register가 주소를 조작하여 500번 주소의 Data를 CPU에게 반환한다. 그리고 CPU는 그 사실을 알지 못한다.
 
-![MMU](./assets/MMU.png)
+![MMU](./assets/4-2_MMU.png)
 
 <br>
 

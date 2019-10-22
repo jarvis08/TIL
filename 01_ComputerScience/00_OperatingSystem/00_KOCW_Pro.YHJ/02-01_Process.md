@@ -40,7 +40,7 @@ Process(= Task, Job)는 현재 실행되고 있는 프로그램(Program in execu
 
 ### 프로세스 상태 천이도
 
-![Process state transition diagram](assets/Process-state-transition-diagram.png)
+![Process state transition diagram](./assets/2-1_Process-state-transition-diagram.png)
 
 > 출처: https://www.researchgate.net/figure/Process-state-transition-diagram_fig3_332546783
 

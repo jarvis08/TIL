@@ -61,11 +61,11 @@ i.g., CPU 2개, 프린터 3개 등 여러 개의 동일 자원이 존재할 수 
 
 다음 그림은 자원 할당도의 예시 입니다.
 
-![Resource_Allocation_Graph](./assets/Resource_Allocation_Graph.png)
+![Resource_Allocation_Graph](./assets/3-5_Resource_Allocation_Graph.png)
 
 <br>
 
 다음 그림은 Dining Philosopher Problem을 자원 할당도로 표현한 것입니다.
 
-![RAG_Dining_Philosopher](./assets/RAG_Dining_Philosopher.png)
+![RAG_Dining_Philosopher](./assets/3-5_RAG_Dining_Philosopher.png)
 

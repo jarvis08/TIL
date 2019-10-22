@@ -16,7 +16,7 @@
 
 ### Semaphore의 동작 프로세스
 
-![Semaphore_Structure](assets/Semaphore_Process.png)
+![Semaphore_Structure](./assets/3-3_Semaphore_Process.png)
 
 
 
