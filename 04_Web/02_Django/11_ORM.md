@@ -360,4 +360,15 @@ $ python manage.py sqlmigrate articles 0001
    	Post.objects.create(**request.GET)
    ```
 
-   
+<br>
+
+<br>
+
+## Lazy Loading
+
+**DB를 `fetch` 단계 이전까지 접근하지 않으며, `fetch` 단계에서 몰아서 작업합니다**
+
+사실상 `{% with 변수=코드 %}`를 사용하지 않아도 됩니다. 위에서는 `{% articles.objects.all %}`과 같이 데이터 베이스에서 작업하는 내용을 최소화 하기 위해 변수에 저장한다는 느낌으로 `{% with %}`를 사용했었습니다.
+
+하지만 ORM은 Lazy Loading이라는 아주 효율적인 방법을 사용하여 Database를 다룹니다. 따라서 실제로 `{% with %}`는  코드 작성의 번거로움을 줄이는 용도로만 사용됩니다.
+
