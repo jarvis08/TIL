@@ -173,3 +173,58 @@ def comments_delete(request, article_pk, c_id):
 ```
 
 ![comments_snapshot](./assets/comments_snapshot.JPG)
+
+<br>
+
+<br>
+
+## model-`related_name`
+
+related_name은 **내가 참조하는 모델**이 **나를 어떤 이름으로 관리할 것인가**를 설정합니다. 우리는 이전에 게시글을 형성할 때, 1:N 관계인 User-Article에서 Article 모델을 다음과 같이 설정했습니다.
+
+```python
+class Article(models.Model):
+    title = models.CharField(max_length=50)
+    content = models.TextField()
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
+    like_users = models.ManyToManyField(settings.AUTH_USER_MODEL, related_name='like_articles', blank=True)
+
+    def __str__(self):
+        return self.title
+    
+    class Meta:
+        ordering = ('-pk',)
+    
+    def get_absolute_url(self):
+        # reverse('어느 뷰 함수로 가는지', '인자')
+        return reverse('articles:detail', kwargs={'article_pk': self.pk})
+```
+
+여기서 user에 `related_name`을 설정하지 않았으며, User 입장에서 자신이 작성한 article을 검색할 때엔 다음과 같이 코드를 작성했습니다.
+
+```python
+articles = UserName.article_set.all()
+```
+
+여기서 `article_set`은 생성되는 **queryset**에 대해 django가 자동으로 생성한 이름입니다.
+
+<br>
+
+### Customizing 하기
+
+하지만 우리는 model에서 `related_name`을 설정하여 **우리가 원하는 이름**을 할당할 수 있습니다.
+
+```python
+user = models.ForeignKey(settings.AUTH_USER_MODEL, related_name='articles', on_delete=models.CASCADE)
+```
+
+위 코드와 같이 `related_name='articles'`라고 설정해 준다면, 우리는 작성글 목록을 조회할 때 다음과 같이 사용할 수 있게 됩니다.
+
+```python
+articles = UserName.articles.all()
+```
+
+이렇게 설정한다면, 개발자로서는 훨씬 가시적으로 기능을 사용할 수 있게 됩니다.
+
