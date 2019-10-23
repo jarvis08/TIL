@@ -385,17 +385,15 @@ urlpatterns = [
 # views.py
 @login_required
 def like(request, article_pk):
-    # 현재 접속 중인 request.user를 article의 like_users에 추가
     article = Article.objects.get(pk=article_pk)
-    # 아래 코드 대신, request.user.like_articles.add(article) 가능
-    article.like_users.add(request.user)
-    return redirect(article)
-
-
-@login_required
-def unlike(request, article_pk):
-    article = Article.objects.get(pk=article_pk)
-    article.like_users.remove(request.user)
+    user = request.user
+    # 만약 좋아요 리스트에 현재 접속중인 유저가 있다면, Unlike 처리
+    # if request.user in article.like_users.all():
+    if article.like_users.filter(pk=user.pk).exists():
+        article.like_users.remove(user)
+    else:
+        # 아래 코드 대신, request.user.like_articles.add(article) 가능
+        article.like_users.add(user)
     return redirect(article)
 ```
 
@@ -403,14 +401,18 @@ def unlike(request, article_pk):
 <!-- detail.html -->
 <h2>Like list</h2>
 <p>How many:) {{ article.like_users.count }}</p>
-<p>Who:) 
-  {% for liker in article.like_users.all %}
+<p>Who:)
+  {% with likers=article.like_users.all %}
+  {% for liker in likers %}
     {{ liker }}
   {% endfor %}
 </p>
-<p>{{ article.like_users. }}</p>
-<a href="{% url 'articles:unlike' article.pk %}" class="btn btn-secondary">Unlike</a>
-<a href="{% url 'articles:like' article.pk %}" class="btn btn-danger">Like!</a>
+{% if user in likers %}
+  <a href="{% url 'articles:like' article.pk %}" class="btn btn-secondary">Unlike</a>
+{% else %}
+  <a href="{% url 'articles:like' article.pk %}" class="btn btn-danger">Like!</a>
+{% endif %}
+{% endwith %}
 ```
 
 ![Like](./assets/Like.JPG)
@@ -419,7 +421,49 @@ def unlike(request, article_pk):
 
 <br>
 
-## Follow 기능
+## Unlike 기능
 
-Follow 기능의 경우 User가 User를 Reference 하는 특수한 기능이자, M:N의 관계 구현에 있어서의 궁극의 기능입니다. 왜냐하면 M:N 관계에 있어서 M과 N이 모두 User이기 때문입니다.
+확인 후 좋아요 목록에서 제거한다.
+
+```python
+# views.py
+@login_required
+def like(request, article_pk):
+    article = Article.objects.get(pk=article_pk)
+    # 만약 좋아요 리스트에 현재 접속중인 유저가 있다면, Unlike 처리
+    if request.user in article.like_users.all():
+        article.like_users.remove(request.user)
+    else:
+        # 아래 코드 대신, request.user.like_articles.add(article) 가능
+        article.like_users.add(request.user)
+    return redirect(article)
+```
+
+하지만 여기서 `for`문의 효율성에 문제가 있을 수 있습니다. `if sth in sth` 구문은 for문을 통해 탐색하는 것과 같은데, 이는 **Database에 요청해야 할 `for`문의 숫자 만큼 Query를 요청**하는 것과 같습니다. 따라서 **searching**에 있어서는 **`exists()`**를 사용하는 것이 월등히 효율적입니다.
+
+여기서 함께 사용되는 것은 `filter()` 메서드입니다. `filter()`는 query의 `WHERE`과 동일한 역할을 하며, `WHERE`는 특정 조건을 만족하는 record를 찾을 때 사용합니다.
+
+- SQL, `WHERE`
+
+  해당 조건 **여러개**를 탐색하며, `LIMIT=1` 부여 시 `.get()`과 동일한 역할을 합니다.
+
+- ORM, `.get()`
+
+  **하나**의 레코드를 찾을 때 사용합니다.
+
+하지만 `.get()`은 특정 조건의 **데이터가 없을 경우** `None`을 반환하며, `filter()`는 **`비어있는 queryset`**을 반환합니다. 따라서 대용량 데이터를 고려했을 때, `fileter()`와 `exists`를 함께 사용하여 다음처럼 표현하는 것이 보다 효율적입니다.
+
+```python
+def like(request, article_pk):
+    article = Article.objects.get(pk=article_pk)
+    user = request.user
+    # 만약 좋아요 리스트에 현재 접속중인 유저가 있다면, Unlike 처리
+    # if request.user in article.like_users.all():
+    if article.like_users.filter(pk=user.pk).exists():
+        article.like_users.remove(user)
+    else:
+        # 아래 코드 대신, request.user.like_articles.add(article) 가능
+        article.like_users.add(user)
+    return redirect(article)
+```
 
