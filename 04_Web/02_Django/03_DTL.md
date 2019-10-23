@@ -256,3 +256,51 @@
 ```
 
 ![Date_Format](assets/Date_Format.jpg)
+
+<br>
+
+<br>
+
+## `{% with %}`
+
+DTL에서 제공하는 with 기능은 html 상에서 변수처리를 할 수 있도록 합니다. 아래의 예시는 '좋아요' 기능을 구현하는 html template 코드입니다.
+
+```html
+<h2>Like list</h2>
+<p>How many:) {{ article.like_users.count }}</p>
+<p>Who:)
+  {% for liker in article.like_users.all %}
+    {{ liker }}
+  {% endfor %}
+</p>
+<p>{{ article.like_users. }}</p>
+{% if user in article.like_users.all %}
+  <a href="{% url 'articles:like' article.pk %}" class="btn btn-secondary">Unlike</a>
+{% else %}
+  <a href="{% url 'articles:like' article.pk %}" class="btn btn-danger">Like!</a>
+{% endif %}
+```
+
+여기서 2회 이상 요구되는 `article.like_users.all` 코드를 변수화 하여 사용해 보겠습니다.
+
+- `{% with variable_name=object_or_value %}`
+- `{% endwith %}`
+
+```html
+<h2>Like list</h2>
+<p>How many:) {{ article.like_users.count }}</p>
+<p>Who:)
+  {% with likers=article.like_users.all %}
+  {% for liker in likers %}
+    {{ liker }}
+  {% endfor %}
+</p>
+{% if user in likers %}
+  <a href="{% url 'articles:like' article.pk %}" class="btn btn-secondary">Unlike</a>
+{% else %}
+  <a href="{% url 'articles:like' article.pk %}" class="btn btn-danger">Like!</a>
+{% endif %}
+{% endwith %}
+```
+
+위의 코드는 `{% with likers=article.like_users.all %}`를 통해 `likers`라는 변수로 간소화 했습니다. `article.like_users`를 변수화 하여 `likers.count` 라고 사용할 수 있지만, count는 일발성 메서드이므로 굳이 사용하지 않았습니다.
