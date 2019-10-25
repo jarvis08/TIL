@@ -2,7 +2,7 @@
 
 # 3-1. Cooperating Processes
 
-프로세스는 크게 **Independent Processd**와 **Cooperating** Process로 나눌 수 있습니다. 그 중 Cooperating Porcess는 **시스템 내의 다른 프로세스로부터 영향을 주거나 받는 프로세스**입니다. Cooperating Process의 예시는 다음이 있습니다.
+프로세스는 크게 **Independent** Processe와 **Cooperating** Process로 나눌 수 있습니다. 그 중 Cooperating Porcess는 **시스템 내의 다른 프로세스로부터 영향을 주거나 받는 프로세스**입니다. Cooperating Process의 예시는 다음이 있습니다.
 
 - 프로세스 간 통신
 
