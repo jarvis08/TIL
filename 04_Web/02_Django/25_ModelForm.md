@@ -19,7 +19,7 @@ class ArticleModelForm(forms.ModelForm):
         #         label='제목'
         #         attrs={
         #             'class': 'form-control my-title',
-        #             'placeholder': '제목을 입력해주세요.',
+        #             'placeholderform': '제목을 입력해주세요.',
         #             'id': 'title',
         #         }
         #     )
