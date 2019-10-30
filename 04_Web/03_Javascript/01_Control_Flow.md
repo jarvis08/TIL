@@ -461,7 +461,9 @@ console.log(nums.indexOf(3))
 
 <br>
 
-## Dictionary
+## Object
+
+JS에서의 Object는 **key-value의 관계로 구성**됩니다.
 
 ```javascript
 // dictionary의 key값을 변수명처럼 사용 가능
@@ -477,7 +479,7 @@ console.log(me.name)
 // donginb
 ```
 
-Dictionary안에 **함수**를 부여할 수 있습니다.
+내부에 **함수**를 부여할 수 있습니다.
 
 ```javascript
 const me = {
@@ -497,7 +499,7 @@ console.log(me.sleep())
 
 마지막의 `undefined`는 `sleep` 함수에 `return` 값이 없기 때문에 발생합니다. Django 처럼 더 이상 요소가 없음에도 Trailing Comma를 작성해도 무방합니다.
 
-Dictionary 안에 Dicationary를 하나 더 부여하는 것도 가능합니다.
+Object 안에 Object를 추가적으로 사용하는 것도 가능합니다.
 
 ```javascript
 const me = {
