@@ -20,6 +20,16 @@ DNS: Domain(i.g., `www.naver.com`)과 Network(i.g., `127.083.12.123.`)를 연결
 > tracert 8.8.8.8
 ```
 
-참고 자료: [Youtube, Worriors of the Net](https://www.youtube.com/watch?v=XwphKCS_Kgw)
+<br>
 
-추천 강의: Coursera, `The Bits and Bytes of Computer Networking`, Google
+### 참고 자료
+
+[Youtube, Worriors of the Net](https://www.youtube.com/watch?v=XwphKCS_Kgw)
+
+[needjarvis](https://needjarvis.tistory.com/158)
+
+[는세](https://ryusae.tistory.com/4)
+
+[_Jbee](https://asfirstalways.tistory.com/85)
+
+Coursera, `The Bits and Bytes of Computer Networking`, Google
