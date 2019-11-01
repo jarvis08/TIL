@@ -55,3 +55,47 @@ setTimeout(nothing, 3000)
 
 만약 웹 페이지에 고해상도 이미지를 표시해야 하며, 이미지 위에 어떤 텍스트를 띄워주고자 한다. 또한 이미지가 모두 load된 이후에 텍스트를 띄워야만 한다고 가정했을 때, 이는 Async 한 상황을 Sync하게 처리해야만 합니다. 그리고 이를 구현하기 위해 Async 함수를 통해 그림을 load하며, Call Back을 통해 텍스트를 그림 위에 표시합니다.
 
+<br>
+
+<br>
+
+## 파일 읽기
+
+```javascript
+const fs = require('fs')
+
+console.log('파일 읽기 전')
+fs.readFile('data2.json', () => {
+    console.log('파일 읽기')
+})
+console.log('종료')
+
+// $ node 02_js_async/01_async_file_read.js
+// 파일 읽기 전
+// 종료
+// 파일 읽기
+```
+
+파일을 읽고 쓰는 함수는 수행 시간이 오래걸리는, 대표적인 async 함수입니다.  비동기 함수는 어떤 작업을 한 이후 수행할 작업을 뒤에 작성합니다. 이를 Callback 함수라고 하며, 위 예시에서는 `() => {}`이 Callback 함수이며, json 파일을 읽은 후에 파일 읽기라는 텍스트를 출력하도록 콜백 함수가 정의되어 있습니다.
+
+```javascript
+const fs = require('fs')
+
+// 10초 후에 파일 읽기
+fs.readFile('data2.json', (err, data) => {
+    setTimeout(() => {
+        console.log(JSON.parse(data))
+    }, 10000)
+})
+```
+
+위의 방법으로 콜백함수로 출력하도록 지시한다면, 10초 후에 데이터 내용을 출력할 수 있습니다. `Sync`가 추가된 함수를 사용하면 Sync 방식으로 코드를 작성할 수 있습니다.
+
+```javascript
+const fs = require('fs')
+
+let content = ''
+content = fs.readFileSync('data2.json')
+console.log(JSON.parse(content))
+```
+
