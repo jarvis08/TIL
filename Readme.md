@@ -45,33 +45,31 @@ I'm Learning Python programming, Data Structure, Algorithm, and Web Programming 
 
 ### MOOC
 
-- [Operating System](http://www.kocw.net/home/cview.do?cid=5c3c30382c7bbcf6)
+- [CS224N](https://www.youtube.com/watch?v=8rXD5-xhemo&list=PLoROMvodv4rOhcuXMZkNm7j3fVwBBY42z)
 
-  경성대학교 양희재 교수님, [KOCW](http://www.kocw.net)
+  Stanford University
 
 ### Book
 
-- [Introduction to Algorithms](http://www.hanbit.co.kr/store/books/look.php?p_code=B9722727468) with C
+- [Deep Learning from Scratch 2](http://www.hanbit.co.kr/store/books/look.php?p_code=B8950212853)
 
-  Thomas H.Cormen, Charles E.Leiserson, Ronald L.Rivest, Clifford Stein
-  
-- [env이산수학](http://www.kyobobook.co.kr/product/detailViewKor.laf?ejkGb=KOR&mallGb=KOR&barcode=9788996814894&orderClick=LEA&Kc=)
+  사이토 고키(齋藤 康毅)
 
-  황석근 지음, 교우미디어
+<br>
 
-<br><br>
+<br>
 
 ## Soon, will study.
 
 ### MOOC
 
-- [CS224N](https://www.youtube.com/watch?v=8rXD5-xhemo&list=PLoROMvodv4rOhcuXMZkNm7j3fVwBBY42z)
-
-  Stanford University
-
 - [CS50](https://www.edwith.org/cs50)
 
   Harvard & Yale, [edX](https://www.edx.org/), [edwith](https://www.edwith.org)
+  
+- [Linear Algebra](https://www.youtube.com/playlist?list=PLUl4u3cNGP63oMNUHXqIUcrkS2PivhN3k)
+
+  Gilbert Strang , MIT
 
 ### Book
 
@@ -83,29 +81,47 @@ I'm Learning Python programming, Data Structure, Algorithm, and Web Programming 
 
   Charles Petzold
 
-- [Operating System Concepts](https://book.naver.com/bookdb/book_detail.nhn?bid=7218891)
+- [한국어 임베딩](https://book.naver.com/bookdb/book_detail.nhn?bid=15431390)
 
-  Abraham Silberschatz
+  이기창
 
-- [Deep Learning from Scratch 2](http://www.hanbit.co.kr/store/books/look.php?p_code=B8950212853)
-
-  사이토 고키(齋藤 康毅)
-
-### Paper Review and Implementation
+### Papers
 
 - [Attention Is All You Need](https://arxiv.org/pdf/1706.03762.pdf)
 
 - [XLNet: Generalized Autoregressive Pretraining for Language Understanding](https://arxiv.org/pdf/1906.08237.pdf)
 
-<br><br>
+<br>
 
-## Studied and wish to review.
+<br>
+
+## Someday
+
+### Book
+
+- [Introduction to Algorithms](http://www.hanbit.co.kr/store/books/look.php?p_code=B9722727468) with C
+
+  Thomas H.Cormen, Charles E.Leiserson, Ronald L.Rivest, Clifford Stein
+
+- [Operating System Concepts](https://book.naver.com/bookdb/book_detail.nhn?bid=7218891)
+
+  Abraham Silberschatz
+
+<br>
+
+<br>
+
+## Studied, and wish to Review.
 
 ### MOOC
 
 - [딥러닝을 이용한 자연어 처리](https://www.edwith.org/deepnlp/joinLectures/17363)
 
   NYU 조경현 교수님, [edwith](https://www.edwith.org)
+  
+- [Operating System](http://www.kocw.net/home/cview.do?cid=5c3c30382c7bbcf6)
+
+  경성대학교 양희재 교수님, [KOCW](http://www.kocw.net)
 
 ### Book
 
@@ -119,12 +135,12 @@ I'm Learning Python programming, Data Structure, Algorithm, and Web Programming 
 
 ### Paper review
 
-- [WAVENET: A GENERATIVE MODEL FOR RAW AUDIO](https://arxiv.org/pdf/1609.03499.pdf)
+- Natural Language Processing
+  - [Learning Phrase Representations using RNN Encoder–Decoder for Statistical Machine Translation](https://arxiv.org/pdf/1406.1078.pdf)
+- Speech Synsthesis
+  - [WAVENET: A GENERATIVE MODEL FOR RAW AUDIO](https://arxiv.org/pdf/1609.03499.pdf)
 
-- [TACOTRON: TOWARDS END-TO-END SPEECH SYNTHESIS](https://arxiv.org/pdf/1703.10135.pdf)
+  - [TACOTRON: TOWARDS END-TO-END SPEECH SYNTHESIS](https://arxiv.org/pdf/1703.10135.pdf)
 
-- [NATURAL TTS SYNTHESIS BY CONDITIONING WAVENET ON MEL SPECTROGRAM
-  PREDICTIONS](https://arxiv.org/pdf/1712.05884.pdf)
-
-- [Learning Phrase Representations using RNN Encoder–Decoder for Statistical Machine Translation](https://arxiv.org/pdf/1406.1078.pdf)
-
+  - [NATURAL TTS SYNTHESIS BY CONDITIONING WAVENET ON MEL SPECTROGRAM
+    PREDICTIONS](https://arxiv.org/pdf/1712.05884.pdf)
