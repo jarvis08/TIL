@@ -1,6 +1,6 @@
 # DOM
 
-DOM은 Tree 구조를 가집니다. 우리는 `querySelector()` 메서드를 이용하여 요소들을 선택할 수 있습니다.
+JS가 HTML을DOM Tree 형태로 만든 후, 각각의 요소들을 Object로써 다룰 수 있습니다. 우리는 `querySelector()` 메서드를 이용하여 요소들을 선택할 수 있습니다.
 
 ![DOM_1](./assets/DOM_1.png)
 

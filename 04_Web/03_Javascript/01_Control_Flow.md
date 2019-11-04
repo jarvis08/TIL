@@ -332,6 +332,12 @@ console.log(square1(2))
 
 <br>
 
+### Arrow Function
+
+`addEventListener('이벤트', 함수)` 형태로 코드를 작성할 때, `함수`를 작성함에 있어서 arrow function을 사용하지 않는 것이 좋습니다. 즉, `function() {}` 형태를 사용하는 것이 좋습니다. 왜냐하면 arrow function이 `EventListener`에서 사용할 `this.`가 가리키는 태그를 변경시키기 때문입니다. `this`는 객체를 지칭하기 위해 사용하는데, 이는 자기 자신객체를 가리킬 때 사용합니다. 그런데 arrow function이 지칭하는 객체를 다른 객체로 변경하게 되면, 적용 대상이 변경됩니다.
+
+<br>
+
 <br>
 
 ## Array

@@ -199,12 +199,3 @@ Semicolon(`;`)은 더이상 붙이지 않는 [추세](https://twitter.com/Brenda
 
 <br>
 
-### Declarative Programming
-
-- **명령형 프로그래밍, Imperative Programming**
-
-  모든걸 개발자가 명령합니다.
-
-- **선언적 프로그래밍, Declarative Programming**
-
-  큰 그림만 그려주면, React / Vue와 같은 Framework들이 알아서 자세한 내용을 처리해 줍니다. Django의 ORM도 선언적 프로그래밍을 구사하게 해줍니다.
