@@ -17,7 +17,7 @@
 
 <br>
 
-### MTV -> M V VM
+### MTV -> V VM M
 
 - Django
   - Model
