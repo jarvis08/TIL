@@ -37,6 +37,7 @@ Webster Dictionary의 '의미'에 대한 정의입니다.
 
 - Great as a resource but missing nuance
   - good과 proficient는 일부 문맥에서는 동의어이지만, 다른 문맥에서는 아닐 수 있다.
+  - 즉, nuance를 고려하지 못한다.
 - Missing new meanings of words
   - 직접 사람이 업데이트 해야한다.
 - Subjective
@@ -50,7 +51,10 @@ Webster Dictionary의 '의미'에 대한 정의입니다.
 - In traditional NLP, we regard words as discrete symbols
 
   - hotel conference, motel (a **localist representation**)
+
   - 벡터 끼리는 직교(orthogonal)하며, **관계를 표현할 수 없다**.
+
+    $W_{house}\cdot W_{hotel} = 0$
 
 - Words can be represented by one-hot vectors
 
@@ -65,6 +69,10 @@ Webster Dictionary의 '의미'에 대한 정의입니다.
 <br>
 
 ## 1-3. Distributional Semantics
+
+Denotaional Semantics는 단어 별로 고정된 별개의 벡터(one-hot vector)를 소유하며, 단어 간의 관계를 표현하기가 어렵습니다. 사람이 직접 정의해 주거나, 단어 집단 전체의 제곱에 해당하는 크기의 유사도 테이블을 생성하는 등의 작업이 필요합니다. 반면에 Distributional Semantics의 경우, 단어에 단순히 one-hot vecotr를 부여하는 것이 아니라, 단어의 벡터를 문맥(context)과의 관계로 학습하여 생성합니다. 즉, 같은 문맥에서 사용되는 단어들 끼리는 유사한 값을 갖게 됩니다.
+
+<br>
 
 ### Representing words by their context
 
@@ -88,9 +96,9 @@ Webster Dictionary의 '의미'에 대한 정의입니다.
 
 Word2vec([Mikolov et al.2013](https://arxiv.org/pdf/1301.3781.pdf))은 word vectors를 학습하는 프레임워크입니다. Word2vec의 과정은 다음과 같습니다.
 
-- 큰 규모의 텍스트 말뭉치가 있으며, 모든 단어들이 벡터로 표상되어 있다.
-- 모든 텍스트들의 위치(t)들을 순회하는데, 이 때 중신 단어(t 위치에서의)를 c, 그리고 문맥 단어(주변 단어)를 o라고 칭한다.
-- c에 대한 o, o에 대한 c의 확률을 계산하기 위해 c와 o의 유사도를 사용한다.
+- 큰 규모의 텍스트 말뭉치(courpus)가 있으며, 모든 단어들이 벡터로 표상되어 있다.
+- 모든 텍스트들의 위치($t$)들을 순회하는데, 이 때 중심 단어($t$ 위치에서의)를 $c$, 그리고 문맥 단어(주변 단어)를 $o$라고 칭한다.
+- $c$에 대한 $o$, $o$에 대한 $c$의 확률을 계산하기 위해 $c$와 $o$의 유사도를 사용한다.
 - 위의 확률을 최대화 하기 위해 word vector들의 값을 조정한다.
 
 <br>
@@ -115,7 +123,7 @@ $P(w_{t+j}|w_{t})$ 값을 구하는 것에 대한 그림입니다. 즉, 중심 �
 
 <br>
 
-$\theta$ 는 최적화 되어야 할 모든 변수들을 의미하며, Likelihood인 **목적 함수(Objective Function)**를 최대화 시키는 것을 목표로 합니다. 목적 함수는 최대화 혹은 최소화 시키는 것을 목적으로 하는 모든 함수를 말합니다.
+$\theta$ 는 최적화 되어야 할 모든 변수들을 의미하며, Likelihood를 최대화 시키는 것을 목표로 합니다. 목적 함수는 최대화 혹은 최소화 시키는 것을 목적으로 하는 모든 함수를 말합니다.
 
 <br>
 
@@ -123,11 +131,11 @@ $\theta$ 는 최적화 되어야 할 모든 변수들을 의미하며, Likelihoo
 
 <br>
 
-목적 함수는 다시 목적 함수이자 **손실 함수(Loss Function)**인 $J(\theta)$ 로 변환할 수 있습니다. $J(\theta)$ 는 **negative log likelihood의 평균**입니다. Objective Function을 최소화 하는 것은 Predictive Accuracy를 최대화하는 것과 같은 역할을 합니다.
+Likelihood는 다시 **목적 함수(Objective Function)**이자 **손실 함수(Loss Function)**인 $J(\theta)$ 로 변환할 수 있습니다. $J(\theta)$ 는 **Average of Negative Log Likelihood**입니다. 목적 함수, 손실 함수를 최소화 하는 것은 Predictive Accuracy를 최대화하는 것과 같은 역할을 합니다.
 
 <br>
 
-### 단어 별 벡터
+### 단어 별 벡터들
 
 Word2vec 프레임워크를 사용하는 최종 목적은 단어 별로 단어를 표상하는 벡터를 하나씩 구축하기 위해서입니다. 그런데 **Prediction Function**, $P(w_{t+j}|w_{t};\theta)$ 의 값을 구하기 위해서는 단어 별로 두 개의 벡터들이 필요합니다. 즉, $\theta$ 는 단어 별로 하나의 vector를 갖는 것이 아니라, 주변 단어와 중심 단어일 때로 나누어집니다.
 
@@ -179,11 +187,15 @@ Softmax function에서 exponentation을 사용하는 데에는 두 가지 의미
 
 우리는 loss function인 $J(\theta) = -\frac{1}{T}\sum^T_{t=1}\sum_{-m≤j≤m(j≠0)}\log P(w_{t+j}|w_{t};\theta)$ 를 최소화 해야 하며, $J(\theta)$ 는 $\log  P(w_{t+j}|w_{t};\theta)$를 최대화 하는 것으로 최소화 할 수 있습니다.
 
+$P(o|c) = \frac{\exp(u^{T}_{o}v_{c})}{\sum_{w\in V}\exp(u^{T}_{w}v_{c})}$
+
+즉, 분모의 계산인 **중심 단어와 주변 단어**와의 dot product 값을 **최대화** 하며, 분자의 계산인 **중심 단어와 나머지 단어들**과의 dot product 값을 **최소화** 해야 합니다.
+
 <br>
 
 ### Chain Rule
 
-최소화 과정을 설명하기에 앞서, 과정에서 사용되는 하나의 유용한 법칙에 대해 설명해 보겠습니다. $y=f(u)$ 와 $u=g(x)$, 즉 $y=(g(x))$가 있습니다. 이 때, Chain Rule을 사용하면 $x$ 에 대한 $y$ 의 변화량 간단히 계산할 수 있습니다.
+최소화 과정을 설명하기에 앞서, 학습 과정에서 사용되는 유용한 법칙인 Chain Rule에 대해 설명해 보겠습니다. $y=f(u)$ 와 $u=g(x)$, 즉 $y=(g(x))$가 있습니다. 이 때, Chain Rule을 사용하면 $x$ 에 대한 $y$ 의 변화량 간단히 계산할 수 있습니다.
 
 $\frac{dy}{dx} = \frac{dy}{du} \frac{du}{dx} = \frac{df(u)}{du} \frac{dg(x)}{dx}$
 
@@ -197,7 +209,7 @@ $\log P(o|c)$ 는 $\log\frac{\exp(u^{T}_{o}v_{c})}{\sum_{w\in V}\exp(u^{T}_{w}v_
 
 1. $\frac{d}{dv_{c}}log\frac{\exp(u^{T}_{o}v_{c})}{\sum_{w\in V}\exp(u^{T}_{w}v_{c})}$
 
-2. $\log\frac{numerator}{denominator} = \log 분자 - \log 분모$로 변환
+2. $\log\frac{numerator}{denominator} = \log numerator - \log denominator$ 임을 활용하여 변환
 
    $= \frac{d}{dv_{c}}\log \exp(u^{T}_{o}v_{c}) - \frac{d}{dv_{c}}\log\sum^{V}_{w=1}\exp(u^{T}_{w}v_{c})$
 
@@ -207,22 +219,28 @@ $\log P(o|c)$ 는 $\log\frac{\exp(u^{T}_{o}v_{c})}{\sum_{w\in V}\exp(u^{T}_{w}v_
      1. $= \frac{d}{dv_{c}}[u_{o_{1}}v_{c_{1}}, u_{o_{1}}v_{c_{2}}, ... , u_{o_{100}}v_{c_{100}}]$
      2. $= [u_{o_{1}}, u_{o_{2}}, u_{o_{3}}, u_{o_{100}}]$
      3. $= u_{o}$
-   - 분모 부분 $\frac{d}{dv_{c}}\log\sum^{V}_{w=1}\exp(u^{T}_{w}v_{c})$에 **Chain Rule**을 적용하여 다음과 같이 변환
-     1. $= \frac{1}{\sum^{V}_{w=1}\exp(u^{T}_{w}v_{c})}\cdot \sum^{V}_{X=1}\frac{d}{dv_{c}}\exp(u^{T}_{X}v_{c})$
+     
+   - 분모 부분 $\frac{d}{dv_{c}}\log\sum^{V}_{w=1}\exp(u^{T}_{w}v_{c})$
+     
+     $f = log()$와 $z(v_{c}) = \sum^{V}_{w=1}\exp(u^{T}_{w}v_{c})$ 으로 나누어 **Chain Rule**을 적용
+     
+     $(\log x)' = \frac{1}{x}$ 이므로,
+     
+     1. $= \frac{1}{\sum^{V}_{w=1}\exp(u^{T}_{w}v_{c})}\cdot \frac{d}{dv_{c}}\sum^{V}_{X=1}\exp(u^{T}_{X}v_{c})$
+     
+     2. $= \frac{1}{\sum^{V}_{w=1}\exp(u^{T}_{w}v_{c})}\cdot \sum^{V}_{X=1}\frac{d}{dv_{c}}\exp(u^{T}_{X}v_{c})$
      
         여기서 다시 시그마 뒤의 $\exp()$와 $u^{T}_{X}v_{c}$에 **Chain Rule**을 적용
      
-     2. $= \frac{1}{\sum^{V}_{w=1}\exp(u^{T}_{w}v_{c})} \cdot\sum^{V}_{X=1}\exp(u^{T}_{X}v_{c})\cdot \frac{d}{dv_{c}}u^{T}_{X}v_{c}$
+     3. $= \frac{1}{\sum^{V}_{w=1}\exp(u^{T}_{w}v_{c})} \cdot\sum^{V}_{X=1}\exp(u^{T}_{X}v_{c})\cdot \frac{d}{dv_{c}}u^{T}_{X}v_{c}$
      
-     3. $= \frac{1}{\sum^{V}_{w=1}\exp(u^{T}_{w}v_{c})} \cdot\sum^{V}_{X=1}\exp(u^{T}_{X}v_{c})\cdot u_{X}$
+     4. $= \frac{1}{\sum^{V}_{w=1}\exp(u^{T}_{w}v_{c})} \cdot\sum^{V}_{X=1}\exp(u^{T}_{X}v_{c})\cdot u_{X}$
 
 따라서 전체 식을 다시 정리해 보면 다음과 같습니다.
 
 $\frac{d}{dv_{c}}\log P(o|c)$
 
-$= u_{o} - \frac{\sum^{V}_{X=1}\exp (u^{T}_{X}v_{c})\cdot u_{X}}{\sum^{V}_{w=1}\exp (u^{T}_{w}v_{c})}$
-
-$= u_{o} - \frac{\sum^{V}_{X=1}\exp (u^{T}_{X}v_{c})}{\sum^{V}_{w=1}\exp (u^{T}_{w}v_{c})}\cdot u_{X}$
+$= u_{o} - \sum^{V}_{X=1}\frac{\exp (u^{T}_{X}v_{c})}{\sum^{V}_{w=1}\exp (u^{T}_{w}v_{c})}\cdot u_{X}$
 
 $= u_{o} - \sum^{V}_{X=1}P(X|c) \cdot u_{X}$
 
