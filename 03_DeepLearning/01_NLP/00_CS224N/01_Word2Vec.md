@@ -268,7 +268,7 @@ $\theta ^{new} = \theta ^{old} - \alpha \nabla_{\theta}J(\theta)$
 
 ![01_gredient_graph](./assets/01_gredient_graph.png)
 
-
+![01_gredient_slope](./assets/01_gredient_slope.png)
 
 
 
