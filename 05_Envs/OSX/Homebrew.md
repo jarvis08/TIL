@@ -12,6 +12,25 @@
 
   `/usr/local/Cellar/`
 
+<br>
+
+## Python3 설치
+
+### 설치 이전
+
+```bash
+$  which python3
+/usr/bin/python3
+$ where python3
+/usr/bin/python3
+```
+
+macbook의 default python3 경로
+
+<br>
+
+### 설치하기
+
 ```shell
 $ brew install python3
 $ brew rm python3
@@ -32,6 +51,10 @@ $ where python3
 
 - `where`: searches for "possibly useful" files
 - `which`: only searches for executables.
+
+### site-packages PATH
+
+`usr/local/lib/python3.y/site-packages/`
 
 <br>
 
