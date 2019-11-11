@@ -18,4 +18,4 @@
 
 ### Google Python Style Guide
 
-![Google_Convention_NameSpace](/Users/whdbin/Documents/00_TIL/02_ComputerScience/assets/Google_Convention_NameSpace.png)
+![Google_Convention_NameSpace](./assets/Google_Convention_NameSpace.png)
