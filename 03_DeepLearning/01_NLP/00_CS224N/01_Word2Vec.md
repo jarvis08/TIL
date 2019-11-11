@@ -203,38 +203,45 @@ Chain rule을 사용하여 당장 구할 수 없는 값을, 구할 수 있는 �
 
 <br>
 
-###Gredient
+### Gradient
 
 $\log P(o|c)$ 는 $\log\frac{\exp(u^{T}_{o}v_{c})}{\sum_{w\in V}\exp(u^{T}_{w}v_{c})}$  라고 표현할 수 있으며, 그 변화량을 계산해 보겠습니다.
 
 1. $\frac{d}{dv_{c}}log\frac{\exp(u^{T}_{o}v_{c})}{\sum_{w\in V}\exp(u^{T}_{w}v_{c})}$
 
-2. $\log\frac{numerator}{denominator} = \log numerator - \log denominator$ 임을 활용하여 변환
-
-   $= \frac{d}{dv_{c}}\log \exp(u^{T}_{o}v_{c}) - \frac{d}{dv_{c}}\log\sum^{V}_{w=1}\exp(u^{T}_{w}v_{c})$
+2. $= \frac{d}{dv_{c}}\log \exp(u^{T}_{o}v_{c}) - \frac{d}{dv_{c}}\log\sum^{V}_{w=1}\exp(u^{T}_{w}v_{c})$
 
 3. $=\frac{d}{dv_{c}}u^{T}_{o}v_{c} - \frac{d}{dv_{c}}\log\sum^{V}_{w=1}\exp(u^{T}_{w}v_{c})$
 
-   - 분자 부분 $\frac{d}{dv_{c}}u^{T}_{o}v_{c}$
-     1. $= \frac{d}{dv_{c}}[u_{o_{1}}v_{c_{1}}, u_{o_{1}}v_{c_{2}}, ... , u_{o_{100}}v_{c_{100}}]$
-     2. $= [u_{o_{1}}, u_{o_{2}}, u_{o_{3}}, u_{o_{100}}]$
-     3. $= u_{o}$
+   - **분자** 부분 $\frac{d}{dv_{c}}u^{T}_{o}v_{c}$
      
-   - 분모 부분 $\frac{d}{dv_{c}}\log\sum^{V}_{w=1}\exp(u^{T}_{w}v_{c})$
+     $= \frac{d}{dv_{c}}[u_{o_{1}}v_{c_{1}}, u_{o_{1}}v_{c_{2}}, ... , u_{o_{100}}v_{c_{100}}]$
      
-     $f = log()$와 $z(v_{c}) = \sum^{V}_{w=1}\exp(u^{T}_{w}v_{c})$ 으로 나누어 **Chain Rule**을 적용
+     $= [u_{o_{1}}, u_{o_{2}}, u_{o_{3}}, u_{o_{100}}]$
      
-     $(\log x)' = \frac{1}{x}$ 이므로,
+     $= u_{o}$
      
-     1. $= \frac{1}{\sum^{V}_{w=1}\exp(u^{T}_{w}v_{c})}\cdot \frac{d}{dv_{c}}\sum^{V}_{X=1}\exp(u^{T}_{X}v_{c})$
+     <br>
      
-     2. $= \frac{1}{\sum^{V}_{w=1}\exp(u^{T}_{w}v_{c})}\cdot \sum^{V}_{X=1}\frac{d}{dv_{c}}\exp(u^{T}_{X}v_{c})$
+   - **분모** 부분 $\frac{d}{dv_{c}}\log\sum^{V}_{w=1}\exp(u^{T}_{w}v_{c})$
      
-        여기서 다시 시그마 뒤의 $\exp()$와 $u^{T}_{X}v_{c}$에 **Chain Rule**을 적용
+     $f = \log()$와 $g(v_{c}) = \sum^{V}_{w=1}\exp(u^{T}_{w}v_{c})$ 으로 구분하여 **Chain Rule**을 적용
      
-     3. $= \frac{1}{\sum^{V}_{w=1}\exp(u^{T}_{w}v_{c})} \cdot\sum^{V}_{X=1}\exp(u^{T}_{X}v_{c})\cdot \frac{d}{dv_{c}}u^{T}_{X}v_{c}$
+     $(\log x)' = \frac{1}{x}$ 이며, $\frac{df(v_{c})}{dv_{c}} = \frac{df(g(v_{c}))}{dg(v_{c})} \frac{dg(v_{c})}{dv_{c}} = f'(g(v_{c})) \cdot g'(v_{c})$ 이므로,
      
-     4. $= \frac{1}{\sum^{V}_{w=1}\exp(u^{T}_{w}v_{c})} \cdot\sum^{V}_{X=1}\exp(u^{T}_{X}v_{c})\cdot u_{X}$
+     <br>
+     
+     $= \frac{1}{\sum^{V}_{w=1}\exp(u^{T}_{w}v_{c})}\cdot \frac{d}{dv_{c}}\sum^{V}_{X=1}\exp(u^{T}_{X}v_{c})$
+     
+     $= \frac{1}{\sum^{V}_{w=1}\exp(u^{T}_{w}v_{c})}\cdot \sum^{V}_{X=1}\frac{d}{dv_{c}}\exp(u^{T}_{X}v_{c})$
+     
+     <br>
+     
+     다시 시그마 뒤의 $f = \exp()$와 $g(v_{c}) = u^{T}_{X}v_{c}$에 **Chain Rule**을 적용
+     
+     $= \frac{1}{\sum^{V}_{w=1}\exp(u^{T}_{w}v_{c})} \cdot\sum^{V}_{X=1}\exp(u^{T}_{X}v_{c})\cdot \frac{d}{dv_{c}}u^{T}_{X}v_{c}$
+     
+     $= \frac{1}{\sum^{V}_{w=1}\exp(u^{T}_{w}v_{c})} \cdot\sum^{V}_{X=1}\exp(u^{T}_{X}v_{c})\cdot u_{X}$
 
 따라서 전체 식을 다시 정리해 보면 다음과 같습니다.
 
@@ -244,7 +251,11 @@ $= u_{o} - \sum^{V}_{X=1}\frac{\exp (u^{T}_{X}v_{c})}{\sum^{V}_{w=1}\exp (u^{T}_
 
 $= u_{o} - \sum^{V}_{X=1}P(X|c) \cdot u_{X}$
 
-여기서 $u_{o}$는 **실제 문맥 단어(observed, actual context word)**의 벡터이며, $\sum^{V}_{X=1}P(X|c) \cdot u_{X}$는 **예상 단어(expected context word)**의 벡터입니다. 예상 단어에 있어서, $\sum^{V}_{X=1}$는 **weighted average**를 계산함을 의미하며, $P(X|c)$는 **현재 모델에서의 확률 값**을 곱해주며, $u_{X}$는 **각 단어들의 표상**입니다. 실제 문맥 단어와 예상 단어의 차를 구함으로써 표상 변화의 방향과 값(**gredient**)을 설정합니다.
+여기서 $u_{o}$는 **실제 문맥 단어(observed, actual context word)**의 벡터이며, $\sum^{V}_{X=1}P(X|c) \cdot u_{X}$는 **예상 단어(expected context word)**의 벡터입니다.
+
+$u_{X}$인 **각 단어들의 표상**에 **현재 모델에서의 현재 단어의 확률 값**인 $P(X|c)$를 곱해주고, (표상 * 확률)들의 합($\sum^{V}_{X=1}$)을 구하여 **weighted average**를 계산합니다.
+
+그 후 정답 단어의 표상과 예상 단어의 표상의 차이를 구함으로써 표상 변화의 방향과 값(**gredient**)을 설정합니다.
 
 *"Weighted average($\sum^{V}_{X=1}$) of the representations of each word($u_{x}$), multiplied by the probability of the word in the current model."*
 
