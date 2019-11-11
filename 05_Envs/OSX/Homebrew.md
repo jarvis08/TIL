@@ -17,6 +17,22 @@ $ brew install python3
 $ brew rm python3
 ```
 
+```bash
+Python has been installed as
+  /usr/local/bin/python3
+```
+
+```bash
+$ which python3
+/usr/local/bin/python3
+$ where python3
+/usr/local/bin/python3
+/usr/bin/python3
+```
+
+- `where`: searches for "possibly useful" files
+- `which`: only searches for executables.
+
 <br>
 
 <br>
@@ -24,4 +40,5 @@ $ brew rm python3
 ## My Installations
 
 - python3
+- docker
 
