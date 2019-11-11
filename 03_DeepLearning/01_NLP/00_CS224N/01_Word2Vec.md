@@ -255,7 +255,7 @@ $= u_{o} - \sum^{V}_{X=1}P(X|c) \cdot u_{X}$
 
 $u_{X}$인 **각 단어들의 표상**에 **현재 모델에서의 현재 단어의 확률 값**인 $P(X|c)$를 곱해주고, (표상 * 확률)들의 합($\sum^{V}_{X=1}$)을 구하여 **weighted average**를 계산합니다.
 
-그 후 정답 단어의 표상과 예상 단어의 표상의 차이를 구함으로써 표상 변화의 방향과 값(**gredient**)을 설정합니다.
+그 후 정답 단어의 표상과 예상 단어의 표상의 차이를 구함으로써 표상 변화의 방향과 값(**gradient**)을 설정합니다.
 
 *"Weighted average($\sum^{V}_{X=1}$) of the representations of each word($u_{x}$), multiplied by the probability of the word in the current model."*
 
@@ -263,7 +263,7 @@ $u_{X}$인 **각 단어들의 표상**에 **현재 모델에서의 현재 단어
 
 ### Learning Rate
 
-우리에게는 최소화 하고 싶은 $J(\theta)$ 가 있으며, Gredient Descent는 $J(\theta)$ 를 최소화하기 위해 gredient를 목적 함수에 적용하는 알고리즘입니다. 우리는 Gredient Descent의 다음과 같은 과정을 통해 목적 함수를 최소화 합니다.
+우리에게는 최소화 하고 싶은 $J(\theta)$ 가 있으며, gradient Descent는 $J(\theta)$ 를 최소화하기 위해 gradient를 목적 함수에 적용하는 알고리즘입니다. 우리는 gradient Descent의 다음과 같은 과정을 통해 목적 함수를 최소화 합니다.
 
 1. 현재의 $\theta$ 값에 대해 $J(\theta)$ 의 기울기를 계산
 2. **Negative gradient**의 방향으로 작은 step만큼 적용
@@ -275,7 +275,7 @@ $\theta ^{new} = \theta ^{old} - \alpha \nabla_{\theta}J(\theta)$
 
 - $\alpha$: Step Size 혹은 Learning Rate
 
-현재 $\theta$ 에 대한 loss를 계산하고, 현재 $\theta$에 $\alpha$ 의 비율만을 적용합니다. 만약 변화량이 클 경우, 최적해를 갖게 하는 $\hat \theta$ 으로 접근하지 못한 채 변화 무쌍한 gredient를 갖게 됩니다. 즉, 아래의 그림처럼 차근차근 접근하여 최적해를 탐색해야 합니다.
+현재 $\theta$ 에 대한 loss를 계산하고, 현재 $\theta$에 $\alpha$ 의 비율만을 적용합니다. 만약 변화량이 클 경우, 최적해를 갖게 하는 $\hat \theta$ 으로 접근하지 못한 채 변화 무쌍한 gradient를 갖게 됩니다. 즉, 아래의 그림처럼 차근차근 접근하여 최적해를 탐색해야 합니다.
 
 ![01_gredient_graph](./assets/01_gredient_graph.png)
 
