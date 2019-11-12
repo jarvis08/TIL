@@ -30,3 +30,20 @@
   """result
   15"""
   ```
+
+<br>
+
+### Sorting 활용
+
+```python
+seperated = ['4,2,3', '3', '2,3,4,1', '2,3']
+ordered = sorted(seperated, key=lambda x: len(x))
+print(ordered)
+```
+
+```bash
+['3', '2,3', '4,2,3', '2,3,4,1']
+```
+
+요소 별 길이를 `key`로하여 sort
+
