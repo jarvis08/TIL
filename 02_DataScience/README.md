@@ -1,4 +1,4 @@
-# Deep Learning
+# Data Science
 
 My goal is to develop AI Secretary like 'Jarvis' of movie 'Ironman'. I'm interested in various fields of my goal, and they are Speech Recognition, NLU, NLG, Searching System, Recommandation System, and Speech Synthesis.
 

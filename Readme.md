@@ -45,12 +45,14 @@ I'm Learning Python programming, Data Structure, Algorithm, and Web Programming 
 
 ### MOOC
 
-- [CS224N](https://www.youtube.com/watch?v=8rXD5-xhemo&list=PLoROMvodv4rOhcuXMZkNm7j3fVwBBY42z)
-
-  Stanford University
+- [모두를 위한 딥러닝 시즌 2](https://deeplearningzerotoall.github.io/season2/) with PyTorch
 
 ### Book
 
+- [Do Data Science](https://book.naver.com/bookdb/book_detail.nhn?bid=7363405)
+
+  Schutt, Rachel /  O'Neil, Cathy
+  
 - [Deep Learning from Scratch 2](http://www.hanbit.co.kr/store/books/look.php?p_code=B8950212853)
 
   사이토 고키(齋藤 康毅)
@@ -59,23 +61,15 @@ I'm Learning Python programming, Data Structure, Algorithm, and Web Programming 
 
 <br>
 
-## Soon, will study.
+## Soon.
 
 ### MOOC
 
-- [CS50](https://www.edwith.org/cs50)
+- [CS224N](https://www.youtube.com/watch?v=8rXD5-xhemo&list=PLoROMvodv4rOhcuXMZkNm7j3fVwBBY42z)
 
-  Harvard & Yale, [edX](https://www.edx.org/), [edwith](https://www.edwith.org)
-  
-- [Linear Algebra](https://www.youtube.com/playlist?list=PLUl4u3cNGP63oMNUHXqIUcrkS2PivhN3k)
-
-  Gilbert Strang , MIT
+  Stanford University
 
 ### Book
-
-- [Mathematics for Machine Learning](https://mml-book.github.io/)
-
-  Marc Peter Deisenroth, A.Aldo Faisal, Cheng Soon Ong
 
 - [Code](http://www.charlespetzold.com/books/)
 
@@ -95,7 +89,7 @@ I'm Learning Python programming, Data Structure, Algorithm, and Web Programming 
 
 <br>
 
-## Someday
+## Expecting.
 
 ### Book
 
@@ -103,15 +97,25 @@ I'm Learning Python programming, Data Structure, Algorithm, and Web Programming 
 
   Thomas H.Cormen, Charles E.Leiserson, Ronald L.Rivest, Clifford Stein
 
-- [Operating System Concepts](https://book.naver.com/bookdb/book_detail.nhn?bid=7218891)
+- [Mathematics for Machine Learning](https://mml-book.github.io/)
 
-  Abraham Silberschatz
+  Marc Peter Deisenroth, A.Aldo Faisal, Cheng Soon Ong
+
+### MOOC
+
+- [Linear Algebra](https://www.youtube.com/playlist?list=PLUl4u3cNGP63oMNUHXqIUcrkS2PivhN3k)
+
+  Gilbert Strang , MIT
+
+- [CS50](https://www.edwith.org/cs50)
+
+  Harvard & Yale, [edX](https://www.edx.org/), [edwith](https://www.edwith.org)
 
 <br>
 
 <br>
 
-## Studied, and wish to Review.
+## Studied.
 
 ### MOOC
 
