@@ -78,7 +78,7 @@
 
 Association Rule은 **고객들의 상품 묶음 정보를 규칙으로 표현하는 가장 기본적인 알고리즘**이며, 흔히 **장바구니 분석**이라고도 불립니다. 데이터마이닝과 같은 수업을 들었다면 한번 쯤 들어봤을 법한 알고리즘입니다. 이 알고리즘은 기초적인 확률론에 기반한 방법으로, **전체 상품중에 고객이 함께 주문한 내역을 살펴본 뒤 상품간의 연관성을 수치화**하여 나타내는 알고리즘입니다. 매우 직관적이고 구현하기도 쉬운데, 현재까지도 사용되기도 하는 알고리즘입니다. 추천 시스템에서 여전히 가장 중요한 알고리즘으로 분류되며, Association Rule에서 파생된 다양한 알고리즘들이 존재합니다.
 
-![img](https://t1.daumcdn.net/cfile/tistory/9920B7455AF6DAF929)
+![01_RS_Examples](./assets/01_RS_Examples.png)
 
 Reference : [Recommender Systems in E-Commerce](http://files.grouplens.org/papers/ec-99.pdf)
 
