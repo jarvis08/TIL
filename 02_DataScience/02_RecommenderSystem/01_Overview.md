@@ -98,7 +98,7 @@ Reference : [Recommender Systems in E-Commerce](http://files.grouplens.org/paper
 
    Rating 기반의 인기 상품, 혹은 현재 상품을 기준으로 AR(Association Rule) 순위 대로 상품을 추천
 
-   주로 Cold Start Problem(개인화 추천 모델링을 위한 유저 정보 혹은 아이템 정보가 부족한 상황에서 발생하는 문제)이 발생하는 상황이나 개인화 추천이 잘 적용되지 않는 도메인에서 사용
+   주로 **Cold Start Problem**(개인화 추천 모델링을 위한 유저 정보 혹은 아이템 정보가 부족한 상황에서 발생하는 문제)이 발생하는 상황이나 개인화 추천이 잘 적용되지 않는 도메인에서 사용
 
    - 대표적인 알고리즘: **AR, Association Rule**
 
