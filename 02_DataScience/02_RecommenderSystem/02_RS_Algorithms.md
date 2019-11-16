@@ -81,7 +81,7 @@ CF는 일반적으로 두 가지 방법으로 분류되며, 그 안에서 몇 �
 
 메모리 기반 알고리즘(Neighborhood model 기준)은 **유저와 아이템에 대한 matrix**를 만든 뒤, **유저 기반 혹은 아이템 기반으로 유사한 객체를 찾은 뒤 빈공간을 추론**하는 알고리즘입니다.
 
-![img](https://t1.daumcdn.net/cfile/tistory/9970CE495AF71C0C06)
+![02_MemoryCF_example](./assets/02_MemoryCF_example.png)
 
 위와 같이 유저-영화 테이블이 있을 때, 채워진 값들은 영화에 대해 내린 rating 값들입니다. Implicit score를 가진 도메인의 경우, 이 rating을 채워넣는 것 자체에 대한 방법론을 고민해야 합니다. 미영은 레디플레이어원과 곤지암에 대해 점수를 평가했고, 시스템은 **미영이 아직 보지 않은 영화들**에 대해, 미영이 본다면 __어떻게 rating을 부여할 지 점수를 예측__하고, **높게 평가될 것이라고 예상되는 영화**를 추천해주어야 합니다. 이때  **user based CF**의 경우, **미영과 가장 유사한 철수**라는 유저를 통해 어벤져스3에 대한 평점을 예측할 수가 있습니다.
 
@@ -117,11 +117,11 @@ CF는 일반적으로 두 가지 방법으로 분류되며, 그 안에서 몇 �
 
 아래의 그림(Andrew Ng의 강의 슬라이드 발췌)을 보면 직관적으로 이해가 될 것입니다.
 
-![img](https://t1.daumcdn.net/cfile/tistory/99EAC1455AF71F3E31)
+![02_MatrixFactorization](./assets/02_MatrixFactorization.png)
 
 MF의 가장 대표적인 방법은 **SVD(Singular Value Decomposition)**이다. **특이값 분해**라고 하는데, 고유값 분해처럼 **행렬을 대각화하여 분해하는 방법 중 하나**입니다. 고유값 분해와 다른 점은 **nXn의 정방행렬이 아니어도 분해가 가능**하다는 것이고, **이는 Sparse한 특성을 가지는 추천 시스템에서의 Matrix를 분해하는 것에 유용한 특성**입니다.
 
-![img](https://t1.daumcdn.net/cfile/tistory/9967D94B5AF71FE808)
+![02_SVD](./assets/02_SVD.png)
 
 (이미지 출처 : ratsgo's blog)
 
@@ -141,7 +141,7 @@ SVD를 비롯한 MF에서 목적함수는, Predicted rating을 구하는 Matrix 
 
 딥 러닝 기반 모델링에 사용되는 알고리즘에 대해서도 포스팅을 길게 작성하고 싶었지만, 이 방법론은 아직 명확하게 정착된 스택이 없는 것 같습니다. 이전의 포스팅 2개에서 언급했던 예제들이 현재 리서치가 가능한 내용의 전부이고, 이를 직관적으로 이해하기 위한 아래의 이미지로 충분하리라 생각됩니다.
 
-![img](https://t1.daumcdn.net/cfile/tistory/992545345AF722D427)
+![02_RS_DL](./assets/02_RS_DL.png)
 
 (구글 논문에 게재된 추천 시스템 구조도 이미지)
 
