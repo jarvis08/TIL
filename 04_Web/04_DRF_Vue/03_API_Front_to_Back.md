@@ -1,4 +1,4 @@
-# Django & Vue 연동
+# API, Django & Vue 연동
 
 Django와 Vue 서버들을 동시에 실행하여 admin 계정으로 로그인해 보겠습니다. 우선 request-response를 주고 받을 axios를 설치합니다.
 
@@ -162,6 +162,13 @@ def todo_create(request):
 ```
 
 Postman으로 생성되는 쿠키를 확인해 보겠습니다. Body에 id, user, title을 입력하고 Headers에 Authentication 항목의 key와 token을 입력합니다.
+
+- Header
+  - Auth(JWT)
+- Body
+  - id
+  - user
+  - content
 
 ![postman_todos_1](./assets/postman_todos_1.png)
 
