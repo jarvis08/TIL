@@ -5,6 +5,7 @@ Form Class 보다 몇 단계 더 편리한 **모듈화 기능**이며, Form Clas
 ```python
 # forms.py
 from .models import Article
+from django import forms
 
 class ArticleModelForm(forms.ModelForm):
     class Meta:
