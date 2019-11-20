@@ -46,6 +46,16 @@ Git의 기능 두가지
 
 <br>
 
+### Git Env, Language
+
+다음 내용을 `~/.bash_profile`에 추가합니다.
+
+```bash
+alias git='LANG=en_GB git'
+```
+
+<br>
+
 ### Config
 
 ```shell
