@@ -1,4 +1,4 @@
-# Heroku
+# Heroku for Django
 
 Heroku는 무료 서버 배포 서비스이며, 테스트 서버를 구축하는데에 용이한 서비스입니다.
 
