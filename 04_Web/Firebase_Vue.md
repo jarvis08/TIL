@@ -1,6 +1,6 @@
-# Heroku for Vue.js
+# Firebase for Vue.js
 
-[Firebase](https://firebase.google.com/?gclid=Cj0KCQiA2vjuBRCqARIsAJL5a-LDjPT-j6KGphu4NA8Y79g45BJE85JbzwIZtXjZfdocgRJpwrei90IaAr8fEALw_wcB)
+[Firebase Website](https://firebase.google.com/?gclid=Cj0KCQiA2vjuBRCqARIsAJL5a-LDjPT-j6KGphu4NA8Y79g45BJE85JbzwIZtXjZfdocgRJpwrei90IaAr8fEALw_wcB)
 
 1. [Web] Firebase App 생성
 
@@ -30,3 +30,4 @@
 __위 코드들은 Firebase 웹사이트에서도 순서대로 지시해줍니다.__
 
 이제 https://vue-deploy-test-1f76f.firebaseapp.com 주소로 나의 app에 접속할 수 있습니다.
+
