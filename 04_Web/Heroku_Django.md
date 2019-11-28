@@ -13,6 +13,14 @@ $ heroku login
 $ pip install django-heroku
 ```
 
+그리고, settings.py에 다음 내용을 추가해 줍니다.
+
+```python
+# settings.py
+import django_heroku
+django_heroku.settings(locals())
+```
+
 <br>
 
 ### App 생성
