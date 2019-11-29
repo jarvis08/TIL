@@ -92,6 +92,8 @@ $ git remote -v
 
 # remote repository(원격저장소) 추가
 $ git remote add 설정할저장소이름 저장소주소
+# remote 삭제
+$ git remote remove origin
 
 # Cloning
 $ git clone address/repository.git
