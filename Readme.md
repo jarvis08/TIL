@@ -24,24 +24,9 @@ GDG(Google Developers Group) 제주에서 주관하여 진행하는 오픈 소�
 
 ## Now studying.
 
-### at SSAFY
+I'm studying about Data Science, and trying to understand various data structures deeply by implementing them with C++.
 
-I'm Learning Python programming, Data Structure, Algorithm, and Web Programming at [SSAFY](https://www.ssafy.com). I have learned how to handle computer and data better, and understood how we use Web for I work and to provide my application.
-
-[SSAFY](https://www.ssafy.com)(삼성청년SW아카데미)에서 파이썬 프로그래밍, 자료 구조, 알고리즘, 웹 프로그래밍에 대해 공부하고 있습니다. 컴퓨터와 데이터를 다루는 방법에 대해 배우고 있으며, 웹을 통해 내가 필요한 데이터를 얻는 동시에 나의 앱을 제공하는 과정을 학습하고 있습니다.
-
-- Python
-- Data Structure
-- Algorithm
-- Web Programming
-  - Django
-  - Database
-  - Flask
-  - Vue.js
-  - Javascript
-  - HTML
-  - CSS
-  - Bootstrap
+데이터 사이언스에 대한 공부하고 있으며, 다양한 자료 구조를 C++로 구현하며 깊이 있는 이해를 시도하고 있습니다.
 
 ### MOOC
 
@@ -53,9 +38,13 @@ I'm Learning Python programming, Data Structure, Algorithm, and Web Programming 
 
   Schutt, Rachel /  O'Neil, Cathy
   
-- [Deep Learning from Scratch 2](http://www.hanbit.co.kr/store/books/look.php?p_code=B8950212853)
+- [Code](http://www.charlespetzold.com/books/)
 
-  사이토 고키(齋藤 康毅)
+  Charles Petzold
+  
+- [Introduction to Algorithms](http://www.hanbit.co.kr/store/books/look.php?p_code=B9722727468) with C++
+
+  Thomas H.Cormen, Charles E.Leiserson, Ronald L.Rivest, Clifford Stein
 
 <br>
 
@@ -63,21 +52,15 @@ I'm Learning Python programming, Data Structure, Algorithm, and Web Programming 
 
 ## Soon.
 
-### MOOC
-
-- [CS224N](https://www.youtube.com/watch?v=8rXD5-xhemo&list=PLoROMvodv4rOhcuXMZkNm7j3fVwBBY42z)
-
-  Stanford University
-
 ### Book
-
-- [Code](http://www.charlespetzold.com/books/)
-
-  Charles Petzold
 
 - [한국어 임베딩](https://book.naver.com/bookdb/book_detail.nhn?bid=15431390)
 
   이기창
+  
+- [Deep Learning from Scratch 2](http://www.hanbit.co.kr/store/books/look.php?p_code=B8950212853)
+
+  사이토 고키(齋藤 康毅)
 
 ### Papers
 
@@ -93,10 +76,6 @@ I'm Learning Python programming, Data Structure, Algorithm, and Web Programming 
 
 ### Book
 
-- [Introduction to Algorithms](http://www.hanbit.co.kr/store/books/look.php?p_code=B9722727468) with C
-
-  Thomas H.Cormen, Charles E.Leiserson, Ronald L.Rivest, Clifford Stein
-
 - [Mathematics for Machine Learning](https://mml-book.github.io/)
 
   Marc Peter Deisenroth, A.Aldo Faisal, Cheng Soon Ong
@@ -106,6 +85,10 @@ I'm Learning Python programming, Data Structure, Algorithm, and Web Programming 
 - [Linear Algebra](https://www.youtube.com/playlist?list=PLUl4u3cNGP63oMNUHXqIUcrkS2PivhN3k)
 
   Gilbert Strang , MIT
+
+- [CS224N](https://www.youtube.com/watch?v=8rXD5-xhemo&list=PLoROMvodv4rOhcuXMZkNm7j3fVwBBY42z)
+
+  Stanford University
 
 - [CS50](https://www.edwith.org/cs50)
 
