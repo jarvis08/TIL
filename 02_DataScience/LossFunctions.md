@@ -20,7 +20,15 @@
 
 <br>
 
+### L2 Regularization
+
+<br>
+
 ### Mean Absolute Error/L1 Loss
+
+<br>
+
+### L1 Regularization
 
 <br>
 
