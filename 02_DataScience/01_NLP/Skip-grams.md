@@ -53,7 +53,7 @@ Negative sampling은 Noise Contrastive Estimation(NCE)를 변형하여 language 
 
 $log \, p(w_{O} | w_{I}) = log \, σ(v\prime_{w_{O}}^{\top} v_{w_{I}}) + \sum_{i=1}^{k} \mathbb{E}_{w_{i} \sim P_{n}(w)}[log \, σ(−v\prime _{w_{i}}^{⊤} v_{w_{I}})]$
 
-$P_{n}(w)$ 은 noise distribution이며, unigram distribution을 따르고, 단어 $w$ 가 선정될 확률입니다.
+$P_{n}(w)$ 은 noise distribution이며, unigram distribution을 따르고, 단어 $w$ 가 **학습에 사용될 확률**입니다.
 
 $P_{n}(w_{i}) = \frac{f(w_{i})^{3/4}}{\sum_{j=1}^{n}\, f(w_{j})^{3/4}}$
 
@@ -65,8 +65,8 @@ $f(w)$ 은 단어 $w$ 가 데이터셋(말뭉치) 내에서 등장하는 비율(
 
 ## Subsampling of Frequent Words
 
-Subsampling은 단어들의 등장 빈도에 따라 해당 step에서의 학습 여부를 확률적으로 결정하고, 계산량을 감소시킵니다. 등장 빈도가 높은 단어일 수록 작은 확률을 갖습니다. 다음 식의 $P(w)$ 는 단어 $w$ 가 학습에 사용될 확률을 의미합니다.
+Subsampling은 단어들의 등장 빈도에 따라 해당 step에서의 학습 여부를 확률적으로 결정하고, 계산량을 감소시킵니다. 등장 빈도가 높은 단어일 수록 작은 등장 확률을 갖습니다. 다음 식의 $P(w)$ 는 단어 $w$ 가 **학습에서 제외될 확률**을 의미하며, negative sampling에서의 $P(w)$ 와는 반대의 의미입니다.
 
 $P(w_{i}) = 1 - \sqrt{\frac{t}{f(w_{i})}}$
 
-$f(w)$ 은  negative sampling에서와 동일한 의미이며, hyper parameter인 $t$ 는 주로 0.00001의 값으로 사용합니다.
+$f(w)$ 은  negative sampling에서와 동일한 의미이며, hyper parameter인 $t$ 는 주로 0.00001의 값으로 사용합니다. 만약 $f(w)$ 가 0.01인 빈도가 매우 높은 단어가 있을 때, $P(w)$ 는 0.9684이므로, 100번의 학습 기회가 주어질 경우 대략 96번 정도는 학습에서 제외됩니다.
