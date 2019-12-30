@@ -48,10 +48,16 @@ Git의 기능 두가지
 
 ### Git Env, Language
 
-다음 내용을 `~/.bash_profile`에 추가합니다.
+다음 내용을 `~/.bash_profile` 혹은 `~/.zshrc`에 다음을 추가합니다.
 
 ```bash
 alias git='LANG=en_GB git'
+```
+
+위와 같이 `alias`를 사용해도 되며, 아래와 같이 `export`를 사용해도 됩니다.
+
+```bash
+export LANG=en_US
 ```
 
 <br>
