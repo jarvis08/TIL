@@ -89,8 +89,52 @@ Error: git 2.24.0_1 already installed
 
 <br>
 
+## oh-my-zsh
+
+`brew`를 사용하여 최신 버전의 zsh과 zsh-completions를 설치합니다.
+
+```bash
+$ brew install zsh zsh-completions
+```
+
+zsh의 설정을 관리해주는 oh-my-zsh을 설치합니다. 설치 도중 아이디와 패스워드를 입력하면, 자동으로 기본쉘을 bash에서 zsh로 변경합니다.
+
+```bash
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+```
+
+<br>
+
+### Plug-in
+
+Oh-my-zsh을 더욱 강력하게 해주는 플러그인을 추가적으로 설치합니다.
+
+```bash
+# zsh-syntax-highlighting
+$ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+
+# zsh-autosuggestions
+$ git clone git://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions
+```
+
+이후 `~/.zshrc`에 플러그인을 설치했음을 설정합니다.
+
+```bash
+# ~/.zshrc
+plugins=(
+  git
+  zsh-syntax-highlighting
+  zsh-autosuggestions
+)
+```
+
+<br>
+
+<br>
+
 ## My Installations
 
 - python3
 - docker
 - git
+- zsh
