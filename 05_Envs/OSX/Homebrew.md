@@ -117,10 +117,15 @@ $ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTO
 $ git clone git://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions
 ```
 
-이후 `~/.zshrc`에 플러그인을 설치했음을 설정합니다.
+이후 `~/.zshrc`에 플러그인을 설치했음을 알리기 위해 기존 코드를 다음과 같이 변경합니다.
 
 ```bash
-# ~/.zshrc
+# ~/.zshrc 변경 전
+plugins=(git)
+```
+
+```bash
+# ~/.zshrc 변경 후
 plugins=(
   git
   zsh-syntax-highlighting
