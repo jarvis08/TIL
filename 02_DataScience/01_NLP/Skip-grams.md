@@ -27,6 +27,8 @@ $p(w_{O} | w_{I}) = \frac{exp(v\prime _{w_O} ^{T} v_{w_{I}})}{\sum_{w=1}^{W} exp
 
 ![hsexample](assets/hsexample.png)
 
+Hierarchial softmax를 사용할 경우 기존 CBOW나 Skip-gram에 있던 $W’$ matrix를 사용하지 않게 됩니다. 대신, $|V|-1$ 개의 internal node들이 각각 길이 $N$ 의 weight vector를 가지게 됩니다. 이를 $v\prime _{i}$ 라고 하며, 학습 과정에서 update 됩니다.
+
 $p(w|w_{I}) = \prod_{j=1}^{L(w) - 1} \sigma ([\![ n(w, j+1) = ch(n(w, j))]\!] \cdot v\prime _{n(w, j)}^{T} v_{w_{I}})$
 
 여기서 시그모이드($\sigma$) 인자 내부의 $[\![ x ]\!]$ 는 다음과 같은 형태로 사용됩니다.
@@ -49,7 +51,20 @@ $\sigma(v_n^Tv_{w_i})+\sigma(-v_n^Tv_{w_i}) = 1$
 
 ## Negative Sampling
 
-Negative sampling은 Noise Contrastive Estimation(NCE)를 변형하여 language modeling을 적용한 방법입니다. 모든 단어를 모두 계산하지 않고 근사하여 값을 구하는데, 주변 단어가 아닌 틀린 단어들에 대해 $k$ 개만을 선별하여 계산하고, 파라미터를 업데이트 하는 방법입니다. $k$ 는 주로 작은 데이터셋에서는 5~20, 큰 데이터셋에서는 2~5의 값으로 설정합니다.
+### Noise Contrastive Function, NCE
+
+**NCE(Noise-Contrastive Estimation)**
+CBOW와 Skip-Gram 모델에서 사용하는 비용 계산 알고리즘을 말한다. 전체 데이터셋에 대해 SoftMax 함수를 적용하는 것이 아니라 샘플링으로 추출한 일부에 대해서만 적용하는 방법을 말한다. k개의 대비되는(contrastive) 단어들을 noise distribution에서 구해서 (몬테카를로) 평균을 구하는 것이 기본 알고리즘이다. Hierarchical SoftMax와 Negative Sampling 등의 여러 가지 방법이 있다.
+일반적으로 단어 갯수가 많을 때 사용하고, NCE를 사용하면 문제를 (실제 분포에서 얻은 샘플)과 (인공적으로 만든 잡음 분포에서 얻은 샘플)을 구별하는 이진 분류 문제로 바꿀 수 있게 된다.
+Negative Sampling에서 사용하는 목적 함수는 결과값이 최대화될 수 있는 형태로 구성한다. 현재(목표, target, positive) 단어에는 높은 확률을 부여하고, 나머지 단어(negative, noise)에는 낮은 확률을 부여해서 가장 큰 값을 만들 수 있는 공식을 사용한다. 특히, 계산 비용에서 전체 단어 V를 계산하는 것이 아니라 선택한 k개의 noise 단어들만 계산하면 되기 때문에 효율적이다. 텐서플로우에서는 tf.nn.nce_loss()에 구현되어 있다.
+
+출처: https://pythonkim.tistory.com/92 [파이쿵]
+
+<br>
+
+### NEG
+
+Negative sampling(NEG)은 NCE를 변형하여 language modeling을 적용한 방법입니다. 모든 단어를 모두 계산하지 않고 근사하여 값을 구하는데, 주변 단어가 아닌 틀린 단어들에 대해 $k$ 개만을 선별하여 계산하고, 파라미터를 업데이트 하는 방법입니다. $k$ 는 주로 작은 데이터셋에서는 5~20, 큰 데이터셋에서는 2~5의 값으로 설정합니다.
 
 $log \, p(w_{O} | w_{I}) = log \, σ(v\prime_{w_{O}}^{\top} v_{w_{I}}) + \sum_{i=1}^{k} \mathbb{E}_{w_{i} \sim P_{n}(w)}[log \, σ(−v\prime _{w_{i}}^{⊤} v_{w_{I}})]$
 
