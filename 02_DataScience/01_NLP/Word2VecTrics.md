@@ -91,7 +91,7 @@ Negative Sampling에서 사용하는 목적 함수는 결과값이 최대화될 
 
 Negative sampling(NEG)은 NCE를 변형하여 language modeling을 적용한 방법입니다. 모든 단어를 모두 계산하지 않고 근사하여 값을 구하는데, 주변 단어가 아닌 틀린 단어들에 대해 $k$ 개만을 선별하여 계산하고, 파라미터를 업데이트 하는 방법입니다. $k$ 는 주로 작은 데이터셋에서는 5~20, 큰 데이터셋에서는 2~5의 값으로 설정합니다.
 
-$p(w_{O} | w_{I}) = σ(v\prime_{w_{O}}^{\top} v_{w_{I}}) + \sum_{i=1}^{k} \mathbb{E}_{w_{i} \sim P_{n}(w)}[log \, σ(−v\prime _{w_{i}}^{⊤} v_{w_{I}})]$
+$ J_{t}(\theta) = \sum log \, σ(v\prime_{w_{O}}^{\top} v_{w_{I}}) + \sum_{i=1}^{k} \mathbb{E}_{w_{i} \sim P_{n}(w)}[log \, σ(−v\prime _{w_{i}}^{⊤} v_{w_{I}})]$
 
 $P_{n}(w)$ 은 noise distribution이며, unigram distribution을 따르고, 단어 $w$ 가 **학습에 사용될 확률**입니다. Positive sample을 의미하는 좌측 항의 경우 ‘$(w,c)$ 조합이 이 corpus에 있을 확률’ 을 정의하며, negative sample의 경우 ‘$(w,c)$ 조합이 이 corpus에 없을 확률’을 정의합니다. 이후, 각각을 더하여 log를 취하고 정리하면, 위과 같은 형태의 식이 됩니다.
 
@@ -117,7 +117,7 @@ Subsampling은 단어들의 등장 빈도에 따라 해당 step에서의 학습 
 
 $P(w_{i}) = 1 - \sqrt{\frac{t}{f(w_{i})}}$
 
-$f(w)$ 은  negative sampling에서와 동일한 의미이며, hyper parameter인 $t$ 일정 값 이상일 때에만 제외한다는 의미의 threshold 값이며, 주로 0.00001($10^{-5}$)의 값ㅇ을 사용합니다. 만약 $f(w)$ 가 0.01인 빈도가 매우 높은 단어가 있을 때, $P(w)$ 는 0.9684이므로, 100번의 학습 기회가 주어질 경우 대략 96번 정도는 학습에서 제외됩니다.
+$f(w)$ 은  negative sampling에서와 동일한 의미이며, hyper parameter인 $t$ 일정 값 이상일 때에만 제외한다는 의미의 threshold 값이며, 주로 0.00001($10^{-5}$)의 값을 사용합니다. 만약 $f(w)$ 가 0.01인 빈도가 매우 높은 단어가 있을 때, $P(w)$ 는 0.9684이므로, 100번의 학습 기회가 주어질 경우 대략 96번 정도는 학습에서 제외됩니다.
 
 <br>
 
@@ -135,3 +135,4 @@ $\delta$ 의 경우 threshold 역할을 하며, 구문 파악을 위해 2~4 회 
 
 
 
+
