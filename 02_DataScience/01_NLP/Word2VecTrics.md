@@ -1,8 +1,19 @@
-# Skip-grams
+# Word2Vec Trics
 
-Variants of Skip-grams.
+아래 나오는 방법들은 Word2Vec의 계산 복잡도를 감소시키고, 보다 효율적인 학습을 하기 위한 제안입니다. Skip-gram 뿐만 아니라, CBOW 또한 적용할 수 있는 방법론들이며, 아래에서는 skip-gram에 중점을 두고 설명하겠습니다. 아래에 소개되는 내용은 다음 네 가지입니다.
 
-## Objective Funtion
+- Hierarchical Softmax
+- Negative Sampling
+- Subsampling
+- Training Phrases
+
+앞의 세 가지는 택 1하여 사용하는 것이 아니라, 하나만 적용할 수도, 모두 적용할 수도 있습니다. 네 번째의 Training Phrases의 경우 앞의 세 알고리즘 처럼 시간 복잡도를 줄이는 방법에 대해 얘기하는 것이 아니라, word2vec을 통해 구문을 학습하는 방법에 대해 얘기합니다.
+
+<br>
+
+<br>
+
+## Skip-gram's Objective Funtion
 
 $maximize \; J(\theta) =  \frac{1}{T} \sum_{t=1}^{T} \sum_{-c \le j \le c , j \neq 0} log \, p(w_{t + j} | w_{t})$
 
