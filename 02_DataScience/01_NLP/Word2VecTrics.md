@@ -9,6 +9,10 @@
 
 앞의 세 가지는 택 1하여 사용하는 것이 아니라, 하나만 적용할 수도, 모두 적용할 수도 있습니다. 네 번째의 Training Phrases의 경우 앞의 세 알고리즘 처럼 시간 복잡도를 줄이는 방법에 대해 얘기하는 것이 아니라, word2vec을 통해 구문을 학습하는 방법에 대해 얘기합니다.
 
+### References
+
+[Chris McCormick](http://mccormickml.com/2017/01/11/word2vec-tutorial-part-2-negative-sampling/)
+
 <br>
 
 <br>
@@ -93,19 +97,19 @@ Negative sampling(NEG)은 NCE를 변형하여 language modeling을 적용한 방
 
 $ J_{t}(\theta) = \sum log \, σ(v\prime_{w_{O}}^{\top} v_{w_{I}}) + \sum_{i=1}^{k} \mathbb{E}_{w_{i} \sim P_{n}(w)}[log \, σ(−v\prime _{w_{i}}^{⊤} v_{w_{I}})]$
 
-$P_{n}(w)$ 은 noise distribution이며, unigram distribution을 따르고, 단어 $w$ 가 **학습에 사용될 확률**입니다. Positive sample을 의미하는 좌측 항의 경우 ‘$(w,c)$ 조합이 이 corpus에 있을 확률’ 을 정의하며, negative sample의 경우 ‘$(w,c)$ 조합이 이 corpus에 없을 확률’을 정의합니다. 이후, 각각을 더하여 log를 취하고 정리하면, 위과 같은 형태의 식이 됩니다.
-
-하지만, 사실상 negative sample을 다루는 오른쪽 항은 별도의 objective의 형태로 학습됩니다. 왜냐하면 이렇게 확률적으로 negative sample들을 구성할 때, 모든 corpus가 학습될 수 있도록 조절해야 하기 때문입니다.
+$P_{n}(w)$ 은 noise distribution이며, unigram distribution을 따르고, 단어 $w$ 가 **학습에 사용될 확률**입니다. Positive sample을 의미하는 좌측 항의 경우 ‘$(w,c)$ 조합이 이 corpus에 있을 확률’ 을 정의하며, negative sample의 경우 ‘$(w,c)$ 조합이 이 corpus에 없을 확률’을 정의합니다. $\sigma(v_n^Tv_{w_i})+\sigma(-v_n^Tv_{w_i}) = 1$ 이므로, negative sample인 $w_{i}$ 에 대한 계산 결과 값의 역이 커지게 파라미터를 학습시킴으로써, $w_{i}$ 의 계산 결과를 감소시키도록 학습합니다.
 
 <br>
 
 ### Negative samples 선정
 
+$P_{n}(w_{i}) = \frac{f(w_{i})}{\sum_{j=1}^{n}\, f(w_{j})}$
+
+$f(w)$ 는 단어 $w$ 가 데이터셋(말뭉치) 내에서 등장하는 비율(단어의 등장 횟수 / 전체 단어수)이며, 식으로 표현하면 $\frac {|V_{w_{i}}|}{|V|}$ 입니다. 그런데 이 식은 Unigram Distribution을 따르며, 이는 비율이 높은 단어일 수록 비례하게 높은 확률을 갖고 있습니다. 따라서 보다 학습 기회를 공평하게 갖기 위해 아래와 같이 식을 변경하는 것이 권장됩니다.
+
 $P_{n}(w_{i}) = \frac{f(w_{i})^{3/4}}{\sum_{j=1}^{n}\, f(w_{j})^{3/4}}$
 
-$f(w)$ 은 단어 $w$ 가 데이터셋(말뭉치) 내에서 등장하는 비율(단어의 등장 횟수 / 전체 단어수)입니다. $\frac{3}{4}$ 의 지수승을 사용하여 확률을 구하는 것은, 개수가 적은 값을 갖는 데이터의 확률은 보다 크게, 많은 개수의 데이터는 보다 작게 만듭니다.
-
-> 보통 Negative Sampling에서 샘플들을 뽑는 것은 ‘Noise Distribution’ 을 정의하고 그 분포를 이용하여 단어들을 일정 갯수 뽑아서 사용하는데, 논문에서는 여러 분포를 실험적으로 사용해본 결과 ‘Unigram Distribution의 3/4 승’ (여기서 Unigram Distribution은 단어가 등장하는 비율에 비례하게 확률을 설정하는 분포라고 할 수 있다. 이 경우 각 확률을 3/4승 해준 후, Normalization factor로 나누어서 단어가 등장할 확률로 사용한 것이다) 을 이용한 분포를 이용해서 실험한 결과 unigram, uniform 등 다른 분포들보다 훨씬 좋은 결과를 얻을 수 있었다고 한다.
+$\frac{3}{4}$ 의 지수승을 사용하여 확률을 구하는 것은, 개수가 적은 값을 갖는 데이터의 확률은 보다 크게, 많은 개수의 데이터는 보다 작게 만듭니다.
 
 <br>
 
@@ -131,8 +135,4 @@ $score(w_{i}, w_{j}) = \frac{count(w_{i}, w_{j}) - \delta}{count(w_{i}) \times c
 
 Skip-gram 모델을 전체 n-grams를 통해 학습할 경우 지나친 메모리 소비를 유발합니다. 따라서 위의 식을 통해 unigram과 bigram을 counting하고, 이를 여러번 시행하여 2 개 단어 길이 이상의 구문들 또한 tokenizing합니다.
 
-$\delta$ 의 경우 threshold 역할을 하며, 구문 파악을 위해 2~4 회 학습 데이터를 살펴보는 동안 그 값을 감소시켜 보다 긴 길이의 구문들을 포착할 수 있도록 합니다.
-
-
-
-
+$\delta$ 의 경우 지나치게 드믄 단어가 구문이 되는 것을 방지하는 역할을 하며, 구문 파악을 위해 2~4 회 학습 데이터를 살펴보는 동안 그 값을 감소시켜 보다 긴 길이의 구문들을 포착할 수 있도록 합니다.
