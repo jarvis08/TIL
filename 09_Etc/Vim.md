@@ -1,6 +1,12 @@
 # Vim
 
-Vi의 adbanced 버전인 Vim의 단축키입니다.
+Vi의 advanced 버전인 Vim의 단축키입니다.
+
+<br>
+
+### 기본 상태
+
+`/단어`: 단어 검색
 
 `dd`: 행 삭제
 
@@ -16,10 +22,14 @@ Vi의 adbanced 버전인 Vim의 단축키입니다.
 
 ### Visual Mode
 
-`v`: Visual Mode 실행
+`v`: Visual Mode 실행 및 케릭터 단위 선택
+
+`V`: 줄(행) 단위 선택
+
+`ctrl+v`: 블록으로 선택(여러 줄, 공통 범위 선택에 용이)
 
 `d`: 잘라내기
 
-`y`: 복사하기
+`y`: (Yank) 복사하기
 
-`p`: 붙여넣기
+`p`: (Put)붙여넣기
