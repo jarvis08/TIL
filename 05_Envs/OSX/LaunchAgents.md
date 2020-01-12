@@ -21,3 +21,12 @@ PID	Status	Label
 
 `launchctl unload -w /Library/LaunchAgents/프로그램명.plist`
 
+<br>
+
+### 사용 후기
+
+매번 macbook을 실행할 때 마다 Pulse Secure라는 앱이 실행되어 위 과정을 통해 시작 프로그램에서 제거했습니다.  이 앱은 회사 네트워크로 SSLVPN 접속하는데에 사용하는 앱입니다. 그런데 위 작업 수행 후 해당 앱을 실행하면 앱 자체의 실행은 되지만, 제대로 작동하지 않는 문제가 발생했습니다.
+
+`launchctl load -w /Library/LaunchAgents/net.pulsesecure.pulsetray.plist`
+
+따라서 위 명령어로 다시 이를 `load`했고, 다시 정상적으로 작동합니다.. 해당 명령어가 단순히 시작 프로그램을 조정하는 것이 아닌, Service Load/Unload와 관련된 조작인 것으로 추정되며, 조금 더 알아봐야 할 것 같습니다.
