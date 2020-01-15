@@ -62,7 +62,7 @@ NERDTree는 탐색기 기능을 사용할 수 있는 기능입니다.
 Plug 'scrooloose/nerdtree'
 ```
 
-vim 실행 시 NERDTree를 자동으로 실행시키고 싶다면, 다음을 추가합니다.
+ `/`로 파일 검색을 할 수 있으며, `C`는 선택한 폴더를 root 폴더로 만들어줍니다. 네비게이션을 끝내는 명령어는 `q` 입니다. Vim 실행 시 NERDTree를 자동으로 실행시키고 싶다면, 다음을 추가합니다.
 
 ```bash
 autocmd vimenter * NERDTree
