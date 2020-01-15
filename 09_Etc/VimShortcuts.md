@@ -1,4 +1,4 @@
-# Vim
+# Vim Shortcuts
 
 출처: [Outsider](https://blog.outsider.ne.kr/540)
 
