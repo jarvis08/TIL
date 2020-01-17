@@ -4,6 +4,10 @@
 
 Vi의 심화 버전인 Vim(Vi IMproved)의 단축키입니다.
 
+- `\g`: go to definition
+
+- `:e#`: go to definition 후, 다시 원래 보던 곳으로 돌아가기
+
 <br>
 
 ### Basic
