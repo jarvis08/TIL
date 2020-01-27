@@ -105,6 +105,9 @@ $ git remote remove origin
 $ git clone address/repository.git
 # 원하는 디렉토리명으로 repository를 clone
 $ git clone address/repository.git new_name
+
+# Delete file from remote repository(maintain local repo's files)
+git rm -r --cached <target>
 ```
 
 <br>
