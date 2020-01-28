@@ -48,6 +48,6 @@ kakao             5697   0.0  0.1  4285496  19988 s000  S+    3:29PM   0:00.20 /
 kakao             5671   0.0  0.0  4304700   7280   ??  Ss    3:28PM   0:24.31 /usr/local/Cellar/supervisor/4.1.0_1/libexec/bin/python3.8 /usr/local/bin/supervisord -c spvc1.conf
 kakao             7724   0.0  0.0  4268296    676 s001  S+    1:33PM   0:00.00 grep --color=auto --exclude-dir=.bzr --exclude-dir=CVS --exclude-dir=.git --exclude-dir=.hg --exclude-dir=.svn supervisor
 # supervisor의 pid인 5697을 강제 종료
-$ kill 5697
+$ kill -9 5697
 ```
 
