@@ -136,6 +136,7 @@ Vi의 심화 버전인 Vim(Vi IMproved)의 단축키입니다.
 - `v, i, w`: 현재 단어 선택
 - `(Visual Mode), 0`: 라인 맨 앞으로 드래그
 - `(Visual Mode), shift+0`: 라인 맨 뒤로 드래그
+- `(ctr+shift+v), I, 입력, <esc>`:  블록단위 선택하여 여러 줄에 한번에 입력하기
 
 <br>
 
