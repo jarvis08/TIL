@@ -21,3 +21,15 @@ source .bashrc
 source .bash_profile
 ```
 
+```bash
+# python 2
+$ python -m virtualenv venv
+$ virtualenv venv --python=python
+$ virtualenv venv --python=python2.7
+
+# python 3
+$ python3 -m virtualenv venv
+$ virtualenv venv --python=python3
+$ virtualenv venv --python=python3.5
+```
+
