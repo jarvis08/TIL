@@ -5,8 +5,15 @@
   ```shell
   /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
   export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
-  brew install python@2  # or python (Python 3)
   ```
+  
+  삭제하는 코드는 위의 `install`을 `uninstall`로 대체하면 됩니다.
+  
+  ```bash
+  /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/uninstall)"
+  ```
+  
+  
   
 - Formula 설치 위치
 
