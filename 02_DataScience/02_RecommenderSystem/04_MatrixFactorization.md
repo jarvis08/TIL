@@ -20,6 +20,8 @@ Collaborative filtering은 다시 두 가지로 나뉜다.
 - Neighborhood methods
 - Latent factor models
 
+![04_Neighborhood_methods](./assets/04_Neighborhood_methods.png)
+
 위에서 설명한 예시가 바로 neighborhood methods이다. `user_1`이 rating한 item들을 토대로 `user_1`과 유사한 또 다른 `user_2`를 찾는다. 그 후, 찾아낸 비슷한 `user_2`의 rating들을 토대로 `user_1`이 경험해보지 못한, `user_1`이 높게 rating할 것이라 예측되는 item들을 추천한다.
 
 Latent factor model은 user들이 rating한 내용들을 토대로 user들의 특성을 나타내는 matrix와 item들의 특성을 나타내는 matrix로 나눈다. 즉, neighborhood method들과 같이 유사도를 통해 값을 예측하는 것이 아니라, user와 item의 고유한 feature값을 생성(예측)한다.
@@ -40,4 +42,30 @@ Latent factor model은 user들이 rating한 내용들을 토대로 user들의 �
 <br>
 
 ## Matrix Factorization
+
+![04_Matrix_Factorization](./assets/04_Matrix_Factorization.png)
+
+Latent factor model의 가장 성공적인 알고리즘들 중 matrix factorization을 기반하여 개발된 알고리즘들이 많다. Matrix factorization은 user feature와 item feature의 inner(dot) product가 user가 평가한 item에 대한 rating이 되도록 학습한다. Hpyer parameter인 dimension $f$로 표현되는 user $u$의 벡터인 $p_{u} \in \real^{f}$와 item의 $i$벡터인 $q_{i} \in \real^{f}$가 있으며, 이 두 벡터의 dot product인 $q^{T}_{i}p_{u}$를 계산하여 item $i$와 user $u$의 interaction($r_{ui}$)을 계산한다.
+
+$\hat r_{ui} = q^{T}_{i}p_{u}$
+
+이렇게 계산되는 $\hat r_{ui}$를 실제 user $u$가 rating한 item $i$의 $\hat r_{ui}$와 비교하여 학습한다. 학습 이후에는 학습에 사용되는 모든 user들에 대해 모든 item들에 대한 user의 rating을 예측할 수 있다.
+
+<br>
+
+### Regularization
+
+그런데 sparse한 user-item matrix를 사용하여 학습을 진행할 시 overfitting될 가능성이 크다.
+
+<br>
+
+<br>
+
+## Learning
+
+### Stochastic Gradient Descent, SGD
+
+### Alternating Least Squares, ALS
+
+
 
