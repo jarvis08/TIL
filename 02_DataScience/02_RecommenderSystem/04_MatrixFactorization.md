@@ -27,9 +27,11 @@ Collaborative filtering은 다시 두 가지로 나뉜다.
 - Neighborhood methods
 - Latent factor models
 
-![04_Neighborhood_methods](./assets/04_Neighborhood_methods.png)
+![04_NeighborhoodMethod](./assets/04_NeighborhoodMethod.png)
 
-위에서 설명한 예시가 바로 neighborhood methods이다. `user_1`이 rating한 item들을 토대로 `user_1`과 유사한 또 다른 `user_2`를 찾는다. 그 후, 찾아낸 비슷한 `user_2`의 rating들을 토대로 `user_1`이 경험해보지 못한, `user_1`이 높게 rating할 것이라 예측되는 item들을 추천한다.
+위에서 설명한 예시와 <Figure 1>이 neighborhood methods이다. `user_1`이 rating한 item들을 토대로 `user_1`과 유사한 또 다른 `user_2`를 찾는다. 그 후, 찾아낸 비슷한 `user_2`의 rating들을 토대로 `user_1`이 경험해보지 못한, `user_1`이 높게 rating할 것이라 예측되는 item들을 추천한다.
+
+<Figure 1>으로 설명하자면, Joe가 시청했으며 높게 rating한 영화 세 편을 토대로 Joe와 유사하게 평가한 유저들을 찾는다. 그리고 탐색한 유저들이 많이 시청한, 그리고 높게 평가한 영화들을 우선으로 하여 Joe가 시청하지 않은 영화를 Joe에게 추천한다.
 
 Latent factor model은 user들이 rating한 내용들을 토대로 user들의 특성을 나타내는 matrix와 item들의 특성을 나타내는 matrix로 나눈다. 즉, neighborhood method들과 같이 유사도를 통해 값을 예측하는 것이 아니라, user와 item의 고유한 feature값을 생성(예측)한다.
 
@@ -51,15 +53,17 @@ Latent factor model은 user들이 rating한 내용들을 토대로 user들의 �
 
 ## Matrix Factorization
 
-Matrix factorization은 CF의 핵심적인 문제점들 중 scaleability와 data sparsity에 대한 해결책으로 자주 사용되며, 현재까지도 가장 많이 사용되고 있는 추천 알고리즘들 중 하나이다. 아래 <Figure 2>는 latent factor model의 예시이며, 이와 같은 형태로 matrix의 feature가 표현된다.
+Matrix factorization은 CF의 핵심적인 문제점들 중 scaleability와 data sparsity에 대한 해결책으로 자주 사용되며, 현재까지도 가장 많이 사용되고 있는 추천 알고리즘들 중 하나이다. 아래 <Figure 2>는 latent factor model의 예시이며, 이와 같은 형태로 matrix의 feature가 표현된다. 유저 별 자신의 성향을 벡터 공간에 표시하는 한편, 영화에 대해서도 영화의 성향에 따라 표현된다.
 
-![04_Matrix_Factorization](./assets/04_Matrix_Factorization.png)
+![04_LatentFactorModel](./assets/04_LatentFactorModel.png)
 
 Latent factor model의 가장 성공적인 알고리즘들 중 matrix factorization을 기반하여 개발된 알고리즘들이 많다. Matrix factorization은 user feature와 item feature의 inner(dot) product가 user가 평가한 item에 대한 rating이 되도록 학습한다. Hpyer parameter인 dimension $f$로 표현되는 user $u$의 벡터인 $p_{u} \in \real^f$와 item의 $i$벡터인 $q_{i} \in \real^f$가 있으며, 이 두 벡터의 dot product인 $q^T_ip_u$를 계산하여 item $i$와 user $u$의 interaction($r_{ui}$)을 계산한다.
 
 $\hat r_{ui} = q^T_ip_u$
 
 이렇게 계산되는 $\hat r_{ui}$를 실제 user $u$가 rating한 item $i$의 $\hat r_{ui}$와 비교하여 학습한다. 학습 이후에는 학습에 사용되는 모든 user들에 대해 모든 item들에 대한 user의 rating을 예측할 수 있다.
+
+Matirx factorization을 학습하는 방법은 기존과 같이 SGD를 사용할 수 있으며, 기타 여러 가지 방법들이 존재한다. 하지만 필요 resource 대비 가장 우수한 성능을 보이고 있으며, 현재까지도 활발히 사용되고 있는 것은 ALS이다.
 
 <br>
 
@@ -84,26 +88,38 @@ $f(U, M) = \sum_{(i, j) \in I}(r_{ij} - u^T_im_j)^2 + \lambda \left(\sum_in_{u_i
 - $I_i$: user $i$ 가 rating한 movie들의 집합($n_{u_{i}}$ 는 $I_i$의 cardinality)
 - $I_j$: movie $j$ 를 rating한 user들의 집합($n_{m_j}$ 는 $I_j$의 cardinality)
 
-위에 언급한 학습 단계를 따라, 처음에 initializing한 item matrix $M$을 사용하여 $U$를 학습하는 것으로 시작하는데, 이는 $U$의 특정 column인 $u_i$는 regularized linear least squares problem을 해결하는 행위이다. 즉, user $i$가 평가한 rating 값($r_{ij}$)과 user $i$가 rating했던 movie $j$의 feature 값인 $m_j$ 를 사용하여 $u_i$ feature를 학습한다.
+<br>
+
+### 학습 과정
+
+기존의 $\hat r_{ui} = q^T_ip_u$ 식은 **nonconvex**한 성질 때문에 일반적인 deep learning처럼 loss를 계산한 후 미분하여 weight를 업데이트 하기 어렵다. 따라서 $U$ 혹은 M을 고정시킨 후, **objective funcion의 미분 0이되는 지점**을 찾아 $u_i$ 혹은 $m_j$에 대한 예측값을 구한다.
+
+위에서 언급한 학습 단계를 따라, 처음에 initializing한 item matrix $M$을 사용하여 $U$를 학습하는 것으로 시작한다. 즉, user $i$가 평가한 rating 값($r_{ij}$)과 user $i$가 rating했던 movie $j$의 feature 값인 $m_j$를 사용하여 해당 시점에서의 $u_i$ feature를 구한다.
 
 $\frac{1}{2}\frac{\partial f}{\partial u_{ki}}=0\ ,\qquad \forall i,\ k$
 
 $\Rightarrow \sum_{j \in I_{i}} (u^T_im_j - r_{ij})m_{kj} + \lambda n_{u_i}u_{ki} = 0\ ,\qquad \forall i,\ k$
 
+> $u^T_im_j$ 값이 상수이며, 식을 변형시켜 transpose를 취해도 같은 값을 갖는다. 또한 $m_{kj}$가 곱해지는 위치도 고려하지 않아도 되므로, 아래와 같이 식을 변경할 수 있다.
+
 $\Rightarrow \sum_{j \in I_i}m_{kj}m^T_j u_i + \lambda n_{ui} u_{ki} = \sum_{j \in I_i}m_{kj}r_{ij}\ ,\qquad \forall i,\ k$
 
 $\Rightarrow (M_{I_i}M^T_{I_i} + \lambda n_{u_i}E)u_i = M_{I_i}R^T(i, I_i)\ ,\qquad \forall i$
+
+> 단위 행렬인 $E$를 곱해주는 이유는 앞의 $M_{I_i}M^T_{I_i}$와 형태를 맞추기 위함이다.
 
 이후 아래와 같이 치환하여 표현한다.
 
 - $A_i = M_{I_i}M^T_{I_i} + \lambda n_{u_i}E$
   - $M_{I_i}$: $M$에서 $j \in I_i$에 속하는 columns의 sub-matrix
+  - user $i$가 평가한 movie들의 현재 feature값들을 곱한 후, user $i$가 평가한 movie 개수를 이용하여 regularize
 - $V_i = M_{I_i}R^T(i,\,I_i)$
   - $R(i,\,I_i)$: $R$의 $i$-th row이며, columns가 $j \in I_i$인 값들
+  - user $i$가 평가한 movie들의 feature와 해당 movie들의 실제 $r_{ij}$ 값을 곱함
 
 $\Rightarrow u_i = A^{-1}_i V_i\ ,\qquad \forall i$
 
-$U$에 대한 학습은 위와 같이 진행하며, $U$를 고정시킨 후 $M$을 학습하는 것은 $U$를 학습할 때와 유사한 과정을 거치며, 다음과 같다.
+$U$에 대한 학습은 위와 같이 진행하며, $U$를 고정시킨 후 $M$을 학습하는 것 또한 $U$를 학습할 때와 유사한 과정을 거친다.
 
 $\frac{1}{2}\frac{\partial f}{\partial m_{ki}}=0\ ,\qquad \forall j,\ k$
 
@@ -114,7 +130,7 @@ $\frac{1}{2}\frac{\partial f}{\partial m_{ki}}=0\ ,\qquad \forall j,\ k$
 
 $\Rightarrow m_j = A^{-1}_j V_j\ , \qquad \forall j$
 
-
+위와 같이 $U$와 $M$을 학습하는 방법을 반복해서 진행하며, 흔히 아는 deep learning의 학습 방법과는 다르게 미분한 값을 그대로 적용하며 feature 값을 갱신해 나간다.
 
 
 
