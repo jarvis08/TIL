@@ -8,7 +8,9 @@ I record and organize almost every knowledge I study in this TIL repository and 
 
 제가 습득하는 대부분의 지식은 이 TIL 저장소와 [Notion](https://www.notion.so/Links-of-jarvis08-3ec5cb8df1bf453e9d78409976da54ab)에 정리하여 기록합니다. 지금 진행중인 작업들에 대한 계획은 [Trello 게시판](https://trello.com/b/L2OzHmaz/get-it)에서 확인할 수 있습니다. 만약 제 이력서와 포트폴리오를 보고 싶으시다면 제 [Github Page](https://jarvis08.github.io)를 방문하세요. 프로젝트 제목을 클릭하면 상세 내용을 볼 수 있습니다.
 
-<br><br>
+<br>
+
+<br>
 
 ## On Going Project.
 
@@ -24,13 +26,14 @@ GDG(Google Developers Group) 제주에서 주관하여 진행하는 오픈 소�
 
 ## Now studying.
 
-I'm studying about Data Science, and trying to understand various data structures deeply by implementing them with C++.
+현재 공부 목표는 기본 지식을 탄탄히 하는 것이며, 중점 내용은 다음과 같습니다.
 
-데이터 사이언스에 대한 공부하고 있으며, 다양한 자료 구조를 C++로 구현하며 깊이 있는 이해를 시도하고 있습니다.
+- C++ 프로그래밍 및 자료 구조
+- 기초 통계 및 데이터 사이언스
 
 ### MOOC
 
-- [모두를 위한 딥러닝 시즌 2](https://deeplearningzerotoall.github.io/season2/) with PyTorch
+- [Object-Oriented Data Structures in C++](https://www.coursera.org/learn/cs-fundamentals-1?#syllabus)
 
 ### Book
 
@@ -38,13 +41,9 @@ I'm studying about Data Science, and trying to understand various data structure
 
   Schutt, Rachel /  O'Neil, Cathy
   
-- [Code](http://www.charlespetzold.com/books/)
+- [Hands on Machine Learning](http://mobile.kyobobook.co.kr/showcase/book/KOR/9791162240731)
 
-  Charles Petzold
-  
-- [Introduction to Algorithms](http://www.hanbit.co.kr/store/books/look.php?p_code=B9722727468) with C++
-
-  Thomas H.Cormen, Charles E.Leiserson, Ronald L.Rivest, Clifford Stein
+  Aurelien Geron
 
 <br>
 
@@ -79,6 +78,14 @@ I'm studying about Data Science, and trying to understand various data structure
 - [Mathematics for Machine Learning](https://mml-book.github.io/)
 
   Marc Peter Deisenroth, A.Aldo Faisal, Cheng Soon Ong
+  
+- [Introduction to Algorithms](http://www.hanbit.co.kr/store/books/look.php?p_code=B9722727468) with C++
+
+  Thomas H.Cormen, Charles E.Leiserson, Ronald L.Rivest, Clifford Stein
+
+- [Code](http://www.charlespetzold.com/books/)
+
+  Charles Petzold
 
 ### MOOC
 
