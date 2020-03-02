@@ -67,6 +67,16 @@ Matirx factorization을 학습하는 방법은 기존과 같이 SGD를 사용할
 
 <br>
 
+### Handling Sparsity Problem
+
+MF에서 사용하는 sparsity 문제 해결 방법은 신뢰도를 사용하는 것이다. Sparsity problem을 겪고 있는 matrix의 경우 평가 값($r_{ui}$)이 0인 경우가 대부분이다. 다음 $c$를 구하는 식은 Matrix에 존재하는 positive feedback들에 대해 점수화하는 것으로, 1점을 몇점으로 계산할 것인가를 결정한다. 계산 식은 다음과 같다.
+
+$c_{ui} = 1 + \alpha r_{ui}$
+
+User `u`가 item `i`에 대해 평가한 점수에 $\alpha$ 값을 곱하고 1을 더하는 식이다. $\alpha$ 값은 hyper parameter인데, 이렇게 계산함으로서 값이 0인 모든 아이템들에 대해서도 값을 부여할 수 있게 된다. 즉, 모든 user들이 모든 item들에 대해 평가할 수 있도록 한다.
+
+<br>
+
 <br>
 
 ## Alternating Least Squares, ALS
