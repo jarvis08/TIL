@@ -10,12 +10,13 @@ IDE, Integrated Development Environments는 알아서 컴파일 후 실행해 �
 3. `make` 명령어로 컴파일
 4. `./compiled_filename` 명령어로 실행
    - `./` 상대 경로 없으면 에러
+5. `make clean` 명령어를 통해 object 파일들과 executable file을 삭제
 
 <br><br>
 
-## Appendix
+## 1. Appendix
 
-### `generic.mk`
+### 1-1. `generic.mk` 내용
 
 ```makefile
 ## generic.mk
@@ -101,7 +102,7 @@ tidy: clean
 
 <br>
 
-### `Makefile`
+### 1-2. `Makefile` 내용
 
 아래 파일을 프로젝트 내부에 생성 후, `make` 명령어 만으로도 다음 파일 구성을 컴파일
 

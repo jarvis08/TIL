@@ -1,8 +1,10 @@
-# C++
+# C++ Intro
 
 C++는 객체지향 프로그래밍 언어(OOP, Objective Oriented Programming)입니다.
 
-### Strongly typed programming language
+<br>
+
+### 0-1. Strongly typed programming language
 
 ```cpp
 // type name = value
@@ -27,24 +29,24 @@ The type of a variable defines the contents of the variable. Every type is eithe
 
 <br>
 
-### `main` 함수
+### 0-2. `main` 함수
 
 Convention 중 하나는, main() 함수를 정의할 때 int 타입으로 정의하는 것입니다. `int` 타입으로 선언하여 프로그램이 무사히 끝마쳐졌을 경우 0을 반환하도록 하며, 에러가 발생했을 경우에는 에러 메세지를 반환합니다.
 
 <br><br>
 
-## OOP - Encapsulation
+## 1. OOP - Encapsulation
 
 Encloses data and funtionality into a single unit(called a class)
 
 C++에서는 data와 funtionality를 Pirvate/Public으로 나누어 보호
 
-- Public: members can be accessed by client code
-- Private: members cannot be accessed by client code, only used within the class itself
+- `public`: members can be accessed by client code
+- `private`: members cannot be accessed by client code, only used within the class itself
 
 <br>
 
-### Header file `.h`
+### 1-1. Header file `.h`
 
 `.h` 파일은 implementation 파일인 `.cpp`로부터 클래스의 interface만을 분리시켜 정의합니다. 즉, 멤버 변수와 멤버 함수가 어떤 내용인지, 어떻게 사용되는지는 implementation(`.cpp`)에서 다루며, 헤더 파일은 그저 선언만 합니다.
 
@@ -69,7 +71,7 @@ class Cube {
 
 <br>
 
-### Implementation file `.cpp`
+### 1-2. Implementation file `.cpp`
 
 우리가 class와 다른 코드들을 통해 실행하고자 하는 모든 로직이 포함되는 파일입니다.
 
@@ -106,7 +108,7 @@ int main() {
 
 <br>
 
-## C++ Standard Library, `std`
+## 2. C++ Standard Library, `std`
 
 C++ Standard Template Library(stl)라고도 부릅니다.
 
@@ -114,7 +116,7 @@ C++ Standard Template Library(stl)라고도 부릅니다.
 
 <br>
 
-### iostream
+### 2-1. iostream
 
 ```c++
 #include <iostream>
@@ -124,7 +126,7 @@ std::cout << "Hello, world" << std::endl;
 
 <br>
 
-### Standard Library 2 Global Namespace
+### 2-2. Standard Library 2 Global Namespace
 
 모든 standard library의 functionality들은 `std` 라는 namespace를 사용합니다. 만약 자주 사용된다면, `using` 명령어를 사용하여 global space로 import할 수 있습니다.
 
@@ -148,7 +150,7 @@ int main() {
 
 <br>
 
-## Specifyed Namespace
+### 2-3. Specifyed Namespace
 
 앞에서 `Cube`라는 클래스를 생성해서 사용했는데, 'cube' 라는 단어는 매우 흔히 사용됩니다. 따라서 `Cube` 클래스를 namespace에서 특정짓는 작업을 해보겠습니다. 여기서는 `uiuc`라는 이름으로 지정합니다.
 
@@ -206,3 +208,10 @@ int main() {
 }
 ```
 
+<br>
+
+<br>
+
+## 3. From Source files to Executable file
+
+![Source2Exe](./assets/Source2Exe.png)
