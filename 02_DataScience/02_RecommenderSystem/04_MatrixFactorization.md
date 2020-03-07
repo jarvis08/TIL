@@ -102,7 +102,7 @@ $f(U, M) = \sum_{(i, j) \in I}(r_{ij} - u^T_im_j)^2 + \lambda \left(\sum_in_{u_i
 
 ### 학습 과정
 
-기존의 $\hat r_{ui} = q^T_ip_u$ 식은 **nonconvex**한 성질 때문에 일반적인 deep learning처럼 loss를 계산한 후 미분하여 weight를 업데이트 하기 어렵다. 따라서 $U$ 혹은 M을 고정시킨 후, **objective funcion의 미분 0이되는 지점**을 찾아 $u_i$ 혹은 $m_j$에 대한 예측값을 구한다.
+기존의 $\hat r_{ui} = q^T_ip_u$ 식은 **nonconvex**하며, $q$와 $p$를 동시에 학습해야 하므로, 일반적인 deep learning처럼 loss를 계산한 후 미분하여 weight를 업데이트 하기 어렵다. 따라서 $U$ 혹은 M을 고정시킨 후, **objective funcion의 미분 0이되는 지점**을 찾아 $u_i$ 혹은 $m_j$에 대한 예측값을 구한다.
 
 위에서 언급한 학습 단계를 따라, 처음에 initializing한 item matrix $M$을 사용하여 $U$를 학습하는 것으로 시작한다. 즉, user $i$가 평가한 rating 값($r_{ij}$)과 user $i$가 rating했던 movie $j$의 feature 값인 $m_j$를 사용하여 해당 시점에서의 $u_i$ feature를 구한다.
 
