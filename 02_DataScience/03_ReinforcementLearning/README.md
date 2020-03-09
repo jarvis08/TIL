@@ -40,7 +40,7 @@ key words
 
 **environment**, **agent**, **state**, **action**, **episodes**
 
-![MDP1.png](./images/MDP1.png)
+![MDP1.png](./assets/MDP1.png)
 
 위에 그림은 Markov Chains의 한 예이다.
 
@@ -52,22 +52,22 @@ key words
 
 여기서 환경이란 이 그림이 표현하는 전반적인 상황이다. 상태는 환경에 속해있고, 에이전트는 환경을 벗어날 수 없다.
 
-![state_transition_probability.png](./images/state_transition_probability.png)
+![state_transition_probability.png](./assets/state_transition_probability.png)
 
 이러한 마르코브 환경에서 상태 s에서 상태 s'으로 갈 수 있는, 혹은 가게 되는 확률을 정의할 수 있는데 이를 state transition probability라고 부르고 위에 수식처럼 정의한다. 여기서 '|'는 contitional probability를 나타내는 것이 아니라, P함수가 $S_t \rightarrow S_{t+1}$인 함수라는 것을 나타낸다. 이렇게 정의된 P함수는 다음과 같이 matrix로도 정의할 수 있다.
 
-![state_transition_matrix.png](./images/state_transition_matrix.png)
+![state_transition_matrix.png](./assets/state_transition_matrix.png)
 
 예시의 state transition matrix는 다음과 같다. 빈곳은 0
 
-![example_state_transition_matrix.png](./images/example_state_transition_matrix.png)
+![example_state_transition_matrix.png](./assets/example_state_transition_matrix.png)
 
 다시 그림을 보자.
-![MDP1.png](./images/MDP1.png)
+![MDP1.png](./assets/MDP1.png)
 
 여기서 우리는 에피소드(episodes)를 정의할 수 있다. 에피소드란 에이전트가 에이전트의 시작 상태부터 종료 상태에 도달하여 움직이지 않을 때까지의 상태들을 말한다.
 
-![episodes](./images/episodes.png)
+![episodes](./assets/episodes.png)
 
 ---
 
@@ -79,25 +79,25 @@ key words
 
 Markov reward process는 value가 주어진 Markov chain이다. 
 
-![MRP.png](./images/MRP.png)
+![MRP.png](./assets/MRP.png)
 
 위 예시는 Markov chain을 배울 때 보았던 그림에 각 상태 별 reward를 추가한 것이다.
 
 Markov Reward Process의 formal한 정의는 다음과 같다.
 
-![markov_reward_process.png](./images/markov_reward_process.png)
+![markov_reward_process.png](./assets/markov_reward_process.png)
 
 여기서 reward function은 현재 agent의 t번 째 상태가 s일 때, 다음 t+1번 째 얻을 수 있는 reward의 평균값인데, 이는 $P_{ss'}$이 정의되었기 때문에 구할 수 있다. 
 
 이 reward와 discount factor로 return $G_t$를 정의할 수 있다.
 
-![return.png](./images/return.png)
+![return.png](./assets/return.png)
 
 return은 한 에피소드가 진행되었을 때, time-step t에서부터 에피소드 끝까지 받았던 reward와 discount factor의 power를 곱해 더한 값이다. discount factor가 1에 가까울 수록 미래의 reward를 중요하게 여긴다고 생각할 수 있다.
 
 이러한 return, state를 통해 state value function v(s)를 정의할 수 있다.
 
-![state_value_function.png](./images/state_value_function.png)
+![state_value_function.png](./assets/state_value_function.png)
 
 이 함수는 agent의 t의 상태가 s일때, 앞으로 생각할 수 있는 episodes를 이용하여 return과 확률을 구하고, 이를 곱하고 더해 평균을 구하는 함수이다.
 
@@ -119,11 +119,11 @@ v(s) &=& \mathbb{E}[G_t | S_t = s] \\
 
 이 Bellman equation을 matrix를 이용하여 간결하게 쓸 수 있다.
 
-![bellman_equation.png](./images/bellman_equation.png)
+![bellman_equation.png](./assets/bellman_equation.png)
 
 Bellman equation은 하나의 선형방정식이기 때문에 바로 솔루션을 구할 수 있다. 하지만 이 솔루션의 계산복잡도는 $O(n^3)$(n은 state의 개수)이기 때문에 state의 개수가 너무 많다면 계산하기 어렵다.
 
-![solving_bellman_equation.png](./images/solving_bellman_equation.png)
+![solving_bellman_equation.png](./assets/solving_bellman_equation.png)
 
 ---
 
@@ -133,40 +133,40 @@ Bellman equation은 하나의 선형방정식이기 때문에 바로 솔루션�
 
 Markov Decision Process란 decision이 있는 Markov reward process다.
 
-![MDP.png](./images/MDP.png)
+![MDP.png](./assets/MDP.png)
 
 자세한 정의는 다음과 같다.
 
-![definition_MDP.png](./images/definition_MDP.png)
+![definition_MDP.png](./assets/definition_MDP.png)
 
 MDP에서는 한 state에서 다른 state로 넘어갈 때, action이라는 요소가 추가된다. 이에 따라 reward function에도 변화가 생겼다. 본 예제에서는 Pub이 아닌 행동을 선택한다면 다음 state가 1의 확률로 정해지고 Pub을 선택하면, 0.2, 0.4, 0.4의 확률로 C1, C2, C3의 state가 된다.
 
 - 일반적인 MDP 그림
 
-![MDP2.png](./images/MDP2.png)
+![MDP2.png](./assets/MDP2.png)
 
 우리는 이제 action에 대한 선택이 생겼고 이에 대한 전략을 policy라고 말한다. policy는 action을 정하는 확률 분포 함수 형태로 표현되며 자세한 정의는 다음과 같다.
 
-![policy.png](./images/policy.png)
+![policy.png](./assets/policy.png)
 
 이러한 policy에 따라 추가적인 notation인 $P^{\pi}_{s, s'}, R^{\pi}_{s}$의 정의가 필요하다.
 
 - $P^{\pi}_{s, s'}$: state s에서 policy $\pi$를 취할 때, state s'에 도달할 확률
 - $R^{\pi}_{s}$: state s에서 policy $\pi$를 취할 때, 얻을 수 있는 reward
 
-![MDP_probability_reward.png](./images/MDP_probability_reward.png)
+![MDP_probability_reward.png](./assets/MDP_probability_reward.png)
 
 이제 확률 P와 reward R에 대한 정의가 생겼으니 state-value function을 다시 정의할 수 있다. 
 
-![state_value_function_with_policy.png](./images/state_value_function_with_policy.png)
+![state_value_function_with_policy.png](./assets/state_value_function_with_policy.png)
 
 이제 추가로 action-value function을 정의한다. action-value function은 t 번째 state에서 특정 a라는 action을 취했을때, 얻게 되는 return의 평균값을 나타내는 함수다.
 
-![action_value_function.png](./images/action_value_function.png)
+![action_value_function.png](./assets/action_value_function.png)
 
 이를 이용해 optimal function들을 정의할 수 있다.
 
-![optimal_functions.png](./images/optimal_functions.png)
+![optimal_functions.png](./assets/optimal_functions.png)
 
 policy $\pi$에 의해 결정되는 $v_\pi(s)$과 $q_{\pi}(s, a)$도 Bellman equation으로 표현할 수 있다.
 
@@ -197,21 +197,21 @@ For any Markov Decision Process, there exists an optimal policy $\pi_*$ that is 
 
 Optimal Policy는 $q_*(s, a)$를 최대화하면서 얻을 수 있다.
 
-![optimal_policy.png](./images/optimal_policy.png)
+![optimal_policy.png](./assets/optimal_policy.png)
 
 어떠한 MDP에서도 deterministic한 optimal policy를 찾을 수 있다.
 
 **Optimal Value Function for Student MDP**
 
-![optimal_value_function.png](./images/optimal_value_function.png)
+![optimal_value_function.png](./assets/optimal_value_function.png)
 
 **Optimal Action-Value Function for Student MDP**
 
-![optimal_action_value_function.png](./images/optimal_action_value_function.png)
+![optimal_action_value_function.png](./assets/optimal_action_value_function.png)
 
 **Optimal Policy for Student MDP**
 
-![optimal_policy_for_student.png](./images/optimal_policy_for_student.png)
+![optimal_policy_for_student.png](./assets/optimal_policy_for_student.png)
 
 우리는 결국 밑에 있는 식을 만족하는 $v_*(s)$ 혹은 $q_*(s, a)$를 구해내면 된다.
 
