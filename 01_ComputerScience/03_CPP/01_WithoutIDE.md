@@ -2,14 +2,22 @@
 
 IDE, Integrated Development Environments는 알아서 컴파일 후 실행해 주지만, text editor를 사용해서 개발한다면 개발자가 따로 compile 작업을 한 후 실행할 수 있습니다.
 
-1. gcc compiler 설치
+1. Clang compiler(clang++) 설치
+
+   강의에서는 Clang compiler를 사용했는데, GNU compiler(g++)을 사용해도 무방하다. 다만, 에러 메세지는 조금 다를 수 있다.
+
 2. `make` 명령어 만으로 header(`.h`), implementation(`.cpp`) 파일들을 한번에 컴파일 하도록 환경 구성
+
    - 이 강의에서는 `generic.mk` 파일을 생성하여 로드하도록 구성되어 있으며, `generic.mk` 파일과 로드하는 `Makefile` 파일은 아래 Appendix에서 정의
    - `generic.mk` 파일은 공통적으로 사용될 수 있기에 root에 위치
    - `Makefile` 파일은 프로젝트 마다 존재
+
 3. `make` 명령어로 컴파일
+
 4. `./compiled_filename` 명령어로 실행
+
    - `./` 상대 경로 없으면 에러
+
 5. `make clean` 명령어를 통해 object 파일들과 executable file을 삭제
 
 <br><br>
