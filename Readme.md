@@ -12,60 +12,29 @@ I record and organize almost every knowledge I study in this TIL repository and 
 
 <br>
 
-## On Going Project.
-
-### TensorFlow 2.0 Beta Tutorial
-
-This is an open source project which is being managed by GDG(Google Developers Group) Jeju. Our work will be published as a book and also be opened with PDF and Notion to everyone.
-
-GDG(Google Developers Group) 제주에서 주관하여 진행하는 오픈 소스 프로젝트입니다. 책으로 출간되며, PDF와 Notion으로 공유됩니다.
-
-<br>
-
-<br>
-
 ## Now studying.
 
-현재 공부 목표는 기본 지식을 탄탄히 하는 것이며, 중점 내용은 다음과 같습니다.
+현재 공부 목표는 기본 지식을 탄탄히 하는 것이며, 대학원 석사 학위 과정의 프로젝트 연구에 초점이 맞춰져 있습니다.
 
 - C++ 프로그래밍 및 자료 구조
-- 기초 통계 및 데이터 사이언스
+- 딥러닝 시스템 엔지니어링
 
 ### MOOC
 
-- [Object-Oriented Data Structures in C++](https://www.coursera.org/learn/cs-fundamentals-1?#syllabus)
+- [Neural Network and Deep Learning](https://www.coursera.org/learn/neural-networks-deep-learning?specialization=deep-learning)
+
+  Prof. Andrew Ng, Stanford Unversity, [COURSERA](https://www.coursera.org/)
 
 ### Book
 
-- [Do Data Science](https://book.naver.com/bookdb/book_detail.nhn?bid=7363405)
-
-  Schutt, Rachel /  O'Neil, Cathy
-  
 - [Hands on Machine Learning](http://mobile.kyobobook.co.kr/showcase/book/KOR/9791162240731)
 
   Aurelien Geron
-
-<br>
-
-<br>
-
-## Soon.
-
-### Book
-
-- [한국어 임베딩](https://book.naver.com/bookdb/book_detail.nhn?bid=15431390)
-
-  이기창
-  
-- [Deep Learning from Scratch 2](http://www.hanbit.co.kr/store/books/look.php?p_code=B8950212853)
-
-  사이토 고키(齋藤 康毅)
 
 ### Papers
 
 - [Attention Is All You Need](https://arxiv.org/pdf/1706.03762.pdf)
 
-- [XLNet: Generalized Autoregressive Pretraining for Language Understanding](https://arxiv.org/pdf/1906.08237.pdf)
 
 <br>
 
@@ -75,6 +44,10 @@ GDG(Google Developers Group) 제주에서 주관하여 진행하는 오픈 소�
 
 ### Book
 
+- [Do Data Science](https://book.naver.com/bookdb/book_detail.nhn?bid=7363405)
+
+  Schutt, Rachel /  O'Neil, Cathy
+  
 - [Mathematics for Machine Learning](https://mml-book.github.io/)
 
   Marc Peter Deisenroth, A.Aldo Faisal, Cheng Soon Ong
@@ -86,20 +59,36 @@ GDG(Google Developers Group) 제주에서 주관하여 진행하는 오픈 소�
 - [Code](http://www.charlespetzold.com/books/)
 
   Charles Petzold
+  
+- [한국어 임베딩](https://book.naver.com/bookdb/book_detail.nhn?bid=15431390)
+
+  이기창, Naver
+
+- [Deep Learning from Scratch 2](http://www.hanbit.co.kr/store/books/look.php?p_code=B8950212853)
+
+  사이토 고키(齋藤 康毅)
+
+- [Data Science Handbook](https://jakevdp.github.io/PythonDataScienceHandbook/)
+
+  Jake VanderPlas
 
 ### MOOC
 
 - [Linear Algebra](https://www.youtube.com/playlist?list=PLUl4u3cNGP63oMNUHXqIUcrkS2PivhN3k)
 
-  Gilbert Strang , MIT
+  Gilbert Strang , MIT, Youtube
 
 - [CS224N](https://www.youtube.com/watch?v=8rXD5-xhemo&list=PLoROMvodv4rOhcuXMZkNm7j3fVwBBY42z)
 
-  Stanford University
+  Prof. Christopher D. Manning, Stanford University, Youtube
 
 - [CS50](https://www.edwith.org/cs50)
 
   Harvard & Yale, [edX](https://www.edx.org/), [edwith](https://www.edwith.org)
+
+### Paper
+
+- [XLNet: Generalized Autoregressive Pretraining for Language Understanding](https://arxiv.org/pdf/1906.08237.pdf)
 
 <br>
 
@@ -107,34 +96,51 @@ GDG(Google Developers Group) 제주에서 주관하여 진행하는 오픈 소�
 
 ## Studied.
 
-### MOOC
+### MOOCs
 
-- [딥러닝을 이용한 자연어 처리](https://www.edwith.org/deepnlp/joinLectures/17363)
+`(Watched date) Title`
 
-  NYU 조경현 교수님, [edwith](https://www.edwith.org)
+- (2018.09) [딥러닝을 이용한 자연어 처리](https://www.edwith.org/deepnlp/joinLectures/17363)
+
+  조경현 교수님, NYU,  [edwith](https://www.edwith.org)
   
-- [Operating System](http://www.kocw.net/home/cview.do?cid=5c3c30382c7bbcf6)
+- (2019.08) [Operating System](http://www.kocw.net/home/cview.do?cid=5c3c30382c7bbcf6)
 
-  경성대학교 양희재 교수님, [KOCW](http://www.kocw.net)
+  양희재 교수님, 경성대학교, [KOCW](http://www.kocw.net)
+  
+- (2020.03) [Object-Oriented Data Structures in C++](https://www.coursera.org/learn/cs-fundamentals-1?#syllabus)
 
-### Book
+  TA Prof. Wade Fagen-Ulmschneider, UIUC, [COURSERA](https://www.coursera.org/)
 
-- [Data Science Handbook](https://jakevdp.github.io/PythonDataScienceHandbook/)
+### Books
 
-  Jake VanderPlas
+`(Read date) Title`
 
-- [Deep Learning from Scratch](http://www.hanbit.co.kr/media/community/review_view.html?hbr_idx=3595)
+- (2019.02) [Deep Learning from Scratch](http://www.hanbit.co.kr/media/community/review_view.html?hbr_idx=3595)
 
   사이토 고키(齋藤 康毅)
 
-### Paper review
+### Papers
+
+`(Reviewed date) Title`
 
 - Natural Language Processing
-  - [Learning Phrase Representations using RNN Encoder–Decoder for Statistical Machine Translation](https://arxiv.org/pdf/1406.1078.pdf)
+  
+  - (2019.03) [Learning Phrase Representations using RNN Encoder–Decoder for Statistical Machine Translation](https://arxiv.org/pdf/1406.1078.pdf)
+  
+- Distributed Computing
+
+  - (2020.03) [Poseidon: An Efficient Communication?Architecture for Distributed Deep Learning?on GPU Clusters](https://www.usenix.org/conference/atc17/technical-sessions/presentation/zhang)
+
+- Testing
+
+  - (2020.03) [DeepXplore: Automated Whitebox Testing of Deep Learning Systems](https://arxiv.org/abs/1705.06640)
+
 - Speech Synsthesis
-  - [WAVENET: A GENERATIVE MODEL FOR RAW AUDIO](https://arxiv.org/pdf/1609.03499.pdf)
 
-  - [TACOTRON: TOWARDS END-TO-END SPEECH SYNTHESIS](https://arxiv.org/pdf/1703.10135.pdf)
+  - (2019.02) [WAVENET: A GENERATIVE MODEL FOR RAW AUDIO](https://arxiv.org/pdf/1609.03499.pdf)
 
-  - [NATURAL TTS SYNTHESIS BY CONDITIONING WAVENET ON MEL SPECTROGRAM
+  - (2019.02) [TACOTRON: TOWARDS END-TO-END SPEECH SYNTHESIS](https://arxiv.org/pdf/1703.10135.pdf)
+
+  - (2019.02) [NATURAL TTS SYNTHESIS BY CONDITIONING WAVENET ON MEL SPECTROGRAM
     PREDICTIONS](https://arxiv.org/pdf/1712.05884.pdf)
