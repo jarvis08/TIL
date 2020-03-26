@@ -23,7 +23,7 @@ I record and organize almost every knowledge I study in this TIL repository and 
 
 - [Neural Network and Deep Learning](https://www.coursera.org/learn/neural-networks-deep-learning?specialization=deep-learning)
 
-  Prof. Andrew Ng, Stanford Unversity, [COURSERA](https://www.coursera.org/)
+  Prof. Andrew Ng, Stanford Unversity
 
 ### Book
 
@@ -76,15 +76,15 @@ I record and organize almost every knowledge I study in this TIL repository and 
 
 - [Linear Algebra](https://www.youtube.com/playlist?list=PLUl4u3cNGP63oMNUHXqIUcrkS2PivhN3k)
 
-  Gilbert Strang , MIT, Youtube
+  Gilbert Strang , MIT
 
 - [CS224N](https://www.youtube.com/watch?v=8rXD5-xhemo&list=PLoROMvodv4rOhcuXMZkNm7j3fVwBBY42z)
 
-  Prof. Christopher D. Manning, Stanford University, Youtube
+  Prof. Christopher D. Manning, Stanford University
 
 - [CS50](https://www.edwith.org/cs50)
 
-  Harvard & Yale, [edX](https://www.edx.org/), [edwith](https://www.edwith.org)
+  Harvard & Yale
 
 ### Paper
 
@@ -102,15 +102,15 @@ I record and organize almost every knowledge I study in this TIL repository and 
 
 - (2018.09) [딥러닝을 이용한 자연어 처리](https://www.edwith.org/deepnlp/joinLectures/17363)
 
-  조경현 교수님, NYU,  [edwith](https://www.edwith.org)
+  조경현 교수님, NYU
   
 - (2019.08) [Operating System](http://www.kocw.net/home/cview.do?cid=5c3c30382c7bbcf6)
 
-  양희재 교수님, 경성대학교, [KOCW](http://www.kocw.net)
+  양희재 교수님, 경성대학교
   
 - (2020.03) [Object-Oriented Data Structures in C++](https://www.coursera.org/learn/cs-fundamentals-1?#syllabus)
 
-  TA Prof. Wade Fagen-Ulmschneider, UIUC, [COURSERA](https://www.coursera.org/)
+  TA Prof. Wade Fagen-Ulmschneider, UIUC
 
 ### Books
 
