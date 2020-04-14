@@ -10,8 +10,13 @@
 
 DeepXplore는 Deep Learning 네트워크의 최초의 whitebox testing 기법이며, 연구 초점은 다음 두 가지이다.
 
-1. (**Neuron Coverage**) DL 시스템 내부적으로 input 데이터에 따라 어떤 양상을 띄었을 때, 어떤 output을 내는가를 확인
-2. (**Test input generation**) Erroneous behavior, 즉 예측 오류를 야기하는 요소들을 직접 labeling 하거나 확인하지 않고도, 이를 어떻게 자동적화할 것인가
+1. **Neuron Coverage**
+
+   : DL 시스템 내부적으로, input 데이터에 따라 반응하는 뉴런을 구분
+
+2. **Test input generation**
+
+   예측 오류를 야기하는 요소(Erroneous behavior)들을 자동으로 파악
 
  1번을 통해 neuron 별로 output에 어떻게 영향을 미치는가를 확인함으로서, test dataset이 DL 시스템 내부의 요소들을 얼마나 잘 테스트 하는가를 확인한다. 더 나아가서, 1번을 활용하여 DL 시스템 내부 요소들을 골고루 확인할 수 있는, 최대한 많은 errorneous behavior에 대한 점검이 가능한 별도의 test dataset을 만들 수 있는 방법을 제안한다.
 
@@ -19,13 +24,13 @@ DeepXplore는 Deep Learning 네트워크의 최초의 whitebox testing 기법이
 
 ### 1-1. Code Coverage
 
-코드 커버리지의 위키 백과 정의는 다음과 같다.
+[코드 커버리지의 정의]([https://ko.wikipedia.org/wiki/%EC%BD%94%EB%93%9C_%EC%BB%A4%EB%B2%84%EB%A6%AC%EC%A7%80](https://ko.wikipedia.org/wiki/코드_커버리지))는 다음과 같다.
 
-> **코드 커버리지**(Code Coverage)는 [소프트웨어](https://ko.wikipedia.org/wiki/소프트웨어)의 테스트를 논할 때 얼마나 테스트가 충분한가를 나타내는 지표중 하나다. 말 그대로 코드가 얼마나 커버되었는가이다. 소프트웨어 테스트를 진행했을 때 코드 자체가 얼마나 실행되었냐는 것이다.
+> 코드 커버리지(Code Coverage)는 소프트웨어의 테스트를 논할 때 얼마나 테스트가 충분한가를 나타내는 지표중 하나다. 말 그대로 코드가 얼마나 커버되었는가이다. 소프트웨어 테스트를 진행했을 때 코드 자체가 얼마나 실행되었냐는 것이다.
 >
 > 코드의 구조를 이루는 것은 크게 구문(Statement), 조건(Condition), 결정(Decision)이다. 이러한 구조를 얼마나 커버했느냐에 따라 코드커버리지의 측정기준은 나뉘게 된다. 일반적으로 많이 사용되는 커버리지는 구문(Statement)커버리지이며, 실행 코드라인이 한번 이상 실행 되면 충족된다. 조건(Condition)커버리지는 각 내부 조건이 참 혹은 거짓을 가지면 충족된다. 결정(Decision) 커버리지는 각 분기의 내부 조건자체가 아닌 이러한 조건으로 인해 전체 결과가 참 혹은 거짓이면 충족된다. 그리고 조건과 결정을 복합적으로 고려하는 MC/DC 커버리지 또한 있다.
 
- 간단하게 정의하자면, 코드를 실행했을 때 코드 한줄 한줄이 몇 회 사용되는가로 평가하는 것이 코드 커버리지이다. 만약 딥러닝 네트워크에 코드 커버리지를 적용하여 테스트할 경우, 100%의 코드 커버리지를 얻는다. 즉, 코드 커버리지로는 딥러닝 네트워크의 코드 별 영향력을 계산할 수 없으며, 이를 대신할 neuron coverage를 제안한다.
+ 간단하게 정리하자면, 코드를 실행했을 때 코드 한줄 한줄이 몇 회 사용되는가로 평가하는 것이 코드 커버리지이다. 만약 딥러닝 네트워크에 코드 커버리지를 적용하여 테스트할 경우, 100%의 코드 커버리지를 얻는다. 즉, 코드 커버리지로는 딥러닝 네트워크의 코드 별 영향력을 측정할 수 없으며, 연구진은 이를 대신할 neuron coverage를 제안한다.
 
 ![Code Coverage](./assets/1-1.CodeCoverage.png)
 
@@ -37,13 +42,13 @@ DeepXplore는 Deep Learning 네트워크의 최초의 whitebox testing 기법이
 
 ![Neuron Coverage](./assets/2-1.NeuronCoverage.png)
 
- Neuron coverage는 어떤 데이터셋의 데이터들을 이용하여 inference를 진행했을 때, 네트워크 내 전체 뉴런들 중 활성화 됐던 뉴런들의 비율을 말한다. 여기서 '활성화 됐다'라는 말의 정의는 다음과 같다.
+ Neuron coverage는 어떤 데이터셋의 데이터들을 이용하여 inference를 진행했을 때, 네트워크 내 전체 뉴런들 중 활성화 됐던 뉴런들의 비율을 말한다. 여기서 '**활성화** 됐다'라는 말의 정의는 다음과 같다.
 
  Input data(`x_data` 혹은 이전 layer의 `activation`)가 뉴런(operation)을 거쳐 activation function까지 적용된 상태, 즉, 현재 layer의 `activation` 값이 특정 값(하이퍼 파라미터) 이상이다.
 
 ![Activation](./assets/2-1.Activation.png)
 
- 논문에서는 test dataset을 사용하여 inference를 진행했을 때, neuron coverage가 100%인 데이터셋을 좋은 test dataset으로 간주한다. Neuron Coverage가 100%라는 것은, 모델이 예측을 진행할 때 고려할 수 있는 모든 요소들에 대해 테스트한 것이기 때문이다.
+ 논문에서는 test dataset을 사용하여 inference를 진행했을 때, neuron coverage가 100%인 데이터셋을 좋은 test dataset으로 간주한다. Neuron Coverage가 100%라는 것은, 모델이 예측을 진행할 때 사용하는 모든 요소들에 대해 테스트한 것을 의미하기 때문이다.
 
 <br>
 
@@ -59,11 +64,13 @@ DeepXplore는 Deep Learning 네트워크의 최초의 whitebox testing 기법이
 - `Joint optimization with gradient ascent`: loss와 neuron coverage가 커지도록 **input data**를 조정
 - `Difference-inducing inputs`: 앞의 DNN 모델들이 서로 다른 output을 내도록 하는 새로운 input data를 생성
 
-`<Figure 5>` 내용 중 가장 모호한 것은 '**DNN 모델들이 서로 다른 output을 내도록**'이며, `<Figure 7>`을 이용하여 부연 설명을 한다.
+`<Figure 5>` 내용 중 '**DNN 모델들이 서로 다른 output을 내도록**'에 대한 부연 설명으로 `<Figure 7>`을 제시한다.
 
 ![Decision Boundary](./assets/2-2.DecisionBoundary.png)
 
- 만약 seed input에 대해 딥러닝 모델들 중 다른 output을 보이는 모델이 있다면, 이는 test data로 활용하기에 적절하다. 하지만 모든 딥러닝 모델들이 같은 output을 보인다면, 해당 데이터를 gradient ascent를 통해 해당 output을 내지 않는 방향으로 조정한다. 계속해서 seed input을 변경하면서, 모델들 중 하나 이상의 모델이 다른 output을 낼 때, 변경된 seed input을 새로운 test data로 저장한다. 아래 `<Figure 6>`가 그 예시이며, $NN_1$과 $NN_2$ 모두 `Car`라고 판별하는 seed input에 대해 gradient ascent를 진행하여 $NN_1$은 `Car`, $NN_2$는 `Face`라고 인식하도록 변경했다.
+ 만약 seed input에 대해 딥러닝 모델들 중 다른 output을 보이는 모델이 있다면, 이는 test data로 활용하기에 적절하다. 하지만 모든 딥러닝 모델들이 같은 output을 보인다면, 해당 데이터를 gradient ascent를 통해 해당 output을 내지 않는 방향으로 조정한다.
+
+ 계속해서 seed input을 변경하면서, 모델들 중 하나 이상의 모델이 다른 output을 낼 때, 변경된 seed input을 새로운 test data로 저장한다. 아래 `<Figure 6>`가 그 예시이며, $NN_1$과 $NN_2$ 모두 `Car`라고 판별하는 seed input에 대해 gradient ascent를 진행하여 $NN_1$은 `Car`, $NN_2$는 `Face`라고 인식하도록 변경했다.
 
 ![Test input generation](./assets/2-2.TestInputGeneration.png)
 
@@ -75,7 +82,7 @@ DeepXplore는 Deep Learning 네트워크의 최초의 whitebox testing 기법이
 
 ![Domain-specific Constraints](./assets/2-3.DomainSpecificConstraints.png)
 
- 위와 같이 발생 가능한 error 상황을 유도할 수도 있다. 이미지를 전체적으로 어둡게 만들수 있으며, occlusion을 발생시켜 정상적이지 않은 환경을 테스트 할 수 있도록 설정할 수 있다. 검은 점을 만드는 occlusion의 경우 특정 구역의 픽셀 값을 0으로 만드는 등의 방법을 사용한다.
+ 위와 같이 발생 가능한 error 상황을 유도할 수도 있다. 이미지를 전체적으로 어둡거나 밝게 만들수 있으며, occlusion을 발생시켜 정상적이지 않은 환경을 테스트 할 수 있도록 설정할 수 있다. 검은 점을 만드는 occlusion의 경우 특정 구역의 픽셀 값을 0으로 만드는 등의 방법을 사용한다.
 
 <br>
 
