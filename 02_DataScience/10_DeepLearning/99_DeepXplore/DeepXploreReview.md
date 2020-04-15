@@ -12,13 +12,13 @@ DeepXplore는 Deep Learning 네트워크의 최초의 whitebox testing 기법이
 
 1. **Neuron Coverage**
 
-   : DL 시스템 내부적으로, input 데이터에 따라 반응하는 뉴런을 구분
+   : DL 시스템 내부적으로, input 데이터에 따라 활성화/비활성화 된 뉴런을 구분
 
 2. **Test input generation**
 
    예측 오류를 야기하는 요소(Erroneous behavior)들을 자동으로 파악
 
- 1번을 통해 neuron 별로 output에 어떻게 영향을 미치는가를 확인함으로서, test dataset이 DL 시스템 내부의 요소들을 얼마나 잘 테스트 하는가를 확인한다. 더 나아가서, 1번을 활용하여 DL 시스템 내부 요소들을 골고루 확인할 수 있는, 최대한 많은 errorneous behavior에 대한 점검이 가능한 별도의 test dataset을 만들 수 있는 방법을 제안한다.
+ Neuron coverage이 test input을 생성하기 위해 고안한 기법은 아니지만, test data 별로 neuron들에게 어떤 영향을 미치는가를 확인함으로서 적절한 test dataset인지의 여부를 판단할 수 있게 된다. 그리고 이를 이용하여 DL 시스템 내부 요소들을 골고루 확인할 수 있는, 최대한 많은 errorneous behavior에 대한 점검이 가능한 별도의 test dataset을 만드는 방법을 제안한다.
 
 <br>
 
@@ -30,7 +30,7 @@ DeepXplore는 Deep Learning 네트워크의 최초의 whitebox testing 기법이
 >
 > 코드의 구조를 이루는 것은 크게 구문(Statement), 조건(Condition), 결정(Decision)이다. 이러한 구조를 얼마나 커버했느냐에 따라 코드커버리지의 측정기준은 나뉘게 된다. 일반적으로 많이 사용되는 커버리지는 구문(Statement)커버리지이며, 실행 코드라인이 한번 이상 실행 되면 충족된다. 조건(Condition)커버리지는 각 내부 조건이 참 혹은 거짓을 가지면 충족된다. 결정(Decision) 커버리지는 각 분기의 내부 조건자체가 아닌 이러한 조건으로 인해 전체 결과가 참 혹은 거짓이면 충족된다. 그리고 조건과 결정을 복합적으로 고려하는 MC/DC 커버리지 또한 있다.
 
- 간단하게 정리하자면, 코드를 실행했을 때 코드 한줄 한줄이 몇 회 사용되는가로 평가하는 것이 코드 커버리지이다. 만약 딥러닝 네트워크에 코드 커버리지를 적용하여 테스트할 경우, 100%의 코드 커버리지를 얻는다. 즉, 코드 커버리지로는 딥러닝 네트워크의 코드 별 영향력을 측정할 수 없으며, 연구진은 이를 대신할 neuron coverage를 제안한다.
+ 간단하게 정리하자면, 코드를 실행했을 때 코드 한줄 한줄이 몇 회 사용되는가로 평가하는 것이 코드 커버리지이다. 만약 딥러닝 네트워크에 코드 커버리지를 적용하여 테스트할 경우, 100%의 코드 커버리지를 얻는다. 즉, 코드 커버리지로는 딥러닝 네트워크의 요소 별 영향력을 측정할 수 없으며, 연구진은 이를 대신할 neuron coverage를 제안한다.
 
 ![Code Coverage](./assets/1-1.CodeCoverage.png)
 
@@ -40,13 +40,13 @@ DeepXplore는 Deep Learning 네트워크의 최초의 whitebox testing 기법이
 
 ### 2-1. Neuron Coverage
 
-![Neuron Coverage](./assets/2-1.NeuronCoverage.png)
-
  Neuron coverage는 어떤 데이터셋의 데이터들을 이용하여 inference를 진행했을 때, 네트워크 내 전체 뉴런들 중 활성화 됐던 뉴런들의 비율을 말한다. 여기서 '**활성화** 됐다'라는 말의 정의는 다음과 같다.
 
  Input data(`x_data` 혹은 이전 layer의 `activation`)가 뉴런(operation)을 거쳐 activation function까지 적용된 상태, 즉, 현재 layer의 `activation` 값이 특정 값(하이퍼 파라미터) 이상이다.
 
 ![Activation](./assets/2-1.Activation.png)
+
+![Neuron Coverage](2-1.NeuronCoverage.png)
 
  논문에서는 test dataset을 사용하여 inference를 진행했을 때, neuron coverage가 100%인 데이터셋을 좋은 test dataset으로 간주한다. Neuron Coverage가 100%라는 것은, 모델이 예측을 진행할 때 사용하는 모든 요소들에 대해 테스트한 것을 의미하기 때문이다.
 
@@ -64,7 +64,7 @@ DeepXplore는 Deep Learning 네트워크의 최초의 whitebox testing 기법이
 - `Joint optimization with gradient ascent`: loss와 neuron coverage가 커지도록 **input data**를 조정
 - `Difference-inducing inputs`: 앞의 DNN 모델들이 서로 다른 output을 내도록 하는 새로운 input data를 생성
 
-`<Figure 5>` 내용 중 '**DNN 모델들이 서로 다른 output을 내도록**'에 대한 부연 설명으로 `<Figure 7>`을 제시한다.
+`<Figure 5>` 내용 중 '**DNN 모델들이 서로 다른 output을 내도록**'에 대한 부연 설명으로 `<Figure 7>`을 제시한다. 동일 기능을 하는 네트워크이면서도 조금씩은 다른 decision boundary를 갖으므로, 데이터에 따라 서로 다른 결과를 제시할 수 있다.
 
 ![Decision Boundary](./assets/2-2.DecisionBoundary.png)
 
