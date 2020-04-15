@@ -46,7 +46,7 @@ DeepXplore는 Deep Learning 네트워크의 최초의 whitebox testing 기법이
 
 ![Activation](./assets/2-1.Activation.png)
 
-![Neuron Coverage](2-1.NeuronCoverage.png)
+![Neuron Coverage](./assets/2-1.NeuronCoverage.png)
 
  논문에서는 test dataset을 사용하여 inference를 진행했을 때, neuron coverage가 100%인 데이터셋을 좋은 test dataset으로 간주한다. Neuron Coverage가 100%라는 것은, 모델이 예측을 진행할 때 사용하는 모든 요소들에 대해 테스트한 것을 의미하기 때문이다.
 
