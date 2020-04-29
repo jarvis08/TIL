@@ -20,6 +20,8 @@
     - `/bin/bash`: 도커 컨테이너 안쪽의 bash 쉘이 실행된다. 접속이란게 결국 리눅스의 쉘을 사용하겠다는 뜻이기 때문에, 이런 방식으로 컨테이너에 접속한다.
 - Get out of container
   - `ctrl + p + q`
+- Save container into an image
+  - `docker commit -a "<user_name_u_want>" <container_id> <image_name_u_want>/<tag_if_u_want>`
 - Delete specific image
   - `docker rm <container_id>`
 - Delete all the images that are not running
