@@ -14,18 +14,23 @@
 - Run image that was already initialized
   - `docker start <name||id>`
 - Access into the docker
-  - `docker attach <name||id>`
-  - `docker exec -it <name||id> /bin/bash`
+  - `docker attach <name || id>`
+  - `docker exec -it <name || id> /bin/bash`
     - `exec`: **도커 컨테이너 안쪽에 명령어를 전송할때 사용**
     - `/bin/bash`: 도커 컨테이너 안쪽의 bash 쉘이 실행된다. 접속이란게 결국 리눅스의 쉘을 사용하겠다는 뜻이기 때문에, 이런 방식으로 컨테이너에 접속한다.
 - Get out of container
   - `ctrl + p + q`
 - Save container into an image
   - `docker commit -a "<user_name_u_want>" <container_id> <image_name_u_want>/<tag_if_u_want>`
-- Delete specific image
-  - `docker rm <container_id>`
+- Delete specific container
+  - `docker rm <id || name>`
 - Delete all the images that are not running
   - `docker container prune`
+- Delete specific image
+  - `docker rmi <image_name>`
+- Rename image
+  - `docker tag <old_name> <new_name>`
+  - `docker rmi <old_name>`
 
 <br>
 

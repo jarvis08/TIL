@@ -3,8 +3,8 @@
 ```bash
 # pull image of ubuntu
 docker pull ubuntu
-# use ubuntu image to make 'ubuntu' container
-docker run -it --name ubuntu ubunt
+# use ubuntu image to make 'ubuntuu' container
+docker run -it --name ubuntuu ubunt
 
 # use apt to install requirements
 apt update && apt upgrade
@@ -28,8 +28,8 @@ pip3 install scipy
 
 ```bash
 # vim setting
-curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
-    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+
 # .vimrc
 call plug#begin('~/.vim/plugged')
 " Declare the list of plugins.
