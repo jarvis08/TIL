@@ -10,14 +10,26 @@ docker run -it --name ubuntuu ubunt
 apt update && apt upgrade
 apt install wget
 apt-get install curl
-apt-get install vim
 # command below installs python3.8 & pip of it
-apt-get install python3-dev
-apt install python3-pip
-apt install git-all
-# install gcc and other things
+$ apt install libssl-dev libncurses5-dev libsqlite3-dev libreadline-dev libtk8.5 libgdm-dev libdb4o-cil-dev libpcap-dev
+$ apt-get install python3-dev
+
+# install gcc
 apt install build-essential
 apt install cmake
+
+# install python3.6
+$ wget https://www.python.org/ftp/python/3.6.9/Python-3.6.9.tgz
+tar xvfz Python-3.6.9.tgz
+cd Python-3.6.9
+./configure
+make
+make install
+
+# pip 설치의 경우, python3.8에 붙이고 싶으면 3.8 설치 직후에 설치
+$ apt install python3-pip
+$ apt-get install vim
+$ apt install git-all
 
 # pip installations
 pip3 install Cython
