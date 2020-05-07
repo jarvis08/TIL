@@ -10,7 +10,9 @@ docker run -it --name ubuntuu ubunt
 apt update && apt upgrade
 apt install wget
 apt-get install curl
-# command below installs python3.8 & pip of it
+
+# If Ubuntu 18.04, it will install python3.6
+# If Ubuntu 16.04, it will install python3.8
 $ apt install libssl-dev libncurses5-dev libsqlite3-dev libreadline-dev libtk8.5 libgdm-dev libdb4o-cil-dev libpcap-dev
 $ apt-get install python3-dev
 
@@ -18,7 +20,7 @@ $ apt-get install python3-dev
 apt install build-essential
 apt install cmake
 
-# install python3.6
+# (if needed, e.g., Ubuntu 16.04) Install python3.6
 $ wget https://www.python.org/ftp/python/3.6.9/Python-3.6.9.tgz
 tar xvfz Python-3.6.9.tgz
 cd Python-3.6.9
