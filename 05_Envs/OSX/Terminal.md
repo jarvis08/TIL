@@ -7,11 +7,35 @@ $ echo '내용' >> 파일명
 내용을 파일명에 추가 기록
 ```
 
-<br>
+```bash
+# <대상> 문자열이 들어간 내용만 출력
+$ <행위>|grep <대상>
+# banana라는 단어가 들어간 것들로만 출력
+$ cat fruits.txt|grep banana
 
-<br>
+# <대상> 문자열이 안들어간 내용만 출력
+$ <행위>|grep -v <대상>
+# banana라는 단어 제외하고 검색
+$ cat fruits.txt|grep -v banana
+# banana, apple, kiwi 제외하고 검색
+$ cat fruits.txt|grep -v banana|grep -v apple|grep -v kiwi
 
-## Process Info
+# <대상|대상|대상|...> 문자열들이 안들어간 내용만 출력
+$ <행위>|grep -ev <대상|대상|대상|...>
+# banana, apple, kiwi 제외하고 검색
+$ cat fruits.txt|grep -ev banana|apple|kiwi
+```
+
+```bash
+# 시간 순서로 정렬 및 디렉토리 내용 출력
+$ ls -ltr
+```
+
+<br><br>
+
+## Process
+
+### Process Info
 
 실행 중인 process는 `ps -efjc`를 통해 조회할 수 있으며, and를 의미하는 |`와 함께  `grep [process_name]`을 사용하면 대상을 특정지을 수 있습니다.
 
@@ -50,12 +74,3 @@ kakao             7724   0.0  0.0  4268296    676 s001  S+    1:33PM   0:00.00 g
 # supervisor의 pid인 5697을 강제 종료
 $ kill -9 5697
 ```
-
-<br>
-
-### 시간 순서로 정렬하여 보기
-
-```bash
-$ ls -ltr
-```
-
