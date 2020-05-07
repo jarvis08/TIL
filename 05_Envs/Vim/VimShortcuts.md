@@ -4,6 +4,8 @@
 
 Vi의 심화 버전인 Vim(Vi IMproved)의 단축키입니다.
 
+- `:set encoding=utf-8` : `vim <파일명>`으로 실행했는데 한글이 깨져 보일 때
+
 <br>
 
 <br>
@@ -30,15 +32,18 @@ Vi의 심화 버전인 Vim(Vi IMproved)의 단축키입니다.
 
 ### 0-0. Replace
 
-vim에서 replace 할 때 쓰는 `:%s/old/new/g` 형태에서 `/` 는 고정된 delimiter가 아니라 %s 이후 첫 문자를 command 내 delimiter로 지정하겠다는 의미입니다. `:%s@old@new@g` 해도 동일한 기능입니다 (`/` 가 포함된 string을 바꿀때 개꿀팁입니다)
-참고로 sed 명령어도 동일하게 적용 됩니다(개꿀) 
+vim에서 replace 할 때 쓰는 `:%s/old/new/g` 형태에서 `/` 는 고정된 delimiter가 아니라 %s 이후 첫 문자를 command 내 delimiter로 지정하겠다는 의미입니다.
+
+즉,  `:%s@old@new@g` 해도 동일한 기능이며, `/` 가 포함된 string을 바꿀때 사용하면 용이합니다. 또한, sed 명령어도 동일하게 적용 됩니다.
 
 <br>
 
 ### 0-1. Go to Definition
 
 - `\g`: go to definition
+  - Kakao Internship 당시 사용했으나, 현재는 `ctags`를 사용하므로 `ctrl+]`
 - `:e#`: go to definition 후, 다시 원래 보던 곳으로 돌아가기
+  - `ctags`의 경우 `ctrl+t` 또한 동일한 동작
 
 <br>
 
@@ -69,6 +74,14 @@ vim에서 replace 할 때 쓰는 `:%s/old/new/g` 형태에서 `/` 는 고정된 
 - `0`: 라인 맨 앞으로 이동
 - `$`: 문장 맨 뒤로 이동
 - `^`: 문장 맨 앞으로 이동(맨 앞의 Tab 뒤로)
+- `x`: 커서가 위치한 char 하나를 제거
+- `X`: 커서 왼쪽 char 하나를 제거
+- `cc`: line 삭제 후 linsert mode 시작
+- `cw`: word 삭제 후 insert mode 시작
+- `s`: 커서가 위치한 char 하나를 제거한 후 insert mode 시작
+- `S`: 커서가 위치한 line을 제거한 후 insert mode 시작
+- `q + <a-z>`: record 시작 및 `esc`로 종료하며, 해당 알파벳에 해당 레코드를 저장
+- `r + <한글자>`: 커서 아래의 char를 입력하는 하나의 char로 교체
 
 <br>
 
@@ -157,6 +170,9 @@ vim에서 replace 할 때 쓰는 `:%s/old/new/g` 형태에서 `/` 는 고정된 
 - `:wq`: 저장하고 닫기
   - `ZZ`: 동일 기능
 - `:숫자`: 지정한 라인넘버로 이동
+- `:set number`: Editor 왼쪽에 line number 표시
+- `:set nonumber`: line number 표기 제거
+- `:sh`: shell로 돌아감 -> shell에서 `Ctral+d` 입력 시 vim으로 돌아옴
 
 <br>
 
