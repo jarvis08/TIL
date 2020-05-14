@@ -74,3 +74,24 @@ kakao             7724   0.0  0.0  4268296    676 s001  S+    1:33PM   0:00.00 g
 # supervisor의 pid인 5697을 강제 종료
 $ kill -9 5697
 ```
+
+<br>
+
+<br>
+
+## Resource Management
+
+DRAM 확인
+
+```bash
+$ free
+# 1초 단위로 확인(-g는 기가바이트 단위로 보겠다는 의미)
+$ free -s 1
+$ watch -n 1 free -g
+```
+
+```bash
+$ htop
+$ nvidia-smi
+```
+
