@@ -160,6 +160,14 @@ vim에서 replace 할 때 쓰는 `:%s/old/new/g` 형태에서 `/` 는 고정된 
 
 <br>
 
+### 4-2. Command-line editing
+
+- `:he cmdline-editing` : see details about command-line editing
+- `Ctrl + r` : command-line editing mode start
+- `(Ctrl + r) + (Ctral + w)` : put word below the current curser to the command line
+
+<br>
+
 <br>
 
 ## 5. Colon
