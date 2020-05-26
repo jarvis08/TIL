@@ -2,7 +2,29 @@
 
 [NVIDIA Documentation](https://devblogs.nvidia.com/even-easier-introduction-cuda/)을 통해 공부한 내용입니다.
 
-### Single thread GPU calculation
+### Initialization
+
+```cpp
+int main()
+{
+    const unsigned int N = 1048576;
+    const unsigned int bytes = N * sizeof(int);
+    int *h_a = (int*)malloc(bytes);
+    int *d_a;
+	// d_a의 주소(&d_a)가 가리키는 주소(* &d_a)에 bytes 만큼의 값(** &d_a)을 할당
+    cudaMalloc((int**)&d_a, bytes);
+
+    memset(h_a, 0, bytes);
+    cudaMemcpy(d_a, h_a, bytes, cudaMemcpyHostToDevice);
+    cudaMemcpy(h_a, d_a, bytes, cudaMemcpyDeviceToHost);
+
+    return 0;
+}
+```
+
+<br>
+
+## Single thread GPU calculation
 
 일반적인 cpp 코드로 두 배열의 요소들을 더하는 `add()` 함수를 제작합니다. 이 함수를 GPU를 사용하여 사용하는 방법은 간단합니다.
 
