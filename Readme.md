@@ -1,44 +1,39 @@
 # Today I Learned
 
-After being fascinated by machine learning, I started to study computer science and data science to handle machine learning better. But nowadays, not just machine learning, I have fallen into studying everything in this field. I believe I can solve many problems by understanding CS, DS and using ML.
-
 I record and organize almost every knowledge I study in this TIL repository and [Notion](https://www.notion.so/Links-of-jarvis08-3ec5cb8df1bf453e9d78409976da54ab). You can check what I study & work nowadays in this [Trello Board](https://trello.com/b/L2OzHmaz/get-it). If you want to see my CV or Portfolio, visit my [Github Page](https://jarvis08.github.io). Also, you can see the details of projects by clicking the title of them.
-
-머신러닝에 매료되어 개발 공부를 시작한 이래로, 머신러닝을 잘 활용하기 위해 컴퓨터 사이언스와 데이터 사이언스를 공부를 시작했습니다. 하지만 지금은 머신러닝 뿐만 아니라, 이 분야의 모든 지식들에 빠져서 공부하고 있습니다. CS와 DS를 이해하고 ML을 활용하여 다양한 문제들을 해결하고 싶습니다.
 
 제가 습득하는 대부분의 지식은 이 TIL 저장소와 [Notion](https://www.notion.so/Links-of-jarvis08-3ec5cb8df1bf453e9d78409976da54ab)에 정리하여 기록합니다. 지금 진행중인 작업들에 대한 계획은 [Trello 게시판](https://trello.com/b/L2OzHmaz/get-it)에서 확인할 수 있습니다. 만약 제 이력서와 포트폴리오를 보고 싶으시다면 제 [Github Page](https://jarvis08.github.io)를 방문하세요. 프로젝트 제목을 클릭하면 상세 내용을 볼 수 있습니다.
 
-<br>
+<br><br>
 
-<br>
+## On Going Projects.
+
+프로젝트들은 종료 후에 정리하여 [Github Page](https://jarvis08.github.io)에 기록합니다.
+
+- Quantization with multiple size of INT type via Darknet
+- Predicting drug responses via computing algoirhtms
+- Analyzing code with DL network
+
+<br><br>
 
 ## Now studying.
 
-현재 공부 목표는 기본 지식을 탄탄히 하는 것이며, 대학원 석사 학위 과정의 프로젝트 연구에 초점이 맞춰져 있습니다.
+현재 공부 목표는 기본 지식을 탄탄히 하는 것이며, 대학원 석사 학위 과정에서의 연구에 초점이 맞춰져 있습니다.
 
-- C++ 프로그래밍 및 자료 구조
-- 딥러닝 시스템 엔지니어링
+- CUDA Programming
+- DL System Engineering with [Darknet](https://pjreddie.com/darknet/)
 
 ### MOOC
 
-- [Neural Network and Deep Learning](https://www.coursera.org/learn/neural-networks-deep-learning?specialization=deep-learning)
+- [병렬 프로그래밍](http://www.kocw.net/home/search/kemView.do?kemId=1322170)
 
-  Prof. Andrew Ng, Stanford Unversity
+  백낙훈 교수님, 경북대학교
 
-### Book
+### Tech Blog
 
-- [Hands on Machine Learning](http://mobile.kyobobook.co.kr/showcase/book/KOR/9791162240731)
+- [NVIDIA Developer blog](https://devblogs.nvidia.com/even-easier-introduction-cuda/)
 
-  Aurelien Geron
-
-### Papers
-
-- [Attention Is All You Need](https://arxiv.org/pdf/1706.03762.pdf)
-
-
-<br>
-
-<br>
+<br><br>
 
 ## Expecting.
 
@@ -48,6 +43,10 @@ I record and organize almost every knowledge I study in this TIL repository and 
 
   Schutt, Rachel /  O'Neil, Cathy
   
+- [Hands on Machine Learning](http://mobile.kyobobook.co.kr/showcase/book/KOR/9791162240731)
+
+  Aurelien Geron
+
 - [Mathematics for Machine Learning](https://mml-book.github.io/)
 
   Marc Peter Deisenroth, A.Aldo Faisal, Cheng Soon Ong
@@ -88,11 +87,10 @@ I record and organize almost every knowledge I study in this TIL repository and 
 
 ### Paper
 
+- [Attention Is All You Need](https://arxiv.org/pdf/1706.03762.pdf)
 - [XLNet: Generalized Autoregressive Pretraining for Language Understanding](https://arxiv.org/pdf/1906.08237.pdf)
 
-<br>
-
-<br>
+<br><br>
 
 ## Studied.
 
@@ -111,6 +109,10 @@ I record and organize almost every knowledge I study in this TIL repository and 
 - (2020.03) [Object-Oriented Data Structures in C++](https://www.coursera.org/learn/cs-fundamentals-1?#syllabus)
 
   TA Prof. Wade Fagen-Ulmschneider, UIUC
+  
+- (2020.04) [Neural Network and Deep Learning](https://www.coursera.org/learn/neural-networks-deep-learning?specialization=deep-learning)
+
+  Prof. Andrew Ng, Stanford Unversity
 
 ### Books
 
@@ -127,15 +129,13 @@ I record and organize almost every knowledge I study in this TIL repository and 
 - Natural Language Processing
   
   - (2019.03) [Learning Phrase Representations using RNN Encoder–Decoder for Statistical Machine Translation](https://arxiv.org/pdf/1406.1078.pdf)
-  
+- Quantization
+- (2020.05) [Quantization and Training of Neural Networks for Efficient Integer-Arithmetic-Only Inference](https://arxiv.org/abs/1712.05877)
 - Distributed Computing
-
-  - (2020.03) [Poseidon: An Efficient Communication?Architecture for Distributed Deep Learning?on GPU Clusters](https://www.usenix.org/conference/atc17/technical-sessions/presentation/zhang)
-
+- (2020.03) [Poseidon: An Efficient Communication?Architecture for Distributed Deep Learning?on GPU Clusters](https://www.usenix.org/conference/atc17/technical-sessions/presentation/zhang)
 - Testing
 
   - (2020.03) [DeepXplore: Automated Whitebox Testing of Deep Learning Systems](https://arxiv.org/abs/1705.06640)
-
 - Speech Synsthesis
 
   - (2019.02) [WAVENET: A GENERATIVE MODEL FOR RAW AUDIO](https://arxiv.org/pdf/1609.03499.pdf)
