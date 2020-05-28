@@ -129,10 +129,15 @@ I record and organize almost every knowledge I study in this TIL repository and 
 - Natural Language Processing
   
   - (2019.03) [Learning Phrase Representations using RNN Encoder–Decoder for Statistical Machine Translation](https://arxiv.org/pdf/1406.1078.pdf)
+
 - Quantization
-- (2020.05) [Quantization and Training of Neural Networks for Efficient Integer-Arithmetic-Only Inference](https://arxiv.org/abs/1712.05877)
+
+  - (2020.05) [Quantization and Training of Neural Networks for Efficient Integer-Arithmetic-Only Inference](https://arxiv.org/abs/1712.05877)
+
 - Distributed Computing
-- (2020.03) [Poseidon: An Efficient Communication?Architecture for Distributed Deep Learning?on GPU Clusters](https://www.usenix.org/conference/atc17/technical-sessions/presentation/zhang)
+
+  - (2020.03) [Poseidon: An Efficient Communication?Architecture for Distributed Deep Learning?on GPU Clusters](https://www.usenix.org/conference/atc17/technical-sessions/presentation/zhang)
+
 - Testing
 
   - (2020.03) [DeepXplore: Automated Whitebox Testing of Deep Learning Systems](https://arxiv.org/abs/1705.06640)
