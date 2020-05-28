@@ -6,7 +6,7 @@ CUDA, Compute Unifed Device Architecture
 >
 > GPU: dedicated super-threaded, massively data parallel co-processor
 
-CUDA Programming을 위해서는 driver를 설치해야 하며, driver는 compiler(NVCC, NVidia Cuda Compiler)과 linker를 모두 보유하고 있다. CUDA Programming으로 작성된 코드를 kernel code라고 하며, kernel code가 작성된 파일은 `.cpp` 혹은 `.c` 확장자가 아니라, `.cu` 확장자를 사용해야만 한다. 컴파일 후 생성된 실행 파일 중, kernel 함수로 작성된 내용에 대해서는 GPU에서 실행하게 된다.
+CUDA Programming을 위해서는 driver를 설치해야 하며, driver는 compiler(NVCC, NVidia Cuda Compiler)과 linker를 모두 보유하고 있습니다. CUDA Programming으로 작성된 코드를 kernel code라고 하며, kernel code가 작성된 파일은 `.cpp` 혹은 `.c` 확장자가 아니라, `.cu` 확장자를 사용해야만 합니다. 컴파일 후 생성된 실행 파일 중, kernel 함수로 작성된 내용에 대해서는 GPU에서 실행하게 됩니다.
 
 <br>
 
@@ -14,7 +14,7 @@ CUDA Programming을 위해서는 driver를 설치해야 하며, driver는 compil
 
 ![HW-structure](./assets/HW-structure.png)
 
-위 구조는 오래 전 메인 보드와 주변 기기의 연결 구조를 나타내지만, 현재도 큰 틀에서 봤을 때에는 유사한 구조를 갖고 있다. 두 개의 파란색 칩을 North-bridge, South-bridge라고 한다. North-bridge에는 빠른 속도의 연동을 요구하는 CPU, GPU, Main Memory를 연결한다. CUDA programming은 north-bridge의 세 가지 H/W 간의 구성을 고려해야 한다.
+위 구조는 오래 전 메인 보드와 주변 기기의 연결 구조를 나타내지만, 현재도 큰 틀에서 봤을 때에는 유사한 구조를 갖고 있습니다. 두 개의 파란색 칩을 North-bridge, South-bridge라고 합니다. North-bridge에는 빠른 속도의 연동을 요구하는 CPU, GPU, Main Memory를 연결합니다. CUDA programming은 north-bridge의 세 가지 H/W 간의 구성을 고려해야 합니다.
 
 - Host: CPU + Main Memory(DRAM)
 - Device: GPU + Video Memory(VRAM)

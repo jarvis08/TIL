@@ -1,4 +1,4 @@
-# CUDA Memory Hierarchy part-2
+# CUDA Memory Hierarchy
 
 CUDA Memory Hierarchy part-1에서는 CPU의 메모리 구조를 확인해 봤었으며, part-2에서는 CUDA에 대해 본격적으로 알아봅니다.
 

@@ -1,4 +1,4 @@
-# CUDA Memory Hierarchy part-1
+# CPU Memory Hierarchy
 
 GPU는 CPU와 유사한 구조를 가지고 있기 때문에, 먼저 CPU에 대해 간단히 알아봅니다.
 
