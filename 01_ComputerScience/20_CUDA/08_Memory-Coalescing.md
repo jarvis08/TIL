@@ -36,7 +36,7 @@ CUDA의 경우 현재 128 bytes를 chunk 단위로 사용하지만, `cudaMalloc(
 
 ### Memory Transaction Size
 
-Memory Coalescing에 대해 자세히 알아보기 전에, 먼저 알아야 할 개념이 하나 더 있습니다. **Memory Transaction Size는 장치간에 메모리를 전송할 때 한 번에 전송할 수 있는 데이터의 크기**로, 이는 H/W마다 다릅니다. CUDA의 경우 사용하는 GPU의 GDDR RAM에 따라 다릅니다.
+Memory Coalescing에 대해 자세히 알아보기 전에, 먼저 알아야 할 개념이 하나 더 있습니다. **Memory Transaction Size는 장치간에 메모리를 전송할 때 한 번에 전송할 수 있는 데이터의 크기**로, 이는 H/W마다 다릅니다. CUDA의 경우 사용하는 [GPU의 GDDR RAM에 따라 다릅니다](https://forums.developer.nvidia.com/t/memory-transaction-size/8856). 이에 대한 설명은 위 링크(NVIDIA Developer Forum)의 글에서 `Sylvain_Collange`가 작성하신 답변을 참고하시면 됩니다.
 
 아래 영문 설명 출처 - [stackoverflow](https://stackoverflow.com/questions/11908142/clarifying-memory-transactions-in-cuda)
 
