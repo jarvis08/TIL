@@ -2,7 +2,7 @@
 
 Reference: [The Cherno](https://www.youtube.com/playlist?list=PLlrATfBNZ98dudnM48yfGUldqGD0S4FFb)
 
-1. If we try to **compile cpp files**, **translation units** translate cpp files into **object files**. A translation unit is responsible for a cpp file.
+1. If we try to **compile cpp files**, **translation units** translate cpp files into **object files**. A translation unit is responsible for a cpp file. Object files are the codes transformed into binary type.
 
 2. Before compiling, **preprocessor statement** will be handled.
 
