@@ -45,7 +45,7 @@ CPU 구성 3가지
 
 - C언어 등을 이용하여 Assembly language로 조작 가능한 register
   - loop optimizer 등 compiler에게 맡기지 않고, 직접 최적화 가능
-- Aplication program과 system program 모두 조작 가능한 영역
+- Application program과 system program 모두 조작 가능한 영역
 - Tpyes of registers
   - Data
   - Address

@@ -34,9 +34,9 @@ Strict 2PL은 2PL과 모두 동일하지만, unlock을 모두 한 번에 진행�
 
 <br><br>
 
-## (Central) Lock Management
+## Lock Management
 
-_현재 CLM으로 인해 발생하는 overhead는 모두 개선된 상태이며, locking 자체에서 오는 한계를 벗어나고자 Optimistic CC에 대한 연구가 진행중이다._
+_현재 C(Central)LM으로 인해 발생하는 overhead는 모두 개선된 상태이며, locking 자체에서 오는 한계를 벗어나고자 Optimistic CC에 대한 연구가 진행중이다._
 
 Lock/Unlock request들은 모두 LM에 의해 이루어진다. LM은 **hash table**을 보유하고 있으며, 이는 `| PID | TID | X/S |` 꼴의 linked-list로 구현되어 있다.
 
@@ -70,8 +70,8 @@ Deadlock은 xact들 간에 lock이 released 되길 서로 기다리는 상태이
 
 ### Deadlock Detection
 
-Deadlock Detection은 실제로 발생했을 때 abort 대상을 선정하는 것으로, 현재 DB들이 사용하는 방식이다. 주기적으로 waits-for graph를 그리고, cycle을 이루는지 확인한다.
+Deadlock Detection은 실제로 발생했을 때 abort 대상을 선정하는 것으로, 현재 DB들이 사용하는 방식이다. 주기적으로 **waits-for graph를** 그리고, cycle을 이루는지 확인한다.
 
-그런데, grpah를 그리는 동안에는 Lock Hash Table을 수정할 수 없으므로(mutex), adaptive 한 periodical check을 진행한다. Adaptive 함은 no dead lock이라고 판별이 될 시, period 주기를 늘리는 등의 유연함을 말한다.
+그런데, grpah를 그리는 동안에는 Lock Hash Table을 수정할 수 없으므로(mutex), **adaptive periodical check**을 진행한다. Adaptive 함은 no dead lock이라고 판별이 될 시, period 주기를 늘리는 등의 유연함을 말한다.
 
 ![02_waits-for-graph](./assets/02_waits-for-graph.png)
