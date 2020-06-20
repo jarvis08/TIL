@@ -1,8 +1,10 @@
 # Compile & Link
 
-1. If we try to compile cpp files, translation units translate cpp files into object files. A translation unit is responsible for a cpp file.
+Reference: [The Cherno](https://www.youtube.com/playlist?list=PLlrATfBNZ98dudnM48yfGUldqGD0S4FFb)
 
-2. Before compiling, preprocessing is done
+1. If we try to **compile cpp files**, **translation units** translate cpp files into **object files**. A translation unit is responsible for a cpp file.
+
+2. Before compiling, **preprocessor statement** will be handled.
 
    ```cpp
    // INTEGER works as int
@@ -17,7 +19,7 @@
    #endif
    ```
 
-3. If a function's code is defined in other cpp file(file-2) and if you want to use the function in the file-1, you need to write **decoration** into the file-1
+3. If a function's code is defined in other cpp file(file-2) and if you want to use the function in the file-1, you need to write **decoration** into the file-1. If you use decoration, then **Linker** will link the files.
 
    ```cpp
    // main.cpp
@@ -38,7 +40,7 @@
    }
    ```
 
-4. If project's size gets bigger, it will be more simple to include just header file. Header files usually only have decorations of functions, defined in seperate cpp file.
+4. If project's size gets bigger, it will be more simple to include just **header file**. Header files usually only have decorations of functions, defined in seperate cpp file.
 
    ```cpp
    // main.cpp
