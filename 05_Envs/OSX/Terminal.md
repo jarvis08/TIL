@@ -95,3 +95,22 @@ $ htop
 $ nvidia-smi
 ```
 
+<br><br>
+
+## Search
+
+```bash
+# 하위 디렉토리로부터 cost = 이라는 단어를 포함하는 파일을 탐색
+# md가 들어가는 파일은 제외
+$ grep -R "cost =" * |grep -v md
+```
+
+```bash
+# L1이 들어가는 파일을 cfg 디렉토리 내에서 탐색
+$ grep -R L1 cfg/*
+```
+
+
+
+
+
