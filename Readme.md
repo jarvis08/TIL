@@ -13,23 +13,14 @@ I record and organize almost every knowledge I study in this TIL repository and 
 - Quantization with multiple size of INT type via Darknet
 - Predicting drug responses via computing algoirhtms
 - Analyzing code with DL network
+- Semantic parser enhancement
 
 <br><br>
 
 ## Now studying.
 
-현재 공부 목표는 기본 지식을 탄탄히 하는 것이며, 대학원 석사 학위 과정에서의 연구에 초점이 맞춰져 있습니다.
-
 - CUDA Programming
-- DL System Engineering with [Darknet](https://pjreddie.com/darknet/)
-
-### MOOC
-
-- [병렬 프로그래밍](http://www.kocw.net/home/search/kemView.do?kemId=1322170) / 백낙훈 교수님 / 경북대학교
-
-### Tech Blog
-
-- [NVIDIA Developer blog](https://devblogs.nvidia.com/even-easier-introduction-cuda/)
+- DL system engineering via quantization
 
 <br><br>
 
@@ -75,12 +66,10 @@ I record and organize almost every knowledge I study in this TIL repository and 
 `(Watched date) Title`
 
 - (2018.09) [딥러닝을 이용한 자연어 처리](https://www.edwith.org/deepnlp/joinLectures/17363) / 조경현 교수님 / NYU
-
 - (2019.08) [Operating System](http://www.kocw.net/home/cview.do?cid=5c3c30382c7bbcf6) / 양희재 교수님 / 경성대학교
-
 - (2020.03) [Object-Oriented Data Structures in C++](https://www.coursera.org/learn/cs-fundamentals-1?#syllabus) / TA Prof. Wade Fagen-Ulmschneider / UIUC
-
 - (2020.04) [Neural Network and Deep Learning](https://www.coursera.org/learn/neural-networks-deep-learning?specialization=deep-learning) / Prof. Andrew Ng / Stanford Unversity
+- (2020.05) [병렬프로그래밍](http://www.kocw.net/home/search/kemView.do?kemId=1322170) / 백낙훈 교수님 / 경북대학교
 
 
 ### Books
@@ -94,18 +83,22 @@ I record and organize almost every knowledge I study in this TIL repository and 
 
 `(Reviewed date) Title`
 
+- Deep Learning Theory
+  - (2020.07) [COMPARING REWINDING AND FINE-TUNING IN NEURAL NETWORK PRUNING](https://openreview.net/pdf?id=S1gSj0NKvB)
+- Graph Embedding
+  - (2020.04) [node2vec: Scalable Feature Learning for Networks](https://arxiv.org/abs/1607.00653)
+  - (2020.06) [Inductive Representation Learning on Large Graphs](https://arxiv.org/abs/1706.02216)
+  - (2020.07) [Modeling Relational Data with Graph Convolutional Networks](https://arxiv.org/pdf/1703.06103.pdf)
 - Natural Language Processing
-  
   - (2019.03) [Learning Phrase Representations using RNN Encoder–Decoder for Statistical Machine Translation](https://arxiv.org/pdf/1406.1078.pdf)
-
+  - (2020.07) [Genie: A Generator of Natural Language Semantic Parsers for Virtual Assistant Commands](https://arxiv.org/abs/1904.09020)
+- (2020.07) [Schema2QA: Answering Complex Queries on the Structured Web with a Neural Model](https://arxiv.org/abs/2001.05609)
 - Quantization
-
   - (2020.05) [Quantization and Training of Neural Networks for Efficient Integer-Arithmetic-Only Inference](https://arxiv.org/abs/1712.05877)
-
+  - (2020.06) [Learning to Quantize Deep Networks by Optimizing Quantization Intervals with Task Loss](https://arxiv.org/abs/1808.05779)
 - Distributed Computing
 
   - (2020.03) [Poseidon: An Efficient Communication?Architecture for Distributed Deep Learning?on GPU Clusters](https://www.usenix.org/conference/atc17/technical-sessions/presentation/zhang)
-
 - Testing
 
   - (2020.03) [DeepXplore: Automated Whitebox Testing of Deep Learning Systems](https://arxiv.org/abs/1705.06640)
