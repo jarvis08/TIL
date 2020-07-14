@@ -19,9 +19,6 @@ I record and organize almost every knowledge I study in this TIL repository and 
 
 ## Now studying.
 
-- CUDA Programming
-- DL system engineering via quantization
-
 <br><br>
 
 ## Expecting.
