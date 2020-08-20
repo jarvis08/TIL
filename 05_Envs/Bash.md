@@ -101,6 +101,9 @@ $ watch -n 1 free -g
 $ df
 # G, MB 등의 단위로
 $ df -h
+
+# 현재 디렉토리 기준, 하위 디렉토리들의 사용량을 출력
+$ du -sh *
 ```
 
 ### File System
