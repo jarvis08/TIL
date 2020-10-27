@@ -81,7 +81,12 @@ $ kill -9 5697
 
 ## Resource Management
 
-DRAM 확인
+```bash
+$ htop
+$ nvidia-smi
+```
+
+### DRAM 확인
 
 ```bash
 $ free
@@ -90,14 +95,27 @@ $ free -s 1
 $ watch -n 1 free -g
 ```
 
+### Disk 용량 확인
+
 ```bash
-$ htop
-$ nvidia-smi
+# 전체 파티션의 용량, 사용량 등을 출력
+$ df
+# G, MB 등의 단위로 깔끔하게 출력
+$ df -h
+# 현재 디렉토리를 포함하는 파티션만의 용량을 출력
+$ df -h .
+
+# 현재 디렉토리를 기준으로, 하위 디렉토리들의 사용량을 출력
+$ du -sh *
 ```
 
-<br><br>
+### File System
 
-## Search
+```bash
+# tmp 확장자를 가진 파일 모두 삭제
+# 하위 디렉토리까지 적용
+$ find . -name '*.tmp' -exec rm {} \;
+```
 
 ```bash
 # 하위 디렉토리로부터 cost = 이라는 단어를 포함하는 파일을 탐색
@@ -109,6 +127,8 @@ $ grep -R "cost =" * |grep -v md
 # L1이 들어가는 파일을 cfg 디렉토리 내에서 탐색
 $ grep -R L1 cfg/*
 ```
+
+
 
 
 
