@@ -30,7 +30,7 @@ $정렬된 Frequent\;1\; itemsets = \{A, B, C, D\}$ 일 때, set-enumeration tre
 - $CD, CE, CDE$
 - $DE$
 
-image
+![max-miner](./assets/03-maxminer.png)
 
 - Since $BCDE$ is a max-pattern, no need to check $BCD$, $BDE$, $CDE$ in later scan
 - If $AC$ is infrequent, no need to check $ABC$ in later scans
