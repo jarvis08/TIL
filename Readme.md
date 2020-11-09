@@ -80,6 +80,7 @@ I record and organize almost every knowledge I study in this TIL repository and 
 `(Reviewed date) Title`
 
 - Recommendation
+  - (2020.02) [An Empirical Evaluation of Thompson Sampling](https://papers.nips.cc/paper/2011/file/e53a0a2978c28872a4505bdb51db06dc-Paper.pdf)
   - (2020.02) [Large-Scale Parallel Collaborative Filtering for the Netflix Prize](https://www.researchgate.net/publication/220788980_Large-Scale_Parallel_Collaborative_Filtering_for_the_Netflix_Prize)
   - (2020.11) [MIXED-PRECISION EMBEDDING USING A CACHE](https://arxiv.org/pdf/2010.11305.pdf)
 - Deep Learning Theory
