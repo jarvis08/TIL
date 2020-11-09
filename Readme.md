@@ -80,6 +80,9 @@ I record and organize almost every knowledge I study in this TIL repository and 
 
 `(Reviewed date) Title`
 
+- Recommendation
+  - (2020.02) [Large-Scale Parallel Collaborative Filtering for the Netflix Prize](https://www.researchgate.net/publication/220788980_Large-Scale_Parallel_Collaborative_Filtering_for_the_Netflix_Prize)
+  - (2020.11) [MIXED-PRECISION EMBEDDING USING A CACHE](https://arxiv.org/pdf/2010.11305.pdf)
 - Deep Learning Theory
   - (2020.07) [COMPARING REWINDING AND FINE-TUNING IN NEURAL NETWORK PRUNING](https://openreview.net/pdf?id=S1gSj0NKvB)
 - Graph Embedding
@@ -88,8 +91,10 @@ I record and organize almost every knowledge I study in this TIL repository and 
   - (2020.07) [Modeling Relational Data with Graph Convolutional Networks](https://arxiv.org/pdf/1703.06103.pdf)
 - Natural Language Processing
   - (2019.03) [Learning Phrase Representations using RNN Encoder–Decoder for Statistical Machine Translation](https://arxiv.org/pdf/1406.1078.pdf)
+  - (2020.01) [Efficient Estimation of Word Representations in Vector Space](https://arxiv.org/pdf/1301.3781.pdf)
   - (2020.07) [Genie: A Generator of Natural Language Semantic Parsers for Virtual Assistant Commands](https://arxiv.org/abs/1904.09020)
-- (2020.07) [Schema2QA: Answering Complex Queries on the Structured Web with a Neural Model](https://arxiv.org/abs/2001.05609)
+  - (2020.07) [Schema2QA: Answering Complex Queries on the Structured Web with a Neural Model](https://arxiv.org/abs/2001.05609)
+  - (2020.11) [ALBERT: A LITE BERT FOR SELF-SUPERVISED LEARNING OF LANGUAGE REPRESENTATIONS](https://arxiv.org/pdf/1909.11942.pdf)
 - Quantization
   - (2020.05) [Quantization and Training of Neural Networks for Efficient Integer-Arithmetic-Only Inference](https://arxiv.org/abs/1712.05877)
   - (2020.06) [Learning to Quantize Deep Networks by Optimizing Quantization Intervals with Task Loss](https://arxiv.org/abs/1808.05779)
