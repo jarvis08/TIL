@@ -11,8 +11,7 @@ I record and organize almost every knowledge I study in this TIL repository and 
 프로젝트들은 종료 후에 정리하여 [Github Page](https://jarvis08.github.io)에 기록합니다.
 
 - Quantization with multiple size of INT type via Darknet
-- Predicting drug responses via computing algoirhtms
-- Analyzing code with DL network
+- Predicting drug responses via computing algorithms
 - Semantic parser enhancement
 
 <br><br>
@@ -85,6 +84,7 @@ I record and organize almost every knowledge I study in this TIL repository and 
   - (2020.11) [MIXED-PRECISION EMBEDDING USING A CACHE](https://arxiv.org/pdf/2010.11305.pdf)
 - Deep Learning Theory
   - (2020.07) [COMPARING REWINDING AND FINE-TUNING IN NEURAL NETWORK PRUNING](https://openreview.net/pdf?id=S1gSj0NKvB)
+  - (2020.10) [Convergence-Aware Neural Network Training](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9218518)
 - Graph Embedding
   - (2020.04) [node2vec: Scalable Feature Learning for Networks](https://arxiv.org/abs/1607.00653)
   - (2020.06) [Inductive Representation Learning on Large Graphs](https://arxiv.org/abs/1706.02216)
