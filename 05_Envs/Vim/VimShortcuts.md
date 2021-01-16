@@ -31,6 +31,8 @@ Vi의 심화 버전인 Vim(Vi IMproved)의 단축키입니다.
 - `%`: 괄호 쌍 이동
 - `#`: 현재 커서의 문자열을 윗 방향으로 탐색(`/문자열` 혹은 `?문자열`과 같은 효과)
 - `*`: 현재 커서의 문자열을 아래 방향으로 탐색
+- `J`: 아래 line과 합치기
+- `K`: shell 보기
 
 <br>
 
@@ -51,7 +53,8 @@ vim에서 replace 할 때 쓰는 `:%s/old/new/g` 형태에서 `/` 는 고정된 
 ### 0-1. Go to Definition
 
 - `\g`: go to definition
-  - Kakao Internship 당시 사용했으나, 현재는 `ctags`를 사용하므로 `ctrl+]`
+  - Kakao Internship 당시 사용
+  - 현재는 `ctags`를 사용하므로 `ctrl+]` 과 `ctrl + t`를 활용
 - `:e#`: go to definition 후, 다시 원래 보던 곳으로 돌아가기
   - `ctags`의 경우 `ctrl+t` 또한 동일한 동작
 
@@ -61,9 +64,9 @@ vim에서 replace 할 때 쓰는 `:%s/old/new/g` 형태에서 `/` 는 고정된 
 
 - `:vs`: 가로 분할
 - `:sv`: 세로 분할
-- `Ctrl + w, w`: 커서(내 위치)를 분할 창들 중 바로 오른쪽 칸으로 이동
+- `Ctrl + w, w`: 커서(내 위치)를 분할 창들 중 바로 오른쪽 칸으로 이동 (맨 오른쪽에 위치 시, 맨 왼쪽으로 이동)
 - `Ctrl + w, h/l`: 커서를 분할된 창들 중 왼/오른쪽으로 이동
-- `Ctrl + w, r`: 현재 분할된 창을 오른쪽 칸으로 옮김
+- `Ctrl + w, r`: 분할되어 있는 현재 창을 오른쪽 칸으로 옮김
 
 <br>
 
@@ -97,11 +100,12 @@ vim에서 replace 할 때 쓰는 `:%s/old/new/g` 형태에서 `/` 는 고정된 
 - `x`: 커서가 위치한 char 하나를 제거
 - `X`: 커서 왼쪽 char 하나를 제거
 - `cc`: line 삭제 후 linsert mode 시작
-- `cw`: word 삭제 후 insert mode 시작
+- `cw`: word(현재 커서 부터 단어 끝) 삭제 후 insert mode 시작
 - `s`: 커서가 위치한 char 하나를 제거한 후 insert mode 시작
 - `S`: 커서가 위치한 line을 제거한 후 insert mode 시작
 - `q + <a-z>`: record 시작 및 `esc`로 종료하며, 해당 알파벳에 해당 레코드를 저장
 - `r + <한글자>`: 커서 아래의 char를 입력하는 하나의 char로 교체
+- `R`: 현재 커서 부터, 계속해서 단어 교체
 
 <br>
 
