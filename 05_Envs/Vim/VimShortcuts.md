@@ -36,7 +36,7 @@ Vi의 심화 버전인 Vim(Vi IMproved)의 단축키입니다.
 
 <br>
 
-### 0-0. Replace
+### 0-0. Replace & Delete Line
 
 vim에서 replace 할 때 쓰는 `:%s/old/new/g` 형태에서 `/` 는 고정된 delimiter가 아니라 %s 이후 첫 문자를 command 내 delimiter로 지정하겠다는 의미입니다.
 
@@ -47,6 +47,10 @@ vim에서 replace 할 때 쓰는 `:%s/old/new/g` 형태에서 `/` 는 고정된 
 - `.,.+10s/old/new/g`: 현재 커서가 위치한 줄 부터, 10 줄 후 까지 수정
 - `.,$s/old/new/g`: 현재 줄 부터 끝까지 교체
 - Split 된 화면들 중 하나의 화면에서 replacing 사용 후, 옆 split 화면으로 가서 `:%s` 라고만 치면 동일한 작업 진행
+
+특정 단어가 존재하는 line들을 모두 삭제하는 기능입니다.
+
+- `%g/[word]/d`
 
 <br>
 
