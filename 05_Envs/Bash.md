@@ -132,8 +132,10 @@ $ grep -R L1 cfg/*
 
 ### Network를 이용하여 다른 서버에 Mount 하기
 
+Reboot 시 자동 연결을 하려면 `-o reconnect` argument 부여
+
 ```
-$ sudo sshfs -o allow_other user@address:[address 서버에서 현재 서버로 가져올 path] [Mount 될 내(현재 서버) 주소]
+$ sudo sshfs -o allow_other user@address:[현재 서버로 가져올 dir path] [Mount 될 현재 서버의 path]
 ```
 
 ### Unmount 하기
