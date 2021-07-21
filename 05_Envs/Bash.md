@@ -128,9 +128,17 @@ $ grep -R "cost =" * |grep -v md
 $ grep -R L1 cfg/*
 ```
 
+## SSHFS
 
+### Network를 이용하여 다른 서버에 Mount 하기
 
+```
+$ sudo sshfs -o allow_other user@address:[address 서버에서 현재 서버로 가져올 path] [Mount 될 내(현재 서버) 주소]
+```
 
+### Unmount 하기
 
-
+```
+$ umount [Unmount 할 path]
+```
 
