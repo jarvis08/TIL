@@ -144,3 +144,13 @@ $ sudo sshfs -o allow_other user@address:[현재 서버로 가져올 dir path] [
 $ umount [Unmount 할 path]
 ```
 
+## SSD, HDD check
+
+Disk 이름(NAME)과 종류(ROTA)를 0과 1로 출력
+
+- `0`: SSD
+- `1`: HDD
+
+```
+$ lsblk -d -o name,rota
+```
